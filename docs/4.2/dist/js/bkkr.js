@@ -1,6 +1,6 @@
 /*!
 	* BKKR v4.2.11 (https://github.com/bkkr-team/bkkr-framework)
-	* Copyright 2015-2020 Imre Bekker
+	* Copyright 2015-2021 Imre Bekker
 	* Licensed under MIT (https://github.com/tetkosimi/bkkr/blob/master/LICENSE)
 	*/
 (function (global, factory) {

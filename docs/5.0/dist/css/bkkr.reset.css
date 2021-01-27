@@ -2,7 +2,7 @@
  * BKKR Reset
  * Version v5.0.0
  *
- * Copyright 2015-2020 Imre Bekker
+ * Copyright 2015-2021 Imre Bekker
  * https://bekkerimre.hu/
  *
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
@@ -18,6 +18,9 @@
 html {
   width: 100%;
   height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -25,6 +28,8 @@ body {
   margin: 0;
   text-rendering: optimizeLegibility;
   touch-action: manipulation;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -ms-content-zooming: none;
   -webkit-user-drag: none;
@@ -51,8 +56,10 @@ hr:not([size]) {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 

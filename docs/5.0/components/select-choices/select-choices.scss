@@ -1,0 +1,108 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+.choices {
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.drawer-viewport {
+    padding-top: 30px;
+}
+
+// Select ui
+// --------------------------------------------------
+
+.choices-inner {
+    display: none;
+}
+
+// Dropdown
+// --------------------------------------------------
+
+.choices-list-dropdown {
+    height: 100%;
+    overflow-y: auto;
+
+    padding-bottom: var(--safe-area-bottom);
+}
+
+.choices-search-enabled .choices-list-dropdown {
+    margin-top: 42px;
+}
+
+// Input
+// --------------------------------------------------
+
+.choices-input {
+    @include mixins.position-set(0, calc(var(--bkkr-spacer) / 2), null, calc(var(--bkkr-spacer) / 2));
+    @include mixins.border-radius-set(8px);
+    @include mixins.padding-set(0, 32px);
+
+    display: inline-block;
+    position: absolute;
+
+    width: calc(100% - var(--bkkr-spacer));
+
+    max-width: 100%;
+    min-height: 32px;
+
+    margin-bottom: 5px;
+
+    border: 0;
+
+    background-color: #f0f0f0;
+
+    vertical-align: baseline;
+    z-index: 10;
+}
+
+
+// Icons
+// --------------------------------------------------
+.choices-searchbar-icons {
+    display: flex;
+    position: absolute;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 32px;
+    min-height: 32px;
+
+    z-index: 15;
+}
+
+.search-icon {
+    @include mixins.position-set(30px, null, null, calc(var(--bkkr-spacer) / 2));
+    pointer-events: none;
+}
+
+.close-icon {
+    @include mixins.position-set(30px, calc(var(--bkkr-spacer) / 2), null, null);
+    cursor: pointer;
+}
+
+
+// Item
+// --------------------------------------------------
+
+.choices-item {
+    @include mixins.padding-set(10px);
+
+    position: relative;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.choices-item.is-highlighted {
+    background-color: #eee;
+}

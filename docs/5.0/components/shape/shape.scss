@@ -1,0 +1,83 @@
+@use "sass:map";
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Shape
+// --------------------------------------------------
+
+@use "shape.vars" as *;
+
+.shape {
+  display: inline-flex;
+
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.shape-square {
+  /**
+   * @prop --border-radius: Border radius of shape
+   */
+  --border-radius: #{$border-radius};
+
+  @include mixins.border-radius-set(var(--border-radius));
+}
+
+
+// Circle
+
+.shape-circle {
+  clip-path: circle(50% at 50% 50%);
+}
+
+
+// Triangle
+
+.shape-triangle {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+
+// Octagon
+
+.shape-octagon {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+
+// Rombus
+
+.shape-rombus {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+
+// Parallel
+
+.shape-parallel {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+
+
+// Sizes
+// --------------------------------------------------
+
+@each $breakpoint in map.keys(globals.$breakpoint-list) {
+  @include mixins.breakpoint-media-breakpoint-up($breakpoint) {
+    $infix: mixins.breakpoint-breakpoint-infix($breakpoint, globals.$breakpoint-list);
+
+    @each $size, $value in $sizes {
+      .shape#{$infix}-#{$size} {
+        width: $value;
+        height: $value;
+      }
+    }
+  }
+}

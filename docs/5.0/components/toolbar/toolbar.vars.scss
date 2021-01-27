@@ -1,0 +1,19 @@
+@use "../../scss/globals";
+
+// Toolbar
+// --------------------------------------------------
+
+/// @prop - Padding top
+$padding-top:               2px !default;
+
+/// @prop - Padding end
+$padding-end:               4px !default;
+
+/// @prop - Padding bottom
+$padding-bottom:            $padding-top !default;
+
+/// @prop - Padding start
+$padding-start:             $padding-end !default;
+
+/// @prop - Minimum height
+$min-height:                44px !default;

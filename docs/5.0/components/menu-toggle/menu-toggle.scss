@@ -1,0 +1,15 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Menu toggle
+// --------------------------------------------------
+
+.menu-toggle {
+  position: absolute;
+}
+
+.menu-toggle-hidden {
+  display: none;
+}

@@ -1,0 +1,25 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Flex row
+// --------------------------------------------------
+
+@use "row.vars" as *;
+
+.row {
+  /**
+   * @prop --gutter-x: Horizontal space between columns
+   * @prop --gutter-y: Vertical space between rows
+   */
+  --gutter-x: #{$gutter-x};
+  --gutter-y: #{$gutter-y};
+
+  @include mixins.margin-set($margin-top, $margin-end, $margin-bottom, $margin-start);
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+}

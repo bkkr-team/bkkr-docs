@@ -1,0 +1,17 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Menu for shadow DOM
+// --------------------------------------------------
+
+@use "menu-toggle" as *;
+
+:host {
+  @extend .menu-toggle;
+}
+
+:host(.menu-toggle-hidden) {
+  @extend .menu-toggle-hidden;
+}

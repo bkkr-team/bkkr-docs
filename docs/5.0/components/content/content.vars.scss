@@ -1,0 +1,19 @@
+@use "../../scss/globals";
+
+// Content
+// --------------------------------------------------
+
+/// @prop - Padding top
+$padding-top:               calc(#{globals.$spacer} + var(--offset-top)) !default;
+
+/// @prop - Padding end
+$padding-end:               0 !default;
+
+/// @prop - Padding bottom
+$padding-bottom:            calc(#{globals.$spacer} + var(--offset-bottom)) !default;
+
+/// @prop - Padding start
+$padding-start:             $padding-end !default;
+
+/// @prop - Top offset
+$offset-top:  0 !default;

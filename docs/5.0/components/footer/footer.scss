@@ -1,0 +1,47 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Footer
+// --------------------------------------------------
+
+@use "footer.vars" as *;
+
+.footer {
+  /**
+   * @prop --background: Background
+   * @prop --color: Text color
+   *
+   * @prop --padding-top: Top padding
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left
+   * @prop --padding-bottom: Bottom padding
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left
+   */
+  --background: var(--bkkr-background-color, #fff);
+  --color: var(--bkkr-text-color, #000);
+  --border-color: #eee;
+  --padding-top: #{$padding-top};
+  --padding-bottom: #{$padding-bottom};
+  --padding-start: #{$padding-start};
+  --padding-end: #{$padding-end};
+
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  @include mixins.position-set(null, null, 0, 0);
+
+  display: block;
+
+  position: relative;
+
+  order: 1;
+
+  width: 100%;
+
+  border-top: 1px solid var(--border-color);
+
+  background: functions.color-current(base, var(--background));
+
+  color: functions.color-current(contrast, var(--color));
+
+  z-index: 10;
+}

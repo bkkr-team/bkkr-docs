@@ -1,0 +1,52 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Paginator
+// --------------------------------------------------
+
+@use "paginator.vars" as *;
+
+:host {
+  display: none;
+
+  width: 100%;
+}
+
+.paginator-enabled {
+  display: block;
+}
+
+
+// Loading
+// --------------------------------------------------
+
+.paginator-loading-content {
+  @include mixins.margin-set($paginator-loading-margin-top, $paginator-loading-margin-end, $paginator-loading-margin-bottom, $paginator-loading-margin-start);
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: $paginator-content-min-height;
+
+  text-align: center;
+
+  user-select: none;
+
+}
+
+.paginator-loading-text {
+  @include mixins.margin-set($paginator-loading-text-margin-top, $paginator-loading-text-margin-end, $paginator-loading-text-margin-bottom, $paginator-loading-text-margin-start);
+}
+
+
+// Infinite Scroll Content States
+// --------------------------------------------------
+
+.paginator-loading > .paginator-loading-content {
+  display: flex;
+}

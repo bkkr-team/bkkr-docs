@@ -1,0 +1,149 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Loading
+// --------------------------------------------------
+
+@use "loading.vars" as *;
+
+:host {
+ /**
+   * @prop --background: Background of the loading
+   *
+   * @prop --border-color: Border color of the loading
+   * @prop --border-radius: Border radius of the loading
+   * @prop --border-width: Border width of the loading
+   * @prop --border-style: Border style of the loading
+   *
+   * @prop --white-space: White space of the loading message
+   *
+   * @prop --box-shadow: Box shadow of the loading
+   *
+   * @prop --min-width: Minimum width of the loading
+   * @prop --width: Width of the loading
+   * @prop --max-width: Maximum width of the loading
+   *
+   * @prop --min-height: Minimum height of the loading
+   * @prop --height: Height of the loading
+   * @prop --max-height: Maximum height of the loading
+   */
+   --border-width: 0;
+   --border-style: none;
+   --border-color: initial;
+   --box-shadow: 0 0 30px 10px rgba(0, 0, 0, .1);
+   --min-width: auto;
+   --width: auto;
+   --min-height: auto;
+   --height: auto;
+   --max-height: auto;
+   --white-space: pre-wrap;
+   --background: #{$loading-background-color};
+   --border-radius: #{$loading-border-radius};
+ 
+   @include mixins.position-set(0, null, null, 0);
+ 
+   display: block;
+ 
+   position: absolute;
+ 
+   width: 100%;
+   height: 100%;
+ 
+   outline: none;
+  
+   font-family: globals.$font-family-base;
+ 
+   contain: strict;
+   z-index: globals.$z-index-loading;
+   pointer-events: none;
+}
+
+// Label
+:host-context(bkkr-content) {
+  --safe-area-top: 0px;
+  --safe-area-bottom: 0px;
+}
+
+.loading.overlay-hidden {
+  display: none;
+}
+
+
+//
+
+.loading-wrapper {
+  @include mixins.border-radius-set(var(--border-radius));
+  @include mixins.position-set(null, null, null, 50%);
+  @include mixins.margin-set(auto);
+  display: block;
+
+  position: absolute;
+
+  width: var(--width);
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+
+  height: var(--height);
+  min-height: var(--min-height);
+  max-height: var(--max-height);
+
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+
+  background: var(--background);
+
+  box-shadow: var(--box-shadow);
+}
+
+.loading-container {
+  display: flex;
+
+  align-items: center;
+
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  pointer-events: auto;
+
+  contain: content;
+}
+
+.loading-content {
+  @include mixins.padding-set($loading-content-padding-top, $loading-content-padding-end, $loading-content-padding-bottom, $loading-content-padding-start);
+  display: flex;
+
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.loading-wrapper.loading-top {
+  top: 0;
+
+  transform: translate3d(-50%, -200%, 0);
+}
+
+.loading-wrapper.loading-middle {
+  opacity: .01;
+}
+
+.loading-wrapper.loading-bottom {
+  bottom: 0;
+
+  transform: translate3d(-50%, 200%, 0);
+}
+
+
+// Loading Button: Hover
+// --------------------------------------------------
+
+@media (any-hover: hover) {
+  .loading-button:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Textarea for shadow DOM
+// --------------------------------------------------
+
+@use "textarea" as *;
+
+:host {
+  @extend .textarea;
+}
+

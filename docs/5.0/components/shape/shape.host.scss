@@ -1,0 +1,60 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Shape for shadow DOM
+// --------------------------------------------------
+
+@use "shape" as *;
+
+:host {
+  @extend .shape;
+}
+
+
+// Shapes
+// --------------------------------------------------
+
+:host(.shape-square) {
+  @extend .shape-square;
+}
+
+:host(.shape-circle) {
+  @extend .shape-circle;
+}
+
+:host(.shape-triangle) {
+  @extend .shape-triangle;
+}
+
+:host(.shape-octagon) {
+  @extend .shape-octagon;
+}
+
+:host(.shape-rombus) {
+  @extend .shape-rombus;
+}
+
+:host(.shape-parallel) {
+  @extend .shape-parallel;
+}
+
+// Sizes
+// --------------------------------------------------
+
+:host(.shape-small) {
+  @extend .shape-small;
+}
+
+:host(.shape-avatar) {
+  @extend .shape-avatar;
+}
+
+:host(.shape-default) {
+  @extend .shape-default;
+}
+
+:host(.shape-large) {
+  @extend .shape-large;
+}

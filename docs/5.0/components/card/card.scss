@@ -1,0 +1,88 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+//
+// Cards
+// --------------------------------------------------
+
+@use "card.vars" as *;
+
+.card {
+  /**
+   * @prop --background: Background of the card
+   * @prop --color: Color of the card
+   * @prop --border-radius: Border radius
+   * @prop --box-shadow: Box shadow
+   */
+  --safe-area-left: 0;
+  --safe-area-right: 0;
+  --border-radius: #{$border-radius};
+  --box-shadow: #{$box-shadow};
+
+  @include mixins.text-font-smoothing();
+  display: block;
+
+  position: relative;
+
+  background: var(--background);
+  color: var(--color);
+
+  font-family: $font-family;
+
+  .card-header + .card-content {
+    --padding-top: 0;
+  }
+}
+
+
+// Disabled Card
+// --------------------------------------------------
+
+.card-disabled {
+  pointer-events: none;
+
+  cursor: default;
+  opacity: .3;
+}
+
+
+// Native
+// --------------------------------------------------
+
+.card-native {
+  @include mixins.text-inherit();
+  @include mixins.padding-set(0);
+  @include mixins.margin-set(0);
+  @include mixins.border-radius-set(var(--border-radius));
+  @include mixins.box-shadow-set(var(--box-shadow));
+  @include mixins.transition-set($transition);
+  display: block;
+
+  width: 100%;
+  min-height: var(--min-height);
+
+  transition: var(--transition);
+
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+
+  outline: none;
+
+  background: inherit;
+
+  overflow: hidden;
+}
+
+.card-native::-moz-focus-inner {
+  border: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+  user-select: none;
+
+  -webkit-user-drag: none;
+}

@@ -1,0 +1,272 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Fab
+// --------------------------------------------------
+
+@use "fab-button.vars" as *;
+
+:host {
+  /**
+   * @prop --background: Background of the button
+   * @prop --background-activated: Background of the button when pressed. Note: setting this will interfere with the Material Design ripple.
+   * @prop --background-activated-opacity: Opacity of the button background when pressed
+   * @prop --background-focused: Background of the button when focused with the tab key
+   * @prop --background-focused-opacity: Opacity of the button background when focused with the tab key
+   * @prop --background-hover: Background of the button on hover
+   * @prop --background-hover-opacity: Opacity of the button background on hover
+   *
+   * @prop --color: Text color of the button
+   * @prop --color-activated: Text color of the button when pressed
+   * @prop --color-focused: Text color of the button when focused with the tab key
+   * @prop --color-hover: Text color of the button on hover
+   *
+   * @prop --transition: Transition of the button
+   *
+   * @prop --border-radius: Border radius of the button
+   * @prop --border-width: Border width of the button
+   * @prop --border-style: Border style of the button
+   * @prop --border-color: Border color of the button
+   *
+   * @prop --box-shadow: Box shadow of the button
+   *
+   * @prop --padding-top: Top padding of the button
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button
+   * @prop --padding-bottom: Bottom padding of the button
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button
+   */
+  --color-activated: var(--color);
+  --color-focused: var(--color);
+  --color-hover: var(--color);
+  --background-hover: #{functions.color-get(globals.$theme-colors, primary, contrast)};
+  --background-hover-opacity: .08;
+  --transition: background-color, opacity 100ms linear;
+  --border-radius: #{$border-radius};
+  --border-width: 0;
+  --border-style: none;
+  --border-color: initial;
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --background: #{$background-color};
+  --background-activated: #{$background-color-activated};
+  --background-focused: #{functions.color-get(globals.$theme-colors, primary, shade)};
+  --background-hover: #{functions.color-get(globals.$theme-colors, primary, tint)};
+  --background-activated-opacity: 1;
+  --background-focused-opacity: 1;
+  --background-hover-opacity: 1;
+  --color: #{$text-color};
+  --box-shadow: #{$box-shadow};
+  --transition: #{$transition};
+
+  @include mixins.margin-set(0);
+  display: block;
+
+  width: #{$size};
+  height: #{$size};
+
+  font-size: 14px;
+
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: none;
+
+  white-space: nowrap;
+  font-kerning: none;
+}
+
+:host(.bkkr-activated) {
+  --box-shadow: #{$box-shadow-activated};
+  --transform: #{$transform};
+  --transition: #{$transition-activated};
+}
+
+.button-native {
+  @include mixins.border-radius-set(var(--border-radius));
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  @include mixins.text-inherit();
+
+  display: block;
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transform: var(--transform);
+
+  transition: var(--transition);
+
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+
+  outline: none;
+
+  background: var(--background);
+
+  background-clip: padding-box;
+  color: var(--color);
+
+  box-shadow: var(--box-shadow);
+  contain: strict;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  appearance: none;
+
+  box-sizing: border-box;
+}
+
+::slotted(bkkr-icon) {
+  font-size: $icon-font-size;
+
+  line-height: 1;
+}
+
+.button-native::after {
+  @include mixins.state-button();
+}
+
+.button-inner {
+  @include mixins.position-set(0, 0, null, 0);
+
+  display: flex;
+  position: absolute;
+
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  transition: all ease-in-out 300ms;
+  transition-property: transform, opacity;
+
+  z-index: 1;
+}
+
+
+// FAB Button: Disabled
+// --------------------------------------------------
+
+:host(.fab-button-disabled) {
+  cursor: default;
+  opacity: .5;
+  pointer-events: none;
+}
+
+
+// FAB Button: Hover
+// --------------------------------------------------
+
+@media (any-hover: hover) {
+  :host(:hover) .button-native {
+    color: var(--color-hover);
+
+    &::after {
+      background: var(--background-hover);
+
+      opacity: var(--background-hover-opacity);
+    }
+  }
+}
+
+
+// FAB Button: Focused
+// --------------------------------------------------
+
+:host(.bkkr-focused) .button-native {
+  color: var(--color-focused);
+
+  &::after {
+    background: var(--background-focused);
+
+    opacity: var(--background-focused-opacity);
+  }
+}
+
+
+// FAB Button: Activated
+// --------------------------------------------------
+
+:host(.bkkr-activated) .button-native {
+  color: var(--color-activated);
+
+  &::after {
+    background: var(--background-activated);
+
+    opacity: var(--background-activated-opacity);
+  }
+}
+
+
+// FAB Content
+// --------------------------------------------------
+
+::slotted(bkkr-icon) {
+  line-height: 1;
+}
+
+
+// FAB small (mini
+// --------------------------------------------------
+
+:host(.fab-button-small) {
+  @include mixins.margin-set(($size - $small-size) / 2);
+
+  width: #{$small-size};
+  height: #{$small-size};
+}
+
+
+// FAB Animation
+// --------------------------------------------------
+
+:host(.fab-button-close-active) .close-icon {
+  transform: scale(1) rotateZ(0deg);
+
+  opacity: 1;
+}
+
+:host(.fab-button-close-active) .button-inner {
+  transform: scale(.4) rotateZ(45deg);
+
+  opacity: 0;
+}
+
+
+// FAB Button: Color
+// --------------------------------------------------
+
+:host(.bkkr-color) .button-native {
+  background: #{functions.color-current(base)};
+  color: #{functions.color-current(contrast)};
+}
+
+:host(.bkkr-color.bkkr-focused) .button-native::after {
+  background: #{functions.color-current(shade)};
+}
+
+// Focused/Activated Button with Color
+:host(.bkkr-color.bkkr-focused) .button-native,
+:host(.bkkr-color.bkkr-activated) .button-native {
+  color: #{functions.color-current(contrast)};
+
+  &::after {
+    background: #{functions.color-current(shade)};
+  }
+}
+
+@media (any-hover: hover) {
+  :host(.bkkr-color:hover) .button-native {
+    color: #{functions.color-current(contrast)};
+
+    &::after {
+      background: #{functions.color-current(tint)};
+    }
+  }
+}

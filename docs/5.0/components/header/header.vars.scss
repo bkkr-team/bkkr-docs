@@ -1,0 +1,16 @@
+@use "../../scss/globals";
+
+// Header
+// --------------------------------------------------
+
+/// @prop - Padding top
+$padding-top:               0 !default;
+
+/// @prop - Padding end
+$padding-end:               0 !default;
+
+/// @prop - Padding bottom
+$padding-bottom:            $padding-top !default;
+
+/// @prop - Padding start
+$padding-start:             $padding-end !default;

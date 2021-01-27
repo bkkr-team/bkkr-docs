@@ -1,0 +1,53 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+// Icon
+// --------------------------------------------------
+
+@use "icon.vars" as *;
+
+.icon {
+  // stylelint-disable-next-line all
+  box-sizing: content-box !important;
+
+  display: inline-block;
+
+  width: 1em;
+  height: 1em;
+
+  color: var(--color);
+  fill: currentColor;
+
+  contain: strict;
+}
+
+.icon-inner,
+svg {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+/* Icon Sizes
+ * -----------------------------------------------------------
+ */
+
+.icon-small {
+  font-size: 18px;
+}
+
+.icon-large {
+  font-size: 32px;
+}
+
+
+/* Icon Colors
+ * -----------------------------------------------------------
+ */
+
+.icon-color {
+  --color: #{functions.color-get(globals.$theme-colors, primary, base)};
+}

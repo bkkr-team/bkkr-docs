@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Card-header for shadow DOM
+// --------------------------------------------------
+
+@use "card-header" as *;
+
+:host {
+  @extend .card-header;
+}
+

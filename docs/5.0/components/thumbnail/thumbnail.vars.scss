@@ -1,0 +1,37 @@
+@use "../../scss/globals";
+
+// Thumbnail
+// --------------------------------------------------
+
+/// @prop - Padding top
+$padding-top:               0 !default;
+
+/// @prop - Padding end
+$padding-end:               $padding-top !default;
+
+/// @prop - Padding bottom
+$padding-bottom:            $padding-top !default;
+
+/// @prop - Padding start
+$padding-start:             $padding-end !default;
+
+/// @prop - Border radius
+$border-radius:             globals.$border-radius-lg !default;
+
+/// @prop - Border width
+$border-width:             0 !default;
+
+/// @prop - Border Style
+$border-style:             solid !default;
+
+/// @prop - Border Color
+$border-color:             transparent !default;
+
+/// @prop - Background
+$background:             #fff !default;
+
+/// @prop - Box shadow color of the card
+$box-shadow-color:           rgba(0, 0, 0, .12) !default;
+
+/// @prop - Box shadow of the card
+$box-shadow:                 0 4px 16px $box-shadow-color !default;

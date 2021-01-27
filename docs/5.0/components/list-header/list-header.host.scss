@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// List header for shadow DOM
+// --------------------------------------------------
+
+@use "list-header" as *;
+
+:host {
+  @extend .list-header;
+}
+

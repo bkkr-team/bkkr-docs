@@ -1,0 +1,13 @@
+@use "../../scss/globals";
+
+// Segment
+// --------------------------------------------------
+
+/// @prop - Alpha of the segment for use in the backgrounds
+$segment-background-alpha:                  .065 !default;
+
+/// @prop - Background color of the segment
+$segment-background-color:                  rgba(globals.$theme-text-color-rgb, $segment-background-alpha) !default;
+
+/// @prop - Border radius of the segment
+$segment-border-radius:                     8px !default;

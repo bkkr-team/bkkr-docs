@@ -1,0 +1,13 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Breadcrumb for shadow DOM
+// --------------------------------------------------
+
+@use "breadcrumb" as *;
+
+:host {
+  @extend .breadcrumb;
+}

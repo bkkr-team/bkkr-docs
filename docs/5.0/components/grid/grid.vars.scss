@@ -1,0 +1,7 @@
+@use "../../scss/globals";
+
+// Grid
+// --------------------------------------------------
+
+/// @prop - Number of columns
+$columns:                       globals.$columns !default;

@@ -1,0 +1,20 @@
+@use "../../scss/globals";
+
+
+// Skeleton
+// --------------------------------------------------
+
+/// @prop - Background color alpha
+$background-alpha:            .065 !default;
+
+/// @prop - Background color
+$background:                  rgba(var(--background-rgb, globals.$theme-text-color-rgb), $background-alpha) !default;
+
+/// @prop - Background color alpha animation
+$background-animated-alpha:   .135 !default;
+
+/// @prop - Background color animation
+$background-animated:         rgba(var(--background-rgb, globals.$theme-text-color-rgb), $background-animated-alpha) !default;
+
+/// @prop - Border radius
+$border-radius:               .3em !default;

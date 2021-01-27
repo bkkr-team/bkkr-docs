@@ -1,0 +1,263 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Range
+// --------------------------------------------------
+
+@use "range.vars" as *;
+
+.range {
+  /**
+   * @prop --bar-background: Background of the range bar
+   * @prop --bar-background-active: Background of the active range bar
+   * @prop --bar-height: Height of the range bar
+   * @prop --bar-border-radius: Border radius of the range bar
+   * @prop --height: Height of the range
+   * @prop --knob-background: Background of the range knob
+   * @prop --knob-border-radius: Border radius of the range knob
+   * @prop --knob-box-shadow: Box shadow of the range knob
+   * @prop --knob-size: Size of the range knob
+   * @prop --pin-background: Background of the range pin
+   * @prop --pin-color: Color of the range pin
+   */
+  --knob-handle-size: calc(var(--knob-size) * 2);
+  --knob-border-radius: 50%;
+  --knob-background: #{$range-knob-background-color};
+  --knob-box-shadow: #{$range-knob-box-shadow};
+  --knob-size: #{$range-knob-width};
+  --bar-height: #{$range-bar-height};
+  --bar-background: #{$range-bar-background-color};
+  --bar-background-active: #{functions.color-get(globals.$theme-colors, primary, base)};
+  --bar-border-radius: 0;
+  --height: #{$range-slider-height};
+
+  @include mixins.padding-set($range-padding-vertical, $range-padding-horizontal);
+
+  display: flex;
+
+  position: relative;
+
+  flex: 3;
+  align-items: center;
+
+  font-family: globals.$font-family-base;
+
+  user-select: none;
+  z-index: globals.$z-index-item-input;
+}
+
+
+// Disabled
+
+:host(.range-disabled) {
+  pointer-events: none;
+
+  opacity: .5;
+}
+
+
+// Slots
+
+::slotted(bkkr-label) {
+  flex: initial;
+}
+
+// stylelint-disable selector-no-qualifying-type
+::slotted(bkkr-icon[slot]) {
+  font-size: 24px;
+}
+
+::slotted([slot="start"]) {
+  @include mixins.margin-set(0, globals.$spacer, 0, 0);
+}
+
+::slotted([slot="end"]) {
+  @include mixins.margin-set(0, 0, 0, globals.$spacer);
+}
+
+
+// Slider
+
+.range-slider {
+  position: relative;
+
+  flex: 1;
+
+  width: 100%;
+  height: var(--height);
+
+  contain: size layout style;
+
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+:host(.range-pressed) .range-slider {
+  cursor: grabbing;
+}
+
+
+// Pin
+
+.range-pin {
+  @include mixins.padding-set($range-pin-padding-top, $range-pin-padding-end, $range-pin-padding-bottom, $range-pin-padding-start);
+  display: inline-block;
+  position: relative;
+  top: -20px;
+
+  min-width: 28px;
+
+  transform: translate3d(0, 28px, 0) scale(.01);
+
+  transition: transform 120ms ease;
+
+  background: $range-pin-background-color;
+  color: $range-pin-color;
+
+  font-size: $range-pin-font-size;
+
+  text-align: center;
+  box-sizing: border-box;
+}
+
+:host(.range-has-pin) {
+  @include mixins.padding-set($range-padding-vertical + $range-pin-font-size, null, null, null);
+}
+
+
+// Bar
+
+.range-bar {
+  @include mixins.border-radius-set(var(--bar-border-radius));
+  @include mixins.position-set(calc((var(--height) - var(--bar-height)) / 2), null, null, 0);
+
+  @include mixins.direction-rtl() {
+    /* stylelint-disable-next-line property-disallowed-list */
+    left: unset;
+  }
+
+  position: absolute;
+
+  width: 100%;
+  height: var(--bar-height);
+
+  pointer-events: none;
+
+  background: var(--bar-background);
+}
+
+.range-bar-active {
+  bottom: 0;
+
+  width: auto;
+
+  background: var(--bar-background-active);
+}
+
+
+// Tick
+
+.range-tick {
+  @include mixins.margin-set-horizontal(-($range-tick-width / 2), null);
+  @include mixins.border-radius-set($range-tick-border-radius);
+
+  position: absolute;
+  top: ($range-hit-height / 2) - ($range-tick-height / 2) + ($range-bar-height / 2);
+
+  width: $range-tick-width;
+  height: $range-tick-height;
+  pointer-events: none;
+
+  background: $range-tick-background-color;
+}
+
+.range-tick-active {
+  background: var(--bar-background-active);
+}
+
+
+// Knob
+
+.range-knob {
+  @include mixins.border-radius-set(var(--knob-border-radius));
+  @include mixins.position-set(
+    calc(50% - var(--knob-size) / 2),
+    null, null,
+    calc(50% - var(--knob-size) / 2)
+  );
+
+  @include mixins.direction-rtl() {
+    // stylelint-disable-next-line property-disallowed-list
+    left: unset;
+  }
+
+  position: absolute;
+
+  width: var(--knob-size);
+  height: var(--knob-size);
+
+  background: var(--knob-background);
+
+  box-shadow: var(--knob-box-shadow);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.range-knob-handle {
+  @include mixins.position-set(
+    calc((var(--height) - var(--knob-handle-size)) / 2),
+    null, null, 0
+  );
+  @include mixins.margin-set-horizontal(
+    calc(#{0px} - var(--knob-handle-size) / 2),
+    null
+  );
+
+  @include mixins.direction-rtl() {
+    // stylelint-disable-next-line property-disallowed-list
+    left: unset;
+  }
+
+  position: absolute;
+
+  width: var(--knob-handle-size);
+  height: var(--knob-handle-size);
+
+  text-align: center;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.range-knob-pressed .range-pin {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+
+// Pressed
+
+:host(.range-pressed) .range-bar-active {
+  will-change: left, right;
+}
+
+
+// Colored
+:host(.range-color) .range-bar-active,
+:host(.range-color) .range-tick-active {
+  background: functions.color-current(base);
+}
+
+
+// In item
+:host(.in-item) {
+  width: 100%;
+}
+
+
+:host(.in-item) ::slotted(bkkr-label) {
+  align-self: center;
+}

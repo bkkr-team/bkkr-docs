@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Navs for shadow DOM
+// --------------------------------------------------
+
+@use "navs" as *;
+
+:host {
+  @extend .navs;
+}
+

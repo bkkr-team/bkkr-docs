@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Imre Bekker">
+<meta name="generator" content="Hugo 0.76.5">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<title>
+  
+    paginator · BKKR Framework
+  
+</title>
+
+
+
+<link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/docs/5.0/components/paginator/example/">
+    
+    
+    
+    
+        
+    
+
+    <link href="/docs/5.0/dist/css/bkkr.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <script type="module" src="/docs/5.0/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="/docs/5.0/dist/bkkr/bkkr.js"></script>
+
+    <style>
+      :root {
+        --safe-area-top: 20px;
+        --safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <bkkr-root>
+      
+<bkkr-page>
+    <bkkr-content>
+        <bkkr-container>
+            <bkkr-button onClick="togglePaginator()" expand="block">
+                Toggle Infinite Scroll
+            </bkkr-button>
+        </bkkr-container>
+
+        <bkkr-list>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+            <bkkr-item></bkkr-item>
+        </bkkr-list>
+
+        <bkkr-paginator threshold="100px" id="paginator" lenght="100" page-size="10" page-index="6
+        ">
+        </bkkr-paginator>
+    </bkkr-content>
+</bkkr-page>
+
+<script>
+    var paginator = document.getElementById('paginator');
+    var index = 1;
+
+    paginator.addEventListener('bkkrPaginator', function(event) {
+    console.log('Loading of page ' + event.target.pageIndex)
+
+    setTimeout(function() {
+        console.log('Done');
+        event.target.complete();
+
+        // App logic to determine if all data is loaded
+        // and disable the infinite scroll
+        // if (data.length == 1000) {
+        //    event.target.disabled = true;
+        // }
+    }, 500);
+    });
+
+    function togglePaginator() {
+        paginator.disabled = !paginator.disabled;
+    }
+</script>
+    </bkkr-root>
+
+    
+
+
+
+
+
+  </body>
+</html>

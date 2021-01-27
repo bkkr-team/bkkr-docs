@@ -1,0 +1,23 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// List
+// --------------------------------------------------
+
+@use "list.vars" as *;
+
+.list {
+  @include mixins.padding-set(null, null, null, 0); // reset padding because ul and ol
+
+
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 0;
+
+  contain: content;
+  list-style-type: none;
+}

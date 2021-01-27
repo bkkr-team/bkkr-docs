@@ -1,0 +1,31 @@
+@use "../../scss/globals";
+
+// Checkbox
+// --------------------------------------------------
+
+/// @prop - Opacity of the disabled checkbox
+$disabled-opacity:           .3 !default;
+
+/// @prop - Margin top of the left checkbox item
+$item-start-margin-top:      8px !default;
+
+/// @prop - Margin end of the left checkbox item
+$item-start-margin-end:      globals.$spacer !default;
+
+/// @prop - Margin bottom of the left checkbox item
+$item-start-margin-bottom:   $item-start-margin-top !default;
+
+/// @prop - Margin start of the left checkbox item
+$item-start-margin-start:    2px !default;
+
+/// @prop - Margin top of the right checkbox item
+$item-end-margin-top:        10px !default;
+
+/// @prop - Margin end of the right checkbox item
+$item-end-margin-end:        8px !default;
+
+/// @prop - Margin bottom of the right checkbox item
+$item-end-margin-bottom:     9px !default;
+
+/// @prop - Margin start of the right checkbox item
+$item-end-margin-start:      0 !default;

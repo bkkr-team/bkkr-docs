@@ -1,0 +1,60 @@
+@use "../../scss/globals";
+@use "../../scss/functions";
+@use "../item/item.vars" as item;
+
+// Radio
+// --------------------------------------------------
+
+/// @prop - Color of the checked radio
+$color:                         rgba(globals.$theme-text-color-rgb, .088) !default;
+
+/// @prop - Color of the checked radio
+$color-checked:                  functions.color-get(globals.$theme-colors, primary, base) !default;
+
+/// @prop - Background color of focus indicator for radio when focused
+$color-focused:                 functions.color-get(globals.$theme-colors, primary, tint) !default;
+
+/// @prop - Width of the radio icon
+$width:                         24px !default;
+
+/// @prop - Height of the radio icon
+$height:                        24px !default;
+
+/// @prop - Opacity of the disabled radio
+$disabled-opacity:              .3 !default;
+
+/// @prop - Transition duration of the toggle icon
+$transition-duration:           150ms !default;
+
+/// @prop - Transition of the toggle icon
+$transition:                    transform $transition-duration ease-in-out !default;
+
+/// @prop - Background color of the radio mark
+$mark-background-color:         globals.$theme-background-color !default;
+
+/// @prop - Box shadow of the radio mark
+$mark-box-shadow:               0 3px 12px rgba(#{globals.$theme-text-color-rgb}, .16), 0 3px 1px rgba(#{globals.$theme-text-color-rgb}, .1) !default;
+
+/// @prop - Margin top of the item-start in a radio
+$item-start-margin-top:         8px !default;
+
+/// @prop - Margin end of the item-start in a radio
+$item-start-margin-end:         21px !default;
+
+/// @prop - Margin bottom of the item-start in a radio
+$item-start-margin-bottom:      8px !default;
+
+/// @prop - Margin start of the item-start in a radio
+$item-start-margin-start:       3px !default;
+
+/// @prop - Margin top of the item-end in a radio
+$item-end-margin-top:           8px !default;
+
+/// @prop - Margin end of the item-end in a radio
+$item-end-margin-end:           11px !default;
+
+/// @prop - Margin bottom of the item-end in a radio
+$item-end-margin-bottom:        $item-end-margin-top !default;
+
+/// @prop - Margin start of the item-end in a radio
+$item-end-margin-start:         (item.$padding-start / 2) !default;

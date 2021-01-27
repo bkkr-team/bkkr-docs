@@ -1,0 +1,23 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+//
+// Page
+// --------------------------------------------------
+
+.bkkr-page {
+  @include mixins.position-set(0, 0, 0, 0);
+
+  display: flex;
+  position: absolute;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--bkkr-background-color);
+
+  contain: layout size style;
+  overflow: hidden;
+  z-index: 0;
+}

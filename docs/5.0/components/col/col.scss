@@ -1,0 +1,61 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Flex column
+// --------------------------------------------------
+
+@use "col.vars" as *;
+
+.col {
+  @include mixins.padding-set($padding-top, $padding-end, $padding-bottom, $padding-start);
+  @include mixins.margin-set($margin-top, $margin-end, $margin-bottom, $margin-start);
+  flex: var(--grow, 1) 0 var(--basis, 0%); // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+
+  width: var(--basis, auto);
+  min-width: 0; // Prevent `.col-auto`, `.col` (& responsive variants) from breaking out the grid
+  max-width: 100%;
+}
+
+
+// Variants
+
+@each $breakpoint in map-keys(globals.$breakpoint-list) {
+  $infix: mixins.breakpoint-breakpoint-infix($breakpoint, globals.$breakpoint-list);
+
+  @include mixins.breakpoint-media-breakpoint-up($breakpoint, globals.$breakpoint-list) {
+    @if $columns > 0 {
+
+      // Columns
+
+      @for $i from 1 through $columns {
+        .col#{$infix}-#{$i} {
+          --grow: 0;
+          --basis: #{percentage($i / $columns)};
+        }
+      }
+
+
+      // Offsets
+      //
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+
+      @for $i from 0 through ($columns - 1) {
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+          .offset#{$infix}-#{$i} {
+            --offset: if($num == 0, 0, percentage($num));
+            $num: $i / $columns;
+          }
+        }
+      }
+    }
+
+    // Auto columns
+
+    .col#{$infix}-auto {
+      --grow: 0;
+      --basis: auto;
+    }
+  }
+}

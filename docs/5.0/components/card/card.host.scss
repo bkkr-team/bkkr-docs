@@ -1,0 +1,21 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Card for shadow DOM
+// --------------------------------------------------
+
+@use "card" as *;
+
+:host {
+  @extend .card;
+}
+
+
+// Disabled Card
+// --------------------------------------------------
+
+:host(.button-disabled) {
+  @extend .button-disabled;
+}

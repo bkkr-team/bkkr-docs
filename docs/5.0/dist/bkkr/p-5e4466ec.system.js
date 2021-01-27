@@ -1,0 +1,1 @@
+System.register([],(function(i){"use strict";return{execute:function(){var t={xs:"(min-width: 0px)",sm:"(min-width: 576px)",md:"(min-width: 768px)",lg:"(min-width: 992px)",xl:"(min-width: 1200px)",xll:"(min-width: 1400px)"};var n=i("m",(function(i){if(i===undefined||i===""){return true}if(window.matchMedia){var n=t[i];return window.matchMedia(n).matches}return false}))}}}));

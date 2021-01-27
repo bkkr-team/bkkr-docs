@@ -1,0 +1,62 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Skeleton
+// --------------------------------------------------
+
+@use "skeleton.vars" as *;
+
+.skeleton {
+  /**
+   * @prop --background: Background
+   * @prop --border-radius: Text color
+   */
+  --background: #{$background};
+  --border-radius: #{$border-radius};
+
+  @include mixins.border-radius-set(var(--border-radius, inherit));
+
+  display: block;
+
+  width: 100%;
+  height: inherit;
+
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  background: var(--background);
+
+  font-size: inherit;
+
+  line-height: 1;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+// Animated skeleton
+
+.skeleton-animated {
+  position: relative;
+
+  background: linear-gradient(to right, $background 8%, $background-animated 18%, $background 33%);
+  background-size: 800px 104px;
+  animation-name: shimmer;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    @include mixins.background-position(-468px 0);
+  }
+
+  100% {
+    @include mixins.background-position(468px 0);
+  }
+}

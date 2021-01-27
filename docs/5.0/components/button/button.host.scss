@@ -1,0 +1,45 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Button for shadow DOM
+// --------------------------------------------------
+
+@use "button" as *;
+
+:host {
+  @extend .button;
+}
+
+
+// Button variations
+// --------------------------------------------------
+
+:host(.button-clear) {
+  @extend .button-clear;
+}
+
+:host(.button-outline) {
+  @extend .button-outline;
+}
+
+:host(.button-solid) {
+  @extend .button-solid;
+}
+
+:host(.button-block) {
+  @extend .button-block;
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+:host(.button-large) {
+  @extend .button-large;
+}
+
+:host(.button-small) {
+  @extend .button-small;
+}

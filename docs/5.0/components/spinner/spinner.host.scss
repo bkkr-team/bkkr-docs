@@ -1,0 +1,33 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Spinner for shadow DOM
+// --------------------------------------------------
+
+@use "spinner" as *;
+
+:host {
+  @extend .spinner;
+}
+
+:host(.spinner-crescent) {
+  @extend .spinner-crescent;
+}
+
+:host(.spinner-lines) {
+  @extend .spinner-lines;
+}
+
+:host(.spinner-dots) {
+  @extend .spinner-dots;
+}
+
+:host(.spinner-circular) {
+  @extend .spinner-circular;
+}
+
+:host(.spinner-circles) {
+  @extend .spinner-circles;
+}

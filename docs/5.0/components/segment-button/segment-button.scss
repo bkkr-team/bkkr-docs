@@ -1,0 +1,416 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Segment button
+// --------------------------------------------------
+
+@use "segment-button.vars" as *;
+
+:host {
+  /**
+   * @prop --background: Background of the segment button
+   * @prop --background-checked: Background of the checked segment button
+   *
+   * @prop --background-hover: Background of the segment button on hover
+   * @prop --background-focused: Background of the segment button when focused with the tab key
+   *
+   * @prop --background-hover-opacity: Opacity of the segment button background on hover
+   * @prop --background-focused-opacity: Opacity of the segment button background when focused with the tab key
+   *
+   * @prop --color: Color of the segment button
+   * @prop --color-checked: Color of the checked segment button
+   * @prop --color-hover: Color of the segment button on hover
+   * @prop --color-focused: Color of the segment button when focused with the tab key
+   *
+   * @prop --border-radius: Radius of the segment button border
+   * @prop --border-color: Color of the segment button border
+   * @prop --border-style: Style of the segment button border
+   * @prop --border-width: Width of the segment button border
+   *
+   * @prop --margin-top: Top margin of the segment button
+   * @prop --margin-end: Right margin if direction is left-to-right, and left margin if direction is right-to-left of the segment button
+   * @prop --margin-bottom: Bottom margin of the segment button
+   * @prop --margin-start: Left margin if direction is left-to-right, and right margin if direction is right-to-left of the segment button
+   *
+   * @prop --padding-top: Top padding of the segment button
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left of the segment button
+   * @prop --padding-bottom: Bottom padding of the segment button
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the segment button
+   *
+   * @prop --transition: Transition of the segment button
+   *
+   * @prop --indicator-height: Height of the indicator for the checked segment button
+   * @prop --indicator-box-shadow: Box shadow on the indicator for the checked segment button
+   * @prop --indicator-color: Color of the indicator for the checked segment button
+   * @prop --indicator-transition: Transition of the indicator for the checked segment button
+   * @prop --indicator-transform: Transform of the indicator for the checked segment button
+   */
+  --background: #{$segment-button-background};
+  --background-checked: #{$segment-button-background-checked};
+  --background-hover: #{$segment-button-background-hover};
+  --background-hover-opacity: 0;
+  --background-focused: none;
+  --background-focused-opacity: 0;
+  --border-radius: #{$segment-button-border-radius};
+  --border-width: #{$segment-button-border-width};
+  --border-color: #{$segment-button-border-color};
+  --border-style: solid;
+  --color: initial;
+  --color-hover: var(--color);
+  --color-checked: var(--color);
+  --color-disabled: var(--color);
+  --indicator-box-shadow: #{$segment-button-box-shadow-checked};
+  --indicator-color: #{$segment-button-indicator-color};
+  --indicator-height: 100%;
+  --indicator-transition: #{$segment-button-transition-animated};
+  --indicator-transform: none;
+  --transition: #{$segment-button-transition};
+  --padding-top: 0;
+  --padding-end: 13px;
+  --padding-bottom: 0;
+  --padding-start: 13px;
+
+  @include mixins.margin-set($segment-button-margin, null, $segment-button-margin, null);
+  @include mixins.border-radius-set(var(--border-radius));
+
+  display: flex;
+
+  position: relative;
+
+  flex: 1 1 auto;
+  flex-basis: 0;
+  flex-direction: row;
+
+  min-width: #{$segment-button-min-width};
+
+  height: auto;
+  min-height: #{$segment-button-min-height};
+
+  transform: translate3d(0, 0, 0);
+
+  background: var(--background);
+
+  color: var(--color);
+
+  font-size: #{$segment-button-font-size};
+  font-weight: 450;
+
+  line-height: #{$segment-button-line-height};
+
+  text-decoration: none;
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  font-kerning: none;
+}
+
+.button-native {
+  @include mixins.border-radius-set(0);
+  @include mixins.text-inherit();
+  @include mixins.margin-set(var(--margin-top), var(--margin-end), var(--margin-bottom), var(--margin-start));
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+
+  display: flex;
+  position: relative;
+
+  flex-direction: inherit;
+
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: inherit;
+  max-width: inherit;
+
+  height: auto;
+  min-height: inherit;
+  max-height: inherit;
+
+  transform: translate3d(0, 0, 0);
+
+  transition: var(--transition);
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  contain: content;
+
+  overflow: hidden;
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* .button-native::after {
+  @include button-state();
+} */
+
+.button-inner {
+  display: flex;
+  position: relative;
+
+  flex-flow: inherit;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+// Segment Button: Borders
+// --------------------------------------------------
+
+:host::before {
+  @include mixins.margin-set(5px, 0);
+
+  transition: 160ms opacity ease-in-out;
+
+  transition-delay: 100ms;
+
+  border-left: var(--border-width) var(--border-style) var(--border-color);
+
+  content: "";
+  opacity: 1;
+
+  will-change: opacity;
+}
+
+:host(:first-of-type)::before {
+  border-left-color: transparent;
+}
+
+
+// Segment Button: Checked
+// --------------------------------------------------
+
+:host(.segment-button-checked) {
+  background: var(--background-checked);
+  color: var(--color-checked);
+
+  z-index: -1;
+}
+
+// Segment Button: Checked Borders
+// --------------------------------------------------
+
+:host(.segment-button-checked)::before,
+:host(.segment-button-after-checked)::before {
+  opacity: 0;
+}
+
+
+// Segment Button: Disabled
+// --------------------------------------------------
+
+:host(.segment-button-disabled) {
+  pointer-events: none;
+
+  cursor: default;
+  opacity: $segment-button-opacity-disabled;
+}
+
+
+// Segment Button: Activated
+// --------------------------------------------------
+
+:host(.segment-button-activated) {
+  --indicator-transform: scale(.95);
+}
+
+
+// Segment Button: Focused
+// --------------------------------------------------
+
+:host(.bkkr-focused) .button-native {
+  color: var(--color-focused);
+
+  opacity: $segment-button-opacity-focused;
+
+  &::after {
+    background: var(--background-focused);
+
+    opacity: var(--background-focused-opacity);
+  }
+}
+
+
+// Segment Button: Hover
+// --------------------------------------------------
+
+@media (any-hover: hover) {
+  :host(:hover) .button-native {
+    color: var(--color-hover);
+
+    opacity: $segment-button-opacity-hover;
+
+    &::after {
+      background: var(--background-hover);
+
+      opacity: var(--background-hover-opacity);
+    }
+  }
+
+  :host(.segment-button-checked:hover) .button-native {
+    color: var(--color-checked);
+
+    opacity: 1;
+  }
+}
+
+
+// Segment Button Label
+// --------------------------------------------------
+
+::slotted(bkkr-label) {
+
+  box-sizing: border-box;
+
+  display: block;
+
+  align-self: center;
+
+  line-height: 22px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+// Segment Button: Indicator
+// --------------------------------------------------
+
+.segment-button-indicator {
+  @include mixins.padding-set(null, $segment-button-margin);
+  @include mixins.position-set(0, 0, 0, 0);
+  position: absolute;
+
+  transform-origin: left;
+
+  opacity: 0;
+
+  box-sizing: border-box;
+
+  pointer-events: none;
+
+  will-change: transform, opacity;
+}
+
+.segment-button-indicator-background {
+  @include mixins.border-radius-set(var(--border-radius));
+  width: 100%;
+  height: var(--indicator-height);
+
+  transform: var(--indicator-transform);
+
+  transition: var(--indicator-transition);
+
+  background: var(--indicator-color);
+
+  box-shadow: var(--indicator-box-shadow);
+
+  pointer-events: none;
+
+}
+
+.segment-button-indicator-animated {
+  transition: var(--indicator-transition);
+}
+
+:host(.segment-button-checked) .segment-button-indicator {
+  opacity: 1;
+}
+
+
+// Segment Button: Segment w/ Color
+// --------------------------------------------------
+
+// Default
+:host(.in-segment-color) {
+  background: none;
+  color: $segment-button-color;
+}
+
+// Indicator color on a Segment w/ color
+// should not change if the variable is set
+:host(.in-segment-color) .segment-button-indicator-background {
+  background: $segment-button-indicator-color;
+}
+
+@media (any-hover: hover) {
+  // Toolbar with Color, Default Segment, Hover
+  // Toolbar with Color, Default Segment, Checked, Hover
+  :host(.in-segment-color:hover) .button-native,
+  :host(.in-segment-color.segment-button-checked:hover) .button-native {
+    color: $segment-button-color;
+  }
+}
+
+
+// Segment: Reduced Motion
+// --------------------------------------------------
+
+@media (prefers-reduced-motion: reduce) {
+  .segment-button-indicator-background {
+    transform: none;
+  }
+
+  .segment-button-indicator-animated {
+    transition: none;
+  }
+}
+
+
+// Segment Button: Toolbar
+// --------------------------------------------------
+
+// Default Segment, In a Toolbar
+:host(.in-toolbar:not(.in-segment-color)) {
+  --background-checked: #{var(--toolbar-segment-background-checked, $segment-button-background-checked)};
+  --color: var(--toolbar-segment-color, var(--toolbar-color), initial);
+  --color-checked: var(--toolbar-segment-color-checked, var(--toolbar-color), initial);
+  --indicator-color: #{var(--toolbar-segment-indicator-color, $segment-button-indicator-color)};
+}
+
+
+// Segment Button: Toolbar w/ Color
+// --------------------------------------------------
+
+// Do not use the global or local CSS variable if the toolbar has a color
+:host(.in-toolbar-color) .segment-button-indicator-background {
+  background: #fff;
+}
+
+// Toolbar with Color, Default Segment
+:host(.in-toolbar-color:not(.in-segment-color)) .button-native {
+  color: #{functions.color-current(contrast)};
+}
+
+// Toolbar with Color, Default Segment, Checked
+:host(.in-toolbar-color.segment-button-checked:not(.in-segment-color)) .button-native {
+  color: #{functions.color-current(base)};
+}
+
+@media (any-hover: hover) {
+  // Toolbar with Color, Default Segment, Hover
+  :host(.in-toolbar-color:not(.in-segment-color):hover) .button-native {
+    color: #{functions.color-current(contrast)};
+  }
+
+  // Toolbar with Color, Default Segment, Checked / Hover
+  :host(.in-toolbar-color.segment-button-checked:not(.in-segment-color):hover) .button-native {
+    color: #{functions.color-current(base)};
+  }
+}

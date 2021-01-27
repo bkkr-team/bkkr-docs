@@ -1,0 +1,11 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Select option
+// --------------------------------------------------
+  
+:host {
+  display: none;
+}

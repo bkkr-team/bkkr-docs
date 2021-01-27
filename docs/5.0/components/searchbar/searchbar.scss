@@ -1,0 +1,308 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Searchbar
+// --------------------------------------------------
+
+@use "searchbar.vars" as *;
+
+:host {
+  /**
+   * @prop --background: Background of the searchbar input
+   * @prop --box-shadow: Box shadow of the searchbar input
+   * @prop --border-radius: Border radius of the searchbar input
+   * @prop --cancel-button-color: Color of the searchbar cancel button
+   * @prop --clear-button-color: Color of the searchbar clear button
+   * @prop --color: Color of the searchbar text
+   * @prop --icon-color: Color of the searchbar icon
+   * @prop --placeholder-color: Color of the searchbar placeholder
+   * @prop --placeholder-font-style: Font style of the searchbar placeholder
+   * @prop --placeholder-font-weight: Font weight of the searchbar placeholder
+   * @prop --placeholder-opacity: Opacity of the searchbar placeholder
+   */
+  --placeholder-color: initial;
+  --placeholder-font-style: initial;
+  --placeholder-font-weight: initial;
+  --placeholder-opacity: .5;
+  --background: #{$input-background-color};
+  --border-radius: #{$input-border-radius};
+  --box-shadow: none;
+  --cancel-button-color: #{$cancel-button-color};
+  --clear-button-color: #{$input-clear-icon-color};
+  --color: #{$input-text-color};
+  --icon-color: #{$input-search-icon-color};
+
+  @include mixins.text-font-smoothing();
+  @include mixins.padding-set($padding-top, $padding-end, $padding-bottom, $padding-start);
+
+  display: flex;
+  position: relative;
+
+  align-items: center;
+
+  width: 100%;
+  height: $input-height + $padding-top + $padding-bottom;
+
+  color: var(--color);
+
+  font-family: globals.$font-family-base;
+  box-sizing: border-box;
+
+  contain: strict;
+}
+
+:host(.bkkr-color) {
+  color: functions.color-current(contrast);
+}
+
+:host(.bkkr-color) .searchbar-input {
+  background: functions.color-current(base);
+}
+
+:host(.bkkr-color) .searchbar-clear-button,
+:host(.bkkr-color) .searchbar-cancel-button,
+:host(.bkkr-color) .searchbar-search-icon {
+  color: inherit;
+}
+
+.searchbar-search-icon {
+  @include mixins.margin-set-horizontal(calc(50% - 60px), null);
+  @include mixins.position-set(50%, null, null, 8px);
+
+  position: absolute;
+
+  width: $input-search-icon-size;
+  height: 50%;
+  
+  transform: translateY(-50%);
+
+  // Don't let them tap on the icon
+  color: var(--icon-color);
+
+  contain: strict;
+
+  pointer-events: none;
+}
+
+.searchbar-input-container {
+  display: block;
+  position: relative;
+  
+  flex-shrink: 1;
+
+  width: 100%;
+
+  height: $input-height;
+}
+
+.searchbar-input {
+  @include mixins.text-inherit();
+  @include mixins.border-radius-set(var(--border-radius));
+  @include mixins.padding-set(0, 28px);
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  outline: none;
+
+  background: var(--background);
+
+  font-family: inherit;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  box-shadow: var(--box-shadow);
+  contain: strict;
+
+  box-sizing: border-box;
+  appearance: none;
+
+  &::placeholder {
+    color: var(--placeholder-color);
+
+    font-family: inherit;
+    font-style: var(--placeholder-font-style);
+    font-weight: var(--placeholder-font-weight);
+
+    opacity: var(--placeholder-opacity);
+  }
+
+  &::-webkit-search-cancel-button,
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+.searchbar-cancel-button {
+  @include mixins.margin-set(0);
+  @include mixins.padding-set(0, 0, 0, 8px);
+
+  display: none;
+
+  flex-shrink: 0;
+
+  height: 100%;
+
+  border: 0;
+
+  outline: none;
+
+  background-color: $cancel-button-background-color;
+
+  color: var(--cancel-button-color);
+
+  font-size: $cancel-button-font-size;
+
+  cursor: pointer;
+  appearance: none;
+}
+
+.searchbar-cancel-button > div {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.searchbar-clear-button {
+  @include mixins.margin-set(0);
+  @include mixins.padding-set(0);
+  @include mixins.position-set(0, 0, null, null);
+  @include mixins.background-position(center);
+
+  display: none;
+  position: absolute;
+
+  width: 36px;
+  height: 100%;
+
+  min-height: 0;
+
+  border: 0;
+
+  outline: none;
+
+  background-color: transparent;
+
+  color: var(--clear-button-color);
+  appearance: none;
+}
+
+.searchbar-clear-icon {
+  width: $input-clear-icon-size;
+  height: 100%;
+}
+
+:host(.searchbar-has-value.searchbar-has-focus) .searchbar-clear-button {
+  display: block;
+}
+
+:host(.searchbar-disabled) {
+  cursor: default;
+  opacity: .4;
+  pointer-events: none;
+}
+
+:host(.searchbar-left-aligned) .searchbar-search-icon {
+  @include mixins.margin-set-horizontal(0, null);
+}
+
+:host(.searchbar-left-aligned) .searchbar-input {
+  @include mixins.padding-set-horizontal(40px, null);
+}
+
+// Searchbar Has Focus & Animated
+// -----------------------------------------
+
+:host(.searchbar-has-focus) .searchbar-cancel-button,
+:host(.searchbar-should-show-cancel) .searchbar-cancel-button,
+:host(.searchbar-animated) .searchbar-cancel-button {
+  display: block;
+}
+
+:host(.searchbar-animated) .searchbar-search-icon,
+:host(.searchbar-animated) .searchbar-input {
+  transition: $input-transition;
+}
+
+:host(.searchbar-animated.searchbar-has-focus) .searchbar-cancel-button,
+:host(.searchbar-animated.searchbar-should-show-cancel) .searchbar-cancel-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+:host(.searchbar-animated) .searchbar-cancel-button {
+  @include mixins.margin-set-horizontal(null, -100%);
+  @include mixins.transform-set(translate3d(0, 0, 0));
+
+  transition: $cancel-transition;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+:host(.searchbar-no-animate) .searchbar-search-icon,
+:host(.searchbar-no-animate) .searchbar-input,
+:host(.searchbar-no-animate) .searchbar-cancel-button {
+  transition-duration: 0ms;
+}
+
+// Searchbar Color
+// -----------------------------------------
+
+:host(.bkkr-color) .searchbar-cancel-button {
+  color: #{functions.color-current(base)};
+}
+
+@media (any-hover: hover) {
+  :host(.bkkr-color) .searchbar-cancel-button:hover {
+    color: #{functions.color-current(tint)};
+  }
+}
+
+// Searchbar in Toolbar
+// -----------------------------------------
+
+:host-context(bkkr-toolbar) {
+  @include mixins.padding-set(1px, null, 15px, null);
+
+  height: 52px;
+}
+
+// Searchbar in Toolbar Color
+// -----------------------------------------
+
+:host-context(bkkr-toolbar.bkkr-color):not(.bkkr-color) {
+  color: inherit;
+}
+
+:host-context(bkkr-toolbar.bkkr-color):not(.bkkr-color) .searchbar-cancel-button {
+  color: currentColor;
+}
+
+:host-context(bkkr-toolbar.bkkr-color) .searchbar-search-icon {
+  color: currentColor;
+
+  opacity: $input-icon-opacity;
+}
+
+:host-context(bkkr-toolbar.bkkr-color):not(.bkkr-color) .searchbar-input {
+  background: rgba(var(--bkkr-color-contrast-rgb), $input-background-color-alpha);
+  color: currentColor;
+}
+
+:host-context(bkkr-toolbar.bkkr-color):not(.bkkr-color) .searchbar-clear-button {
+  color: currentColor;
+
+  opacity: $input-icon-opacity;
+}

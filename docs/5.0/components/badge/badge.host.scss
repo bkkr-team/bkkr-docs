@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Badge for shadow DOM
+// --------------------------------------------------
+
+@use "badge" as *;
+
+:host {
+  @extend .badge;
+}
+

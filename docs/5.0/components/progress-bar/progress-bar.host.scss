@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Progress-bar for shadow DOM
+// --------------------------------------------------
+
+@use "progress-bar" as *;
+
+:host {
+  @extend .progress-bar;
+}
+

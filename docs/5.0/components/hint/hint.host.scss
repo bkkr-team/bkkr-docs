@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Hint for shadow DOM
+// --------------------------------------------------
+
+@use "hint" as *;
+
+:host {
+  @extend .hint;
+}
+

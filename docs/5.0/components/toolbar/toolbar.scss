@@ -1,0 +1,62 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Toolbar
+// --------------------------------------------------
+
+@use "toolbar.vars" as *;
+
+.toolbar {
+  /**
+   * @prop --background: Background of the badge
+   * @prop --color: Text color of the badge
+   *
+   * @prop --padding-top: Top padding of the badge
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left of the badge
+   * @prop --padding-bottom: Bottom padding of the badge
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the badge
+   *
+   * @prop --min-height: Minimum height
+   */
+  --background: var(--bkkr-toolbar-background, #fff);
+  --color: var(--bkkr-toolbar-color, var(--bkkr-text-color, #000));
+  --padding-top: #{$padding-top};
+  --padding-bottom: #{$padding-bottom};
+  --padding-start: #{$padding-start};
+  --padding-end: #{$padding-end};
+  --min-height: #{$min-height};
+
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  display: flex;
+
+  position: relative;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: var(--min-height);
+
+  margin-bottom: 0; // For <ul>
+
+  background: functions.color-current(base, var(--background));
+  color: functions.color-current(contrast, var(--color));
+
+  list-style: none; // For <ul>
+
+  contain: content;
+  overflow: hidden;
+  user-select: none;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.toolbar-content {
+  flex: 1 1 0%;
+
+  min-width: 0;
+}

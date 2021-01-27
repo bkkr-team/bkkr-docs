@@ -1,0 +1,86 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Segment
+// --------------------------------------------------
+
+@use "segment.vars" as *;
+
+:host {
+  /**
+   * @prop --background: Background of the segment button
+   */
+  --background: #{$segment-background-color};
+
+  @include mixins.border-radius-set($segment-border-radius);
+  @include mixins.text-font-smoothing();
+
+  display: flex;
+
+  position: relative;
+
+  align-items: stretch;
+  justify-content: center;
+
+  width: 100%;
+
+  background: var(--background);
+
+  text-align: center;
+
+  contain: paint;
+  overflow: hidden;
+
+  user-select: none;
+  z-index: 0;
+}
+
+
+// Segment: Scrollable
+// --------------------------------------------------
+
+:host(.segment-scrollable) {
+  justify-content: start;
+
+  width: auto;
+
+  overflow-x: auto;
+}
+
+:host(.segment-scrollable::-webkit-scrollbar) {
+  display: none;
+}
+
+
+// Segment: Color
+// --------------------------------------------------
+
+:host(.segment-color) {
+  background: #{functions.color-current(base, .065)};
+}
+
+
+// Segment: Default Toolbar
+// --------------------------------------------------
+
+:host(.in-toolbar) {
+  @include mixins.margin-set(0, auto);
+
+  width: auto;
+}
+
+// Default Segment, In a Toolbar
+:host(.in-toolbar:not(.segment-color)) {
+  background: var(--toolbar-segment-background, var(--background));
+}
+
+
+// Segment: Color Toolbar
+// --------------------------------------------------
+
+// Toolbar with Color, Default Segment
+:host(.in-toolbar-color:not(.segment-color)) {
+  background: #{functions.color-current(contrast, .11)};
+}

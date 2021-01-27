@@ -1,0 +1,27 @@
+@use "../../scss/globals";
+@use "../../scss/functions";
+@use "../item/item.vars" as item;
+
+// Select
+// --------------------------------------------------
+
+/// @prop - Padding top of the select
+$padding-top:            item.$padding-top !default;
+
+/// @prop - Padding end of the select
+$padding-end:            (item.$padding-end / 2) !default;
+
+/// @prop - Padding bottom of the select
+$padding-bottom:         item.$padding-bottom !default;
+
+/// @prop - Padding start of the select
+$padding-start:          item.$padding-start !default;
+
+/// @prop - Color of the select icon
+$icon-color:             globals.$theme-text-color-step-650 !default;
+
+/// @prop - Color of the select placeholder
+$placeholder-color:      $icon-color !default;
+
+/// @prop - Text Color of the selected item
+$text-color:             globals.$theme-text-color !default;

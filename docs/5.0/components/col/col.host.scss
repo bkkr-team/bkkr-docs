@@ -1,0 +1,16 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Col for shadow DOM
+// --------------------------------------------------
+
+@use "col" as *;
+
+:host {
+  // Needed to extend only .col class,
+  // because size is calculated inside component.
+  @extend .col;
+}
+

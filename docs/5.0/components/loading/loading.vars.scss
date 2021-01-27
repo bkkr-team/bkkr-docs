@@ -1,0 +1,25 @@
+@use "../../scss/globals";
+
+// Loading
+// --------------------------------------------------
+
+// Loading
+// --------------------------------------------------
+
+/// @prop - Background Color of the loading wrapper
+$loading-background-color:                      globals.$theme-background-color !default;
+
+/// @prop - Border radius of the loading wrapper
+$loading-border-radius:                         globals.$border-radius-lg !default;
+
+/// @prop - Padding top of the loading content
+$loading-content-padding-top:                   15px !default;
+
+/// @prop - Padding end of the loading content
+$loading-content-padding-end:                   $loading-content-padding-top !default;
+
+/// @prop - Padding bottom of the loading content
+$loading-content-padding-bottom:                $loading-content-padding-top !default;
+
+/// @prop - Padding start of the loading content
+$loading-content-padding-start:                 $loading-content-padding-end !default;

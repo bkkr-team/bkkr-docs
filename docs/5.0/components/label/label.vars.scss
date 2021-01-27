@@ -1,0 +1,32 @@
+@use "../../scss/globals";
+@use "../../scss/functions";
+
+// Label
+// --------------------------------------------------
+
+/// @prop - Text color of the label by an input, select, or datetime
+$label-text-color:                 null !default;
+
+/// @prop - Text color of the stacked/floating label when it is focused
+$label-text-color-focused:         functions.color-get(globals.$theme-colors, primary, base) !default;
+
+/// @prop - Margin top of the label
+$label-margin-top:                 0 !default;
+
+/// @prop - Margin end of the label
+$label-margin-end:                 (1 / 2) !default;
+
+/// @prop - Margin bottom of the label
+$label-margin-bottom:              0 !default;
+
+/// @prop - Margin start of the label
+$label-margin-start:               0 !default;
+
+/// @prop - Font size of the label when the text wraps
+$label-text-wrap-font-size:        14px !default;
+
+/// @prop - Line height of the label when the text wraps
+$label-text-wrap-line-height:      1.5 !default;
+
+/// @prop - Color of the item paragraph
+$item-paragraph-text-color:        globals.$theme-text-color-step-600 !default;

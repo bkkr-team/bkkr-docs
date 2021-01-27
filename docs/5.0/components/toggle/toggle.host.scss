@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Toggle for shadow DOM
+// --------------------------------------------------
+
+@use "toggle" as *;
+
+:host {
+  @extend .toggle;
+}
+

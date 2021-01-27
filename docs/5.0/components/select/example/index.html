@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Imre Bekker">
+<meta name="generator" content="Hugo 0.76.5">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<title>
+  
+    select · BKKR Framework
+  
+</title>
+
+
+
+<link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/docs/5.0/components/select/example/">
+    
+    
+    
+    
+        
+    
+
+    <link href="/docs/5.0/dist/css/bkkr.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <script type="module" src="/docs/5.0/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="/docs/5.0/dist/bkkr/bkkr.js"></script>
+
+    <style>
+      :root {
+        --safe-area-top: 20px;
+        --safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <bkkr-root>
+      
+<bkkr-page>
+    <bkkr-content>
+      <bkkr-item>
+        <bkkr-label position="floating">Alert interface</bkkr-label>
+        <bkkr-select id="alert" value="brown" ok-text="Okay" cancel-text="Dismiss" interface="alert">
+          <bkkr-select-option value="brown">Brown</bkkr-select-option>
+          <bkkr-select-option value="blonde">Blonde</bkkr-select-option>
+          <bkkr-select-option value="black">Black</bkkr-select-option>
+          <bkkr-select-option value="red">Red</bkkr-select-option>
+        </bkkr-select>
+      </bkkr-item>
+      <bkkr-item>
+        <bkkr-label position="floating">Drawer interface</bkkr-label>
+        <bkkr-select value="brown" ok-text="Okay" cancel-text="Dismiss" interface="drawer">
+          <bkkr-select-option value="brown">Brown</bkkr-select-option>
+          <bkkr-select-option value="blonde">Blonde</bkkr-select-option>
+          <bkkr-select-option value="black">Black</bkkr-select-option>
+          <bkkr-select-option value="red">Red</bkkr-select-option>
+          <bkkr-select-option value="yellow">Yellow</bkkr-select-option>
+          <bkkr-select-option value="green">Green</bkkr-select-option>
+          <bkkr-select-option value="bird">Bird</bkkr-select-option>
+          <bkkr-select-option value="cat">Cat</bkkr-select-option>
+          <bkkr-select-option value="dog">Dog</bkkr-select-option>
+          <bkkr-select-option value="honeybadger">Honey Badger</bkkr-select-option>
+        </bkkr-select>
+      </bkkr-item>
+      <bkkr-item>
+        <bkkr-label position="floating">Popover interface</bkkr-label>
+        <bkkr-select placeholder="No items have been selected" ok-text="Okay" cancel-text="Dismiss" interface="popover" search="false">
+          <bkkr-select-option value="brown">Brown</bkkr-select-option>
+          <bkkr-select-option value="blonde">Blonde</bkkr-select-option>
+          <bkkr-select-option value="black">Black</bkkr-select-option>
+          <bkkr-select-option value="red">Red</bkkr-select-option>
+        </bkkr-select>
+      </bkkr-item>
+      <bkkr-item>
+        <bkkr-label position="floating">Multiple</bkkr-label>
+        <bkkr-select id="multi" id="multiple" multiple="true">
+          <bkkr-select-option value="bird">Bird</bkkr-select-option>
+          <bkkr-select-option value="cat">Cat</bkkr-select-option>
+          <bkkr-select-option value="dog">Dog</bkkr-select-option>
+          <bkkr-select-option value="honeybadger">Honey Badger</bkkr-select-option>
+        </bkkr-select>
+      </bkkr-item>
+    </bkkr-content>
+</bkkr-page>
+
+<script>
+const alert = document.getElementById('alert');
+alert.interfaceOptions = {
+  cssClass: 'my-custom-class',
+  header: 'Alert',
+  subHeader: 'Subtitle'
+}
+
+const multi = document.getElementById('multi');
+multi.interfaceOptions = {
+  cssClass: 'my-custom-class',
+  header: 'Multiple',
+  subHeader: 'Subtitle'
+}
+multi.value = ['bird', 'dog'];
+</script>
+    </bkkr-root>
+
+    
+
+
+
+
+
+  </body>
+</html>

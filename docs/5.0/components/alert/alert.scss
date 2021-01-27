@@ -1,0 +1,414 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Alert
+// --------------------------------------------------
+
+@use "alert.vars" as *;
+
+:host {
+  /**
+   * @prop --background: Background of the alert
+   *
+   * @prop --min-width: Minimum width of the alert
+   * @prop --width: Width of the alert
+   * @prop --max-width: Maximum width of the alert
+   *
+   * @prop --min-height: Minimum height of the alert
+   * @prop --height: Height of the alert
+   * @prop --max-height: Maximum height of the alert
+   *
+   * @prop --backdrop-opacity: Opacity of the backdrop
+   */
+  --min-width: #{$min-width};
+  --width: calc(100% - #{globals.$spacer});
+  --min-height: auto;
+  --height: auto;
+  --max-height: #{$max-height};
+  --background: #{$background-color};
+  --max-width: #{$max-width};
+  --backdrop-opacity: var(--bkkr-backdrop-opacity, .3);
+  --margin-bottom: calc(#{globals.$spacer} / 2);
+
+  @include mixins.text-font-smoothing();
+  @include mixins.position-set(0, 0, 0, 0);
+
+  display: flex;
+
+  position: absolute;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  outline: none;
+
+  font-family: globals.$font-family-base;
+
+  font-size: $font-size;
+
+  contain: strict;
+  touch-action: none;
+  user-select: none;
+  z-index: globals.$z-index-overlay;
+}
+
+:host(.overlay-hidden) {
+  display: none;
+}
+
+:host(.alert-top) {
+  @include mixins.padding-set(50px, null, null, null);
+
+  align-items: flex-start;
+}
+
+.alert-wrapper {
+  @include mixins.border-radius-set($border-radius);
+  display: flex;
+
+  flex-direction: column;
+
+  width: var(--width);
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+
+  height: var(--height);
+  min-height: var(--min-height);
+  max-height: var(--max-height);
+
+  margin-bottom: var(--margin-bottom);
+
+  background: var(--background);
+
+  box-shadow: $box-shadow;
+
+  contain: content;
+  opacity: 0;
+  overflow: hidden;
+  z-index: globals.$z-index-overlay-wrapper;
+}
+
+.alert-checkbox-group::-webkit-scrollbar,
+.alert-radio-group::-webkit-scrollbar,
+.alert-message::-webkit-scrollbar {
+  display: none;
+}
+
+// Alert Header
+// --------------------------------------------------
+
+.alert-head {
+  @include mixins.padding-set($head-padding-top, $head-padding-end, $head-padding-bottom, $head-padding-start);
+  text-align: $head-text-align;
+}
+
+.alert-title {
+  @include mixins.margin-set($title-margin-top, null, null, null);
+  @include mixins.padding-set(0);
+  color: $title-color;
+
+  font-size: $title-font-size;
+  font-weight: $title-font-weight;
+}
+
+.alert-sub-title {
+  @include mixins.margin-set(5px, 0, 0);
+  @include mixins.padding-set(0);
+  color: $sub-title-text-color;
+
+  font-size: $sub-title-font-size;
+  font-weight: 400;
+
+}
+
+// Alert Message
+// --------------------------------------------------
+
+.alert-message {
+  @include mixins.padding-set($message-padding-top, $message-padding-end, $message-padding-bottom, $message-padding-start);
+  color: $message-text-color;
+
+  font-size: $message-font-size;
+
+  text-align: $message-text-align;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+.alert-message {
+  max-height: $content-max-height;
+}
+
+.alert-message:empty {
+  @include mixins.padding-set($message-empty-padding-top, $message-empty-padding-end, $message-empty-padding-bottom, $message-empty-padding-start);
+}
+
+// Alert Input
+// --------------------------------------------------
+
+.alert-input {
+  @include mixins.border-radius-set($input-border-radius);
+  @include mixins.margin-set($input-margin-top, null, null, null);
+  @include mixins.padding-set($input-padding-top, $input-padding-end, $input-padding-bottom, $input-padding-start);
+
+  width: 100%;
+
+  border: $input-border;
+
+  background-color: $input-background-color;
+  appearance: none;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+
+    font-family: inherit;
+    font-weight: inherit;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+
+// Alert Radio/Checkbox Group
+// --------------------------------------------------
+
+.alert-radio-group,
+.alert-checkbox-group {
+  overscroll-behavior: contain;
+
+  max-height: $content-max-height;
+
+  border-top: $list-border-top;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.alert-tappable {
+  height: $tappable-height;
+}
+
+.alert-checkbox,
+.alert-radio {
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #eee;
+    }
+  }
+  cursor: pointer;
+}
+
+
+// Alert Radio/Checkbox Label
+// --------------------------------------------------
+
+.alert-radio-label,
+.alert-checkbox-label {
+  @include mixins.padding-set($radio-label-padding-top, $radio-label-padding-end, $radio-label-padding-bottom, $radio-label-padding-start);
+
+  flex: 1;
+  order: 0;
+
+  color: $radio-label-text-color;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+}
+
+
+// Alert Radio/Checkbox Label: Checked
+// --------------------------------------------------
+
+[aria-checked=true] .alert-radio-label,
+[aria-checked=true] .alert-checkbox-label {
+  color: $radio-label-text-color-checked;
+}
+
+
+// Alert Radio/Checkbox Checkmark: Unchecked
+// -----------------------------------------
+
+.alert-radio-icon,
+.alert-checkbox-icon {
+  position: relative;
+
+  order: 1;
+
+  min-width: $radio-min-width;
+}
+
+
+// Alert Radio/Checkbox Checked
+// -----------------------------------------
+
+[aria-checked=true] .alert-radio-inner,
+[aria-checked=true] .alert-checkbox-inner {
+  @include mixins.position-set($radio-icon-top, null, null, $radio-icon-start);
+
+  position: absolute;
+
+  width: $radio-icon-width;
+  height: $radio-icon-height;
+
+  transform: $radio-icon-transform;
+
+  border-width: $radio-icon-border-width;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-style: $radio-icon-border-style;
+  border-color: $radio-icon-border-color;
+}
+
+
+// Alert Button
+// --------------------------------------------------
+
+.alert-button-group {
+  @include mixins.margin-set-horizontal(null, -$button-border-width);
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: $button-group-flex-wrap;
+
+  width: 100%;
+
+}
+
+.alert-button-group-vertical {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.alert-button {
+  @include mixins.margin-set($button-margin);
+  @include mixins.border-radius-set($button-border-radius);
+
+  display: block;
+
+  flex: $button-flex;
+
+  min-width: $button-min-width;
+  height: $button-min-height;
+
+  border: 0;
+
+  border-top: $button-border-width $button-border-style $button-border-color;
+  border-right: $button-border-width $button-border-style $button-border-color;
+
+  background-color: $button-background-color;
+  color: $button-text-color;
+
+  font-size: $button-font-size;
+
+  line-height: $button-line-height;
+
+  cursor: pointer;
+
+  overflow: hidden;
+  z-index: 0;
+}
+
+.alert-button:first-child {
+  border-right: 0;
+}
+
+.alert-button:last-child {
+  border-right: $button-border-width $button-border-style $button-border-color;
+
+  font-weight: $button-main-font-weight;
+}
+
+.alert-button.bkkr-activated {
+  background-color: $button-background-color-activated;
+}
+
+.alert-button.bkkr-focused,
+.alert-tappable.bkkr-focused {
+  background: globals.$theme-background-color-step-100;
+}
+
+.alert-button-inner {
+  display: flex;
+
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.alert-button .alert-button-inner {
+  pointer-events: none;
+}
+
+
+// Alert Button: Disabled
+// --------------------------------------------------
+.alert-input-disabled,
+.alert-checkbox-button-disabled .alert-button-inner,
+.alert-radio-button-disabled .alert-button-inner {
+  pointer-events: none;
+
+  cursor: default;
+  opacity: .5;
+}
+
+.alert-tappable {
+  @include mixins.margin-set(0);
+  @include mixins.padding-set(0);
+  display: flex;
+
+  width: 100%;
+
+  border: 0;
+
+  background: transparent;
+
+  font-size: inherit;
+
+  line-height: initial;
+
+  text-align: start;
+
+  contain: strict;
+  appearance: none;
+}
+
+.alert-button,
+.alert-checkbox,
+.alert-input,
+.alert-radio {
+  outline: none;
+}
+
+.alert-radio-icon,
+.alert-checkbox-icon,
+.alert-checkbox-inner {
+  box-sizing: border-box;
+}
+
+// stylelint-disable-next-line selector-no-qualifying-type
+textarea.alert-input {
+  min-height: $input-min-height;
+  resize: none;
+}
+
+
+// Button: Destructive
+// ---------------------------------------------------
+
+.alert-button-role-destructive,
+.alert-button-role-destructive.bkkr-activated,
+.alert-button-role-destructive.bkkr-focused {
+  color: $button-destructive-text-color;
+}

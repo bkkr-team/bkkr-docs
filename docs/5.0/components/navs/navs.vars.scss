@@ -1,0 +1,12 @@
+
+@use "../../scss/globals";
+@use "../../scss/functions";
+
+// Navs
+// --------------------------------------------------
+
+/// @prop - Text color of the inactive nav button
+$text-color:           globals.$theme-text-color-step-400 !default;
+
+/// @prop - Text color of the active nav button
+$text-color-selected:    functions.color-get(globals.$theme-colors, primary, base) !default;

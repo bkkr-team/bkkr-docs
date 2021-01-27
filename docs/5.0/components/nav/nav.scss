@@ -1,0 +1,320 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Nav
+// --------------------------------------------------
+
+@use "nav.vars" as *;
+
+.nav {
+  /**
+   * @prop --background: Background of the tab button
+   * @prop --background-focused: Background of the tab button when focused with the tab key
+   * @prop --background-focused-opacity: Opacity of the tab button background when focused with the tab key
+   *
+   * @prop --color: Color of the tab button
+   * @prop --color-focused: Color of the tab button when focused with the tab key
+   * @prop --color-selected: Color of the selected tab button
+   *
+   * @prop --padding-top: Top padding of the tab button
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left of the tab button
+   * @prop --padding-bottom: Bottom padding of the tab button
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the tab button
+   */
+  --background-hover: #{$background-color-hover};
+  --background-focused-opacity: 1;
+  --padding-top: #{$padding-top};
+  --padding-end: #{$padding-end};
+  --padding-bottom: #{$padding-bottom};
+  --padding-start: #{$padding-start};
+
+  flex: 1;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: $max-width;
+
+  height: 100%;
+
+  outline: none;
+
+  background: var(--background);
+  color: var(--color);
+
+  font-size: $font-size;
+}
+
+// Tab Button: Native
+// --------------------------------------------------
+
+.button-native {
+  @include mixins.border-radius-set(inherit);
+  @include mixins.margin-set(0);
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  @include mixins.text-inherit();
+
+  display: flex;
+  position: relative;
+
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+}
+
+.button-native::after {
+  @include mixins.state-button();
+}
+
+.button-inner {
+  display: flex;
+  position: relative;
+
+  flex-flow: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+// Tab Button: States
+// --------------------------------------------------
+
+:host(.bkkr-focused) .button-native {
+  color: var(--color-focused);
+
+  &::after {
+    background: var(--background-focused);
+
+    opacity: var(--background-focused-opacity);
+  }
+}
+
+@media (any-hover: hover) {
+  a:hover {
+    background: var(--background-hover);
+  }
+}
+
+:host(.nav-selected) {
+  color: var(--color-selected);
+
+  ::slotted(bkkr-icon) {
+    color: var(--color-selected);
+  }
+}
+
+:host(.nav-hidden) {
+  /* stylelint-disable-next-line declaration-no-important */
+  display: none !important;
+}
+
+:host(.nav-disabled) {
+  pointer-events: none;
+
+  opacity: .4;
+}
+
+
+// Tab Button: Label / Icon
+// --------------------------------------------------
+
+::slotted(bkkr-label),
+::slotted(bkkr-icon) {
+  display: block;
+
+  align-self: center;
+
+  max-width: 100%;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+::slotted(bkkr-label) {
+  @include mixins.margin-set(0, null, 1px, null);
+  order: 0;
+
+  min-height: $font-size + 1;
+
+  font-weight: 500;
+}
+
+::slotted(bkkr-icon) {
+  @include mixins.margin-set(2px, null, 2px, null);
+  order: -1;
+
+  height: 1em;
+
+  font-size: $icon-size;
+}
+
+::slotted(bkkr-icon::before) {
+  vertical-align: top;
+}
+
+
+:host(.nav-has-label-only) ::slotted(bkkr-label) {
+  white-space: normal;
+}
+
+
+// Tab Button: Badge
+// --------------------------------------------------
+
+::slotted(bkkr-badge) {
+  @include mixins.padding-set(1px, 6px);
+  @include mixins.position-set(0, null, null, calc(50% + 6px));
+
+  position: absolute;
+
+  height: auto;
+
+  font-size: 12px;
+
+  line-height: 16px;
+
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+
+// Tab Button: Layout
+// --------------------------------------------------
+
+:host(.nav-layout-icon-start) {
+  flex-direction: row;
+}
+
+:host(.nav-layout-icon-end) {
+  flex-direction: row-reverse;
+}
+
+:host(.nav-layout-icon-bottom) {
+  flex-direction: column-reverse;
+}
+
+:host(.nav-layout-icon-hide) ::slotted(bkkr-icon) {
+  display: none;
+}
+
+:host(.nav-layout-label-hide) ::slotted(bkkr-label) {
+  display: none;
+}
+
+
+// Tab Button Label Only
+// --------------------------------------------------
+
+:host(.nav-has-label-only) ::slotted(bkkr-label) {
+  @include mixins.margin-set(2px, 0);
+
+  font-size: $font-size + 2;
+  font-size: 14px;
+
+  line-height: 1.1;
+}
+
+
+// Tab Button Layout
+// --------------------------------------------------
+
+:host(.nav-layout-icon-end) ::slotted(bkkr-label),
+:host(.nav-layout-icon-start) ::slotted(bkkr-label),
+:host(.nav-layout-icon-hide) ::slotted(bkkr-label) {
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  font-size: 14px;
+
+  line-height: 1.1;
+}
+
+:host(.nav-layout-icon-end) ::slotted(bkkr-icon),
+:host(.nav-layout-icon-start) ::slotted(bkkr-icon) {
+  min-width: 24px;
+  height: 26px;
+
+  margin-top: 2px;
+  margin-bottom: 1px;
+
+  font-size: 24px;
+}
+
+
+// Tab Button: Icon Bottom Layout
+// --------------------------------------------------
+
+// Badge
+:host(.nav-layout-icon-bottom) ::slotted(bkkr-badge) {
+  @include mixins.position-set(null, null, null, calc(50% + 12px));
+}
+
+// Icon
+:host(.nav-layout-icon-bottom) ::slotted(bkkr-icon) {
+  @include mixins.margin-set(0, null, 1px, null);
+}
+
+// Label
+:host(.nav-layout-icon-bottom) ::slotted(bkkr-label) {
+  @include mixins.margin-set(4px, null, null, null);
+}
+
+
+// Tab Button: Icon Start / End Layout
+// --------------------------------------------------
+
+:host(.nav-layout-icon-start) ::slotted(bkkr-badge),
+:host(.nav-layout-icon-end) ::slotted(bkkr-badge) {
+  @include mixins.position-set(10px, null, null, calc(50% + 35px));
+}
+
+
+// Tab Button: Icon Hide / Label Only Layout
+// --------------------------------------------------------------
+
+// Badge
+:host(.nav-layout-icon-hide) ::slotted(bkkr-badge),
+:host(.nav-has-label-only) ::slotted(bkkr-badge) {
+  @include mixins.position-set(10px, null, null, calc(50% + 30px));
+}
+
+
+// Tab Button: Icon Only / Label Hide Layout
+// --------------------------------------------------------------
+
+// Badge
+:host(.nav-layout-label-hide) ::slotted(bkkr-badge),
+:host(.nav-has-icon-only) ::slotted(bkkr-badge) {
+  @include mixins.position-set(10px, null, null, null);
+}
+
+:host(.nav-layout-label-hide) ::slotted(bkkr-icon) {
+  @include mixins.margin-set(0);
+}

@@ -1,0 +1,122 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Drawer
+// --------------------------------------------------
+
+@use "drawer.vars" as *;
+
+:host {
+  /**
+   * @prop --background: Background of the drawer content
+   *
+   * @prop --border-color: Border color of the drawer content
+   * @prop --border-radius: Border radius of the drawer content
+   * @prop --border-width: Border width of the drawer content
+   * @prop --border-style: Border style of the drawer content
+   *
+   * @prop --min-width: Minimum width of the drawer
+   * @prop --width: Width of the drawer
+   * @prop --max-width: Maximum width of the drawer
+   *
+   * @prop --min-height: Minimum height of the drawer
+   * @prop --height: Height of the drawer
+   * @prop --max-height: Maximum height of the drawer
+   *
+   * @prop --backdrop-opacity: Opacity of the backdrop
+   */
+  --min-width: auto;
+  --min-height: auto;
+  --overflow: hidden;
+  --border-width: 0;
+  --border-style: none;
+  --border-color: transparent;
+  --background: #{$background-color};
+  --box-shadow: none;
+  --height: 300px;
+  --max-width: 720px;
+  --max-height: 1000px;
+  --border-radius: #{$border-radius};
+  --backdrop-opacity: 0;
+  --width: 100%;
+  --margin-bottom: 0px;
+
+  @include mixins.position-set(0, 0, 0, 0);
+  display: flex;
+
+  position: absolute;
+
+  align-items: flex-end;
+  justify-content: center;
+
+  transition: all .5s ease-in-out;
+
+  outline: none;
+
+  contain: strict;
+
+  &:first-of-type {
+    --backdrop-opacity: .18;
+  }
+}
+
+// Shell div to position the drawer with bottom padding
+.drawer-shadow,
+.drawer-wrapper {
+  @include mixins.border-radius-set(var(--border-radius), top);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: var(--width);
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+
+  height: calc(var(--height) - max(30px, var(--safe-area-top)) - 10px - var(--margin-bottom));
+  min-height: var(--min-height);
+  max-height: var(--max-height);
+
+  margin-bottom: var(--margin-bottom);
+
+  // hidden by default to prevent flickers, the animation will show it
+  transform: translate3d(0, 100%, 0);
+
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+
+  background: var(--background);
+
+  box-shadow: var(--box-shadow);
+
+  overflow: var(--overflow);
+  z-index: globals.$z-index-modal;
+}
+
+.drawer-wrapper {
+  padding-top: 30px;
+}
+
+.drawer-shadow {
+  position: absolute;
+  pointer-events: none;
+
+  background: transparent;
+
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, .1);
+}
+
+
+// Drawer card
+:host(.drawer-card) {
+  --width: calc(100% - #{globals.$spacer});
+  --margin-bottom: calc(#{globals.$spacer} / 2);
+
+  .drawer-shadow,
+  .drawer-wrapper {
+    @include mixins.border-radius-set(var(--border-radius));
+  }
+}

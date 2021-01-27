@@ -1,0 +1,77 @@
+@use "../../scss/globals";
+@use "../../scss/functions";
+
+// Toggle
+// --------------------------------------------------
+
+/// @prop - Width of the toggle
+$width:                     42px !default;
+
+/// @prop - Height of the toggle
+$height:                    24px !default;
+
+/// @prop - Border width of the toggle
+$border-width:              2px !default;
+
+/// @prop - Border radius of the toggle
+$border-radius:             $height / 2 !default;
+
+/// @prop - Background color of the unchecked toggle
+$background-color-off:      rgba(globals.$theme-text-color-rgb, .088) !default;
+
+/// @prop - Background color of the checked toggle
+$background-color-on:       functions.color-get(globals.$theme-colors, primary, base) !default;
+
+/// @prop - Width of the toggle handle
+$handle-width:              calc(#{$height} - (#{$border-width} * 2)) !default;
+
+/// @prop - Height of the toggle handle
+$handle-height:             $handle-width !default;
+
+/// @prop - Max height of the toggle handle
+$handle-max-height:         calc(100% - (var(--handle-spacing) * 2)) !default;
+
+/// @prop - Border radius of the toggle handle
+$handle-border-radius:      $width / 2 !default;
+
+/// @prop - Box shadow of the toggle handle
+$handle-box-shadow:         0 3px 12px rgba(#{globals.$theme-text-color-rgb}, .16), 0 3px 1px rgba(#{globals.$theme-text-color-rgb}, .1) !default;
+
+/// @prop - Background color of the toggle handle
+$handle-background-color:   globals.$theme-background-color !default;
+
+/// @prop - Margin of the toggle handle
+$media-margin:              0 !default;
+
+/// @prop - Transition duration of the toggle icon
+$transition-duration:       300ms !default;
+
+/// @prop - Transition of the toggle icon
+$transition:                transform $transition-duration, width 120ms ease-in-out 80ms, left 110ms ease-in-out 80ms, right 110ms ease-in-out 80ms !default;
+
+/// @prop - Opacity of the disabled toggle
+$disabled-opacity:          .3 !default;
+
+/// @prop - Padding top of the toggle positioned on the start in an item
+$item-start-padding-top:    6px !default;
+
+/// @prop - Padding end of the toggle positioned on the start in an item
+$item-start-padding-end:    16px !default;
+
+/// @prop - Padding bottom of the toggle positioned on the start in an item
+$item-start-padding-bottom: 5px !default;
+
+/// @prop - Padding start of the toggle positioned on the start in an item
+$item-start-padding-start:  0 !default;
+
+/// @prop - Padding top of the toggle positioned on the end in an item
+$item-end-padding-top:      6px !default;
+
+/// @prop - Padding end of the toggle positioned on the end in an item
+$item-end-padding-end:      globals.$spacer !default; // ($item-padding-end / 2) !default;
+
+/// @prop - Padding bottom of the toggle positioned on the end in an item
+$item-end-padding-bottom:   5px !default;
+
+/// @prop - Padding start of the toggle positioned on the end in an item
+$item-end-padding-start:    globals.$spacer !default; // $item-padding-start !default;

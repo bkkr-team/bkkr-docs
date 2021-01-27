@@ -1,0 +1,260 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+// stylelint-disable selector-no-qualifying-type
+
+
+// Button
+// --------------------------------------------------
+
+@use "button.vars" as *;
+
+.button {
+  /**
+   * @prop --background: Background
+   * @prop --background-opacity: Background opacity
+   * @prop --background-activated: Background when pressed. Note: setting this will interfere with the Material Design ripple.
+   * @prop --background-activated-opacity: Opacity when pressed
+   * @prop --background-focused: Background when focused with the tab key
+   * @prop --background-focused-opacity: Opacity when focused with the tab key
+   * @prop --background-hover: Background on hover
+   * @prop --background-hover-opacity: Opacity of the background on hover
+   *
+   * @prop --color: Text color
+   * @prop --color-activated: Text color when pressed
+   * @prop --color-focused: Text color when focused with the tab key
+   * @prop --color-hover: Text color when hover
+   *
+   * @prop --transition: Transition
+   *
+   * @prop --border-radius: Border radius
+   * @prop --border-width: Border width
+   * @prop --border-style: Border style
+   * @prop --border-color: Border color
+   * @prop --box-shadow: Box shadow
+   * @prop --opacity: Opacity
+   *
+   * @prop --padding-top: Top padding
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left
+   * @prop --padding-bottom: Bottom padding
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left
+   */
+  --overflow: unset;
+  --ripple-color: currentColor;
+  --background: transparent;
+  --background-opacity: 1;
+  --border-width: 0;
+  --border-color: transparent;
+  --border-style: solid;
+  --border-radius: #{$border-radius};
+  --color-active: var(--color);
+  --color-focus: var(--color);
+  --color-hover: var(--color);
+  --box-shadow: none;
+  --padding-top: 0;
+  --padding-start: .9em;
+  --padding-end: .9em;
+  --padding-bottom: 0;
+  --height: #{$height};
+
+  display: inline-block;
+
+  width: auto;
+  height: var(--height);
+
+  color: var(--color);
+
+  font-family: globals.$font-family-base;
+  font-weight: $font-weight;
+
+  line-height: 1;
+
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  overflow: var(--overflow);
+  user-select: none;
+  vertical-align: top; // the better option for most scenarios
+  vertical-align: -webkit-baseline-middle; // the best for those that support it
+  pointer-events: auto;
+  font-kerning: none;
+
+  .button-native {
+    @include mixins.transition-set(var(--transition));
+    @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+    @include mixins.border-radius-set(var(--border-radius));
+    @include mixins.box-shadow-set(var(--box-shadow));
+    @include mixins.text-inherit();
+    @include mixins.text-font-smoothing();
+
+    // States
+
+    // Focus
+    @include mixins.state-focus() {
+      outline: 0;
+    }
+
+    // Hover
+    @include mixins.state-hover() {
+      background: var(--background-hover);
+      color: var(--color-hover);
+
+      text-decoration: none;
+    }
+
+    // Focus
+    @include mixins.state-active() {
+      background: var(--background-active);
+      color: var(--color-active);
+    }
+
+    // Disabled
+    @include mixins.state-disabled() {
+      cursor: default;
+      opacity: .5;
+      pointer-events: none;
+    }
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    border-width: var(--border-width);
+    border-style: var(--border-style);
+    border-color: var(--border-color);
+
+    outline: none;
+
+    background: var(--background);
+
+    cursor: pointer;
+    opacity: var(--opacity);
+    z-index: 0;
+    box-sizing: border-box;
+    appearance: none;
+  }
+}
+
+
+// Button variations
+// --------------------------------------------------
+
+.button-clear {
+  --background-active: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-active-opacity))};
+  --background-focus: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-focus-opacity))};
+  --background-hover: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-hover-opacity))};
+  --background-active-opacity: .1;
+  --background-focus-opacity: .06;
+  --background-hover-opacity: .06;
+  --color: #{functions.color-get(globals.$theme-colors, primary, base)};
+}
+
+.button-outline {
+  --border-width: 3px;
+  --background-active: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-active-opacity))};
+  --background-focus: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-focus-opacity))};
+  --background-hover: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-hover-opacity))};
+  --background-active-opacity: .1;
+  --background-focus-opacity: .06;
+  --background-hover-opacity: .06;
+  --border-color: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-opacity))};
+  --color: #{functions.color-get(globals.$theme-colors, primary, base)};
+}
+
+.button-solid {
+  --background: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-opacity))};
+  --background-active: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-active-opacity))};
+  --background-focus: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-focus-opacity))};
+  --background-hover: #{functions.color-get(globals.$theme-colors, primary, base, var(--background-hover-opacity))};
+  --background-active-opacity: .9;
+  --background-focus-opacity: .94;
+  --background-hover-opacity: .94;
+  --color: #{functions.color-get(globals.$theme-colors, primary, contrast)};
+  --box-shadow: 0 4px 12px #{functions.color-get(globals.$theme-colors, primary, base, .64)};
+}
+
+.button-block {
+  display: block;
+
+  .button-native {
+    width: 100%;
+
+    contain: content;
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.button-large {
+  --border-radius: #{$button-large-border-radius};
+  --padding-top: #{$button-large-padding-top};
+  --padding-start: #{$button-large-padding-start};
+  --padding-end: #{$button-large-padding-end};
+  --padding-bottom: #{$button-large-padding-bottom};
+
+  height: #{$button-large-height};
+
+  font-size: #{$button-large-font-size};
+}
+
+.button-small {
+  --border-radius: #{$button-small-border-radius};
+  --padding-top: #{$button-small-padding-top};
+  --padding-start: #{$button-small-padding-start};
+  --padding-end: #{$button-small-padding-end};
+  --padding-bottom: #{$button-small-padding-bottom};
+
+  height: #{$button-small-height};
+
+  font-size: #{$button-small-font-size};
+}
+
+
+// Button in Toolbar
+
+:host(.button-toolbar) {
+  --padding-start: #{$button-small-padding-start};
+  --padding-end: #{$button-small-padding-end};
+  --height: #{$button-small-height};
+  --border-radius: #{$button-small-border-radius};
+}
+
+.button-toolbar-color:not([color]) {
+  --background-active: #{rgba(var(--color-contrast-rgb), var(--background-active-opacity))};
+  --background-focus: #{rgba(var(--color-contrast-rgb), var(--background-focus-opacity))};
+  --background-hover: #{rgba(var(--color-contrast-rgb), var(--background-hover-opacity))};
+}
+
+:host(.button-toolbar:not([color])) .button-native {
+  color: #{var(--color-contrast, var(--color))};
+}
+
+:host(.button-outline.button-toolbar:not([color])) .button-native {
+  border-color: #{var(--bkkr-toolbar-color, var(--color, var(--border-color)))};
+}
+
+:host(.button-solid.button-toolbar:not([color])) .button-native {
+  background: #{var(--bkkr-toolbar-color, var(--background))};
+  color: #{var(--bkkr-toolbar-background, var(--color))};
+}
+
+
+// Button States
+// --------------------------------------------------
+.button-disabled {
+  pointer-events: none;
+
+  cursor: default;
+}

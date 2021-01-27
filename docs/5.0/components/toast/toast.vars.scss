@@ -1,0 +1,70 @@
+@use "../../scss/globals";
+
+// Toast
+// --------------------------------------------------
+
+/// @prop - Max width of the toast
+$toast-max-width:                         700px !default;
+
+/// @prop - Font size of the toast button
+$toast-button-font-size:                  15px !default;
+
+/// @prop - Background Color of the toast wrapper
+$toast-background-color:                      globals.$theme-background-color !default;
+
+/// @prop - Border radius of the toast wrapper
+$toast-border-radius:                         globals.$border-radius-lg !default;
+
+/// @prop - Color of the toast title
+$toast-title-color:                           globals.$theme-text-color-step-150 !default;
+
+/// @prop - Font size of the toast title
+$toast-header-font-weight:                    500 !default;
+
+/// @prop - Spacing between the header and the message
+$toast-header-margin-bottom:                  2px !default;
+
+/// @prop - Font size of the toast title
+$toast-content-font-size:                     14px !default;
+
+/// @prop - Padding top of the toast content
+$toast-content-padding-top:                   15px !default;
+
+/// @prop - Padding end of the toast content
+$toast-content-padding-end:                   $toast-content-padding-top !default;
+
+/// @prop - Padding bottom of the toast content
+$toast-content-padding-bottom:                $toast-content-padding-top !default;
+
+/// @prop - Padding start of the toast content
+$toast-content-padding-start:                 $toast-content-padding-end !default;
+
+/// @prop - Color of the toast button
+$toast-button-color:                          #{color-get(primary, base)} !default;
+
+/// @prop - Minimum height of the toast button
+$toast-button-min-height:                     44px !default;
+
+/// @prop - Padding top of the toast button
+$toast-button-padding-top:                    10px !default;
+
+/// @prop - Padding end of the toast button
+$toast-button-padding-end:                    15px !default;
+
+/// @prop - Padding bottom of the toast button
+$toast-button-padding-bottom:                 $toast-button-padding-top !default;
+
+/// @prop - Padding start of the toast button
+$toast-button-padding-start:                  15px !default;
+
+/// @prop - Font size of the toast button
+$toast-button-font-size:                      17px !default;
+
+/// @prop - Font size of the toast button
+$toast-button-font-weight:                    500 !default;
+
+/// @prop - Background color alpha of the toast activated button
+$toast-button-opacity-activated:              .4 !default;
+
+/// @prop - Background color of the toast button
+$toast-button-background-color:               transparent !default;

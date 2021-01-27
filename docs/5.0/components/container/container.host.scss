@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Container for shadow DOM
+// --------------------------------------------------
+
+@use "container" as *;
+
+:host {
+  @extend .container;
+}
+

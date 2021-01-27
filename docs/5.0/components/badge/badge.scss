@@ -1,0 +1,56 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Badge
+// --------------------------------------------------
+
+@use "badge.vars" as *;
+
+.badge {
+  /**
+   * @prop --background: Background of the badge
+   * @prop --color: Text color of the badge
+   *
+   * @prop --padding-top: Top padding of the badge
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left of the badge
+   * @prop --padding-bottom: Bottom padding of the badge
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the badge
+   */
+  --background: #{functions.color-get(globals.$theme-colors, primary, base)};
+  --color: #{functions.color-get(globals.$theme-colors, primary, contrast)};
+  --padding-top: #{$padding-top};
+  --padding-end: #{$padding-end};
+  --padding-bottom: #{$padding-bottom};
+  --padding-start: #{$padding-start};
+  --border-radius: #{$border-radius};
+
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  @include mixins.text-font-smoothing();
+  @include mixins.border-radius-set(var(--border-radius));
+
+  display: inline-block;
+
+  min-width: $min-width;
+
+  background: var(--background);
+  color: var(--color);
+
+  font-family: globals.$font-family-base;
+  font-size: $font-size;
+  font-weight: $font-weight;
+
+  line-height: 1;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  contain: content;
+  vertical-align: baseline;
+
+  &:empty {
+    display: none;
+  }
+}

@@ -1,0 +1,64 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+@use "../fab-button/fab-button.vars" as fab-button;
+
+// Floating Action Button Container
+// --------------------------------------------------
+
+@use "fab.vars" as *;
+
+:host {
+  position: absolute;
+
+  z-index: globals.$z-index-fixed-content;
+}
+
+
+// FAB Horizontal Positioning
+// --------------------------------------------------
+
+:host(.fab-horizontal-center) {
+  @include mixins.position-set(null, null, null, 50%);
+  @include mixins.margin-set-horizontal(-(fab-button.$size) / 2, null);
+}
+
+:host(.fab-horizontal-start) {
+  @include mixins.position-set(
+    null, null, null, calc(#{$margin} + var(--safe-area-left, 0px))
+  );
+}
+
+:host(.fab-horizontal-end) {
+  @include mixins.position-set(
+    null, calc(#{$margin} + var(--safe-area-right, 0px)) null, null
+  );
+}
+
+
+// FAB Vertical Positioning
+// --------------------------------------------------
+
+:host(.fab-vertical-top) {
+  top: $margin;
+}
+
+:host(.fab-vertical-top.fab-edge) {
+  top: -(fab-button.$size) / 2;
+}
+
+
+:host(.fab-vertical-bottom) {
+  bottom: $margin;
+}
+
+:host(.fab-vertical-bottom.fab-edge) {
+  bottom: -(fab-button.$size) / 2;
+}
+
+
+:host(.fab-vertical-center) {
+  @include mixins.margin-set(-(fab-button.$size) / 2, null, null, null);
+
+  top: 50%;
+}

@@ -1,0 +1,41 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Menu for shadow DOM
+// --------------------------------------------------
+
+@use "menu" as *;
+
+:host {
+  @extend .menu;
+}
+
+:host(.show-menu) {
+  @extend .show-menu;
+}
+
+
+// Sides
+// --------------------------------------------------
+
+:host(.menu-side-start) {
+  @extend .menu-side-start;
+}
+
+:host(.menu-side-end) {
+  @extend .menu-side-end;
+}
+
+
+// Types
+// --------------------------------------------------
+
+:host(.menu-type-reveal) {
+  @extend .menu-type-reveal;
+}
+
+:host(.menu-type-overlay) {
+  @extend .menu-type-overlay;
+}

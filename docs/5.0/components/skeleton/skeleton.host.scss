@@ -1,0 +1,17 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Skeleton for shadow DOM
+// --------------------------------------------------
+
+@use "skeleton" as *;
+
+:host {
+  @extend .skeleton;
+}
+
+:host(.skeleton-animated) {
+  @extend .skeleton-animated;
+}

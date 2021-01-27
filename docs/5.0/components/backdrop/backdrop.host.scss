@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Backdrop for shadow DOM
+// --------------------------------------------------
+
+@use "backdrop" as *;
+
+:host {
+  @extend .backdrop;
+}
+

@@ -1,0 +1,13 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Datepicker
+// --------------------------------------------------
+
+@use "datepicker.vars" as *;
+
+.datepicker {
+  display: inline-block;
+}

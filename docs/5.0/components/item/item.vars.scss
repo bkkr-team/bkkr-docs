@@ -1,0 +1,141 @@
+@use "../../scss/globals";
+@use "../../scss/functions";
+
+// Item
+// --------------------------------------------------
+
+/// @prop - Background
+$background:                       transparent !default;
+
+/// @prop - Border-color
+$border-color:                     rgba(globals.$theme-text-color-rgb, .4) !default;
+
+/// @prop - Color
+$color:                            globals.$theme-text-color !default;
+
+/// @prop - Minimum height of the item
+$min-height:                        44px !default;
+
+/// @prop - Font size of the item
+$font-size:                         17px !default;
+
+/// @prop - Margin top of the item paragraph
+$paragraph-margin-top:              0 !default;
+
+/// @prop - Margin end of the item paragraph
+$paragraph-margin-end:              0 !default;
+
+/// @prop - Margin bottom of the item paragraph
+$paragraph-margin-bottom:           2px !default;
+
+/// @prop - Margin start of the item paragraph
+$paragraph-margin-start:            $paragraph-margin-end !default;
+
+/// @prop - Font size of the item paragraph
+$paragraph-font-size:               14px !default;
+
+/// @prop - Color of the item paragraph
+$paragraph-text-color:              rgba(globals.$theme-text-color-rgb, .4) !default;
+
+/// @prop - Width of the shape in the item
+$shape-width:                      36px !default;
+
+/// @prop - Height of the shape in the item
+$shape-height:                     $shape-width !default;
+
+/// @prop - Width of the thumbnail in the item
+$thumbnail-width:                   56px !default;
+
+/// @prop - Height of the thumbnail in the item
+$thumbnail-height:                  $thumbnail-width !default;
+
+/// @prop - Color of the detail arrow icon
+$detail-icon-color:                 $border-color !default;
+
+/// @prop - Padding top for the item content
+$padding-top:                       10px !default;
+
+/// @prop - Padding end for the item content
+$padding-end:                       globals.$spacer !default;
+
+/// @prop - Padding bottom for the item content
+$padding-bottom:                    $padding-top !default;
+
+/// @prop - Padding start for the item content
+$padding-start:                     $padding-end !default;
+
+/// @prop - Border bottom width for the item when lines are displayed
+$border-bottom-width:               globals.$hairlines-width !default;
+
+/// @prop - Border bottom style for the item when lines are displayed
+$border-bottom-style:               solid !default;
+
+/// @prop - Border bottom color for the item when lines are displayed
+$border-bottom-color:               $border-color !default;
+
+/// @prop - Border bottom for the item
+$border-bottom:                     $border-bottom-width $border-bottom-style $border-bottom-color !default;
+
+/// @prop - Height of input highlight
+$highlight-height:                  1px !default;
+
+/// @prop - Color of the item input highlight
+$input-highlight-color:             functions.color-get(globals.$theme-colors, primary, base) !default;
+
+/// @prop - Color of the item input highlight when valid
+$input-highlight-color-valid:       functions.color-get(globals.$theme-colors, success, base) !default;
+
+/// @prop - Color of the item input highlight when invalid
+$input-highlight-color-invalid:     functions.color-get(globals.$theme-colors, danger, base) !default;
+
+
+// Item Slots
+// --------------------------------------------------
+
+/// @prop - Margin top for the start slot
+$slot-start-margin-top:             2px !default;
+
+/// @prop - Margin end for the start slot
+$slot-start-margin-end:             $padding-end !default;
+
+/// @prop - Margin bottom for the start slot
+$slot-start-margin-bottom:          $slot-start-margin-top !default;
+
+/// @prop - Margin start for the start slot
+$slot-start-margin-start:           0 !default;
+
+/// @prop - Margin top for the end slot
+$slot-end-margin-top:               null !default;
+
+/// @prop - Margin end for the end slot
+$slot-end-margin-end:               ($padding-start / 2) !default;
+
+/// @prop - Margin bottom for the end slot
+$slot-end-margin-bottom:            $slot-end-margin-top !default;
+
+/// @prop - Margin start for the end slot
+$slot-end-margin-start:             $slot-end-margin-end !default;
+
+/// @prop - Margin top for an icon in the start/end slot
+$icon-slot-margin-top:              7px !default;
+
+/// @prop - Margin end for an icon in the start/end slot
+$icon-slot-margin-end:              null !default;
+
+/// @prop - Margin bottom for an icon in the start/end slot
+$icon-slot-margin-bottom:           7px !default;
+
+/// @prop - Margin start for an icon in the start/end slot
+$icon-slot-margin-start:            null !default;
+
+/// @prop - Margin top for the end slot inside of a floating/stacked label
+$label-slot-end-margin-top:         7px !default;
+
+/// @prop - Margin end for the end slot inside of a floating/stacked label
+$label-slot-end-margin-end:         null !default;
+
+/// @prop - Margin bottom for the end slot inside of a floating/stacked label
+$label-slot-end-margin-bottom:      $label-slot-end-margin-top !default;
+
+/// @prop - Margin start for the end slot inside of a floating/stacked label
+$label-slot-end-margin-start:       $label-slot-end-margin-end !default;

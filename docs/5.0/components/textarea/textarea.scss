@@ -1,0 +1,135 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Textarea
+// --------------------------------------------------
+
+@use "textarea.vars" as *;
+
+.textarea {
+  /**
+   * @prop --background: Background of the textarea
+   *
+   * @prop --color: Color of the textarea text
+   *
+   * @prop --padding-top: Top padding of the textarea
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left of the textarea
+   * @prop --padding-bottom: Bottom padding of the textarea
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the textarea
+   *
+   * @prop --placeholder-color: Color of the textarea placeholder text
+   * @prop --placeholder-font-style: Font style of the textarea placeholder text
+   * @prop --placeholder-font-weight: Font weight of the textarea placeholder text
+   * @prop --placeholder-opacity: Opacity of the textarea placeholder text
+   * @prop --placeholder-transition: Transition of the textarea placeholder text
+   * @prop --placeholder-transition-delay: Transition delay of the textarea placeholder text
+   */
+  --placeholder-color: initial;
+  --placeholder-font-style: initial;
+  --placeholder-font-weight: initial;
+  --padding-top: #{$padding-top};
+  --padding-end: #{$padding-end};
+  --padding-bottom: #{$padding-bottom};
+  --padding-start: #{$padding-start};
+  --background: transparent;
+  --color: initial;
+
+  @include mixins.padding-set(0 !important);
+  display: block;
+  position: relative;
+
+  flex: 1;
+
+  width: 100%;
+
+  background: var(--background);
+  color: var(--color);
+
+  font-family: globals.$font-family-base;
+
+  white-space: pre-wrap;
+
+  z-index: globals.$z-index-item-input;
+
+  box-sizing: border-box;
+}
+// Textarea Within An Item
+// --------------------------------------------------
+
+:host-context(bkkr-item) {
+  align-self: baseline;
+}
+
+:host-context(bkkr-item:not(.item-label)) {
+  --padding-start: 0;
+}
+
+
+// Native Textarea
+// --------------------------------------------------
+
+.textarea-wrapper {
+  min-width: inherit;
+  max-width: inherit;
+  min-height: inherit;
+  max-height: inherit;
+}
+
+.native-textarea {
+  @include mixins.border-radius-set(var(--border-radius));
+  @include mixins.margin-set(0);
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  @include mixins.text-inherit();
+
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+  box-sizing: border-box;
+  resize: none;
+  appearance: none;
+
+  &::placeholder {
+    @include mixins.padding-set(0);
+
+    transition: var(--placeholder-transition, none);
+    transition-delay: var(--placeholder-transition-delay, none);
+
+    color: var(--placeholder-color, 0.5);
+
+    font-family: inherit;
+    font-style: var(--placeholder-font-style);
+    font-weight: var(--placeholder-font-weight);
+
+    opacity: var(--placeholder-opacity);
+  }
+}
+
+.native-textarea[disabled] {
+  opacity: .4;
+}
+
+// Input Cover: Unfocused
+// --------------------------------------------------
+// The input cover is the div that actually receives the
+// tap/click event when scroll assist is configured to true.
+// This make it so the native input element is not clickable.
+// This will only show when the scroll assist is configured
+// otherwise the .input-cover will not be rendered at all
+// The input cover is not clickable when the input is disabled
+.cloned-input {
+  @include mixins.position-set(0, null, null, 0);
+
+  position: absolute;
+
+  pointer-events: none;
+}

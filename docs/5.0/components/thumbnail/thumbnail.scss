@@ -1,0 +1,48 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Thumbnail
+// --------------------------------------------------
+
+@use "thumbnail.vars" as *;
+
+.thumbnail {
+  /**
+   * @prop --border-radius: Background of the badge
+   * @prop --border-width: Border width
+   * @prop --border-style: Border style
+   * @prop --border-color: Border color
+   *
+   * @prop --box-shadow: Shadow
+   *
+   * @prop --padding-top: Top padding of the badge
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left of the badge
+   * @prop --padding-bottom: Bottom padding of the badge
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left of the badge
+   */
+  --padding-top: #{$padding-top};
+  --padding-end: #{$padding-end};
+  --padding-bottom: #{$padding-bottom};
+  --padding-start: #{$padding-start};
+  --border-radius: #{$border-radius};
+  --border-width: #{$border-width};
+  --border-style: #{$border-style};
+  --border-color: #{$border-color};
+  --background: #{$background};
+  --box-shadow: #{$box-shadow};
+
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  @include mixins.border-radius-set(var(--border-radius));
+  @include mixins.box-shadow-set(var(--box-shadow));
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+
+  background-color: var(--background);
+
+  contain: content;
+
+  overflow: hidden;
+}

@@ -1,0 +1,14 @@
+@use "../../scss/globals";
+@use "../item/item.vars" as item;
+
+// Split-pane
+// --------------------------------------------------
+
+/// @prop - Minimum width of the split pane's side pane
+$side-min-width:     270px !default;
+
+/// @prop - Maximum width of the split pane's side pane
+$side-max-width:     320px !default;
+
+/// @prop - Border style of the side pane
+$border:             globals.$hairlines-width solid item.$border-color !default;

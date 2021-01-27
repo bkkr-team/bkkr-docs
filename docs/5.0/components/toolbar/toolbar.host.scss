@@ -1,0 +1,14 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Toolbar for shadow DOM
+// --------------------------------------------------
+
+@use "toolbar" as *;
+
+:host {
+  @extend .toolbar;
+}
+

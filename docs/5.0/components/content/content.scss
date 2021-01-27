@@ -1,0 +1,124 @@
+@use "../../scss/mixins";
+@use "../../scss/functions";
+@use "../../scss/globals";
+
+
+// Content
+// --------------------------------------------------
+
+@use "content.vars" as *;
+
+.content {
+  /**
+   * @prop --background: Background
+   * @prop --color: Text color
+   *
+   * @prop --offset-top: Top offset
+   * @prop --offset-bottom: Bottom offset
+   *
+   * @prop --padding-top: Top padding
+   * @prop --padding-end: Right padding if direction is left-to-right, and left padding if direction is right-to-left
+   * @prop --padding-bottom: Bottom padding
+   * @prop --padding-start: Left padding if direction is left-to-right, and right padding if direction is right-to-left
+   */
+  --background: var(--bkkr-background-color);
+  --color: var(--bkkr-text-color);
+  --offset-top: 0px; // stylelint-disable-line length-zero-no-unit
+  --offset-bottom: 0px; // stylelint-disable-line length-zero-no-unit
+  --padding-top: #{$padding-top};
+  --padding-end: #{$padding-end};
+  --padding-bottom: #{$padding-bottom};
+  --padding-start: #{$padding-start};
+
+  @include mixins.padding-set(var(--padding-top), var(--padding-end), var(--padding-bottom), var(--padding-start));
+  display: block;
+
+  position: relative;
+
+  flex: 1;
+  order: 0;
+
+  max-width: 100%;
+
+  height: 100%;
+
+  margin-top: calc(var(--offset-top) * -1);
+  margin-bottom: calc(var(--offset-bottom) * -1);
+
+  contain: size style;
+  overflow-x: hidden;
+}
+
+
+.inner-scroll {
+  @include mixins.position-set(calc(var(--offset-top) * -1), 0, calc(var(--offset-bottom) * -1), 0);
+  @include mixins.padding-set(calc(var(--padding-top) + var(--offset-top)), var(--padding-end), calc(var(--padding-bottom) + var(--keyboard-offset) + var(--offset-bottom)), var(--padding-start));
+
+  position: absolute;
+
+  color: var(--color);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+.scroll-y,
+.scroll-x {
+  -webkit-overflow-scrolling: touch;
+
+  /**
+   * This adds `.inner-scroll` as part of the
+   * stacking context in WebKit. Without it,
+   * children of bkkr-content are treated as
+   * siblings rather than descendants. This
+   * can result in the children being put
+   * into their own layers, degrading
+   * scrolling performance.
+   *
+   * An optimization called "layer backing
+   * sharing" usually kicks in to prevent
+   * this, but having translate3d defeats
+   * this optimization.
+   *
+   * See: https://bugs.webkit.org/show_bug.cgi?id=216701
+   */
+  will-change: scroll-position, transform;
+}
+
+.scroll-y {
+  overflow-y: var(--overflow);
+
+  touch-action: pan-y;
+  overscroll-behavior-y: contain;
+}
+
+.scroll-x {
+  overflow-x: var(--overflow);
+
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+}
+
+.scroll-x.scroll-y {
+  touch-action: auto;
+}
+
+
+// Content sizing
+:host(.content-sizing) {
+  contain: none;
+}
+
+:host(.content-sizing) .inner-scroll {
+  position: relative;
+}
+
+
+// Content: Fixed
+// --------------------------------------------------
+
+::slotted([slot="fixed"]) {
+  position: absolute;
+}

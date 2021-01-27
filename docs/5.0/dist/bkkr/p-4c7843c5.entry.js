@@ -1,0 +1,1 @@
+import{r,h as s,H as t}from"./p-ff07675f.js";const e=class{constructor(s){r(this,s)}render(){return s(t,null,s("slot",null))}};e.style=".datepicker,:host{display:inline-block}";export{e as bkkr_datepicker}

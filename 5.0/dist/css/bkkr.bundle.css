@@ -34,7 +34,7 @@ code,
   word-break: break-word;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   code,
 .code {
     padding-left: unset;
@@ -65,7 +65,7 @@ kbd,
   color: #fff;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   kbd,
 .kdb {
     padding-left: unset;
@@ -250,6 +250,9 @@ body {
 html {
   width: 100%;
   height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -257,6 +260,8 @@ body {
   margin: 0;
   text-rendering: optimizeLegibility;
   touch-action: manipulation;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -ms-content-zooming: none;
   -webkit-user-drag: none;
@@ -283,8 +288,10 @@ hr:not([size]) {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -507,7 +514,7 @@ progress {
   vertical-align: top;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .table th,
 .table td {
     padding-left: unset;
@@ -606,7 +613,7 @@ blockquote {
   margin-bottom: 1rem;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   blockquote {
     margin-right: unset;
     -webkit-margin-end: 0;
@@ -630,7 +637,7 @@ mark {
   background-color: #fcf8e3;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   mark {
     padding-left: unset;
     padding-right: unset;
@@ -690,7 +697,7 @@ legend {
   white-space: normal;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   legend {
     padding-left: unset;
     padding-right: unset;
@@ -742,6 +749,9 @@ legend + * {
   font-size: 14px;
   contain: strict;
   touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 1001;
 }
@@ -788,7 +798,7 @@ legend + * {
   text-align: left;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .alert-head {
     padding-left: unset;
     padding-right: unset;
@@ -837,7 +847,7 @@ legend + * {
   overscroll-behavior-y: contain;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .alert-message {
     padding-left: unset;
     padding-right: unset;
@@ -868,10 +878,12 @@ legend + * {
   width: 100%;
   border: 0.55px solid var(--bkkr-color-step-250, #bfbfbf);
   background-color: var(--bkkr-background-color, #fff);
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .alert-input {
     padding-left: unset;
     padding-right: unset;
@@ -880,6 +892,16 @@ legend + * {
     -webkit-padding-end: 6px;
     padding-inline-end: 6px;
   }
+}
+.alert-input::-moz-placeholder {
+  color: var(--bkkr-placeholder-color, var(--bkkr-color-step-400, #999999));
+  font-family: inherit;
+  font-weight: inherit;
+}
+.alert-input::-ms-input-placeholder {
+  color: var(--bkkr-placeholder-color, var(--bkkr-color-step-400, #999999));
+  font-family: inherit;
+  font-weight: inherit;
 }
 .alert-input::placeholder {
   color: var(--bkkr-placeholder-color, var(--bkkr-color-step-400, #999999));
@@ -893,6 +915,7 @@ legend + * {
 
 .alert-radio-group,
 .alert-checkbox-group {
+  -ms-scroll-chaining: none;
   overscroll-behavior: contain;
   max-height: 240px;
   border-top: 1px solid rgba(var(--bkkr-text-color-rgb, 0, 0, 0), 0.2);
@@ -929,7 +952,7 @@ legend + * {
   overflow: hidden;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .alert-radio-label,
 .alert-checkbox-label {
     padding-left: unset;
@@ -975,7 +998,7 @@ legend + * {
   width: 100%;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .alert-button-group {
     margin-right: unset;
     -webkit-margin-end: -1px;
@@ -1066,6 +1089,8 @@ legend + * {
   line-height: initial;
   text-align: start;
   contain: strict;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1147,7 +1172,7 @@ textarea.alert-input {
   vertical-align: baseline;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .badge {
     padding-left: unset;
     padding-right: unset;
@@ -1192,7 +1217,7 @@ textarea.alert-input {
   contain: content;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .breadcrumb {
     padding-left: unset;
     padding-right: unset;
@@ -1214,7 +1239,7 @@ textarea.alert-input {
   line-height: 1;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .breadcrumb-item {
     margin-right: unset;
     -webkit-margin-end: 0.25rem;
@@ -1225,7 +1250,7 @@ bkkr-icon {
   margin-left: 0.25rem;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   bkkr-icon {
     margin-left: unset;
     -webkit-margin-start: 0.25rem;
@@ -1292,10 +1317,14 @@ bkkr-icon {
   white-space: nowrap;
   cursor: pointer;
   overflow: var(--overflow);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   vertical-align: top;
   vertical-align: -webkit-baseline-middle;
   pointer-events: auto;
+  -webkit-font-kerning: none;
   font-kerning: none;
 }
 
@@ -1336,6 +1365,8 @@ bkkr-icon {
   opacity: var(--opacity);
   z-index: 0;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1344,7 +1375,7 @@ bkkr-icon {
     transition: none;
   }
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .button .button-native {
     padding-left: unset;
     padding-right: unset;
@@ -1548,6 +1579,9 @@ bkkr-icon {
 button,
 a {
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
 }
@@ -1571,7 +1605,7 @@ a {
   position: relative;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .card-content {
     padding-left: unset;
     padding-right: unset;
@@ -1600,7 +1634,7 @@ a {
   position: relative;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .card-header {
     padding-left: unset;
     padding-right: unset;
@@ -1613,6 +1647,7 @@ a {
 .img {
   border-radius: calc(var(--border-radius) - var(--padding-top));
   display: block;
+  -o-object-fit: contain;
   object-fit: contain;
   overflow: hidden;
 }
@@ -1621,7 +1656,9 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+  -o-object-fit: inherit;
   object-fit: inherit;
+  -o-object-position: inherit;
   object-position: inherit;
 }
 
@@ -1845,7 +1882,7 @@ img {
   box-sizing: border-box;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .item-native {
     padding-left: unset;
     padding-right: unset;
@@ -1874,6 +1911,9 @@ img {
 button,
 a {
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
 }
@@ -1931,7 +1971,7 @@ a {
   box-sizing: border-box;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .item-inner {
     padding-left: unset;
     padding-right: unset;
@@ -1970,7 +2010,7 @@ a {
   margin-bottom: 2px;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   ::slotted([slot=start]) {
     margin-left: unset;
     margin-right: unset;
@@ -1985,7 +2025,7 @@ a {
   margin-right: var(--bkkr-spacer, 16px)/2;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   ::slotted([slot=end]) {
     margin-left: unset;
     margin-right: unset;
@@ -2149,7 +2189,7 @@ a {
   margin-bottom: var(--bkkr-spacer, 16px)/2;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   ::slotted(bkkr-bkkr-shape[slot=end]),
 ::slotted(bkkr-thumbnail[slot=end]) {
     margin-left: unset;
@@ -2165,7 +2205,7 @@ a {
   margin-left: 0;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   :host(.item-radio) ::slotted(bkkr-label),
 :host(.item-toggle) ::slotted(bkkr-label) {
     margin-left: unset;
@@ -2180,7 +2220,7 @@ a {
   margin-bottom: 10px;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   ::slotted(bkkr-label) {
     margin-left: unset;
     margin-right: unset;
@@ -2204,7 +2244,7 @@ a {
   list-style-type: none;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .list {
     padding-left: unset;
     -webkit-padding-start: 0;
@@ -2387,7 +2427,7 @@ bkkr-backdrop {
   -webkit-user-drag: none;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .button-native {
     padding-left: unset;
     padding-right: unset;
@@ -2500,7 +2540,7 @@ bkkr-backdrop {
   box-sizing: border-box;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   ::slotted(bkkr-badge) {
     padding-left: unset;
     padding-right: unset;
@@ -2616,13 +2656,16 @@ bkkr-backdrop {
   height: 100%;
   list-style: none;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 10;
   /* stylelint-disable-next-line declaration-no-important */
   box-sizing: content-box !important;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .navs {
     padding-left: unset;
     padding-right: unset;
@@ -2632,7 +2675,7 @@ bkkr-backdrop {
     padding-inline-end: var(--safe-area-right);
   }
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .navs {
     margin-left: unset;
     margin-right: unset;
@@ -2714,11 +2757,14 @@ bkkr-backdrop {
   bottom: 0;
   left: -145.166611%;
   /* stylelint-enable property-disallowed-list */
+  -webkit-animation: primary-indeterminate-translate 2s infinite linear;
   animation: primary-indeterminate-translate 2s infinite linear;
 }
 
 .indeterminate-bar-primary .progress-indeterminate {
+  -webkit-animation: primary-indeterminate-scale 2s infinite linear;
   animation: primary-indeterminate-scale 2s infinite linear;
+  -webkit-animation-play-state: inherit;
   animation-play-state: inherit;
 }
 
@@ -2729,11 +2775,14 @@ bkkr-backdrop {
   bottom: 0;
   left: -54.888891%;
   /* stylelint-enable property-disallowed-list */
+  -webkit-animation: secondary-indeterminate-translate 2s infinite linear;
   animation: secondary-indeterminate-translate 2s infinite linear;
 }
 
 .indeterminate-bar-secondary .progress-indeterminate {
+  -webkit-animation: secondary-indeterminate-scale 2s infinite linear;
   animation: secondary-indeterminate-scale 2s infinite linear;
+  -webkit-animation-play-state: inherit;
   animation-play-state: inherit;
 }
 
@@ -2741,6 +2790,7 @@ bkkr-backdrop {
   background: radial-gradient(ellipse at center, var(--buffer-background) 0%, var(--buffer-background) 30%, transparent 30%) repeat-x 5px center;
   background-size: 10px 10px;
   z-index: 0;
+  -webkit-animation: buffering 450ms infinite linear;
   animation: buffering 450ms infinite linear;
 }
 
@@ -2760,7 +2810,27 @@ bkkr-backdrop {
 :host(.progress-paused) .indeterminate-bar-secondary,
 :host(.progress-paused) .indeterminate-bar-primary,
 :host(.progress-paused) .buffer-circles {
+  -webkit-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+@-webkit-keyframes primary-indeterminate-translate {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.701732, 0.495819);
+    animation-timing-function: cubic-bezier(0.5, 0, 0.701732, 0.495819);
+  }
+  59.15% {
+    transform: translateX(83.67142%);
+    -webkit-animation-timing-function: cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);
+    animation-timing-function: cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);
+  }
+  100% {
+    transform: translateX(200.611057%);
+  }
 }
 
 @keyframes primary-indeterminate-translate {
@@ -2769,14 +2839,34 @@ bkkr-backdrop {
   }
   20% {
     transform: translateX(0);
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.701732, 0.495819);
     animation-timing-function: cubic-bezier(0.5, 0, 0.701732, 0.495819);
   }
   59.15% {
     transform: translateX(83.67142%);
+    -webkit-animation-timing-function: cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);
     animation-timing-function: cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);
   }
   100% {
     transform: translateX(200.611057%);
+  }
+}
+@-webkit-keyframes primary-indeterminate-scale {
+  0% {
+    transform: scaleX(0.08);
+  }
+  36.65% {
+    transform: scaleX(0.08);
+    -webkit-animation-timing-function: cubic-bezier(0.334731, 0.12482, 0.785844, 1);
+    animation-timing-function: cubic-bezier(0.334731, 0.12482, 0.785844, 1);
+  }
+  69.15% {
+    transform: scaleX(0.661479);
+    -webkit-animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1);
+    animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1);
+  }
+  100% {
+    transform: scaleX(0.08);
   }
 }
 @keyframes primary-indeterminate-scale {
@@ -2785,48 +2875,101 @@ bkkr-backdrop {
   }
   36.65% {
     transform: scaleX(0.08);
+    -webkit-animation-timing-function: cubic-bezier(0.334731, 0.12482, 0.785844, 1);
     animation-timing-function: cubic-bezier(0.334731, 0.12482, 0.785844, 1);
   }
   69.15% {
     transform: scaleX(0.661479);
+    -webkit-animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1);
     animation-timing-function: cubic-bezier(0.06, 0.11, 0.6, 1);
   }
   100% {
     transform: scaleX(0.08);
   }
 }
-@keyframes secondary-indeterminate-translate {
+@-webkit-keyframes secondary-indeterminate-translate {
   0% {
     transform: translateX(0);
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.515058, 0.409685);
     animation-timing-function: cubic-bezier(0.15, 0, 0.515058, 0.409685);
   }
   25% {
     transform: translateX(37.651913%);
+    -webkit-animation-timing-function: cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);
     animation-timing-function: cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);
   }
   48.35% {
     transform: translateX(84.386165%);
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.627035, 0.6, 0.902026);
     animation-timing-function: cubic-bezier(0.4, 0.627035, 0.6, 0.902026);
   }
   100% {
     transform: translateX(160.277782%);
   }
 }
-@keyframes secondary-indeterminate-scale {
+@keyframes secondary-indeterminate-translate {
+  0% {
+    transform: translateX(0);
+    -webkit-animation-timing-function: cubic-bezier(0.15, 0, 0.515058, 0.409685);
+    animation-timing-function: cubic-bezier(0.15, 0, 0.515058, 0.409685);
+  }
+  25% {
+    transform: translateX(37.651913%);
+    -webkit-animation-timing-function: cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);
+    animation-timing-function: cubic-bezier(0.31033, 0.284058, 0.8, 0.733712);
+  }
+  48.35% {
+    transform: translateX(84.386165%);
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.627035, 0.6, 0.902026);
+    animation-timing-function: cubic-bezier(0.4, 0.627035, 0.6, 0.902026);
+  }
+  100% {
+    transform: translateX(160.277782%);
+  }
+}
+@-webkit-keyframes secondary-indeterminate-scale {
   0% {
     transform: scaleX(0.08);
+    -webkit-animation-timing-function: cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);
     animation-timing-function: cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);
   }
   19.15% {
     transform: scaleX(0.457104);
+    -webkit-animation-timing-function: cubic-bezier(0.152313, 0.196432, 0.648374, 1.004315);
     animation-timing-function: cubic-bezier(0.152313, 0.196432, 0.648374, 1.004315);
   }
   44.15% {
     transform: scaleX(0.72796);
+    -webkit-animation-timing-function: cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);
     animation-timing-function: cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);
   }
   100% {
     transform: scaleX(0.08);
+  }
+}
+@keyframes secondary-indeterminate-scale {
+  0% {
+    transform: scaleX(0.08);
+    -webkit-animation-timing-function: cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);
+    animation-timing-function: cubic-bezier(0.205028, 0.057051, 0.57661, 0.453971);
+  }
+  19.15% {
+    transform: scaleX(0.457104);
+    -webkit-animation-timing-function: cubic-bezier(0.152313, 0.196432, 0.648374, 1.004315);
+    animation-timing-function: cubic-bezier(0.152313, 0.196432, 0.648374, 1.004315);
+  }
+  44.15% {
+    transform: scaleX(0.72796);
+    -webkit-animation-timing-function: cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);
+    animation-timing-function: cubic-bezier(0.257759, -0.003163, 0.211762, 1.38179);
+  }
+  100% {
+    transform: scaleX(0.08);
+  }
+}
+@-webkit-keyframes buffering {
+  to {
+    transform: translateX(-10px);
   }
 }
 @keyframes buffering {
@@ -2851,22 +2994,27 @@ bkkr-backdrop {
 }
 
 .shape-circle {
+  -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
 }
 
 .shape-triangle {
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
   clip-path: polygon(0 0, 50% 100%, 100% 0);
 }
 
 .shape-octagon {
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
 .shape-rombus {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .shape-parallel {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
@@ -3011,6 +3159,9 @@ bkkr-backdrop {
   background: var(--background);
   font-size: inherit;
   line-height: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
@@ -3019,11 +3170,25 @@ bkkr-backdrop {
   position: relative;
   background: linear-gradient(to right, rgba(var(--background-rgb, var(--bkkr-text-color-rgb, 0, 0, 0)), 0.065) 8%, rgba(var(--background-rgb, var(--bkkr-text-color-rgb, 0, 0, 0)), 0.135) 18%, rgba(var(--background-rgb, var(--bkkr-text-color-rgb, 0, 0, 0)), 0.065) 33%);
   background-size: 800px 104px;
+  -webkit-animation-name: shimmer;
   animation-name: shimmer;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
 }
 
 @keyframes shimmer {
@@ -3184,10 +3349,12 @@ bkkr-backdrop {
 }
 
 .swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
+  -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
 }
 
 .swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
+  -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
 }
 
@@ -3497,6 +3664,7 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container > canvas {
   max-width: 100%;
   max-height: 100%;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -3515,6 +3683,7 @@ button.swiper-pagination-bullet {
   margin-top: -21px;
   z-index: 10;
   transform-origin: 50%;
+  -webkit-animation: swiper-preloader-spin 1s infinite linear;
   animation: swiper-preloader-spin 1s infinite linear;
   box-sizing: border-box;
   border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
@@ -3528,6 +3697,12 @@ button.swiper-pagination-bullet {
 
 .swiper-lazy-preloader-black {
   --swiper-preloader-color: #000;
+}
+
+@-webkit-keyframes swiper-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes swiper-preloader-spin {
@@ -3616,7 +3791,6 @@ button.swiper-pagination-bullet {
   height: 100%;
   background: #000;
   opacity: 0.6;
-  -webkit-filter: blur(50px);
   filter: blur(50px);
   z-index: 0;
 }
@@ -3662,6 +3836,9 @@ bkkr-slides {
    * @prop --scroll-bar-background-active: Background of the active pagination scroll-bar
    */
   display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -3712,6 +3889,9 @@ bkkr-slides {
   width: 28px;
   height: 28px;
   color: var(--color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -3734,10 +3914,12 @@ svg {
 
 .spinner-lines svg,
 .spinner-lines-small svg {
+  -webkit-animation: spinner-fade-out 1s linear infinite;
   animation: spinner-fade-out 1s linear infinite;
 }
 
 .spinner-circles svg {
+  -webkit-animation: spinner-fade-out 1s linear infinite;
   animation: spinner-fade-out 1s linear infinite;
   fill: currentColor;
 }
@@ -3751,6 +3933,7 @@ svg {
 }
 
 .spinner-crescent svg {
+  -webkit-animation: spinner-rotate 1s linear infinite;
   animation: spinner-rotate 1s linear infinite;
 }
 
@@ -3760,14 +3943,17 @@ svg {
 }
 
 .spinner-dots svg {
+  -webkit-animation: spinner-dots 1s linear infinite;
   animation: spinner-dots 1s linear infinite;
 }
 
 .spinner-circular {
+  -webkit-animation: spinner-circular linear infinite;
   animation: spinner-circular linear infinite;
 }
 
 .spinner-circular circle {
+  -webkit-animation: spinner-circular-inner ease-in-out infinite;
   animation: spinner-circular-inner ease-in-out infinite;
   fill: none;
   stroke: currentColor;
@@ -3779,7 +3965,17 @@ svg {
 .spinner-paused,
 .spinner-paused svg,
 .spinner-paused circle {
+  -webkit-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+@-webkit-keyframes spinner-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes spinner-fade-out {
@@ -3790,12 +3986,34 @@ svg {
     opacity: 0;
   }
 }
+@-webkit-keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes spinner-rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinner-dots {
+  0% {
+    transform: scale(1, 1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(0.4, 0.4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0.9;
   }
 }
 @keyframes spinner-dots {
@@ -3812,9 +4030,28 @@ svg {
     opacity: 0.9;
   }
 }
+@-webkit-keyframes spinner-circular {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes spinner-circular {
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinner-circular-inner {
+  0% {
+    stroke-dasharray: 1px, 200px;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -15px;
+  }
+  100% {
+    stroke-dasharray: 100px, 200px;
+    stroke-dashoffset: -125px;
   }
 }
 @keyframes spinner-circular-inner {
@@ -3894,7 +4131,7 @@ svg {
   overflow: hidden;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .thumbnail {
     padding-left: unset;
     padding-right: unset;
@@ -4003,7 +4240,7 @@ svg {
   box-shadow: var(--box-shadow);
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .toast-wrapper {
     margin-left: unset;
     margin-right: unset;
@@ -4035,7 +4272,7 @@ svg {
   text-align: center;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .toast-content {
     padding-left: unset;
     padding-right: unset;
@@ -4137,7 +4374,7 @@ svg {
   z-index: 2;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .input {
     padding-left: unset;
     padding-right: unset;
@@ -4185,10 +4422,12 @@ svg {
   outline: none;
   background: transparent;
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .native-input {
     padding-left: unset;
     padding-right: unset;
@@ -4197,6 +4436,26 @@ svg {
     -webkit-padding-end: var(--padding-end);
     padding-inline-end: var(--padding-end);
   }
+}
+.native-input::-moz-placeholder {
+  -moz-transition: var(--placeholder-transition, none);
+  transition: var(--placeholder-transition, none);
+  transition-delay: var(--placeholder-transition-delay, none);
+  color: var(--placeholder-color);
+  font-family: inherit;
+  font-style: var(--placeholder-font-style);
+  font-weight: var(--placeholder-font-weight);
+  opacity: var(--placeholder-opacity, 0.5);
+}
+.native-input::-ms-input-placeholder {
+  -ms-transition: var(--placeholder-transition, none);
+  transition: var(--placeholder-transition, none);
+  transition-delay: var(--placeholder-transition-delay, none);
+  color: var(--placeholder-color);
+  font-family: inherit;
+  font-style: var(--placeholder-font-style);
+  font-weight: var(--placeholder-font-weight);
+  opacity: var(--placeholder-opacity, 0.5);
 }
 .native-input::placeholder {
   transition: var(--placeholder-transition, none);
@@ -4249,6 +4508,8 @@ svg {
   background-repeat: no-repeat;
   background-size: 18px;
   visibility: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -4286,6 +4547,9 @@ svg {
   position: relative;
   width: 24px;
   height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 2;
   box-sizing: border-box;
@@ -4326,6 +4590,8 @@ label {
   outline: none;
   background: transparent;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   margin-left: 0;
   display: flex;
@@ -4337,7 +4603,7 @@ label::-moz-focus-inner {
   border: 0;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   label {
     margin-left: unset;
     -webkit-margin-start: 0;
@@ -4359,6 +4625,8 @@ input {
   opacity: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -4392,7 +4660,7 @@ input {
   position: static;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   :host(.in-item) {
     margin-left: unset;
     margin-right: unset;
@@ -4409,7 +4677,7 @@ input {
   margin-bottom: 8px;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   :host(.in-item[slot=start]) {
     margin-left: unset;
     margin-right: unset;
@@ -4452,11 +4720,14 @@ input {
   flex: 3;
   align-items: center;
   font-family: var(--default-font-sans-serif);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 2;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .range {
     padding-left: unset;
     padding-right: unset;
@@ -4486,7 +4757,7 @@ input {
   margin-bottom: 0;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   ::slotted([slot=start]) {
     margin-left: unset;
     margin-right: unset;
@@ -4503,7 +4774,7 @@ input {
   margin-bottom: 0;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   ::slotted([slot=end]) {
     margin-left: unset;
     margin-right: unset;
@@ -4519,11 +4790,13 @@ input {
   width: 100%;
   height: var(--height);
   contain: size layout style;
+  cursor: -webkit-grab;
   cursor: grab;
   touch-action: pan-y;
 }
 
 :host(.range-pressed) .range-slider {
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
@@ -4545,7 +4818,7 @@ input {
   box-sizing: border-box;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .range-pin {
     padding-left: unset;
     padding-right: unset;
@@ -4592,7 +4865,7 @@ input {
   background: rgba(var(--text-color-rgb, 0, 0, 0), 0.1);
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .range-tick {
     margin-left: unset;
     -webkit-margin-start: -1px;
@@ -4630,7 +4903,7 @@ input {
   text-align: center;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .range-knob-handle {
     margin-left: unset;
     -webkit-margin-start: calc(0px - var(--knob-handle-size) / 2);
@@ -4709,7 +4982,7 @@ input {
   box-sizing: border-box;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .textarea {
     padding-left: unset;
     padding-right: unset;
@@ -4765,10 +5038,12 @@ input {
   background: transparent;
   box-sizing: border-box;
   resize: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .native-textarea {
     padding-left: unset;
     padding-right: unset;
@@ -4777,6 +5052,34 @@ input {
     -webkit-padding-end: var(--padding-end);
     padding-inline-end: var(--padding-end);
   }
+}
+.native-textarea::-moz-placeholder {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  -moz-transition: var(--placeholder-transition, none);
+  transition: var(--placeholder-transition, none);
+  transition-delay: var(--placeholder-transition-delay, none);
+  color: var(--placeholder-color, 0.5);
+  font-family: inherit;
+  font-style: var(--placeholder-font-style);
+  font-weight: var(--placeholder-font-weight);
+  opacity: var(--placeholder-opacity);
+}
+.native-textarea::-ms-input-placeholder {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  -ms-transition: var(--placeholder-transition, none);
+  transition: var(--placeholder-transition, none);
+  transition-delay: var(--placeholder-transition-delay, none);
+  color: var(--placeholder-color, 0.5);
+  font-family: inherit;
+  font-style: var(--placeholder-font-style);
+  font-weight: var(--placeholder-font-weight);
+  opacity: var(--placeholder-opacity);
 }
 .native-textarea::placeholder {
   padding-left: 0;
@@ -4841,6 +5144,9 @@ input {
   cursor: pointer;
   overflow: hidden;
   touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 2;
   /* stylelint-disable-next-line declaration-no-important */
@@ -4861,6 +5167,8 @@ label {
   outline: none;
   background: transparent;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   display: flex;
   align-items: center;
@@ -4886,6 +5194,8 @@ input {
   opacity: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -4992,7 +5302,7 @@ input {
   padding-bottom: 5px;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   :host(.in-item[slot]) {
     padding-left: unset;
     padding-right: unset;
@@ -5009,7 +5319,7 @@ input {
   padding-bottom: 5px;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   :host(.in-item[slot=start]) {
     padding-left: unset;
     padding-right: unset;
@@ -5336,7 +5646,7 @@ input {
   flex-wrap: wrap;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .row {
     margin-left: unset;
     margin-right: unset;
@@ -5357,7 +5667,7 @@ input {
   max-width: 100%;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .col {
     padding-left: unset;
     padding-right: unset;
@@ -5367,7 +5677,7 @@ input {
     padding-inline-end: calc(var(--gutter-x) / 2);
   }
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .col {
     margin-left: unset;
     -webkit-margin-start: var(--offset, 0);
@@ -6079,7 +6389,7 @@ input {
   width: 100%;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .container {
     padding-left: unset;
     padding-right: unset;
@@ -6089,7 +6399,7 @@ input {
     padding-inline-end: var(--padding-end);
   }
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .container {
     margin-left: unset;
     margin-right: unset;
@@ -6141,7 +6451,7 @@ input {
   overflow-x: hidden;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .content {
     padding-left: unset;
     padding-right: unset;
@@ -6166,7 +6476,7 @@ input {
   box-sizing: border-box;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .inner-scroll {
     padding-left: unset;
     padding-right: unset;
@@ -6294,12 +6604,15 @@ input {
   list-style: none;
   contain: content;
   overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 10;
   box-sizing: border-box;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .toolbar {
     padding-left: unset;
     padding-right: unset;
@@ -6347,7 +6660,7 @@ input {
   z-index: 10;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .header {
     padding-left: unset;
     padding-right: unset;
@@ -6390,7 +6703,7 @@ input {
   z-index: 10;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .footer {
     padding-left: unset;
     padding-right: unset;
@@ -7701,6 +8014,7 @@ input {
 }
 
 .cursor-grab {
+  cursor: -webkit-grab !important;
   cursor: grab !important;
 }
 
@@ -7721,6 +8035,7 @@ input {
 }
 
 .position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -7740,8 +8055,9 @@ input {
   z-index: 1020;
 }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -10070,7 +10386,7 @@ input {
   margin-bottom: var(--padding-bottom);
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .wrap, .wrap-xxl, .wrap-xl, .wrap-lg, .wrap-md, .wrap-sm {
     margin-left: unset;
     margin-right: unset;

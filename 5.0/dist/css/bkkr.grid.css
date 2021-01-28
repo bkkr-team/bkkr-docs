@@ -20,7 +20,7 @@
   flex-wrap: wrap;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .row {
     margin-left: unset;
     margin-right: unset;
@@ -41,7 +41,7 @@
   max-width: 100%;
 }
 
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .col {
     padding-left: unset;
     padding-right: unset;
@@ -51,7 +51,7 @@
     padding-inline-end: calc(var(--gutter-x) / 2);
   }
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .col {
     margin-left: unset;
     -webkit-margin-start: var(--offset, 0);

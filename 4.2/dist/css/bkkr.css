@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * BKKR Framework
- * Version v4.2.11
+ * Version v4.2.13
  *
  * Copyright 2015-2021 Imre Bekker
  * Copyright 2015-2021 Ingenia IT
@@ -14884,22 +14884,18 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .filter-grayscale {
-  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
 .filter-blur-sm {
-  -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 
 .filter-blur {
-  -webkit-filter: blur(30px);
   filter: blur(30px);
 }
 
 .filter-blur-lg {
-  -webkit-filter: blur(60px);
   filter: blur(60px);
 }
 

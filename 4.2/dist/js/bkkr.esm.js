@@ -1,6 +1,11 @@
 /*!
+<<<<<<< HEAD:docs/static/4.2/dist/js/bkkr.esm.js
 	* BKKR v4.2.11 (https://github.com/bkkr-team/bkkr-framework)
 	* Copyright 2015-2021 Imre Bekker
+=======
+	* BKKR v4.2.13 (https://github.com/bkkr-team/bkkr-framework)
+	* Copyright 2015-2020 Imre Bekker
+>>>>>>> de7161822a9f55a60aca51b70245b1a6123d02f0:packages/core/dist/js/bkkr.esm.js
 	* Licensed under MIT (https://github.com/tetkosimi/bkkr/blob/master/LICENSE)
 	*/
 import $ from 'jquery';
@@ -42,7 +47,7 @@ function _extends() {
 
 /**
  * --------------------------------------------------------------------------
- * BKKR (v4.2.11): util.js
+ * BKKR (v4.2.13): util.js
  * --------------------------------------------------------------------------
  */
 
@@ -580,7 +585,7 @@ var Util = function ($) {
  */
 
 var NAME = 'alert';
-var VERSION = '4.2.11';
+var VERSION = '4.2.13';
 var DATA_KEY = 'bkkr.alert';
 var EVENT_KEY = "." + DATA_KEY;
 var DATA_API_KEY = '.data-api';
@@ -742,7 +747,7 @@ $.fn[NAME].noConflict = function () {
  */
 
 var NAME$1 = 'button';
-var VERSION$1 = '4.2.11';
+var VERSION$1 = '4.2.13';
 var DATA_KEY$1 = 'bkkr.button';
 var EVENT_KEY$1 = "." + DATA_KEY$1;
 var DATA_API_KEY$1 = '.data-api';
@@ -893,7 +898,7 @@ $.fn[NAME$1].noConflict = function () {
  */
 
 var NAME$2 = 'collapse';
-var VERSION$2 = '4.2.11';
+var VERSION$2 = '4.2.13';
 var DATA_KEY$2 = 'bkkr.collapse';
 var EVENT_KEY$2 = "." + DATA_KEY$2;
 var DATA_API_KEY$2 = '.data-api';
@@ -1250,7 +1255,7 @@ $.fn[NAME$2].noConflict = function () {
  */
 
 var NAME$3 = 'dropdown';
-var VERSION$3 = '4.2.11';
+var VERSION$3 = '4.2.13';
 var DATA_KEY$3 = 'bkkr.dropdown';
 var EVENT_KEY$3 = "." + DATA_KEY$3;
 var DATA_API_KEY$3 = '.data-api';
@@ -1771,7 +1776,7 @@ $.fn[NAME$3].noConflict = function () {
  */
 
 var NAME$4 = 'modal';
-var VERSION$4 = '4.2.11';
+var VERSION$4 = '4.2.13';
 var DATA_KEY$4 = 'bkkr.modal';
 var EVENT_KEY$4 = "." + DATA_KEY$4;
 var DATA_API_KEY$4 = '.data-api';
@@ -2344,7 +2349,7 @@ $.fn[NAME$4].noConflict = function () {
 
 /**
  * --------------------------------------------------------------------------
- * BKKR (v4.2.11): navigator.js
+ * BKKR (v4.2.13): navigator.js
  * --------------------------------------------------------------------------
  */
 
@@ -2405,34 +2410,42 @@ var Navigator = function ($) {
         });
       }
     },
-    // Sidebar handler
-    sidebarHandler: function sidebarHandler(sidebar, navigationButton) {
+    // Sidebar handlers
+    toggle: function toggle(sidebar, navigationButton) {
+      // Update if it was opened
+      if (sidebarOpened === false) {
+        this.open(sidebar, navigationButton);
+      } else if (sidebarOpened === true) {
+        this.close(sidebar, navigationButton);
+      }
+    },
+    open: function open(sidebar, navigationButton) {
+      window.requestAnimationFrame(function () {
+        // Change styleclasses on navigation button
+        if ($(navigationButton).hasClass('animate-reverse')) {
+          $(navigationButton).removeClass('animate-reverse');
+        }
+
+        $(navigationButton).addClass('animate-in'); // Change styleclasses on sidebar
+
+        if ($(sidebar).hasClass('animate-reverse')) {
+          $(sidebar).removeClass('animate-reverse');
+        }
+
+        $(sidebar).addClass('animate-in');
+        $('body').css('overflow', 'hidden'); // disable scrolling
+
+        sidebarOpened = true;
+      });
+    },
+    close: function close(sidebar, navigationButton) {
       window.requestAnimationFrame(function () {
         // Update if it was opened
-        if (sidebarOpened === false) {
-          // Change styleclasses on navigation button
-          if ($(navigationButton).hasClass('animate-reverse')) {
-            $(navigationButton).removeClass('animate-reverse');
-          }
+        $(navigationButton).removeClass('animate-in').addClass('animate-reverse');
+        $(sidebar).removeClass('animate-in').addClass('animate-reverse');
+        $('body').css('overflow', 'auto'); // enables scrolling
 
-          $(navigationButton).addClass('animate-in'); // Change styleclasses on sidebar
-
-          if ($(sidebar).hasClass('animate-reverse')) {
-            $(sidebar).removeClass('animate-reverse');
-          }
-
-          $(sidebar).addClass('animate-in');
-          $('body').css('overflow', 'hidden'); // disable scrolling
-
-          sidebarOpened = true;
-        } else if (sidebarOpened === true) {
-          // Update if it was closed
-          $(navigationButton).removeClass('animate-in').addClass('animate-reverse');
-          $(sidebar).removeClass('animate-in').addClass('animate-reverse');
-          $('body').css('overflow', 'auto'); // enables scrolling
-
-          sidebarOpened = false;
-        }
+        sidebarOpened = false;
       });
     },
     // Sidebar listeners
@@ -2443,15 +2456,15 @@ var Navigator = function ($) {
       var sidebar = '#mainSidebar';
       var breakpoint = 992;
       $(navigationButton).click(function () {
-        _this.sidebarHandler(sidebar, navigationButton);
+        _this.toggle(sidebar, navigationButton);
       });
       $('#mainSidebar + .navbar-overlay').click(function () {
-        _this.sidebarHandler(sidebar, navigationButton);
+        _this.toggle(sidebar, navigationButton);
       });
 
       if (window.innerWidth < breakpoint) {
         $('#mainSidebar a[href]:not([href^="#"])').click(function () {
-          _this.sidebarHandler(sidebar, navigationButton);
+          _this.toggle(sidebar, navigationButton);
         });
       }
     }
@@ -2461,7 +2474,7 @@ var Navigator = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * BKKR (v4.2.11): reflect.js
+ * BKKR (v4.2.13): reflect.js
  * --------------------------------------------------------------------------
  */
 
@@ -2700,7 +2713,7 @@ var Reflect$1 = function ($) {
             length = _$$val.length;
 
         var max = $(this).attr('maxlength');
-        var elem = $(this).parent().find('.input-counter-text');
+        var elem = $(this).parent().parent().find('.input-counter-text').first();
 
         if (elem) {
           elem.text(length + "/" + max);
@@ -2718,7 +2731,7 @@ var Reflect$1 = function ($) {
  */
 
 var NAME$5 = 'scrollspy';
-var VERSION$5 = '4.2.11';
+var VERSION$5 = '4.2.13';
 var DATA_KEY$5 = 'bkkr.scrollspy';
 var EVENT_KEY$5 = "." + DATA_KEY$5;
 var DATA_API_KEY$5 = '.data-api';
@@ -3022,7 +3035,7 @@ $.fn[NAME$5].noConflict = function () {
  */
 
 var NAME$6 = 'tab';
-var VERSION$6 = '4.2.11';
+var VERSION$6 = '4.2.13';
 var DATA_KEY$6 = 'bkkr.tab';
 var EVENT_KEY$6 = "." + DATA_KEY$6;
 var DATA_API_KEY$6 = '.data-api';
@@ -3254,7 +3267,7 @@ $.fn[NAME$6].noConflict = function () {
  */
 
 var NAME$7 = 'toast';
-var VERSION$7 = '4.2.11';
+var VERSION$7 = '4.2.13';
 var DATA_KEY$7 = 'bkkr.toast';
 var EVENT_KEY$7 = "." + DATA_KEY$7;
 var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
@@ -3461,7 +3474,7 @@ $.fn[NAME$7].noConflict = function () {
 
 /**
  * --------------------------------------------------------------------------
- * BKKR (v4.2.11): sanitizer.js
+ * BKKR (v4.2.13): sanitizer.js
  * --------------------------------------------------------------------------
  */
 var uriAttrs = ['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href'];
@@ -3586,7 +3599,7 @@ function sanitizeHtml(unsafeHtml, whiteList, sanitizeFn) {
  */
 
 var NAME$8 = 'tooltip';
-var VERSION$8 = '4.2.11';
+var VERSION$8 = '4.2.13';
 var DATA_KEY$8 = 'bkkr.tooltip';
 var EVENT_KEY$8 = "." + DATA_KEY$8;
 var JQUERY_NO_CONFLICT$8 = $.fn[NAME$8];
@@ -4295,7 +4308,7 @@ $.fn[NAME$8].noConflict = function () {
 
 /**
  * --------------------------------------------------------------------------
- * BKKR (v4.2.11): index.js
+ * BKKR (v4.2.13): index.js
  * --------------------------------------------------------------------------
  */
 
@@ -4312,7 +4325,7 @@ $.fn[NAME$8].noConflict = function () {
   var maxMajor = 4;
 
   if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-    throw new Error('BKKR\'s JavaScript requires at least jQuery v1.9.1 but less than v4.2.11');
+    throw new Error('BKKR\'s JavaScript requires at least jQuery v1.9.1 but less than v4.2.13');
   }
 })($);
 

@@ -1,8 +1,0 @@
-// Image for shadow DOM
-// --------------------------------------------------
-
-@use "img" as *;
-
-:host {
-  @extend .img;
-}

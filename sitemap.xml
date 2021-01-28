@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/</loc>
-    <priority>0</priority>
-  </url>
-  <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/alert/usage/html/</loc>
   </url>
   <url>
@@ -234,6 +230,9 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/4.2/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/</loc>
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumb/example/</loc>
@@ -546,8 +545,5 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/</loc>
-  </url>
-  <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/readme/</loc>
   </url>
 </urlset>

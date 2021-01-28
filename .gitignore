@@ -1,3 +1,10 @@
+# Ignore because hugo mount
+*.scss
+*.ts
+*.tsx
+*/**/tests
+*/**/usage
+
 # Numerous always-ignore extensions
 *.diff
 *.err

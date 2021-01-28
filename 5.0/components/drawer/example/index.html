@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta name="author" content="Imre Bekker">
+<meta name="generator" content="Hugo 0.76.5">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<title>
+  
+    drawer · BKKR Documentation
+  
+</title>
+
+
+
+<link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/5.0/components/drawer/example/">
+    
+    
+    
+    
+        
+    
+
+    <link href="https://bkkr-team.github.io/bkkr-docs/5.0/dist/css/bkkr.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <script type="module" src="https://bkkr-team.github.io/bkkr-docs/5.0/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://bkkr-team.github.io/bkkr-docs/5.0/dist/bkkr/bkkr.js"></script>
+
+    <style>
+      :root {
+        --safe-area-top: 20px;
+        --safe-area-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <bkkr-root>
+      
+<bkkr-page>
+  <bkkr-content>
+      <bkkr-container>
+          <bkkr-button onclick="presentDrawer()">
+              Launch drawer
+          </bkkr-button>
+      </bkkr-container>
+  </bkkr-content>
+</bkkr-page>
+
+<script>
+const drawerElement = document.createElement('bkkr-drawer');
+
+customElements.define('drawer-page', class extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+<bkkr-content class="bkkr-padding">
+  <bkkr-container>
+    Drawer Content
+  </bkkr-container>
+</bkkr-content>`;
+  }
+});
+
+function presentDrawer() {
+  // create the drawer with the `drawer-page` component
+  drawerElement.component = 'drawer-page';
+  // drawerElement.card = true
+
+  // present the drawer
+  document.body.appendChild(drawerElement);
+  return drawerElement.present();
+}
+</script>
+    </bkkr-root>
+
+    
+
+
+
+
+
+  </body>
+</html>

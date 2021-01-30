@@ -42,7 +42,7 @@
   <body>
     <bkkr-root>
       
-<bkkr-page>
+<div class="bkkr-page">
   <bkkr-content>
       <bkkr-container>
           <bkkr-button id="basic-popover" expand="block" onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
@@ -50,7 +50,7 @@
           <bkkr-button id="no-event-popover" expand="block" color="danger" onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
       </bkkr-container>
   </bkkr-content>
-</bkkr-page>
+</div>
 
 <script type="module">
     import { popoverController } from '../../../dist/bkkr/index.esm.js';

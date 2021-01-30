@@ -109,9 +109,6 @@
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/usage/html/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/page/usage/html/</loc>
-  </url>
-  <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/usage/html/</loc>
   </url>
   <url>
@@ -137,6 +134,30 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/root/usage/html/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route-redirect/usage/bkkr/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route-redirect/usage/html/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route/usage/bkkr/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route/usage/html/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-outlet/usage/bkkr/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-outlet/usage/html/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/usage/bkkr/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/usage/html/</loc>
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/row/usage/html/</loc>
@@ -400,9 +421,6 @@
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/page/</loc>
-  </url>
-  <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/example/</loc>
   </url>
   <url>
@@ -434,6 +452,18 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/root/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-outlet/</loc>
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/row/example/</loc>

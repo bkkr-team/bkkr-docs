@@ -359,16 +359,30 @@
 <td><code>false</code></td>
 </tr>
 <tr>
+<td><code>href</code></td>
+<td><code>href</code></td>
+<td>Contains a URL or a URL fragment that the hyperlink points to.</td>
+<td><code>string</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
 <td><code>infinite</code></td>
 <td><code>infinite</code></td>
 <td>Handle infinite loading feature.</td>
 <td><code>boolean</code></td>
-<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td><code>items</code></td>
+<td>Number of items.</td>
+<td><code>number</code></td>
+<td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>lenght</code></td>
 <td><code>lenght</code></td>
-<td>Number of items.</td>
+<td>Lenght of the page.</td>
 <td><code>number</code></td>
 <td><code>undefined</code></td>
 </tr>
@@ -387,18 +401,11 @@
 <td><code>undefined</code></td>
 </tr>
 <tr>
-<td><code>pageIndex</code></td>
-<td><code>page-index</code></td>
-<td>Number of items on a page</td>
+<td><code>page</code></td>
+<td><code>page</code></td>
+<td>The currently displayed page.</td>
 <td><code>number</code></td>
 <td><code>1</code></td>
-</tr>
-<tr>
-<td><code>pageSize</code></td>
-<td><code>page-size</code></td>
-<td>Number of items on a page</td>
-<td><code>number</code></td>
-<td><code>10</code></td>
 </tr>
 <tr>
 <td><code>position</code></td>
@@ -406,6 +413,13 @@
 <td>The position of the paginator element. The value can be either <code>top</code> or <code>bottom</code>.</td>
 <td><code>&quot;bottom&quot; \| &quot;top&quot;</code></td>
 <td><code>'bottom'</code></td>
+</tr>
+<tr>
+<td><code>routerDirection</code></td>
+<td><code>router-direction</code></td>
+<td>When using a router, it specifies the transition direction when navigating to another page using <code>href</code>.</td>
+<td><code>&quot;back&quot; \| &quot;forward&quot; \| &quot;root&quot;</code></td>
+<td><code>'forward'</code></td>
 </tr>
 <tr>
 <td><code>threshold</code></td>
@@ -459,6 +473,7 @@ to <code>enabled</code>.</p>
 <li><a href="../toolbar">bkkr-toolbar</a></li>
 <li><a href="../button">bkkr-button</a></li>
 <li><a href="../icon">bkkr-icon</a></li>
+<li><a href="../label">bkkr-label</a></li>
 </ul>
 <h3 id="graph">Graph</h3>
 <pre><code class="language-mermaid" data-lang="mermaid">graph TD;
@@ -466,6 +481,7 @@ to <code>enabled</code>.</p>
   bkkr-paginator --&gt; bkkr-toolbar
   bkkr-paginator --&gt; bkkr-button
   bkkr-paginator --&gt; bkkr-icon
+  bkkr-paginator --&gt; bkkr-label
   style bkkr-paginator fill:#f9f,stroke:#333,stroke-width:4px
 </code></pre><hr>
 

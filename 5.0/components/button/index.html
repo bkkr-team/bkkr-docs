@@ -101,16 +101,8 @@
         </h6>
           <ul class="list-unstyled font-weight-normal pb-1 small">
               <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/root/" class="align-items-center ">root</a></li>
-              <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/page/" class="align-items-center ">page</a></li>
               <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/content/" class="align-items-center ">content</a></li>
               <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/container/" class="align-items-center ">container</a></li>
-          </ul>
-      </li><li class="pb-3">
-        <h6 class="docs-menu-nav-title d-flex align-items-center">
-          Datepicker
-        </h6>
-          <ul class="list-unstyled font-weight-normal pb-1 small">
-              <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/datepicker/" class="align-items-center ">datepicker</a></li>
           </ul>
       </li><li class="pb-3">
         <h6 class="docs-menu-nav-title d-flex align-items-center">
@@ -306,10 +298,11 @@
   <ul>
     <li><a href="#usage">Usage</a>
       <ul>
-        <li><a href="#html">Html</a></li>
+        <li><a href="#angular">Angular</a></li>
       </ul>
     </li>
     <li><a href="#properties">Properties</a></li>
+    <li><a href="#events">Events</a></li>
     <li><a href="#slots">Slots</a></li>
     <li><a href="#shadow-parts">Shadow Parts</a></li>
     <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
@@ -329,9 +322,47 @@
             <p>[description]</p>
 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
-<h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h3 id="angular">Angular</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Anchor --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Anchor<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Colors --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span><span class="p">&gt;</span>Primary<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Expand --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">expand</span><span class="o">=</span><span class="s">&#34;full&#34;</span><span class="p">&gt;</span>Full Button<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">expand</span><span class="o">=</span><span class="s">&#34;block&#34;</span><span class="p">&gt;</span>Block Button<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Round --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">shape</span><span class="o">=</span><span class="s">&#34;round&#34;</span><span class="p">&gt;</span>Round Button<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Fill --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;clear&#34;</span><span class="p">&gt;</span>Clear<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;outline&#34;</span><span class="p">&gt;</span>Outline<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;solid&#34;</span><span class="p">&gt;</span>Solid<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Icons --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-icon</span> <span class="na">slot</span><span class="o">=</span><span class="s">&#34;start&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;star&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-icon</span><span class="p">&gt;</span>
+  Left Icon
+<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+  Right Icon
+  <span class="p">&lt;</span><span class="nt">bkkr-icon</span> <span class="na">slot</span><span class="o">=</span><span class="s">&#34;end&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;star&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-icon</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-icon</span> <span class="na">slot</span><span class="o">=</span><span class="s">&#34;icon-only&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;star&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-icon</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Sizes --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;large&#34;</span><span class="p">&gt;</span>Large<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>Default<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;small&#34;</span><span class="p">&gt;</span>Small<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -430,6 +461,28 @@
 </tr>
 </tbody>
 </table>
+<h2 id="events">Events</h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bkkrBlur</code></td>
+<td>Emitted when the button loses focus.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+<tr>
+<td><code>bkkrFocus</code></td>
+<td>Emitted when the button has focus.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -486,19 +539,19 @@
 <td>Background</td>
 </tr>
 <tr>
-<td><code>--background-activated</code></td>
-<td>Background when pressed. Note: setting this will interfere with the Material Design ripple.</td>
+<td><code>--background-active</code></td>
+<td>Background when pressed.</td>
 </tr>
 <tr>
-<td><code>--background-activated-opacity</code></td>
+<td><code>--background-active-opacity</code></td>
 <td>Opacity when pressed</td>
 </tr>
 <tr>
-<td><code>--background-focused</code></td>
+<td><code>--background-focus</code></td>
 <td>Background when focused with the tab key</td>
 </tr>
 <tr>
-<td><code>--background-focused-opacity</code></td>
+<td><code>--background-focus-opacity</code></td>
 <td>Opacity when focused with the tab key</td>
 </tr>
 <tr>
@@ -534,15 +587,19 @@
 <td>Box shadow</td>
 </tr>
 <tr>
+<td><code>--box-shadow-active</code></td>
+<td>Box shadow when pressed.</td>
+</tr>
+<tr>
 <td><code>--color</code></td>
 <td>Text color</td>
 </tr>
 <tr>
-<td><code>--color-activated</code></td>
+<td><code>--color-active</code></td>
 <td>Text color when pressed</td>
 </tr>
 <tr>
-<td><code>--color-focused</code></td>
+<td><code>--color-focus</code></td>
 <td>Text color when focused with the tab key</td>
 </tr>
 <tr>

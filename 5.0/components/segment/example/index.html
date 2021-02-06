@@ -43,9 +43,12 @@
     <bkkr-root>
       
 <div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-container>
-            <bkkr-segment>
+    <bkkr-header>
+        <bkkr-toolbar>
+            <bkkr-segment value="all">
+                <bkkr-segment-button value="all">
+                    <bkkr-label>All</bkkr-label>
+                </bkkr-segment-button>
                 <bkkr-segment-button value="friends">
                     <bkkr-label>Friends</bkkr-label>
                 </bkkr-segment-button>
@@ -53,7 +56,20 @@
                     <bkkr-label>Enemies</bkkr-label>
                 </bkkr-segment-button>
             </bkkr-segment>
-        </bkkr-container>
+        </bkkr-toolbar>
+    </bkkr-header>
+    <bkkr-content>
+        <bkkr-segment value="all">
+            <bkkr-segment-button value="all">
+                <bkkr-label>All</bkkr-label>
+            </bkkr-segment-button>
+            <bkkr-segment-button value="friends">
+                <bkkr-label>Friends</bkkr-label>
+            </bkkr-segment-button>
+            <bkkr-segment-button value="enemies">
+                <bkkr-label>Enemies</bkkr-label>
+            </bkkr-segment-button>
+        </bkkr-segment>
     </bkkr-content>
 </div>
 

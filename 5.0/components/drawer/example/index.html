@@ -58,8 +58,14 @@ const drawerElement = document.createElement('bkkr-drawer');
 customElements.define('drawer-page', class extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-<bkkr-content class="bkkr-padding">
-  <bkkr-container>
+<bkkr-content>
+  <bkkr-container style='height: 80vh'>
+    Drawer Content
+  </bkkr-container>
+  <bkkr-container style='height: 80vh'>
+    Drawer Content
+  </bkkr-container>
+  <bkkr-container style='height: 80vh'>
     Drawer Content
   </bkkr-container>
 </bkkr-content>`;

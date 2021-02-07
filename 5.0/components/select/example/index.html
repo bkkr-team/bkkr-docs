@@ -43,67 +43,66 @@
     <bkkr-root>
       
 <div class="bkkr-page">
-    <bkkr-content>
+  <bkkr-content>
+    <bkkr-list>
+      <bkkr-list-header>
+        Configure your auto
+      </bkkr-list-header>
+
       <bkkr-item>
-        <bkkr-label position="floating">Alert interface</bkkr-label>
+        <bkkr-label position="floating">Body color</bkkr-label>
         <bkkr-select id="alert" value="brown" ok-text="Okay" cancel-text="Dismiss" interface="alert">
           <bkkr-select-option value="brown">Brown</bkkr-select-option>
-          <bkkr-select-option value="blonde">Blonde</bkkr-select-option>
           <bkkr-select-option value="black">Black</bkkr-select-option>
           <bkkr-select-option value="red">Red</bkkr-select-option>
         </bkkr-select>
       </bkkr-item>
       <bkkr-item>
-        <bkkr-label position="floating">Drawer interface</bkkr-label>
+        <bkkr-label position="floating">Race stripe color</bkkr-label>
         <bkkr-select value="brown" ok-text="Okay" cancel-text="Dismiss" interface="drawer">
           <bkkr-select-option value="brown">Brown</bkkr-select-option>
-          <bkkr-select-option value="blonde">Blonde</bkkr-select-option>
-          <bkkr-select-option value="black">Black</bkkr-select-option>
           <bkkr-select-option value="red">Red</bkkr-select-option>
           <bkkr-select-option value="yellow">Yellow</bkkr-select-option>
           <bkkr-select-option value="green">Green</bkkr-select-option>
-          <bkkr-select-option value="bird">Bird</bkkr-select-option>
-          <bkkr-select-option value="cat">Cat</bkkr-select-option>
-          <bkkr-select-option value="dog">Dog</bkkr-select-option>
-          <bkkr-select-option value="honeybadger">Honey Badger</bkkr-select-option>
         </bkkr-select>
       </bkkr-item>
       <bkkr-item>
-        <bkkr-label position="floating">Popover interface</bkkr-label>
-        <bkkr-select placeholder="No items have been selected" ok-text="Okay" cancel-text="Dismiss" interface="popover" search="false">
-          <bkkr-select-option value="brown">Brown</bkkr-select-option>
-          <bkkr-select-option value="blonde">Blonde</bkkr-select-option>
-          <bkkr-select-option value="black">Black</bkkr-select-option>
-          <bkkr-select-option value="red">Red</bkkr-select-option>
+        <bkkr-label position="floating">Number of horsepowers</bkkr-label>
+        <bkkr-select placeholder="No items have been selected" ok-text="Okay" cancel-text="Dismiss" interface="popover"
+          search="false">
+          <bkkr-select-option [value]="100">100</bkkr-select-option>
+          <bkkr-select-option [value]="120">120</bkkr-select-option>
+          <bkkr-select-option [value]="130">130</bkkr-select-option>
+          <bkkr-select-option [value]="140">140</bkkr-select-option>
         </bkkr-select>
       </bkkr-item>
       <bkkr-item>
-        <bkkr-label position="floating">Multiple</bkkr-label>
+        <bkkr-label position="floating">Accessories</bkkr-label>
         <bkkr-select id="multi" id="multiple" multiple="true">
-          <bkkr-select-option value="bird">Bird</bkkr-select-option>
-          <bkkr-select-option value="cat">Cat</bkkr-select-option>
-          <bkkr-select-option value="dog">Dog</bkkr-select-option>
-          <bkkr-select-option value="honeybadger">Honey Badger</bkkr-select-option>
+          <bkkr-select-option value="seat">Leather seat </bkkr-select-option>
+          <bkkr-select-option value="sound">Extended sound system</bkkr-select-option>
+          <bkkr-select-option value="cruise">Cruise control </bkkr-select-option>
         </bkkr-select>
       </bkkr-item>
-    </bkkr-content>
+    </bkkr-list>
+  </bkkr-content>
 </div>
 
 <script>
-const alert = document.getElementById('alert');
-alert.interfaceOptions = {
-  cssClass: 'my-custom-class',
-  header: 'Alert',
-  subHeader: 'Subtitle'
-}
+  const alert = document.getElementById('alert');
+  alert.interfaceOptions = {
+    cssClass: 'my-custom-class',
+    header: 'Alert',
+    subHeader: 'Subtitle'
+  }
 
-const multi = document.getElementById('multi');
-multi.interfaceOptions = {
-  cssClass: 'my-custom-class',
-  header: 'Multiple',
-  subHeader: 'Subtitle'
-}
-multi.value = ['bird', 'dog'];
+  const multi = document.getElementById('multi');
+  multi.interfaceOptions = {
+    cssClass: 'my-custom-class',
+    header: 'Multiple',
+    subHeader: 'Subtitle'
+  }
+  multi.value = ['bird', 'dog'];
 </script>
     </bkkr-root>
 

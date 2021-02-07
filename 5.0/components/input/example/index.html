@@ -44,45 +44,37 @@
       
 <div class="bkkr-page">
     <bkkr-content>
-        <!-- Default Input -->
-        <bkkr-input></bkkr-input>
+        <bkkr-list class="mb-5">
+            <bkkr-list-header>
+                Account details
+            </bkkr-list-header>
 
-        <!-- Input with value -->
-        <bkkr-input value="custom"></bkkr-input>
+            <bkkr-item>
+                <bkkr-label>Firstname</bkkr-label>
+                <bkkr-input required></bkkr-input>
+            </bkkr-item>
+    
+            <bkkr-item>
+                <bkkr-label position="fixed">Lastname</bkkr-label>
+                <bkkr-input required></bkkr-input>
+            </bkkr-item>
+    
+            <bkkr-item>
+                <bkkr-label position="floating">Address</bkkr-label>
+                <bkkr-input placeholder="ZIP City, Street"></bkkr-input>
+            </bkkr-item>
+        </bkkr-list>
 
-        <!-- Input with placeholder -->
-        <bkkr-input placeholder="Enter Input"></bkkr-input>
-
-        <!-- Input with clear button when there is a value -->
-        <bkkr-input clear-input value="clear me"></bkkr-input>
-
-        <!-- Number type input -->
-        <bkkr-input type="number" value="333"></bkkr-input>
-
-        <!-- Disabled input -->
-        <bkkr-input value="Disabled" disabled></bkkr-input>
-
-        <!-- Readonly input -->
-        <bkkr-input value="Readonly" readonly></bkkr-input>
-
-        <!-- Required input -->
-        <bkkr-input placeholder="Required" required></bkkr-input>
-
-        <!-- Inputs with labels -->
-        <bkkr-item>
-            <bkkr-label>Default Label</bkkr-label>
-            <bkkr-input></bkkr-input>
-        </bkkr-item>
-
-        <bkkr-item>
-            <bkkr-label position="fixed">Fixed Label</bkkr-label>
-            <bkkr-input></bkkr-input>
-        </bkkr-item>
-
-        <bkkr-item>
-            <bkkr-label position="floating">Floating Label</bkkr-label>
-            <bkkr-input placeholder="eg. Pizza"></bkkr-input>
-        </bkkr-item>
+        <bkkr-list>
+            <bkkr-item>
+                <bkkr-label position="fixed">Email</bkkr-label>
+                <bkkr-input value="test@elek.com" disabled></bkkr-input>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-label position="fixed">Password</bkkr-label>
+                <bkkr-input value="123456789" type="password" clear-input></bkkr-input>
+            </bkkr-item>
+        </bkkr-list>
     </bkkr-content>
 </div>
     </bkkr-root>

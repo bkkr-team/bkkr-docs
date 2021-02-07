@@ -317,6 +317,7 @@
         </li>
       </ul>
     </li>
+    <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
     <li><a href="#dependencies">Dependencies</a>
       <ul>
         <li><a href="#depends-on">Depends on</a></li>
@@ -366,7 +367,7 @@
 <td><code>autocomplete</code></td>
 <td><code>autocomplete</code></td>
 <td>Indicates whether the value of the control can be automatically completed by the browser.</td>
-<td><code>&quot;off&quot; \| &quot;on&quot; \| &quot;name&quot; \| &quot;honorific-prefix&quot; \| &quot;given-name&quot; \| &quot;additional-name&quot; \| &quot;family-name&quot; \| &quot;honorific-suffix&quot; \| &quot;nickname&quot; \| &quot;email&quot; \| &quot;username&quot; \| &quot;new-password&quot; \| &quot;current-password&quot; \| &quot;one-time-code&quot; \| &quot;organization-title&quot; \| &quot;organization&quot; \| &quot;street-address&quot; \| &quot;address-line1&quot; \| &quot;address-line2&quot; \| &quot;address-line3&quot; \| &quot;address-level4&quot; \| &quot;address-level3&quot; \| &quot;address-level2&quot; \| &quot;address-level1&quot; \| &quot;country&quot; \| &quot;country-name&quot; \| &quot;postal-code&quot; \| &quot;cc-name&quot; \| &quot;cc-given-name&quot; \| &quot;cc-additional-name&quot; \| &quot;cc-family-name&quot; \| &quot;cc-number&quot; \| &quot;cc-exp&quot; \| &quot;cc-exp-month&quot; \| &quot;cc-exp-year&quot; \| &quot;cc-csc&quot; \| &quot;cc-type&quot; \| &quot;transaction-currency&quot; \| &quot;transaction-amount&quot; \| &quot;language&quot; \| &quot;bday&quot; \| &quot;bday-day&quot; \| &quot;bday-month&quot; \| &quot;bday-year&quot; \| &quot;sex&quot; \| &quot;tel&quot; \| &quot;tel-country-code&quot; \| &quot;tel-national&quot; \| &quot;tel-area-code&quot; \| &quot;tel-local&quot; \| &quot;tel-extension&quot; \| &quot;impp&quot; \| &quot;url&quot; \| &quot;photo&quot;</code></td>
+<td><code>&quot;on&quot; \| &quot;off&quot; \| &quot;name&quot; \| &quot;honorific-prefix&quot; \| &quot;given-name&quot; \| &quot;additional-name&quot; \| &quot;family-name&quot; \| &quot;honorific-suffix&quot; \| &quot;nickname&quot; \| &quot;email&quot; \| &quot;username&quot; \| &quot;new-password&quot; \| &quot;current-password&quot; \| &quot;one-time-code&quot; \| &quot;organization-title&quot; \| &quot;organization&quot; \| &quot;street-address&quot; \| &quot;address-line1&quot; \| &quot;address-line2&quot; \| &quot;address-line3&quot; \| &quot;address-level4&quot; \| &quot;address-level3&quot; \| &quot;address-level2&quot; \| &quot;address-level1&quot; \| &quot;country&quot; \| &quot;country-name&quot; \| &quot;postal-code&quot; \| &quot;cc-name&quot; \| &quot;cc-given-name&quot; \| &quot;cc-additional-name&quot; \| &quot;cc-family-name&quot; \| &quot;cc-number&quot; \| &quot;cc-exp&quot; \| &quot;cc-exp-month&quot; \| &quot;cc-exp-year&quot; \| &quot;cc-csc&quot; \| &quot;cc-type&quot; \| &quot;transaction-currency&quot; \| &quot;transaction-amount&quot; \| &quot;language&quot; \| &quot;bday&quot; \| &quot;bday-day&quot; \| &quot;bday-month&quot; \| &quot;bday-year&quot; \| &quot;sex&quot; \| &quot;tel&quot; \| &quot;tel-country-code&quot; \| &quot;tel-national&quot; \| &quot;tel-area-code&quot; \| &quot;tel-local&quot; \| &quot;tel-extension&quot; \| &quot;impp&quot; \| &quot;url&quot; \| &quot;photo&quot;</code></td>
 <td><code>'off'</code></td>
 </tr>
 <tr>
@@ -581,6 +582,61 @@
 <code>input.focus()</code>.</p>
 <h4 id="returns-1">Returns</h4>
 <p>Type: <code>Promise&lt;void&gt;</code></p>
+<h2 id="css-custom-properties">CSS Custom Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--background</code></td>
+<td>Background of the input</td>
+</tr>
+<tr>
+<td><code>--color</code></td>
+<td>Color of the input text</td>
+</tr>
+<tr>
+<td><code>--padding-bottom</code></td>
+<td>Bottom padding of the input</td>
+</tr>
+<tr>
+<td><code>--padding-end</code></td>
+<td>Right padding if direction is left-to-right, and left padding if direction is right-to-left of the input</td>
+</tr>
+<tr>
+<td><code>--padding-start</code></td>
+<td>Left padding if direction is left-to-right, and right padding if direction is right-to-left of the input</td>
+</tr>
+<tr>
+<td><code>--padding-top</code></td>
+<td>Top padding of the input</td>
+</tr>
+<tr>
+<td><code>--placeholder-color</code></td>
+<td>Color of the input placeholder text</td>
+</tr>
+<tr>
+<td><code>--placeholder-font-style</code></td>
+<td>Font style of the input placeholder text</td>
+</tr>
+<tr>
+<td><code>--placeholder-font-weight</code></td>
+<td>Font weight of the input placeholder text</td>
+</tr>
+<tr>
+<td><code>--placeholder-opacity</code></td>
+<td>Opacity of the input placeholder text</td>
+</tr>
+<tr>
+<td><code>--placeholder-transition-delay</code></td>
+<td>Transition delay of the input placeholder text</td>
+</tr>
+</tbody>
+</table>
 <h2 id="dependencies">Dependencies</h2>
 <h3 id="depends-on">Depends on</h3>
 <ul>

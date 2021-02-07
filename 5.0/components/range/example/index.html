@@ -45,39 +45,45 @@
 <div class="bkkr-page">
     <bkkr-content>
         <bkkr-list>
-            <bkkr-item>
-                <bkkr-range color="danger" pin="true"></bkkr-range>
-            </bkkr-item>
+            <bkkr-list-header>
+                Adjust Display
+            </bkkr-list-header>
 
             <bkkr-item>
-                <bkkr-range min="-200" max="200" color="secondary">
-                <bkkr-label slot="start">-200</bkkr-label>
-                <bkkr-label slot="end">200</bkkr-label>
+                <bkkr-range value="20">
+                    <bkkr-icon slot="start" size="small" name="sun"></bkkr-icon>
+                    <bkkr-icon slot="end" name="sun"></bkkr-icon>
                 </bkkr-range>
             </bkkr-item>
 
             <bkkr-item>
-                <bkkr-range min="20" max="80" step="2">
-                <bkkr-icon size="small" slot="start" name="sun"></bkkr-icon>
-                <bkkr-icon slot="end" name="sun"></bkkr-icon>
+                <bkkr-range min="-200" max="200" pin color="secondary">
+                    <bkkr-icon slot="start" size="small" name="adjust"></bkkr-icon>
+                    <bkkr-icon slot="end" name="adjust"></bkkr-icon>
                 </bkkr-range>
             </bkkr-item>
 
             <bkkr-item>
-                <bkkr-range min="1000" max="2000" step="100" snaps="true" color="secondary"></bkkr-range>
+                <bkkr-range id="dual-range" dual-knobs pin color="dark">
+                    <bkkr-icon slot="start" size="small" name="brush"></bkkr-icon>
+                    <bkkr-icon slot="end" name="brush"></bkkr-icon>
+                </bkkr-range>
             </bkkr-item>
 
             <bkkr-item>
-                <bkkr-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></bkkr-range>
-            </bkkr-item>
-
-            <bkkr-item>
-                <bkkr-range dual-knobs="true" min="21" max="72" step="3" snaps="true"></bkkr-range>
+                <bkkr-range min="1000" max="2000" step="100" value="1400" snaps color="danger">
+                    <bkkr-icon slot="start" size="small" color="danger" name="thermometer"></bkkr-icon>
+                    <bkkr-icon slot="end" color="danger" name="thermometer"></bkkr-icon>
+                </bkkr-range>
             </bkkr-item>
         </bkkr-list>
     </bkkr-content>
 </div>
 
+<script>
+    const dualRange = document.querySelector('#dual-range');
+    dualRange.value = { lower: 33, upper: 60 };
+</script>
     </bkkr-root>
 
     

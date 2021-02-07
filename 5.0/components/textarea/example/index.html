@@ -44,41 +44,29 @@
       
 <div class="bkkr-page">
     <bkkr-content>
-        <!-- Default textarea -->
-        <bkkr-textarea></bkkr-textarea>
+        <bkkr-list class="mb-5">
+            <bkkr-list-header>
+                Profile infos
+            </bkkr-list-header>
 
-        <!-- Textarea in an item with a placeholder -->
-        <bkkr-item>
-            <bkkr-textarea placeholder="Enter more information here..."></bkkr-textarea>
-        </bkkr-item>
+            <bkkr-item>
+                <bkkr-label position="floating">About us</bkkr-label>
+                <bkkr-textarea placeholder="Tell something about yourself..."></bkkr-textarea>
+            </bkkr-item>
 
-        <!-- Textarea in an item with a floating label -->
-        <bkkr-item>
-            <bkkr-label position="floating">Description</bkkr-label>
-            <bkkr-textarea placeholder="Enter more information here..."></bkkr-textarea>
-        </bkkr-item>
+            <bkkr-item>
+                <bkkr-label>Signature</bkkr-label>
+                <bkkr-textarea
+                    disabled
+                    value="Sent from my phone">
+                </bkkr-textarea>
+            </bkkr-item>
 
-        <!-- Disabled and readonly textarea in an item with a stacked label -->
-        <bkkr-item>
-            <bkkr-label position="stacked">Summary</bkkr-label>
-            <bkkr-textarea
-                disabled
-                readonly
-                value="Disabled">
-            </bkkr-textarea>
-        </bkkr-item>
-
-        <!-- Textarea that clears the value on edit -->
-        <bkkr-item>
-            <bkkr-label>Comment</bkkr-label>
-            <bkkr-textarea clear-on-edit="true"></bkkr-textarea>
-        </bkkr-item>
-
-        <!-- Textarea with custom number of rows and cols -->
-        <bkkr-item>
-            <bkkr-label>Notes</bkkr-label>
-            <bkkr-textarea rows="6" cols="20" placeholder="Enter any notes here..."></bkkr-textarea>
-        </bkkr-item>
+            <bkkr-item>
+                <bkkr-label>Notes</bkkr-label>
+                <bkkr-textarea rows="6" cols="20" clear-on-edit placeholder="Enter any notes here..."></bkkr-textarea>
+            </bkkr-item>
+        </bkkr-list>
     </bkkr-content>
 </div>
 

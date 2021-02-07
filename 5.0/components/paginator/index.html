@@ -344,6 +344,13 @@
 </thead>
 <tbody>
 <tr>
+<td><code>arrowIcon</code></td>
+<td><code>arrow-icon</code></td>
+<td>Arrow icon beign used on next and previous buttons.</td>
+<td><code>string</code></td>
+<td><code>'chevron'</code></td>
+</tr>
+<tr>
 <td><code>disabled</code></td>
 <td><code>disabled</code></td>
 <td>If <code>true</code>, the paginator will be hidden and scroll event listeners will be removed.  Set this to true to disable the paginator from actively trying to receive new data while scrolling. This is useful when it is known that there is no more data that can be added, and the paginator is no longer needed.</td>
@@ -414,6 +421,13 @@
 <td><code>'forward'</code></td>
 </tr>
 <tr>
+<td><code>statusText</code></td>
+<td><code>status-text</code></td>
+<td>Set the the status text.</td>
+<td><code>string</code></td>
+<td><code>'of'</code></td>
+</tr>
+<tr>
 <td><code>threshold</code></td>
 <td><code>threshold</code></td>
 <td>The threshold distance from the bottom of the content to call the <code>infinite</code> output event when scrolled. The threshold value can be either a percent, or in pixels. For example, use the value of <code>10%</code> for the <code>infinite</code> output event to get called when the user has scrolled 10% from the bottom of the page. Use the value <code>100px</code> when the scroll is within 100 pixels from the bottom of the page.</td>
@@ -462,20 +476,14 @@ to <code>enabled</code>.</p>
 <h3 id="depends-on">Depends on</h3>
 <ul>
 <li><a href="../spinner">bkkr-spinner</a></li>
-<li><a href="../row">bkkr-row</a></li>
-<li><a href="../col">bkkr-col</a></li>
 <li><a href="../button">bkkr-button</a></li>
 <li><a href="../icon">bkkr-icon</a></li>
-<li><a href="../label">bkkr-label</a></li>
 </ul>
 <h3 id="graph">Graph</h3>
 <pre><code class="language-mermaid" data-lang="mermaid">graph TD;
   bkkr-paginator --&gt; bkkr-spinner
-  bkkr-paginator --&gt; bkkr-row
-  bkkr-paginator --&gt; bkkr-col
   bkkr-paginator --&gt; bkkr-button
   bkkr-paginator --&gt; bkkr-icon
-  bkkr-paginator --&gt; bkkr-label
   style bkkr-paginator fill:#f9f,stroke:#333,stroke-width:4px
 </code></pre><hr>
 

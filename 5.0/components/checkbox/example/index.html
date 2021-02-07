@@ -44,37 +44,34 @@
       
 <div class="bkkr-page">
     <bkkr-content>
-        <!-- Default Checkbox -->
-        <bkkr-checkbox></bkkr-checkbox>
-
-        <!-- Disabled Checkbox -->
-        <bkkr-checkbox disabled></bkkr-checkbox>
-
-        <!-- Checked Checkbox -->
-        <bkkr-checkbox checked></bkkr-checkbox>
-
-        <!-- Checkbox Colors -->
-        <bkkr-checkbox color="primary"></bkkr-checkbox>
-        <bkkr-checkbox color="secondary"></bkkr-checkbox>
-        <bkkr-checkbox color="danger"></bkkr-checkbox>
-        <bkkr-checkbox color="light"></bkkr-checkbox>
-        <bkkr-checkbox color="dark"></bkkr-checkbox>
-
-        <!-- Checkboxes in a List -->
         <bkkr-list>
+            <bkkr-list-header>
+                Select ingredients
+            </bkkr-list-header>
+
+            <bkkr-item>
+                <bkkr-label>Ham</bkkr-label>
+                <bkkr-checkbox slot="end" value="ham" checked></bkkr-checkbox>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>Cucumber</bkkr-label>
+                <bkkr-checkbox slot="end" value="cucumber" disabled></bkkr-checkbox>
+            </bkkr-item>
+
             <bkkr-item>
                 <bkkr-label>Pepperoni</bkkr-label>
-                <bkkr-checkbox slot="end" value="pepperoni" checked></bkkr-checkbox>
+                <bkkr-checkbox slot="end" value="pepperoni" color="danger" checked></bkkr-checkbox>
             </bkkr-item>
 
             <bkkr-item>
-                <bkkr-label>Sausage</bkkr-label>
-                <bkkr-checkbox slot="end" value="sausage" disabled></bkkr-checkbox>
+                <bkkr-label>Corn</bkkr-label>
+                <bkkr-checkbox slot="end" value="Corn" color="success"></bkkr-checkbox>
             </bkkr-item>
 
             <bkkr-item>
-                <bkkr-label>Mushrooms</bkkr-label>
-                <bkkr-checkbox slot="end" value="mushrooms" checked indeterminate></bkkr-checkbox>
+                <bkkr-label>Mushroom</bkkr-label>
+                <bkkr-checkbox slot="end" value="mushroom" color="warning" checked indeterminate></bkkr-checkbox>
             </bkkr-item>
         </bkkr-list>
     </bkkr-content>

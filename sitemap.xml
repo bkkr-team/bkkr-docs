@@ -148,6 +148,12 @@
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route/usage/html/</loc>
   </url>
   <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-link/usage/bkkr/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-link/usage/html/</loc>
+  </url>
+  <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-outlet/usage/bkkr/</loc>
   </url>
   <url>
@@ -461,6 +467,9 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-link/</loc>
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-outlet/</loc>

@@ -61,12 +61,6 @@
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/header/usage/html/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/hint/usage/bkkr/</loc>
-  </url>
-  <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/hint/usage/html/</loc>
-  </url>
-  <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/icon/usage/bkkr/</loc>
   </url>
   <url>
@@ -107,6 +101,12 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/usage/html/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/usage/bkkr/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/usage/html/</loc>
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/usage/html/</loc>
@@ -355,12 +355,6 @@
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/header/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/hint/example/</loc>
-  </url>
-  <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/hint/</loc>
-  </url>
-  <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/icon/</loc>
   </url>
   <url>
@@ -425,6 +419,12 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/example/</loc>
+  </url>
+  <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/</loc>
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/example/</loc>

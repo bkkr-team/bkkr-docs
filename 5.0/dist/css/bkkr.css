@@ -320,9 +320,8 @@ body {
 hr {
   margin: var(--bkkr-spacer, 16px) 0;
   border: 0;
-  background-color: currentColor;
-  color: inherit;
-  opacity: 0.25;
+  background-color: var(--bkkr-border, rgba(var(--bkkr-text-color-rgb, 0, 0, 0), 0.1));
+  color: transparent;
 }
 
 hr:not([size]) {

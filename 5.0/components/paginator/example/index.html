@@ -44,45 +44,42 @@
       
 <div class="bkkr-page">
     <bkkr-content>
-        <bkkr-container>
+        <bkkr-container class="mb-3">
             <bkkr-button onClick="togglePaginator()" expand="block">
                 Toggle Infinite Scroll
             </bkkr-button>
         </bkkr-container>
 
-        <bkkr-list>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-            <bkkr-item></bkkr-item>
-        </bkkr-list>
-
-        <bkkr-container>
-            <bkkr-paginator threshold="100px" id="paginator" items="110" lenght="10" page="7">
-            </bkkr-paginator>
-        </bkkr-container>
+        <bkkr-paginator threshold="100px" id="paginator" items="110" lenght="10" page="7">
+            <bkkr-list>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+                <bkkr-item lines="full"></bkkr-item>
+            </bkkr-list>
+        </bkkr-paginator>
     </bkkr-content>
 </div>
 
@@ -102,7 +99,7 @@
         // if (data.length == 1000) {
         //    event.target.disabled = true;
         // }
-    }, 500);
+    }, 3000);
     });
 
     function togglePaginator() {

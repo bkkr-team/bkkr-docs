@@ -435,7 +435,7 @@
 <td><code>status-text</code></td>
 <td>Set the the status text.</td>
 <td><code>string</code></td>
-<td><code>'of'</code></td>
+<td><code>'/'</code></td>
 </tr>
 <tr>
 <td><code>threshold</code></td>
@@ -464,6 +464,11 @@
 </thead>
 <tbody>
 <tr>
+<td><code>bkkrPageSizeChanged</code></td>
+<td>Emitted when page size have changed.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+<tr>
 <td><code>bkkrPaginator</code></td>
 <td>Emitted when the scroll reaches the threshold distance, or stepper have changed. From within your infinite handler, you must call the paginator&rsquo;s <code>complete()</code> method when your async operation has completed.</td>
 <td><code>CustomEvent&lt;void&gt;</code></td>
@@ -486,12 +491,16 @@ to <code>enabled</code>.</p>
 <h3 id="depends-on">Depends on</h3>
 <ul>
 <li><a href="../spinner">bkkr-spinner</a></li>
+<li><a href="../select">bkkr-select</a></li>
+<li><a href="../select-option">bkkr-select-option</a></li>
 <li><a href="../button">bkkr-button</a></li>
 <li><a href="../icon">bkkr-icon</a></li>
 </ul>
 <h3 id="graph">Graph</h3>
 <pre><code class="language-mermaid" data-lang="mermaid">graph TD;
   bkkr-paginator --&gt; bkkr-spinner
+  bkkr-paginator --&gt; bkkr-select
+  bkkr-paginator --&gt; bkkr-select-option
   bkkr-paginator --&gt; bkkr-button
   bkkr-paginator --&gt; bkkr-icon
   style bkkr-paginator fill:#f9f,stroke:#333,stroke-width:4px

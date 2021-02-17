@@ -217,6 +217,10 @@ fieldset {
   height: auto;
 }
 
+:focus {
+  outline: 0;
+}
+
 [type=search] {
   outline-offset: -2px;
   -webkit-appearance: textfield;

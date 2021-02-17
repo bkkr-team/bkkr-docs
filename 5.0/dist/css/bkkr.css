@@ -493,6 +493,10 @@ fieldset {
   height: auto;
 }
 
+:focus {
+  outline: 0;
+}
+
 [type=search] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
@@ -717,7 +721,7 @@ a:not([class]) {
 }
 
 @media (any-hover: hover) {
-  a:not([class]) :host(:hover) {
+  a:not([class]):hover {
     color: var(--color-base, var(--color-primary, #3880ff));
     text-decoration: underline;
   }

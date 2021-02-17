@@ -59,7 +59,7 @@
       </bkkr-item>
       <bkkr-item>
         <bkkr-label position="floating">Race stripe color</bkkr-label>
-        <bkkr-select value="brown" ok-text="Okay" cancel-text="Dismiss" interface="drawer">
+        <bkkr-select id="drawer" value="brown" ok-text="Okay" cancel-text="Dismiss" interface="drawer">
           <bkkr-select-option value="brown">Brown</bkkr-select-option>
           <bkkr-select-option value="red">Red</bkkr-select-option>
           <bkkr-select-option value="yellow">Yellow</bkkr-select-option>
@@ -103,6 +103,11 @@
     subHeader: 'Subtitle'
   }
   multi.value = ['bird', 'dog'];
+
+
+  document.getElementById('drawer').addEventListener('bkkrSearch', (ev) => {
+    console.log(ev);
+  })
 </script>
     </bkkr-root>
 

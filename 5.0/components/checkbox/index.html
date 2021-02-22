@@ -301,6 +301,7 @@
   <ul>
     <li><a href="#usage">Usage</a>
       <ul>
+        <li><a href="#angular">Angular</a></li>
         <li><a href="#html">Html</a></li>
       </ul>
     </li>
@@ -318,9 +319,30 @@
             <p>[Checkbox]</p>
 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
-<h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h3 id="angular">Angular</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Checkboxes in a List --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-item</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&#34;let entry of form&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>{{entry.val}}<span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">slot</span><span class="o">=</span><span class="s">&#34;end&#34;</span> <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]=&#34;</span><span class="na">entry</span><span class="err">.</span><span class="na">isChecked</span><span class="err">&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="html">Html</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Disabled --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">disabled</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Checked --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">checked</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Colors --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;secondary&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;danger&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;light&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-checkbox</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;dark&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-checkbox</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="properties">Properties</h2>
 <table>
 <thead>

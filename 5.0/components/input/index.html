@@ -301,7 +301,7 @@
   <ul>
     <li><a href="#usage">Usage</a>
       <ul>
-        <li><a href="#html">Html</a></li>
+        <li><a href="#angular--html">Angular / html</a></li>
       </ul>
     </li>
     <li><a href="#properties">Properties</a></li>
@@ -337,9 +337,43 @@
             <p>[Input]</p>
 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
-<h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h3 id="angular--html">Angular / html</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-input</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Input with value --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-input</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;custom&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Input with placeholder --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Enter Input&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Input with clear button when there is a value --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-input</span> <span class="na">clear-input</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;clear me&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Number type input --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;number&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;333&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Disabled input --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-input</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Disabled&#34;</span> <span class="na">disabled</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Readonly input --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-input</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Readonly&#34;</span> <span class="na">readonly</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Inputs with labels --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>Default Label<span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-input</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-label</span> <span class="na">position</span><span class="o">=</span><span class="s">&#34;floating&#34;</span><span class="p">&gt;</span>Floating Label<span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-input</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-label</span> <span class="na">position</span><span class="o">=</span><span class="s">&#34;fixed&#34;</span><span class="p">&gt;</span>Fixed Label<span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-input</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-input</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="properties">Properties</h2>
 <table>
 <thead>

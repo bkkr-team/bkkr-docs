@@ -301,7 +301,7 @@
   <ul>
     <li><a href="#usage">Usage</a>
       <ul>
-        <li><a href="#html">Html</a></li>
+        <li><a href="#angular--html">Angular / html</a></li>
       </ul>
     </li>
     <li><a href="#properties">Properties</a></li>
@@ -316,9 +316,33 @@
             <p>Cards are a standard piece of UI that serves as an entry point to more detailed information. A card can be a single component, but is often made up of some header, title, subtitle, and content. <code>card</code> is broken up into several sub-components to reflect this. Please see <code>card-content</code>, <code>card-header</code>, <code>card-title</code>, <code>card-subtitle</code>.</p>
 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
-<h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h3 id="angular--html">Angular / html</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-card</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-card-header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-card-subtitle</span><span class="p">&gt;</span>Card Subtitle<span class="p">&lt;/</span><span class="nt">bkkr-card-subtitle</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0 text-bold&#34;</span><span class="p">&gt;</span>Card Title<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">bkkr-card-header</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">bkkr-card-content</span><span class="p">&gt;</span>
+    Keep close to Nature&#39;s heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+  <span class="p">&lt;/</span><span class="nt">bkkr-card-content</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-card</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Item in card --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-card</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-icon</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;thumbtack&#34;</span> <span class="na">slot</span><span class="o">=</span><span class="s">&#34;start&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-icon</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>bkkr-item in a card, icon left, button right<span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;outline&#34;</span> <span class="na">slot</span><span class="o">=</span><span class="s">&#34;end&#34;</span><span class="p">&gt;</span>View<span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">bkkr-card-content</span><span class="p">&gt;</span>
+    This is content, without any paragraph or header tags,
+    within an bkkr-card-content element.
+  <span class="p">&lt;/</span><span class="nt">bkkr-card-content</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-card</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="properties">Properties</h2>
 <table>
 <thead>

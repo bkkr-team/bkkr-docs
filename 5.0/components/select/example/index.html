@@ -77,8 +77,16 @@
         </bkkr-select>
       </bkkr-item>
       <bkkr-item>
+        <bkkr-label position="floating" interface="drawer">Navigation</bkkr-label>
+        <bkkr-select id="nav" multiple="true">
+          <bkkr-select-option value="driving">Driving assistant</bkkr-select-option>
+          <bkkr-select-option value="parking">Parking assistant</bkkr-select-option>
+          <bkkr-select-option value="voice">Voice assistant</bkkr-select-option>
+        </bkkr-select>
+      </bkkr-item>
+      <bkkr-item>
         <bkkr-label position="floating">Accessories</bkkr-label>
-        <bkkr-select id="multi" id="multiple" multiple="true">
+        <bkkr-select id="multi" multiple="true" interface="alert">
           <bkkr-select-option value="seat">Leather seat </bkkr-select-option>
           <bkkr-select-option value="sound">Extended sound system</bkkr-select-option>
           <bkkr-select-option value="cruise">Cruise control </bkkr-select-option>
@@ -107,6 +115,10 @@
 
   document.getElementById('drawer').addEventListener('bkkrSearch', (ev) => {
     console.log(ev);
+  })
+
+  document.getElementById('drawer').addEventListener('bkkrOpen', () => {
+    console.log("opened");
   })
 </script>
     </bkkr-root>

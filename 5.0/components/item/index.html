@@ -301,7 +301,7 @@
   <ul>
     <li><a href="#usage">Usage</a>
       <ul>
-        <li><a href="#html">Html</a></li>
+        <li><a href="#angular--html">Angular / html</a></li>
       </ul>
     </li>
     <li><a href="#properties">Properties</a></li>
@@ -324,9 +324,33 @@
             <p>[item]</p>
 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
-<h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;item&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h3 id="angular--html">Angular / html</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+    Item
+  <span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Item as a Button --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-item</span> <span class="na">button</span> <span class="err">(</span><span class="na">click</span><span class="err">)=&#34;</span><span class="na">buttonClick</span><span class="err">()&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+    Button Item
+  <span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Item as an Anchor --&gt;</span>
+<span class="p">&lt;</span><span class="nt">bkkr-item</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://bkkr-team.github.io/bkkr-docs/&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+    Anchor Item
+  <span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">bkkr-item</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;secondary&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+    Secondary Color Item
+  <span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="properties">Properties</h2>
 <table>
 <thead>

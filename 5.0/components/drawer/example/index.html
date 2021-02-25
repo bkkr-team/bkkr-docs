@@ -45,16 +45,18 @@
 <div class="bkkr-page">
   <bkkr-content>
       <bkkr-container>
-          <bkkr-button onclick="presentDrawer()">
-              Launch drawer
+          <bkkr-button class="mb-2" onclick="presentDrawer()">
+            Launch drawer
           </bkkr-button>
+
+          <bkkr-button onclick="presentAutoDrawer()">
+            Lauch card drawer
+        </bkkr-button>
       </bkkr-container>
   </bkkr-content>
 </div>
 
 <script>
-const drawerElement = document.createElement('bkkr-drawer');
-
 customElements.define('drawer-page', class extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -73,9 +75,24 @@ customElements.define('drawer-page', class extends HTMLElement {
 });
 
 function presentDrawer() {
+  const drawerElement = document.createElement('bkkr-drawer');
+
   // create the drawer with the `drawer-page` component
   drawerElement.component = 'drawer-page';
   // drawerElement.card = true
+
+  // present the drawer
+  document.body.appendChild(drawerElement);
+  return drawerElement.present();
+}
+
+function presentAutoDrawer() {
+  const drawerElement = document.createElement('bkkr-drawer');
+
+  // create the drawer with the `drawer-page` component
+  drawerElement.component = 'drawer-page';
+  drawerElement.card = true
+  drawerElement.duration = 3000
 
   // present the drawer
   document.body.appendChild(drawerElement);

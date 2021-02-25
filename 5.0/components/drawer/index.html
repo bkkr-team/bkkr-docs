@@ -330,7 +330,6 @@
         </li>
       </ul>
     </li>
-    <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
     <li><a href="#dependencies">Dependencies</a>
       <ul>
         <li><a href="#depends-on">Depends on</a></li>
@@ -384,6 +383,13 @@
 <td><code>false</code></td>
 </tr>
 <tr>
+<td><code>closeButton</code></td>
+<td><code>close-button</code></td>
+<td>If <code>true</code>, the drawer will have a close button on large screens.</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
 <td><code>component</code> <em>(required)</em></td>
 <td><code>component</code></td>
 <td>The component to display inside of the drawer.</td>
@@ -403,6 +409,13 @@
 <td>Additional classes to apply for custom CSS. If multiple classes are provided they should be separated by spaces.</td>
 <td><code>string \| string[]</code></td>
 <td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td><code>duration</code></td>
+<td>How many milliseconds to wait before hiding the drawer. By default, it won&rsquo;t disappear.</td>
+<td><code>number</code></td>
+<td><code>0</code></td>
 </tr>
 <tr>
 <td><code>enterAnimation</code></td>
@@ -504,73 +517,16 @@
 <p>Present the drawer overlay after it has been created.</p>
 <h4 id="returns-3">Returns</h4>
 <p>Type: <code>Promise&lt;void&gt;</code></p>
-<h2 id="css-custom-properties">CSS Custom Properties</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--backdrop-opacity</code></td>
-<td>Opacity of the backdrop</td>
-</tr>
-<tr>
-<td><code>--background</code></td>
-<td>Background of the drawer content</td>
-</tr>
-<tr>
-<td><code>--border-color</code></td>
-<td>Border color of the drawer content</td>
-</tr>
-<tr>
-<td><code>--border-radius</code></td>
-<td>Border radius of the drawer content</td>
-</tr>
-<tr>
-<td><code>--border-style</code></td>
-<td>Border style of the drawer content</td>
-</tr>
-<tr>
-<td><code>--border-width</code></td>
-<td>Border width of the drawer content</td>
-</tr>
-<tr>
-<td><code>--height</code></td>
-<td>Height of the drawer</td>
-</tr>
-<tr>
-<td><code>--max-height</code></td>
-<td>Maximum height of the drawer</td>
-</tr>
-<tr>
-<td><code>--max-width</code></td>
-<td>Maximum width of the drawer</td>
-</tr>
-<tr>
-<td><code>--min-height</code></td>
-<td>Minimum height of the drawer</td>
-</tr>
-<tr>
-<td><code>--min-width</code></td>
-<td>Minimum width of the drawer</td>
-</tr>
-<tr>
-<td><code>--width</code></td>
-<td>Width of the drawer</td>
-</tr>
-</tbody>
-</table>
 <h2 id="dependencies">Dependencies</h2>
 <h3 id="depends-on">Depends on</h3>
 <ul>
 <li><a href="../backdrop">bkkr-backdrop</a></li>
+<li><a href="../icon">bkkr-icon</a></li>
 </ul>
 <h3 id="graph">Graph</h3>
 <pre><code class="language-mermaid" data-lang="mermaid">graph TD;
   bkkr-drawer --&gt; bkkr-backdrop
+  bkkr-drawer --&gt; bkkr-icon
   style bkkr-drawer fill:#f9f,stroke:#333,stroke-width:4px
 </code></pre><hr>
 

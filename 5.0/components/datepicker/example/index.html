@@ -13,7 +13,7 @@
 
 <title>
   
-    datepicker · BKKR Documentation
+    datetime · BKKR Documentation
   
 </title>
 
@@ -27,7 +27,7 @@
         
     
 
-    <link href="https://bkkr-team.github.io/bkkr-docs/5.0/dist/css/bkkr.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://bkkr-team.github.io/bkkr-docs/5.0/dist/bkkr/bkkr.css" rel="stylesheet">
 
     <script type="module" src="https://bkkr-team.github.io/bkkr-docs/5.0/dist/bkkr/bkkr.esm.js"></script>
     <script nomodule src="https://bkkr-team.github.io/bkkr-docs/5.0/dist/bkkr/bkkr.js"></script>
@@ -44,11 +44,26 @@
       
 <div class="bkkr-page">
     <bkkr-content>
-        <bkkr-container>
-            <bkkr-datepicker>
-            
-            </bkkr-datepicker>
-        </bkkr-container>
+        <bkkr-list class="mb-5">
+            <bkkr-list-header>
+                Account details
+            </bkkr-list-header>
+
+            <bkkr-item>
+                <bkkr-label>Firstname</bkkr-label>
+                <bkkr-datetime></bkkr-datetime>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label position="fixed">Lastname</bkkr-label>
+                <bkkr-datetime></bkkr-datetime>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label position="floating">Address</bkkr-label>
+                <bkkr-datetime placeholder="ZIP City, Street"></bkkr-datetime>
+            </bkkr-item>
+        </bkkr-list>
     </bkkr-content>
 </div>
     </bkkr-root>

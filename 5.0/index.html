@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en" class="hydrated">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
@@ -20,7 +21,7 @@
 
 
 <link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/5.0/">
-    
+  
 
 
 
@@ -32,14 +33,18 @@
 
 
 <link rel="stylesheet" href="https://bkkr-team.github.io/bkkr-docs/5.0/assets/css/docs.css">
-<link rel="stylesheet" href="https://bkkr-team.github.io/bkkr-docs/5.0/assets/css/vendor/all.css">
-  </head>
-  <body>
-    <div class="app-root">
-      <header id="mainNavbar" class="header docs-header position-fixed">
-  <div class="toolbar">
+</head>
+
+<body>
+  <bkkr-root>
+    <bkkr-header class="docs-header">
+  <bkkr-toolbar>
     <nav class="d-flex">
-      
+      <bkkr-menu-toggle slot="start">
+        <bkkr-button fill="clear" color="dark">
+          <bkkr-icon name="bars" slot="icon-only"></bkkr-icon>
+        </bkkr-button>
+      </bkkr-menu-toggle>
 
       <a class="docs-logo mr-4" href="https://bkkr-team.github.io/bkkr-docs/5.0/">
         <span class="brand">BKKR</span>
@@ -53,32 +58,31 @@
         </li>
       </ul>
     </nav>
-  </div>
-</header>
+  </bkkr-toolbar>
+</bkkr-header>
 
-      <div class="wrapper">
-        <main id="site-content" class="content" role="main">
+    <main id="main-content" class="bkkr-page docs-content" role="main">
+      
+<bkkr-content>
+    <bkkr-container>
+    </bkkr-container>
+</bkkr-content>
+    </main>
 
-          BKKR 5.0
-
-
-        </main>
-      </div>
-
-      <footer class="footer bg-dark text-light py-3">
+    <footer class="footer bg-dark text-light py-3">
   <div class="container">
     <p class="small mb-0">
       2021 &copy; Bekker Imre
     </p>
   </div>
 </footer>
-    </div>
-    
-    
+  </bkkr-root>
+
+  
+<script src="https://bkkr-team.github.io/bkkr-docs/5.0/dist/bkkr/bkkr.js"></script>
 
 
 
+</body>
 
-
-  </body>
 </html>

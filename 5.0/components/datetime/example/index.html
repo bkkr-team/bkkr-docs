@@ -65,7 +65,7 @@
             </bkkr-item>
             <bkkr-item>
                 <bkkr-label>Start Time</bkkr-label>
-                <bkkr-datetime type="time" display-format="h:mm A" min="1990-02-10" value="1990-02-19T07:43Z">
+                <bkkr-datetime id="timefield" min="1990-02-10" value="1990-02-19T07:43Z" picker="false">
                 </bkkr-datetime>
             </bkkr-item>
             <bkkr-item>
@@ -87,6 +87,11 @@
         </bkkr-list>
     </bkkr-content>
 </div>
+
+<script>
+    var el = document.getElementById('timefield');
+    el.displayFormat = ['h:mm A', 'HH:mm'];
+</script>
   </bkkr-root>
 
   

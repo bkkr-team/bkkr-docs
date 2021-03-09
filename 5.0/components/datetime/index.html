@@ -344,7 +344,6 @@
         </li>
       </ul>
     </li>
-    <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
     <li><a href="#dependencies">Dependencies</a>
       <ul>
         <li><a href="#depends-on">Depends on</a></li>
@@ -401,14 +400,14 @@
 <td><code>day-names</code></td>
 <td>Full day of the week names. This can be used to provide locale names for each day in the week. Defaults to English.</td>
 <td><code>string \| string[]</code></td>
-<td><code>undefined</code></td>
+<td><code>DAY_NAMES</code></td>
 </tr>
 <tr>
 <td><code>dayShortNames</code></td>
 <td><code>day-short-names</code></td>
 <td>Short abbreviated day of the week names. This can be used to provide locale names for each day in the week. Defaults to English. Defaults to: <code>['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']</code></td>
 <td><code>string \| string[]</code></td>
-<td><code>undefined</code></td>
+<td><code>DAY_SHORT_NAMES</code></td>
 </tr>
 <tr>
 <td><code>disabled</code></td>
@@ -420,16 +419,9 @@
 <tr>
 <td><code>displayFormat</code></td>
 <td><code>display-format</code></td>
-<td>The display format of the date and time as text that shows within the item. When the <code>pickerFormat</code> input is not used, then the <code>displayFormat</code> is used for both display the formatted text, and determining the datetime picker&rsquo;s columns. See the <code>pickerFormat</code> input description for more info. Defaults to <code>MMM D, YYYY</code>.</td>
-<td><code>string</code></td>
-<td><code>this.type === 'time' ? DEFAULT_TIME_FORMAT : DEFAULT_DATE_FORMAT</code></td>
-</tr>
-<tr>
-<td><code>displayTimezone</code></td>
-<td><code>display-timezone</code></td>
-<td>The timezone to use for display purposes only. See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString">Date.prototype.toLocaleString()</a> for a list of supported timezones. If no value is provided, the component will default to displaying times in the user&rsquo;s local timezone.</td>
-<td><code>string</code></td>
-<td><code>undefined</code></td>
+<td>The display format of the date and time as text that shows within the item. When the <code>pickerFormat</code> input is not used, then the <code>displayFormat</code> is used for both display the formatted text, and determining the datetime picker&rsquo;s columns. See the <code>pickerFormat</code> input description for more info. Defaults to <code>DD.MM.YYYY</code>.</td>
+<td><code>string \| string[]</code></td>
+<td><code>DEFAULT_DATE_FORMAT</code></td>
 </tr>
 <tr>
 <td><code>enterkeyhint</code></td>
@@ -471,14 +463,14 @@
 <td><code>month-names</code></td>
 <td>Full names for each month name. This can be used to provide locale month names. Defaults to English.</td>
 <td><code>string \| string[]</code></td>
-<td><code>undefined</code></td>
+<td><code>MONTH_SHORT_NAMES</code></td>
 </tr>
 <tr>
 <td><code>monthShortNames</code></td>
 <td><code>month-short-names</code></td>
 <td>Short abbreviated names for each month name. This can be used to provide locale month names. Defaults to English.</td>
 <td><code>string \| string[]</code></td>
-<td><code>undefined</code></td>
+<td><code>MONTH_SHORT_NAMES</code></td>
 </tr>
 <tr>
 <td><code>name</code></td>
@@ -486,6 +478,13 @@
 <td>The name of the control, which is submitted with the form data.</td>
 <td><code>string</code></td>
 <td><code>this.inputId</code></td>
+</tr>
+<tr>
+<td><code>picker</code></td>
+<td><code>picker</code></td>
+<td>If <code>true</code>, the user can open a datepicker interface.</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
 </tr>
 <tr>
 <td><code>placeholder</code></td>
@@ -507,13 +506,6 @@
 <td>If <code>true</code>, the user must fill in a value before submitting a form.</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
-</tr>
-<tr>
-<td><code>type</code></td>
-<td><code>type</code></td>
-<td>The type of control to display. The default type is text.</td>
-<td><code>&quot;date&quot; \| &quot;time&quot;</code></td>
-<td><code>'date'</code></td>
 </tr>
 <tr>
 <td><code>value</code></td>
@@ -581,61 +573,6 @@ depending on the <code>interface</code> property on the <code>bkkr-select</code>
 <code>datetime.focus()</code>.</p>
 <h4 id="returns-2">Returns</h4>
 <p>Type: <code>Promise&lt;void&gt;</code></p>
-<h2 id="css-custom-properties">CSS Custom Properties</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--background</code></td>
-<td>Background of the datetime</td>
-</tr>
-<tr>
-<td><code>--color</code></td>
-<td>Color of the datetime text</td>
-</tr>
-<tr>
-<td><code>--padding-bottom</code></td>
-<td>Bottom padding of the datetime</td>
-</tr>
-<tr>
-<td><code>--padding-end</code></td>
-<td>Right padding if direction is left-to-right, and left padding if direction is right-to-left of the datetime</td>
-</tr>
-<tr>
-<td><code>--padding-start</code></td>
-<td>Left padding if direction is left-to-right, and right padding if direction is right-to-left of the datetime</td>
-</tr>
-<tr>
-<td><code>--padding-top</code></td>
-<td>Top padding of the datetime</td>
-</tr>
-<tr>
-<td><code>--placeholder-color</code></td>
-<td>Color of the datetime placeholder text</td>
-</tr>
-<tr>
-<td><code>--placeholder-font-style</code></td>
-<td>Font style of the datetime placeholder text</td>
-</tr>
-<tr>
-<td><code>--placeholder-font-weight</code></td>
-<td>Font weight of the datetime placeholder text</td>
-</tr>
-<tr>
-<td><code>--placeholder-opacity</code></td>
-<td>Opacity of the datetime placeholder text</td>
-</tr>
-<tr>
-<td><code>--placeholder-transition-delay</code></td>
-<td>Transition delay of the datetime placeholder text</td>
-</tr>
-</tbody>
-</table>
 <h2 id="dependencies">Dependencies</h2>
 <h3 id="depends-on">Depends on</h3>
 <ul>

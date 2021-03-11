@@ -22,6 +22,11 @@
 
 <link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/5.0/components/datetime-popover/">
   
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+
+
+
 
 
 
@@ -39,8 +44,8 @@
   <bkkr-root class="docs-root">
     <bkkr-header class="docs-header">
   <bkkr-toolbar>
-    <nav class="d-flex">
-      <bkkr-menu-toggle slot="start">
+    <nav class="d-flex align-items-center">
+      <bkkr-menu-toggle slot="start" class="d-lg-none">
         <bkkr-button fill="clear" color="dark">
           <bkkr-icon name="bars" slot="icon-only"></bkkr-icon>
         </bkkr-button>
@@ -51,13 +56,20 @@
         <span class="docs">Docs</span>
       </a>
 
-      <ul class="navs">
-        
+      <ul class="navs d-none d-lg-flex">
+        <li>
+          <a class="nav text-bold" href="https://bkkr-team.github.io/bkkr-docs/5.0/">Guide</a>
+        </li>
         <li>
           <a class="nav text-bold" href="https://bkkr-team.github.io/bkkr-docs/5.0/components">Components</a>
         </li>
       </ul>
     </nav>
+    <div slot="end">
+      <bkkr-button fill="clear" href="https://github.com/bkkr-team/bkkr-framework">
+        <bkkr-icon slot="icon-only" type="brands" name="github"></bkkr-icon>
+      </bkkr-button>
+    </div>
   </bkkr-toolbar>
 </bkkr-header>
 
@@ -307,7 +319,7 @@
           <div class="docs-page">
             <article>
               <div class="docs-intro">
-                <h1 class="docs-title" id="content">datetime-popover</h1>
+                <h1 class="docs-title text-truncate" id="content">datetime-popover</h1>
                 <p class="docs-lead lead"></p>
               </div>
 

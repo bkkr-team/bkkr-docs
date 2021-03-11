@@ -22,6 +22,11 @@
 
 <link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/5.0/components/searchbar/">
   
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+
+
+
 
 
 
@@ -39,8 +44,8 @@
   <bkkr-root class="docs-root">
     <bkkr-header class="docs-header">
   <bkkr-toolbar>
-    <nav class="d-flex">
-      <bkkr-menu-toggle slot="start">
+    <nav class="d-flex align-items-center">
+      <bkkr-menu-toggle slot="start" class="d-lg-none">
         <bkkr-button fill="clear" color="dark">
           <bkkr-icon name="bars" slot="icon-only"></bkkr-icon>
         </bkkr-button>
@@ -51,13 +56,20 @@
         <span class="docs">Docs</span>
       </a>
 
-      <ul class="navs">
-        
+      <ul class="navs d-none d-lg-flex">
+        <li>
+          <a class="nav text-bold" href="https://bkkr-team.github.io/bkkr-docs/5.0/">Guide</a>
+        </li>
         <li>
           <a class="nav text-bold" href="https://bkkr-team.github.io/bkkr-docs/5.0/components">Components</a>
         </li>
       </ul>
     </nav>
+    <div slot="end">
+      <bkkr-button fill="clear" href="https://github.com/bkkr-team/bkkr-framework">
+        <bkkr-icon slot="icon-only" type="brands" name="github"></bkkr-icon>
+      </bkkr-button>
+    </div>
   </bkkr-toolbar>
 </bkkr-header>
 
@@ -308,7 +320,7 @@
           <div class="docs-page">
             <article>
               <div class="docs-intro">
-                <h1 class="docs-title" id="content">searchbar</h1>
+                <h1 class="docs-title text-truncate" id="content">searchbar</h1>
                 <p class="docs-lead lead"></p>
               </div>
 
@@ -340,6 +352,7 @@
         </li>
       </ul>
     </li>
+    <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
     <li><a href="#dependencies">Dependencies</a>
       <ul>
         <li><a href="#depends-on">Depends on</a></li>
@@ -533,6 +546,73 @@
 <code>input.focus()</code>.</p>
 <h4 id="returns-1">Returns</h4>
 <p>Type: <code>Promise&lt;void&gt;</code></p>
+<h2 id="css-custom-properties">CSS Custom Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--background</code></td>
+<td>Background of the searchbar input</td>
+</tr>
+<tr>
+<td><code>--background-active</code></td>
+<td>Background of the activated searchbar input</td>
+</tr>
+<tr>
+<td><code>--background-focus</code></td>
+<td>Background of the focused searchbar input</td>
+</tr>
+<tr>
+<td><code>--background-hover</code></td>
+<td>Background of the hovered searchbar input</td>
+</tr>
+<tr>
+<td><code>--border-radius</code></td>
+<td>Border radius of the searchbar input</td>
+</tr>
+<tr>
+<td><code>--box-shadow</code></td>
+<td>Box shadow of the searchbar input</td>
+</tr>
+<tr>
+<td><code>--cancel-button-color</code></td>
+<td>Color of the searchbar cancel button</td>
+</tr>
+<tr>
+<td><code>--clear-button-color</code></td>
+<td>Color of the searchbar clear button</td>
+</tr>
+<tr>
+<td><code>--color</code></td>
+<td>Color of the searchbar text</td>
+</tr>
+<tr>
+<td><code>--icon-color</code></td>
+<td>Color of the searchbar icon</td>
+</tr>
+<tr>
+<td><code>--placeholder-color</code></td>
+<td>Color of the searchbar placeholder</td>
+</tr>
+<tr>
+<td><code>--placeholder-font-style</code></td>
+<td>Font style of the searchbar placeholder</td>
+</tr>
+<tr>
+<td><code>--placeholder-font-weight</code></td>
+<td>Font weight of the searchbar placeholder</td>
+</tr>
+<tr>
+<td><code>--placeholder-opacity</code></td>
+<td>Opacity of the searchbar placeholder</td>
+</tr>
+</tbody>
+</table>
 <h2 id="dependencies">Dependencies</h2>
 <h3 id="depends-on">Depends on</h3>
 <ul>

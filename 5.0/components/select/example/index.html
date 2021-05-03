@@ -129,6 +129,12 @@
   }
   multi.value = ['bird', 'dog'];
 
+  const drawer = document.getElementById('drawer');
+  drawer.interfaceOptions = {
+    cssClass: 'my-custom-class',
+    closeIcon: 'check'
+  }
+
 
   document.getElementById('drawer').addEventListener('bkkrSearch', (ev) => {
     console.log(ev);

@@ -382,7 +382,8 @@
         </li>
       </ul>
     </li>
-    <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
+    <li><a href="#slots">Slots</a></li>
+    <li><a href="#shadow-parts">Shadow Parts</a></li>
     <li><a href="#dependencies">Dependencies</a>
       <ul>
         <li><a href="#depends-on">Depends on</a></li>
@@ -431,24 +432,17 @@
 <td><code>true</code></td>
 </tr>
 <tr>
-<td><code>component</code> <em>(required)</em></td>
 <td><code>component</code></td>
-<td>The component to display inside of the popover.</td>
+<td><code>component</code></td>
+<td>The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of <code>bkkr-popover</code>.</td>
 <td><code>Function \| HTMLElement \| string</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>componentProps</code></td>
 <td>&ndash;</td>
-<td>The data to pass to the popover component.</td>
+<td>The data to pass to the popover component. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just set the props directly on your component.</td>
 <td><code>{ [key: string]: any; }</code></td>
-<td><code>undefined</code></td>
-</tr>
-<tr>
-<td><code>cssClass</code></td>
-<td><code>css-class</code></td>
-<td>Additional classes to apply for custom CSS. If multiple classes are provided they should be separated by spaces.</td>
-<td><code>string \| string[]</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -464,6 +458,20 @@
 <td>The event to pass to the popover animation.</td>
 <td><code>any</code></td>
 <td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>inline</code></td>
+<td><code>inline</code></td>
+<td>If <code>true</code>, popover will be presented inline.</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>isOpen</code></td>
+<td><code>is-open</code></td>
+<td>If <code>true</code>, the popover will open. If <code>false</code>, the popover will close. Use this if you need finer grained control over presentation, otherwise just use the popoverController or the <code>trigger</code> property. Note: <code>isOpen</code> will not automatically be set back to <code>false</code> when the popover dismisses. You will need to do that in your code.</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
 </tr>
 <tr>
 <td><code>keyboardClose</code></td>
@@ -518,6 +526,26 @@
 <td>Emitted before the popover has presented.</td>
 <td><code>CustomEvent&lt;void&gt;</code></td>
 </tr>
+<tr>
+<td><code>didDismiss</code></td>
+<td>Emitted after the popover has dismissed. Shorthand for bkkrPopoverDidDismiss.</td>
+<td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
+</tr>
+<tr>
+<td><code>didPresent</code></td>
+<td>Emitted after the popover has presented. Shorthand for bkkrPopoverWillDismiss.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+<tr>
+<td><code>willDismiss</code></td>
+<td>Emitted before the popover has dismissed. Shorthand for bkkrPopoverWillDismiss.</td>
+<td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
+</tr>
+<tr>
+<td><code>willPresent</code></td>
+<td>Emitted before the popover has presented. Shorthand for bkkrPopoverWillPresent.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="methods">Methods</h2>
@@ -537,50 +565,41 @@
 <p>Present the popover overlay after it has been created.</p>
 <h4 id="returns-3">Returns</h4>
 <p>Type: <code>Promise&lt;void&gt;</code></p>
-<h2 id="css-custom-properties">CSS Custom Properties</h2>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
-<th>Name</th>
+<th>Slot</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--background</code></td>
-<td>Background of the popover</td>
+<td></td>
+<td>Content is placed inside of the <code>.popover-content</code> element.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shadow-parts">Shadow Parts</h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&quot;arrow&quot;</code></td>
+<td>The arrow that points to the reference element. Only applies on <code>ios</code> mode.</td>
 </tr>
 <tr>
-<td><code>--bkkr-backdrop-opacity</code></td>
-<td>Opacity of the backdrop</td>
+<td><code>&quot;backdrop&quot;</code></td>
+<td>The <code>ion-backdrop</code> element.</td>
 </tr>
 <tr>
-<td><code>--box-shadow</code></td>
-<td>Box shadow of the popover</td>
-</tr>
-<tr>
-<td><code>--height</code></td>
-<td>Height of the popover</td>
-</tr>
-<tr>
-<td><code>--max-height</code></td>
-<td>Maximum height of the popover</td>
-</tr>
-<tr>
-<td><code>--max-width</code></td>
-<td>Maximum width of the popover</td>
-</tr>
-<tr>
-<td><code>--min-height</code></td>
-<td>Minimum height of the popover</td>
-</tr>
-<tr>
-<td><code>--min-width</code></td>
-<td>Minimum width of the popover</td>
-</tr>
-<tr>
-<td><code>--width</code></td>
-<td>Width of the popover</td>
+<td><code>&quot;content&quot;</code></td>
+<td>The wrapper element for the default slot.</td>
 </tr>
 </tbody>
 </table>

@@ -62,37 +62,49 @@
     
 <div class="bkkr-page">
   <bkkr-content>
-      <bkkr-container>
-          <bkkr-button style="width: 150px; position: fixed; bottom: 0; right: 8px" id="basic-popover" class="mb-3" expand="block" onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
-          <bkkr-button id="long-list-popover" class="mb-3" expand="block" color="secondary" onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
-          <bkkr-button id="no-event-popover" class="mb-3" expand="block" color="danger" onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
-      </bkkr-container>
+    <bkkr-container>
+      <bkkr-button style="position: fixed; right: 8px; bottom: 0;
+
+width: 150px;" id="basic-popover" class="mb-3" expand="block"
+        onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
+      <bkkr-button id="long-list-popover" class="mb-3" expand="block" color="secondary"
+        onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
+      <bkkr-button id="no-event-popover" class="mb-3" expand="block" color="danger"
+        onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
+      <bkkr-button onclick="openPopover(event)">Open Inline Popover</bkkr-button>
+    </bkkr-container>
+
+    <bkkr-popover inline="true">
+      <bkkr-content>
+        This is my inline popover content!
+      </bkkr-content>
+    </bkkr-popover>
   </bkkr-content>
 </div>
 
 <script type="module">
-    import { popoverController } from '../../../dist/bkkr/index.esm.js';
-    window.popoverController = popoverController;
+  import { popoverController } from '../../../dist/bkkr/index.esm.js';
+  window.popoverController = popoverController;
 </script>
 
 <script>
   async function presentPopover(opts) {
-      const popover = document.createElement('bkkr-popover');
-      for (const [key, value] of Object.entries(opts)) {
-        popover[key] = value;
-        console.log(`${key}: ${value}`);
-      }
-      document.body.appendChild(popover);
-      await popover.present();
+    const popover = document.createElement('bkkr-popover');
+    for (const [key, value] of Object.entries(opts)) {
+      popover[key] = value;
+      console.log(`${key}: ${value}`);
+    }
+    document.body.appendChild(popover);
+    await popover.present();
+  }
+
+  class ProfilePage extends HTMLElement {
+    constructor() {
+      super();
     }
 
-    class ProfilePage extends HTMLElement {
-      constructor() {
-        super();
-      }
-
-      connectedCallback() {
-        this.innerHTML = `
+    connectedCallback() {
+      this.innerHTML = `
           <bkkr-content>
             <bkkr-list>
               <bkkr-list-header><bkkr-label>List</bkkr-label></bkkr-list-header>
@@ -103,23 +115,23 @@
             </bkkr-list>
           </bkkr-content>
         `;
-      }
+    }
+  }
+
+  customElements.define('profile-page', ProfilePage);
+
+  class ListPage extends HTMLElement {
+    constructor() {
+      super();
     }
 
-    customElements.define('profile-page', ProfilePage);
-
-    class ListPage extends HTMLElement {
-      constructor() {
-        super();
+    connectedCallback() {
+      let items = '';
+      for (var i = 0; i < 30; i++) {
+        items += '<bkkr-item><bkkr-label>Item ' + i + '</bkkr-label></bkkr-item>';
       }
 
-      connectedCallback() {
-        let items = '';
-        for (var i = 0; i < 30; i++) {
-          items += '<bkkr-item><bkkr-label>Item ' + i + '</bkkr-label></bkkr-item>';
-        }
-
-        this.innerHTML = `
+      this.innerHTML = `
           <bkkr-content>
             <bkkr-list>
               <bkkr-list-header><bkkr-label>List</bkkr-label></bkkr-list-header>
@@ -127,10 +139,21 @@
             </bkkr-list>
           </bkkr-content>
         `;
-      }
     }
+  }
 
-    customElements.define('list-page', ListPage);
+  customElements.define('list-page', ListPage);
+
+  const popover = document.querySelector('bkkr-popover');
+  const openPopover = (ev) => {
+    popover.isOpen = true;
+    popover.event = ev;
+  }
+
+  popover.addEventListener('didDismiss', () => {
+    popover.isOpen = false;
+    popover.event = undefined;
+  });
 </script>
   </bkkr-root>
 

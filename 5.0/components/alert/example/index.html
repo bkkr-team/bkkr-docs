@@ -78,6 +78,14 @@ function presentAlert() {
   alert.subHeader = 'Subtitle';
   alert.message = 'This is an alert message.';
   alert.buttons = ['Cancel', 'OK'];
+  alert.inputs = [{
+    name: 'confirm',
+    type: 'text',
+    placeholder: 'Type something here...',
+    attributes: {
+      autofocus: true
+    }
+  }];
 
   document.body.appendChild(alert);
   return alert.present();

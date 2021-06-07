@@ -505,6 +505,9 @@
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio/</loc>
   </url>
   <url>
+    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio-group/</loc>
+  </url>
+  <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/range/example/</loc>
   </url>
   <url>
@@ -554,9 +557,6 @@
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select/</loc>
-  </url>
-  <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select-option/</loc>
   </url>
   <url>
     <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select-option/</loc>

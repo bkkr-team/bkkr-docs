@@ -63,40 +63,39 @@
 <div class="bkkr-page">
   <bkkr-content>
       <bkkr-container>
-          <bkkr-button onclick="presentModal()">
+          <bkkr-button onclick="openModal(event)">
               Launch modal
           </bkkr-button>
+
+          <bkkr-modal>
+            <bkkr-header>
+              <bkkr-toolbar class="px-3">
+                <h2 class="text-bold my-2">
+                  Modal
+                </h2>
+              </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content>
+              <bkkr-container>
+                This is my inline modal content!
+              </bkkr-container>
+            </bkkr-content>
+          </bkkr-modal>
       </bkkr-container>
   </bkkr-content>
 </div>
 
 <script>
-const modalElement = document.createElement('bkkr-modal');
+  const modal = document.querySelector('bkkr-modal');
+  modal.presentingElement = document.querySelector('.bkkr-page');
 
-customElements.define('modal-page', class extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
-<bkkr-header>
-  <bkkr-toolbar>
-    <p class="text-bold text-center mb-0">Modal Header</p>
-  </bkkr-toolbar>
-</bkkr-header>
-<bkkr-content>
-  <bkkr-container>
-    Modal Content
-  </bkkr-container>
-</bkkr-content>`;
+  const openModal = () => {
+    modal.isOpen = true;
   }
-});
 
-function presentModal() {
-  // create the modal with the `modal-page` component
-  modalElement.component = 'modal-page';
-
-  // present the modal
-  document.body.appendChild(modalElement);
-  return modalElement.present();
-}
+  modal.addEventListener('didDismiss', () => {
+    modal.isOpen = false;
+  });
 </script>
   </bkkr-root>
 

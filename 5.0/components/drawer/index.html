@@ -189,6 +189,7 @@
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/checkbox/" class="align-items-center " >checkbox</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/input/" class="align-items-center " >input</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/radio/" class="align-items-center " >radio</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/radio-group/" class="align-items-center " >radio-group</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/range/" class="align-items-center " >range</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/select/" class="align-items-center " >select</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/textarea/" class="align-items-center " >textarea</a></li>
@@ -381,6 +382,8 @@
         </li>
       </ul>
     </li>
+    <li><a href="#slots">Slots</a></li>
+    <li><a href="#shadow-parts">Shadow Parts</a></li>
     <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
     <li><a href="#dependencies">Dependencies</a>
       <ul>
@@ -427,13 +430,6 @@
 <td><code>true</code></td>
 </tr>
 <tr>
-<td><code>card</code></td>
-<td><code>card</code></td>
-<td>The component to display as card</td>
-<td><code>boolean</code></td>
-<td><code>false</code></td>
-</tr>
-<tr>
 <td><code>closeButton</code></td>
 <td><code>close-button</code></td>
 <td>If <code>true</code>, the drawer will have a close button on large screens.</td>
@@ -445,27 +441,6 @@
 <td><code>close-icon</code></td>
 <td>The icon to use when <code>closeButton</code> is set to <code>true</code>.</td>
 <td><code>string</code></td>
-<td><code>undefined</code></td>
-</tr>
-<tr>
-<td><code>component</code> <em>(required)</em></td>
-<td><code>component</code></td>
-<td>The component to display inside of the drawer.</td>
-<td><code>Function \| HTMLElement \| string</code></td>
-<td><code>undefined</code></td>
-</tr>
-<tr>
-<td><code>componentProps</code></td>
-<td>&ndash;</td>
-<td>The data to pass to the drawer component.</td>
-<td><code>{ [key: string]: any; }</code></td>
-<td><code>undefined</code></td>
-</tr>
-<tr>
-<td><code>cssClass</code></td>
-<td><code>css-class</code></td>
-<td>Additional classes to apply for custom CSS. If multiple classes are provided they should be separated by spaces.</td>
-<td><code>string \| string[]</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -488,6 +463,13 @@
 <td>If <code>true</code>, the drawer will have a drag indicator.</td>
 <td><code>boolean</code></td>
 <td><code>true</code></td>
+</tr>
+<tr>
+<td><code>isOpen</code></td>
+<td><code>is-open</code></td>
+<td>If <code>true</code>, the drawer will open. If <code>false</code>, the drawer will close. Use this if you need finer grained control over presentation, otherwise just use the drawerController or the <code>trigger</code> property. Note: <code>isOpen</code> will not automatically be set back to <code>false</code> when the drawer dismisses. You will need to do that in your code.</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
 </tr>
 <tr>
 <td><code>keyboardClose</code></td>
@@ -524,6 +506,13 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 </tr>
+<tr>
+<td><code>trigger</code></td>
+<td><code>trigger</code></td>
+<td>An ID corresponding to the trigger element that causes the drawer to open when clicked.</td>
+<td><code>string</code></td>
+<td><code>undefined</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="events">Events</h2>
@@ -556,6 +545,26 @@
 <td>Emitted before the drawer has presented.</td>
 <td><code>CustomEvent&lt;void&gt;</code></td>
 </tr>
+<tr>
+<td><code>didDismiss</code></td>
+<td>Emitted after the drawer has dismissed. Shorthand for bkkrDrawerDidDismiss.</td>
+<td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
+</tr>
+<tr>
+<td><code>didPresent</code></td>
+<td>Emitted after the drawer has presented. Shorthand for bkkrDrawerWillDismiss.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+<tr>
+<td><code>willDismiss</code></td>
+<td>Emitted before the drawer has dismissed. Shorthand for bkkrDrawerWillDismiss.</td>
+<td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
+</tr>
+<tr>
+<td><code>willPresent</code></td>
+<td>Emitted before the drawer has presented. Shorthand for bkkrDrawerWillPresent.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="methods">Methods</h2>
@@ -575,6 +584,40 @@
 <p>Present the drawer overlay after it has been created.</p>
 <h4 id="returns-3">Returns</h4>
 <p>Type: <code>Promise&lt;void&gt;</code></p>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&quot;= Content is placed inside of the </code>.drawer-content<code> element.&quot;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="shadow-parts">Shadow Parts</h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&quot;backdrop&quot;</code></td>
+<td>The <code>bkkr-backdrop</code> element.</td>
+</tr>
+<tr>
+<td><code>&quot;content&quot;</code></td>
+<td>The wrapper element for the default slot.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="css-custom-properties">CSS Custom Properties</h2>
 <table>
 <thead>

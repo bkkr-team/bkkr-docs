@@ -63,23 +63,54 @@
 <div class="bkkr-page">
   <bkkr-content>
     <bkkr-container>
-      <bkkr-button style="position: fixed; right: 8px; bottom: 0;
-
-width: 150px;" id="basic-popover" class="mb-3" expand="block"
-        onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
-      <bkkr-button id="long-list-popover" class="mb-3" expand="block" color="secondary"
-        onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
-      <bkkr-button id="no-event-popover" class="mb-3" expand="block" color="danger"
-        onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
-      <bkkr-button onclick="openPopover(event)">Open Inline Popover</bkkr-button>
+      <bkkr-button id="basic-popover" expand="block" class="mb-3" onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
+      <bkkr-button id="long-list-popover" expand="block" class="mb-3" color="secondary" onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
+      <bkkr-button id="no-event-popover" expand="block" class="mb-3" color="danger" onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
     </bkkr-container>
-
-    <bkkr-popover inline="true">
-      <bkkr-content>
-        This is my inline popover content!
-      </bkkr-content>
-    </bkkr-popover>
   </bkkr-content>
+  <bkkr-footer color="primary">
+    <bkkr-toolbar color="primary">
+      <bkkr-button slot="start" id="trigger-context">
+        <bkkr-icon slot="start" name="mouse" class="mr-2"></bkkr-icon>
+        Context menu
+      </bkkr-button>
+      <bkkr-button slot="end" id="trigger-hover">
+        <bkkr-icon slot="start" name="mouse-pointer" class="mr-2"></bkkr-icon>
+        Hover
+      </bkkr-button>
+    </bkkr-toolbar>
+  </bkkr-footer>
+
+  <bkkr-popover
+    trigger="trigger-context"
+    trigger-action="context-menu"
+  >
+    <bkkr-content>
+      <bkkr-container>
+        <bkkr-list>
+          <bkkr-item lines="full">
+            Copy
+          </bkkr-item>
+          <bkkr-item lines="full">
+            Paste
+          </bkkr-item>
+        </bkkr-list>
+      </bkkr-container>
+    </bkkr-content>
+  </bkkr-popover>
+
+  <bkkr-popover
+    trigger="trigger-hover"
+    trigger-action="hover"
+  >
+    <bkkr-content>
+      <bkkr-container>
+        <div class="text-center">
+          Hello!
+        </div>
+      </bkkr-container>
+    </bkkr-content>
+  </bkkr-popover>
 </div>
 
 <script type="module">
@@ -89,12 +120,7 @@ width: 150px;" id="basic-popover" class="mb-3" expand="block"
 
 <script>
   async function presentPopover(opts) {
-    const popover = document.createElement('bkkr-popover');
-    for (const [key, value] of Object.entries(opts)) {
-      popover[key] = value;
-      console.log(`${key}: ${value}`);
-    }
-    document.body.appendChild(popover);
+    const popover = await popoverController.create(opts);
     await popover.present();
   }
 
@@ -105,16 +131,16 @@ width: 150px;" id="basic-popover" class="mb-3" expand="block"
 
     connectedCallback() {
       this.innerHTML = `
-          <bkkr-content>
-            <bkkr-list>
-              <bkkr-list-header><bkkr-label>List</bkkr-label></bkkr-list-header>
-              <bkkr-item button><bkkr-label>Item 0</bkkr-label></bkkr-item>
-              <bkkr-item button><bkkr-label>Item 1</bkkr-label></bkkr-item>
-              <bkkr-item button><bkkr-label>Item 2</bkkr-label></bkkr-item>
-              <bkkr-item button><bkkr-label>Item 3</bkkr-label></bkkr-item>
-            </bkkr-list>
-          </bkkr-content>
-        `;
+        <bkkr-content>
+          <bkkr-list>
+            <bkkr-list-header><bkkr-label>Bkkr</bkkr-label></bkkr-list-header>
+            <bkkr-item button><bkkr-label>Item 0</bkkr-label></bkkr-item>
+            <bkkr-item button><bkkr-label>Item 1</bkkr-label></bkkr-item>
+            <bkkr-item button><bkkr-label>Item 2</bkkr-label></bkkr-item>
+            <bkkr-item button><bkkr-label>Item 3</bkkr-label></bkkr-item>
+          </bkkr-list>
+        </bkkr-content>
+      `;
     }
   }
 
@@ -132,28 +158,17 @@ width: 150px;" id="basic-popover" class="mb-3" expand="block"
       }
 
       this.innerHTML = `
-          <bkkr-content>
-            <bkkr-list>
-              <bkkr-list-header><bkkr-label>List</bkkr-label></bkkr-list-header>
-              ` + items + `
-            </bkkr-list>
-          </bkkr-content>
-        `;
+        <bkkr-content>
+          <bkkr-list>
+            <bkkr-list-header><bkkr-label>Bkkr</bkkr-label></bkkr-list-header>
+            ` + items + `
+          </bkkr-list>
+        </bkkr-content>
+      `;
     }
   }
 
   customElements.define('list-page', ListPage);
-
-  const popover = document.querySelector('bkkr-popover');
-  const openPopover = (ev) => {
-    popover.isOpen = true;
-    popover.event = ev;
-  }
-
-  popover.addEventListener('didDismiss', () => {
-    popover.isOpen = false;
-    popover.event = undefined;
-  });
 </script>
   </bkkr-root>
 

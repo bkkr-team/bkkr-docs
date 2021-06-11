@@ -69,61 +69,48 @@
         </bkkr-container>
 
         <bkkr-paginator threshold="100px" infinite="true" id="paginator" items="110" length="10" page="7">
-            <bkkr-list>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
-                <bkkr-item lines="full"></bkkr-item>
+            <bkkr-list id="list">
             </bkkr-list>
         </bkkr-paginator>
     </bkkr-content>
 </div>
 
 <script>
-    var paginator = document.getElementById('paginator');
-    var index = 1;
-
-    paginator.addEventListener('bkkrPaginator', function (event) {
-        console.log('Loading of page ' + event.target.page)
-
-        setTimeout(function () {
-            console.log('Done');
-            event.target.complete();
-
-            // App logic to determine if all data is loaded
-            // and disable the infinite scroll
-            // if (data.length == 1000) {
-            //    event.target.disabled = true;
-            // }
-        }, 3000);
-    });
+    const list = document.getElementById('list');
+    const paginator = document.getElementById('paginator');
 
     function togglePaginator() {
-        paginator.infinite = !paginator.infinite;
+      paginator.disabled = !paginator.disabled;
     }
-</script>
+
+    paginator.addEventListener('bkkrPaginator', async function () {
+      console.log('Loading data...');
+      await wait(500);
+      paginator.complete();
+      appendItems();
+
+      console.log('Done');
+    });
+
+    function appendItems() {
+      for (var i = 0; i < 30; i++) {
+        const el = document.createElement('bkkr-item');
+        el.textContent = `${1 + i}`;
+        list.appendChild(el);
+      }
+    }
+
+    function wait(time) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve();
+        }, time);
+      });
+    }
+
+    appendItems();
+
+  </script>
   </bkkr-root>
 
   

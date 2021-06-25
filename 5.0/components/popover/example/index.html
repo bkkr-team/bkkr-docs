@@ -63,9 +63,12 @@
 <div class="bkkr-page">
   <bkkr-content>
     <bkkr-container>
-      <bkkr-button id="basic-popover" expand="block" class="mb-3" onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
-      <bkkr-button id="long-list-popover" expand="block" class="mb-3" color="secondary" onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
-      <bkkr-button id="no-event-popover" expand="block" class="mb-3" color="danger" onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
+      <bkkr-button id="basic-popover" expand="block" class="mb-3"
+        onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
+      <bkkr-button id="long-list-popover" expand="block" class="mb-3" color="secondary"
+        onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
+      <bkkr-button id="no-event-popover" expand="block" class="mb-3" color="danger"
+        onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
     </bkkr-container>
   </bkkr-content>
   <bkkr-footer color="primary">
@@ -81,28 +84,20 @@
     </bkkr-toolbar>
   </bkkr-footer>
 
-  <bkkr-popover
-    trigger="trigger-context"
-    trigger-action="context-menu"
-  >
+  <bkkr-popover trigger="trigger-context" trigger-action="context-menu">
     <bkkr-content>
-      <bkkr-container>
-        <bkkr-list>
-          <bkkr-item lines="full">
-            Copy
-          </bkkr-item>
-          <bkkr-item lines="full">
-            Paste
-          </bkkr-item>
-        </bkkr-list>
-      </bkkr-container>
+      <bkkr-list>
+        <bkkr-item lines="full">
+          Copy
+        </bkkr-item>
+        <bkkr-item lines="full">
+          Paste
+        </bkkr-item>
+        </bkkr-container>
     </bkkr-content>
   </bkkr-popover>
 
-  <bkkr-popover
-    trigger="trigger-hover"
-    trigger-action="hover"
-  >
+  <bkkr-popover trigger="trigger-hover" trigger-action="hover">
     <bkkr-content>
       <bkkr-container>
         <div class="text-center">

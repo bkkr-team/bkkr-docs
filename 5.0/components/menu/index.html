@@ -78,7 +78,7 @@
       </ul>
     </nav>
     <div slot="end">
-      <bkkr-button fill="clear" href="https://github.com/bkkr-team/bkkr-framework">
+      <bkkr-button fill="clear" target="_blank" href="https://github.com/bkkr-team/bkkr-framework">
         <bkkr-icon slot="icon-only" type="brands" name="github"></bkkr-icon>
       </bkkr-button>
     </div>
@@ -113,9 +113,10 @@
           </ul>
         </li><li class="pb-3">
           <h6 class="docs-menu-nav-title d-flex align-items-center">
-            Breadcrumb
+            Breadcrumbs
           </h6>
           <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumbs/" class="align-items-center " >breadcrumbs</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumb/" class="align-items-center " >breadcrumb</a></li>
           </ul>
         </li><li class="pb-3">
@@ -353,7 +354,8 @@
   <ul>
     <li><a href="#usage">Usage</a>
       <ul>
-        <li><a href="#html">Html</a></li>
+        <li><a href="#angular">Angular</a></li>
+        <li><a href="#javascript">Javascript</a></li>
       </ul>
     </li>
     <li><a href="#properties">Properties</a></li>
@@ -409,9 +411,49 @@
               <div class="docs-content">
                 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
-<h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menu&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h3 id="angular">Angular</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-root</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-menu</span> <span class="na">side</span><span class="o">=</span><span class="s">&#34;start&#34;</span> <span class="na">menuId</span><span class="o">=</span><span class="s">&#34;first&#34;</span> <span class="na">contentId</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-toolbar</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-title</span><span class="p">&gt;</span>Start Menu<span class="p">&lt;/</span><span class="nt">bkkr-title</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">bkkr-toolbar</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-menu</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">bkkr-router-outlet</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-router-outlet</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-root</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="javascript">Javascript</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-root</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-menu</span> <span class="na">side</span><span class="o">=</span><span class="s">&#34;start&#34;</span> <span class="na">menu-id</span><span class="o">=</span><span class="s">&#34;first&#34;</span> <span class="na">content-id</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-toolbar</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;primary&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-title</span><span class="p">&gt;</span>Start Menu<span class="p">&lt;/</span><span class="nt">bkkr-title</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">bkkr-toolbar</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>Menu Item<span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-menu</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bkkr-page&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-root</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="properties">Properties</h2>
 <table>
 <thead>

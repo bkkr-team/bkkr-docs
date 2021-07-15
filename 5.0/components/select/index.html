@@ -78,7 +78,7 @@
       </ul>
     </nav>
     <div slot="end">
-      <bkkr-button fill="clear" href="https://github.com/bkkr-team/bkkr-framework">
+      <bkkr-button fill="clear" target="_blank" href="https://github.com/bkkr-team/bkkr-framework">
         <bkkr-icon slot="icon-only" type="brands" name="github"></bkkr-icon>
       </bkkr-button>
     </div>
@@ -113,9 +113,10 @@
           </ul>
         </li><li class="pb-3">
           <h6 class="docs-menu-nav-title d-flex align-items-center">
-            Breadcrumb
+            Breadcrumbs
           </h6>
           <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumbs/" class="align-items-center " >breadcrumbs</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumb/" class="align-items-center " >breadcrumb</a></li>
           </ul>
         </li><li class="pb-3">
@@ -353,7 +354,7 @@
   <ul>
     <li><a href="#usage">Usage</a>
       <ul>
-        <li><a href="#html">Html</a></li>
+        <li><a href="#angular--javascript">Angular / javascript</a></li>
       </ul>
     </li>
     <li><a href="#properties">Properties</a></li>
@@ -384,9 +385,14 @@
               <div class="docs-content">
                 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
-<h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;select&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<h3 id="angular--javascript">Angular / javascript</h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>Gender<span class="p">&lt;/</span><span class="nt">bkkr-label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-select</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Select One&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">bkkr-select-option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;f&#34;</span><span class="p">&gt;</span>Female<span class="p">&lt;/</span><span class="nt">bkkr-select-option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">bkkr-select-option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;m&#34;</span><span class="p">&gt;</span>Male<span class="p">&lt;/</span><span class="nt">bkkr-select-option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-select</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">bkkr-item</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="properties">Properties</h2>
 <table>
 <thead>

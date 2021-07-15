@@ -78,7 +78,7 @@
       </ul>
     </nav>
     <div slot="end">
-      <bkkr-button fill="clear" href="https://github.com/bkkr-team/bkkr-framework">
+      <bkkr-button fill="clear" target="_blank" href="https://github.com/bkkr-team/bkkr-framework">
         <bkkr-icon slot="icon-only" type="brands" name="github"></bkkr-icon>
       </bkkr-button>
     </div>
@@ -113,9 +113,10 @@
           </ul>
         </li><li class="pb-3">
           <h6 class="docs-menu-nav-title d-flex align-items-center">
-            Breadcrumb
+            Breadcrumbs
           </h6>
           <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumbs/" class="align-items-center " >breadcrumbs</a></li>
             <li><a href="https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumb/" class="align-items-center " >breadcrumb</a></li>
           </ul>
         </li><li class="pb-3">
@@ -350,19 +351,8 @@
                   <strong class="docs-toc-title d-block">Contents</strong>
                   <nav id="TableOfContents">
   <ul>
-    <li><a href="#usage">Usage</a>
-      <ul>
-        <li><a href="#bkkr">Bkkr</a></li>
-        <li><a href="#html">Html</a></li>
-      </ul>
-    </li>
     <li><a href="#properties">Properties</a></li>
-    <li><a href="#dependencies">Dependencies</a>
-      <ul>
-        <li><a href="#used-by">Used by</a></li>
-        <li><a href="#graph">Graph</a></li>
-      </ul>
-    </li>
+    <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
   </ul>
 </nav>
                 </div>
@@ -371,14 +361,7 @@
 
               <div class="docs-content">
                 <!-- Auto Generated Below -->
-<h2 id="usage">Usage</h2>
-<h3 id="bkkr">Bkkr</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-select-option</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">bkkr-select-option</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="html">Html</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;select-option&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="properties">Properties</h2>
+<h2 id="properties">Properties</h2>
 <table>
 <thead>
 <tr>
@@ -391,31 +374,50 @@
 </thead>
 <tbody>
 <tr>
-<td><code>disabled</code></td>
-<td><code>disabled</code></td>
-<td>If <code>true</code>, the user cannot interact with the select option.</td>
-<td><code>boolean</code></td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>value</code></td>
-<td><code>value</code></td>
-<td>The text value of the option.</td>
-<td><code>any</code></td>
+<td><code>color</code></td>
+<td><code>color</code></td>
+<td>The color to use from your application&rsquo;s color palette. Default options are: <code>&quot;primary&quot;</code>, <code>&quot;secondary&quot;</code>, <code>&quot;tertiary&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;warning&quot;</code>, <code>&quot;danger&quot;</code>, <code>&quot;light&quot;</code>, <code>&quot;medium&quot;</code>, and <code>&quot;dark&quot;</code>. For more information on colors, see <a href="https://bkkr-team.github.io/bkkr-docs/docs/theming/basics">theming</a>.</td>
+<td><code>string</code></td>
 <td><code>undefined</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="dependencies">Dependencies</h2>
-<h3 id="used-by">Used by</h3>
-<ul>
-<li><a href="../paginator">bkkr-paginator</a></li>
-</ul>
-<h3 id="graph">Graph</h3>
-<pre><code class="language-mermaid" data-lang="mermaid">graph TD;
-  bkkr-paginator --&gt; bkkr-select-option
-  style bkkr-select-option fill:#f9f,stroke:#333,stroke-width:4px
-</code></pre><hr>
+<h2 id="css-custom-properties">CSS Custom Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--background</code></td>
+<td>Background of the select-option</td>
+</tr>
+<tr>
+<td><code>--color</code></td>
+<td>Text color of the select-option</td>
+</tr>
+<tr>
+<td><code>--padding-bottom</code></td>
+<td>Bottom padding of the select-option</td>
+</tr>
+<tr>
+<td><code>--padding-end</code></td>
+<td>Right padding if direction is left-to-right, and left padding if direction is right-to-left of the select-option</td>
+</tr>
+<tr>
+<td><code>--padding-start</code></td>
+<td>Left padding if direction is left-to-right, and right padding if direction is right-to-left of the select-option</td>
+</tr>
+<tr>
+<td><code>--padding-top</code></td>
+<td>Top padding of the select-option</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
               </div>
             </article>

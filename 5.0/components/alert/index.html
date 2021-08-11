@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.">
 <meta name="author" content="Imre Bekker">
-<meta name="generator" content="Hugo 0.76.5">
+<meta name="generator" content="Hugo 0.87.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -401,7 +401,7 @@
                 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
 <h3 id="angular">Angular</h3>
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">AlertController</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@bkkr/angular&#39;</span><span class="p">;</span>
 
 <span class="kd">@Component</span><span class="p">({</span>
@@ -429,7 +429,7 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="javascript">Javascript</h3>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">presentAlert</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">presentAlert</span><span class="p">()</span> <span class="p">{</span>
   <span class="kr">const</span> <span class="nx">alert</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;bkkr-alert&#39;</span><span class="p">);</span>
   <span class="nx">alert</span><span class="p">.</span><span class="nx">cssClass</span> <span class="o">=</span> <span class="s1">&#39;my-custom-class&#39;</span><span class="p">;</span>
   <span class="nx">alert</span><span class="p">.</span><span class="nx">header</span> <span class="o">=</span> <span class="s1">&#39;Alert&#39;</span><span class="p">;</span>
@@ -473,14 +473,14 @@
 <td><code>buttons</code></td>
 <td>&ndash;</td>
 <td>Array of buttons to be added to the alert.</td>
-<td><code>(string \| AlertButton)[]</code></td>
+<td><code>(string | AlertButton)[]</code></td>
 <td><code>[]</code></td>
 </tr>
 <tr>
 <td><code>cssClass</code></td>
 <td><code>css-class</code></td>
 <td>Additional classes to apply for custom CSS. If multiple classes are provided they should be separated by spaces.</td>
-<td><code>string \| string[]</code></td>
+<td><code>string | string[]</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -522,14 +522,14 @@
 <td><code>message</code></td>
 <td><code>message</code></td>
 <td>The main message to be displayed in the alert. <code>message</code> can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example <code>&lt;Bkkr&gt;</code> would become <code>&amp;lt;Bkkr&amp;gt;</code></td>
-<td><code>SafeString \| string</code></td>
+<td><code>SafeString | string</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>position</code></td>
 <td><code>position</code></td>
 <td>The position of the alert on the screen.</td>
-<td><code>&quot;bottom&quot; \| &quot;top&quot;</code></td>
+<td><code>&quot;bottom&quot; | &quot;top&quot;</code></td>
 <td><code>'bottom'</code></td>
 </tr>
 <tr>

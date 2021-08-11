@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.">
 <meta name="author" content="Imre Bekker">
-<meta name="generator" content="Hugo 0.76.5">
+<meta name="generator" content="Hugo 0.87.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -385,7 +385,7 @@
                 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
 <h3 id="angular">Angular</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">bkkr-container</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="err">(</span><span class="na">click</span><span class="err">)=&#34;</span><span class="na">togglePaginator</span><span class="err">()&#34;</span> <span class="na">expand</span><span class="o">=</span><span class="s">&#34;block&#34;</span><span class="p">&gt;</span>
             Toggle Infinite Scroll
@@ -398,7 +398,7 @@
     <span class="p">&lt;/</span><span class="nt">bkkr-paginator</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="javascript">Javascript</h3>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">bkkr-container</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&#34;togglePaginator()&#34;</span> <span class="na">expand</span><span class="o">=</span><span class="s">&#34;block&#34;</span><span class="p">&gt;</span>
             Toggle Infinite Scroll
@@ -492,14 +492,14 @@
 <td><code>loadingText</code></td>
 <td><code>loading-text</code></td>
 <td>Optional text to display while loading. <code>loadingText</code> can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example <code>&lt;Bkkr&gt;</code> would become <code>&amp;lt;Bkkr&amp;gt;</code></td>
-<td><code>SafeString \| string</code></td>
+<td><code>SafeString | string</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>loadingType</code></td>
 <td><code>loading-type</code></td>
 <td>Type of loading animation</td>
-<td><code>&quot;ambient&quot; \| &quot;spinner&quot;</code></td>
+<td><code>&quot;ambient&quot; | &quot;spinner&quot;</code></td>
 <td><code>'spinner'</code></td>
 </tr>
 <tr>
@@ -513,21 +513,21 @@
 <td><code>position</code></td>
 <td><code>position</code></td>
 <td>The position of the paginator element. The value can be either <code>top</code> or <code>bottom</code>.</td>
-<td><code>&quot;bottom&quot; \| &quot;top&quot;</code></td>
+<td><code>&quot;bottom&quot; | &quot;top&quot;</code></td>
 <td><code>'bottom'</code></td>
 </tr>
 <tr>
 <td><code>routerDirection</code></td>
 <td><code>router-direction</code></td>
 <td>When using a router, it specifies the transition direction when navigating to another page using <code>href</code>.</td>
-<td><code>&quot;back&quot; \| &quot;forward&quot; \| &quot;root&quot;</code></td>
+<td><code>&quot;back&quot; | &quot;forward&quot; | &quot;root&quot;</code></td>
 <td><code>'forward'</code></td>
 </tr>
 <tr>
 <td><code>spinner</code></td>
 <td><code>spinner</code></td>
 <td>An animated SVG spinner that shows while loading.</td>
-<td><code>&quot;circles&quot; \| &quot;circular&quot; \| &quot;crescent&quot; \| &quot;dots&quot; \| &quot;lines&quot; \| &quot;lines-sharp&quot; \| &quot;lines-sharp-small&quot; \| &quot;lines-small&quot;</code></td>
+<td><code>&quot;circles&quot; | &quot;circular&quot; | &quot;crescent&quot; | &quot;dots&quot; | &quot;lines&quot; | &quot;lines-sharp&quot; | &quot;lines-sharp-small&quot; | &quot;lines-small&quot;</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>

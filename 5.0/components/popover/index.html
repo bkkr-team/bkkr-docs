@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.">
 <meta name="author" content="Imre Bekker">
-<meta name="generator" content="Hugo 0.76.5">
+<meta name="generator" content="Hugo 0.87.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -403,7 +403,7 @@
                 <!-- Auto Generated Below -->
 <h2 id="usage">Usage</h2>
 <h3 id="angular">Angular</h3>
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">PopoverController</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@bkkr/angular&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">PopoverPage</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;../popover/popover.page&#39;</span><span class="p">;</span>
 
@@ -427,7 +427,7 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="javascript">Javascript</h3>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;popover-page&#39;</span><span class="p">,</span> <span class="kr">class</span> <span class="kr">extends</span> <span class="nx">HTMLElement</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;popover-page&#39;</span><span class="p">,</span> <span class="kr">class</span> <span class="kr">extends</span> <span class="nx">HTMLElement</span> <span class="p">{</span>
   <span class="nx">connectedCallback</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="sb">`
 </span><span class="sb">&lt;bkkr-header&gt;
@@ -472,7 +472,7 @@
 <td><code>alignment</code></td>
 <td><code>alignment</code></td>
 <td>Describes how to align the popover content with the <code>reference</code> point.</td>
-<td><code>&quot;center&quot; \| &quot;end&quot; \| &quot;start&quot;</code></td>
+<td><code>&quot;center&quot; | &quot;end&quot; | &quot;start&quot;</code></td>
 <td><code>'start'</code></td>
 </tr>
 <tr>
@@ -500,7 +500,7 @@
 <td><code>component</code></td>
 <td><code>component</code></td>
 <td>The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of <code>bkkr-popover</code>.</td>
-<td><code>Function \| HTMLElement \| string</code></td>
+<td><code>Function | HTMLElement | string</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -556,7 +556,7 @@
 <td><code>reference</code></td>
 <td><code>reference</code></td>
 <td>Describes what to position the popover relative to. If <code>'trigger'</code>, the popover will be positioned relative to the trigger button. If passing in an event, this is determined via event.target. If <code>'event'</code>, the popover will be positioned relative to the x/y coordinates of the trigger action. If passing in an event, this is determined via event.clientX and event.clientY.</td>
-<td><code>&quot;event&quot; \| &quot;trigger&quot;</code></td>
+<td><code>&quot;event&quot; | &quot;trigger&quot;</code></td>
 <td><code>'trigger'</code></td>
 </tr>
 <tr>
@@ -570,14 +570,14 @@
 <td><code>side</code></td>
 <td><code>side</code></td>
 <td>Describes which side of the <code>reference</code> point to position the popover on. The <code>'start'</code> and <code>'end'</code> values are RTL-aware, and the <code>'left'</code> and <code>'right'</code> values are not.</td>
-<td><code>&quot;bottom&quot; \| &quot;end&quot; \| &quot;left&quot; \| &quot;right&quot; \| &quot;start&quot; \| &quot;top&quot;</code></td>
+<td><code>&quot;bottom&quot; | &quot;end&quot; | &quot;left&quot; | &quot;right&quot; | &quot;start&quot; | &quot;top&quot;</code></td>
 <td><code>'bottom'</code></td>
 </tr>
 <tr>
 <td><code>size</code></td>
 <td><code>size</code></td>
 <td>Describes how to calculate the popover width. If <code>'cover'</code>, the popover width will match the width of the trigger. If <code>'auto'</code>, the popover width will be determined by the content in the popover.</td>
-<td><code>&quot;auto&quot; \| &quot;cover&quot;</code></td>
+<td><code>&quot;auto&quot; | &quot;cover&quot;</code></td>
 <td><code>'auto'</code></td>
 </tr>
 <tr>
@@ -591,7 +591,7 @@
 <td><code>triggerAction</code></td>
 <td><code>trigger-action</code></td>
 <td>Describes what kind of interaction with the trigger that should cause the popover to open. Does not apply when the <code>trigger</code> property is <code>undefined</code>. If <code>'click'</code>, the popover will be presented when the trigger is left clicked. If <code>'hover'</code>, the popover will be presented when a pointer hovers over the trigger. If <code>'context-menu'</code>, the popover will be presented when the trigger is right clicked on desktop and long pressed on mobile. This will also prevent your device&rsquo;s normal context menu from appearing.</td>
-<td><code>&quot;click&quot; \| &quot;context-menu&quot; \| &quot;hover&quot;</code></td>
+<td><code>&quot;click&quot; | &quot;context-menu&quot; | &quot;hover&quot;</code></td>
 <td><code>'click'</code></td>
 </tr>
 </tbody>

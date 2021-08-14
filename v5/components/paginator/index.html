@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.">
+<meta name="author" content="Imre Bekker">
+<meta name="generator" content="Hugo 0.87.0">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="BKKR Documentation" />
+<meta property="og:title" content="paginator" />
+<meta property="og:description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript." />
+<meta property="og:image" content="https://bkkr-team.github.io/bkkr-docs/media/v5/bkkr-preview.png" />
+<meta property="og:image:alt" content="BKKR preview image" />
+<meta property="og:url" content="https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/" />
+
+<meta name="theme-color" content="#3880ff"/>
+<meta name="color-scheme" content="dark light">
+
+<title>
+  
+    paginator
+  
+</title>
+
+
+
+<link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/">
+  
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+
+
+
+
+
+
+
+
+<link href="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="https://bkkr-team.github.io/bkkr-docs/v5/assets/css/docs.css">
+</head>
+
+<body>
+  <bkkr-root class="docs-root">
+    <bkkr-header class="docs-header">
+  <bkkr-toolbar>
+    <nav class="d-flex align-items-center">
+      <bkkr-menu-toggle slot="start" class="d-lg-none">
+        <bkkr-button fill="clear">
+          <bkkr-icon name="bars" slot="icon-only"></bkkr-icon>
+        </bkkr-button>
+      </bkkr-menu-toggle>
+
+      <a class="docs-logo mr-4" href="https://bkkr-team.github.io/bkkr-docs/v5/">
+        <span class="brand">BKKR</span>
+        <span class="docs">Docs</span>
+      </a>
+
+      <ul class="navs d-none d-lg-flex">
+        <li>
+          <a class="nav text-small" href="https://bkkr-team.github.io/bkkr-docs/v5/">Guide</a>
+        </li>
+        <li>
+          <a class="nav text-small" href="https://bkkr-team.github.io/bkkr-docs/v5/components">Components</a>
+        </li>
+      </ul>
+    </nav>
+    <div slot="end">
+      <bkkr-button fill="clear" target="_blank" href="https://github.com/bkkr-team/bkkr-framework">
+        <bkkr-icon slot="icon-only" type="brands" name="github"></bkkr-icon>
+      </bkkr-button>
+    </div>
+  </bkkr-toolbar>
+</bkkr-header>
+
+    <bkkr-split-pane class="docs-content" content-id="main-content">
+      
+      <bkkr-menu content-id="main-content">
+  <nav class="docs-menu" aria-label="Docs navigation"><div class="docs-menu-nav">
+      <ul class="list-unstyled mb-0 py-3"><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Accordion
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/accordion/" class="align-items-center " >accordion</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/accordion-group/" class="align-items-center " >accordion-group</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Alert
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/alert/" class="align-items-center " >alert</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Badge
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/badge/" class="align-items-center " >badge</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Breadcrumbs
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumbs/" class="align-items-center " >breadcrumbs</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumb/" class="align-items-center " >breadcrumb</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Buttons
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/button/" class="align-items-center " >button</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Card
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/card/" class="align-items-center " >card</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/card-header/" class="align-items-center " >card-header</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/card-content/" class="align-items-center " >card-content</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Content
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/root/" class="align-items-center " >root</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/content/" class="align-items-center " >content</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/container/" class="align-items-center " >container</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Datetime
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/datetime/" class="align-items-center " >datetime</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Drawer
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/drawer/" class="align-items-center " >drawer</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Floating Action Button
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/fab/" class="align-items-center " >fab</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/fab-button/" class="align-items-center " >fab-button</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Flexgrid
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/row/" class="align-items-center " >row</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/col/" class="align-items-center " >col</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Grid
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/grid/" class="align-items-center " >grid</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Inputs
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/checkbox/" class="align-items-center " >checkbox</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/input/" class="align-items-center " >input</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/radio/" class="align-items-center " >radio</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/radio-group/" class="align-items-center " >radio-group</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/range/" class="align-items-center " >range</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/select/" class="align-items-center " >select</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/textarea/" class="align-items-center " >textarea</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/toggle/" class="align-items-center " >toggle</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Item
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/item/" class="align-items-center " >item</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/label/" class="align-items-center " >label</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/note/" class="align-items-center " >note</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            List
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/list/" class="align-items-center " >list</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/list-header/" class="align-items-center " >list-header</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Media
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/icon/" class="align-items-center " >icon</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/img/" class="align-items-center " >img</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/shape/" class="align-items-center " >shape</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/" class="align-items-center " >thumbnail</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Modal
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/modal/" class="align-items-center " >modal</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Menu
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/menu/" class="align-items-center " >menu</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/menu-toggle/" class="align-items-center " >menu-toggle</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/split-pane/" class="align-items-center " >split-pane</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Navigation
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/navs/" class="align-items-center " >navs</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/nav/" class="align-items-center " >nav</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Pagination
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/" class="align-items-center  active" 
+                aria-current="page" >paginator</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Popover
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/popover/" class="align-items-center " >popover</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Progress indicators
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/loading/" class="align-items-center " >loading</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/progress-bar/" class="align-items-center " >progress-bar</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/skeleton/" class="align-items-center " >skeleton</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/spinner/" class="align-items-center " >spinner</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Reorder
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/reorder/" class="align-items-center " >reorder</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/reorder-group/" class="align-items-center " >reorder-group</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Routing
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/route/" class="align-items-center " >route</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router/" class="align-items-center " >router</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router-link/" class="align-items-center " >router-link</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router-outlet/" class="align-items-center " >router-outlet</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router-redirect/" class="align-items-center " >router-redirect</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Search
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/searchbar/" class="align-items-center " >searchbar</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Segments
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/segment/" class="align-items-center " >segment</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/segment-button/" class="align-items-center " >segment-button</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Slides
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/slides/" class="align-items-center " >slides</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/slide/" class="align-items-center " >slide</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Tabs
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/tabs/" class="align-items-center " >tabs</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/tab/" class="align-items-center " >tab</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Toast
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/toast/" class="align-items-center " >toast</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Toolbar
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/toolbar/" class="align-items-center " >toolbar</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/header/" class="align-items-center " >header</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/footer/" class="align-items-center " >footer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</bkkr-menu>
+      
+
+      <main id="main-content" class="bkkr-page" role="main">
+
+        <bkkr-content>
+          <div class="docs-page">
+            <article>
+              <div class="docs-intro">
+                <h1 class="docs-title text-truncate" id="content">paginator</h1>
+                <p class="docs-lead lead"></p>
+              </div>
+
+              <div>
+                
+                <div class="docs-toc">
+                  <strong class="docs-toc-title d-block">Contents</strong>
+                  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#angular">Angular</a></li>
+        <li><a href="#javascript">Javascript</a></li>
+      </ul>
+    </li>
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#methods">Methods</a>
+      <ul>
+        <li><a href="#complete--promisevoid"><code>complete() =&gt; Promise&lt;void&gt;</code></a>
+          <ul>
+            <li><a href="#returns">Returns</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#dependencies">Dependencies</a>
+      <ul>
+        <li><a href="#depends-on">Depends on</a></li>
+        <li><a href="#graph">Graph</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+                
+              </div>
+
+              <div class="docs-content">
+                <!-- Auto Generated Below -->
+<h2 id="usage">Usage</h2>
+<h3 id="angular">Angular</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-container</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="err">(</span><span class="na">click</span><span class="err">)=&#34;</span><span class="na">togglePaginator</span><span class="err">()&#34;</span> <span class="na">expand</span><span class="o">=</span><span class="s">&#34;block&#34;</span><span class="p">&gt;</span>
+            Toggle Infinite Scroll
+        <span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-container</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">bkkr-paginator</span> <span class="na">threshold</span><span class="o">=</span><span class="s">&#34;100px&#34;</span> <span class="na">infinite</span><span class="o">=</span><span class="s">&#34;true&#34;</span>  <span class="na">items</span><span class="o">=</span><span class="s">&#34;110&#34;</span> <span class="na">length</span><span class="o">=</span><span class="s">&#34;10&#34;</span> <span class="na">page</span><span class="o">=</span><span class="s">&#34;7&#34;</span> <span class="err">(</span><span class="na">bkkrPaginator</span><span class="err">)=&#34;</span><span class="na">loadData</span><span class="err">($</span><span class="na">event</span><span class="err">)&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-list</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-paginator</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="javascript">Javascript</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">bkkr-container</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-3&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-button</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&#34;togglePaginator()&#34;</span> <span class="na">expand</span><span class="o">=</span><span class="s">&#34;block&#34;</span><span class="p">&gt;</span>
+            Toggle Infinite Scroll
+        <span class="p">&lt;/</span><span class="nt">bkkr-button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-container</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">bkkr-paginator</span> <span class="na">threshold</span><span class="o">=</span><span class="s">&#34;100px&#34;</span> <span class="na">infinite</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;paginator&#34;</span> <span class="na">items</span><span class="o">=</span><span class="s">&#34;110&#34;</span> <span class="na">length</span><span class="o">=</span><span class="s">&#34;10&#34;</span> <span class="na">page</span><span class="o">=</span><span class="s">&#34;7&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">bkkr-list</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">bkkr-list</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">bkkr-paginator</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-content</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">const</span> <span class="nx">paginator</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;paginator&#39;</span><span class="p">);</span>
+
+    <span class="kd">function</span> <span class="nx">togglePaginator</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">paginator</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="o">!</span><span class="nx">paginator</span><span class="p">.</span><span class="nx">disabled</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">paginator</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;bkkrPaginator&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Loading data...&#39;</span><span class="p">);</span>
+      <span class="kr">await</span> <span class="nx">wait</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+      <span class="nx">paginator</span><span class="p">.</span><span class="nx">complete</span><span class="p">();</span>
+      <span class="nx">appendItems</span><span class="p">();</span>
+
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Done&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>animated</code></td>
+<td><code>animated</code></td>
+<td>Animate loading indication.</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>arrowIcon</code></td>
+<td><code>arrow-icon</code></td>
+<td>Arrow icon beign used on next and previous buttons.</td>
+<td><code>string</code></td>
+<td><code>'chevron'</code></td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td><code>disabled</code></td>
+<td>If <code>true</code>, the paginator will be hidden and scroll event listeners will be removed.  Set this to true to disable the paginator from actively trying to receive new data while scrolling. This is useful when it is known that there is no more data that can be added, and the paginator is no longer needed.</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>href</code></td>
+<td><code>href</code></td>
+<td>Contains a URL or a URL fragment that the hyperlink points to.</td>
+<td><code>string</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>infinite</code></td>
+<td><code>infinite</code></td>
+<td>Handle infinite loading feature.</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td><code>items</code></td>
+<td>Number of items.</td>
+<td><code>number</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>length</code></td>
+<td><code>length</code></td>
+<td>Length of the page.</td>
+<td><code>number</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>loadingText</code></td>
+<td><code>loading-text</code></td>
+<td>Optional text to display while loading. <code>loadingText</code> can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example <code>&lt;Bkkr&gt;</code> would become <code>&amp;lt;Bkkr&amp;gt;</code></td>
+<td><code>SafeString | string</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>loadingType</code></td>
+<td><code>loading-type</code></td>
+<td>Type of loading animation</td>
+<td><code>&quot;ambient&quot; | &quot;spinner&quot;</code></td>
+<td><code>'spinner'</code></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td><code>page</code></td>
+<td>The currently displayed page.</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td><code>position</code></td>
+<td>The position of the paginator element. The value can be either <code>top</code> or <code>bottom</code>.</td>
+<td><code>&quot;bottom&quot; | &quot;top&quot;</code></td>
+<td><code>'bottom'</code></td>
+</tr>
+<tr>
+<td><code>routerDirection</code></td>
+<td><code>router-direction</code></td>
+<td>When using a router, it specifies the transition direction when navigating to another page using <code>href</code>.</td>
+<td><code>&quot;back&quot; | &quot;forward&quot; | &quot;root&quot;</code></td>
+<td><code>'forward'</code></td>
+</tr>
+<tr>
+<td><code>spinner</code></td>
+<td><code>spinner</code></td>
+<td>An animated SVG spinner that shows while loading.</td>
+<td><code>&quot;circles&quot; | &quot;circular&quot; | &quot;crescent&quot; | &quot;dots&quot; | &quot;lines&quot; | &quot;lines-sharp&quot; | &quot;lines-sharp-small&quot; | &quot;lines-small&quot;</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>statusText</code></td>
+<td><code>status-text</code></td>
+<td>Set the the status text.</td>
+<td><code>string</code></td>
+<td><code>'/'</code></td>
+</tr>
+<tr>
+<td><code>threshold</code></td>
+<td><code>threshold</code></td>
+<td>The threshold distance from the bottom of the content to call the <code>infinite</code> output event when scrolled. The threshold value can be either a percent, or in pixels. For example, use the value of <code>10%</code> for the <code>infinite</code> output event to get called when the user has scrolled 10% from the bottom of the page. Use the value <code>100px</code> when the scroll is within 100 pixels from the bottom of the page.</td>
+<td><code>string</code></td>
+<td><code>'15%'</code></td>
+</tr>
+<tr>
+<td><code>toolbar</code></td>
+<td><code>toolbar</code></td>
+<td>Show or hide the toolbar of pagination element.</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="events">Events</h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bkkrPageSizeChanged</code></td>
+<td>Emitted when page size have changed.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+<tr>
+<td><code>bkkrPaginator</code></td>
+<td>Emitted when the scroll reaches the threshold distance, or stepper have changed. From within your infinite handler, you must call the paginator&rsquo;s <code>complete()</code> method when your async operation has completed.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="methods">Methods</h2>
+<h3 id="complete--promisevoid"><code>complete() =&gt; Promise&lt;void&gt;</code></h3>
+<p>Call <code>complete()</code> within the <code>ionInfinite</code> output event handler when
+your async operation has completed. For example, the <code>loading</code>
+state is while the app is performing an asynchronous operation,
+such as receiving more data from an AJAX request to add more items
+to a data list. Once the data has been received and UI updated, you
+then call this method to signify that the loading has completed.
+This method will change the paginator&rsquo;s state from <code>loading</code>
+to <code>enabled</code>.</p>
+<h4 id="returns">Returns</h4>
+<p>Type: <code>Promise&lt;void&gt;</code></p>
+<h2 id="dependencies">Dependencies</h2>
+<h3 id="depends-on">Depends on</h3>
+<ul>
+<li><a href="../spinner">bkkr-spinner</a></li>
+<li><a href="../select">bkkr-select</a></li>
+<li><a href="../select-option">bkkr-select-option</a></li>
+<li><a href="../button">bkkr-button</a></li>
+<li><a href="../icon">bkkr-icon</a></li>
+</ul>
+<h3 id="graph">Graph</h3>
+<pre><code class="language-mermaid" data-lang="mermaid">graph TD;
+  bkkr-paginator --&gt; bkkr-spinner
+  bkkr-paginator --&gt; bkkr-select
+  bkkr-paginator --&gt; bkkr-select-option
+  bkkr-paginator --&gt; bkkr-button
+  bkkr-paginator --&gt; bkkr-icon
+  style bkkr-paginator fill:#f9f,stroke:#333,stroke-width:4px
+</code></pre><hr>
+
+              </div>
+            </article>
+
+            
+            <div class="docs-demo">
+              <div class="docs-demo-inner">
+                <div class="docs-device">
+                  <div class="docs-device-inner">
+                    <iframe src="https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/example"></iframe>
+                  </div>
+                </div>
+                <p class="docs-fullscreen my-3 text-center">
+                  <a href="https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/example" target="_blank">
+                    <bkkr-icon name="expand" class="mr-2"></bkkr-icon>
+                    <span>View in fullscreen</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </bkkr-content>
+      </main>
+    </bkkr-split-pane>
+
+    
+  </bkkr-root>
+
+  
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
+
+
+</body>
+
+</html>

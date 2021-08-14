@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.">
+<meta name="author" content="Imre Bekker">
+<meta name="generator" content="Hugo 0.87.0">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="BKKR Documentation" />
+<meta property="og:title" content="popover" />
+<meta property="og:description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript." />
+<meta property="og:image" content="https://bkkr-team.github.io/bkkr-docs/media/v5/bkkr-preview.png" />
+<meta property="og:image:alt" content="BKKR preview image" />
+<meta property="og:url" content="https://bkkr-team.github.io/bkkr-docs/v5/components/popover/example/" />
+
+<meta name="theme-color" content="#3880ff"/>
+<meta name="color-scheme" content="dark light">
+
+<title>
+  
+    popover
+  
+</title>
+
+
+
+<link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/v5/components/popover/example/">
+
+  
+  
+  
+  
+  
+
+  <link href="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.css" rel="stylesheet">
+
+  
+
+  <link rel="stylesheet" href="https://bkkr-team.github.io/bkkr-docs/v5/assets/css/v5/demo.css">
+
+  <script type="module" src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.esm.js"></script>
+  <script nomodule src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
+  <style>
+    :root {
+      --safe-area-top: 20px;
+      --safe-area-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <bkkr-root>
+    
+<div class="bkkr-page">
+  <bkkr-content>
+    <bkkr-container>
+      <bkkr-button id="basic-popover" expand="block" class="mb-3"
+        onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
+      <bkkr-button id="long-list-popover" expand="block" class="mb-3" color="secondary"
+        onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
+      <bkkr-button id="no-event-popover" expand="block" class="mb-3" color="danger"
+        onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
+    </bkkr-container>
+  </bkkr-content>
+  <bkkr-footer color="primary">
+    <bkkr-toolbar color="primary">
+      <bkkr-button slot="start" id="trigger-context">
+        <bkkr-icon slot="start" name="mouse" class="mr-2"></bkkr-icon>
+        Context menu
+      </bkkr-button>
+      <bkkr-button slot="end" id="trigger-hover">
+        <bkkr-icon slot="start" name="mouse-pointer" class="mr-2"></bkkr-icon>
+        Hover
+      </bkkr-button>
+    </bkkr-toolbar>
+  </bkkr-footer>
+
+  <bkkr-popover trigger="trigger-context" trigger-action="context-menu">
+    <bkkr-content>
+      <bkkr-list>
+        <bkkr-item lines="full">
+          Copy
+        </bkkr-item>
+        <bkkr-item lines="full">
+          Paste
+        </bkkr-item>
+        </bkkr-container>
+    </bkkr-content>
+  </bkkr-popover>
+
+  <bkkr-popover trigger="trigger-hover" trigger-action="hover">
+    <bkkr-content>
+      <bkkr-container>
+        <div class="text-center">
+          Hello!
+        </div>
+      </bkkr-container>
+    </bkkr-content>
+  </bkkr-popover>
+</div>
+
+<script type="module">
+  import { popoverController } from '../../../dist/bkkr/index.esm.js';
+  window.popoverController = popoverController;
+</script>
+
+<script>
+  async function presentPopover(opts) {
+    const popover = await popoverController.create(opts);
+    await popover.present();
+  }
+
+  class ProfilePage extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.innerHTML = `
+        <bkkr-content>
+          <bkkr-list>
+            <bkkr-list-header><bkkr-label>Bkkr</bkkr-label></bkkr-list-header>
+            <bkkr-item button><bkkr-label>Item 0</bkkr-label></bkkr-item>
+            <bkkr-item button><bkkr-label>Item 1</bkkr-label></bkkr-item>
+            <bkkr-item button><bkkr-label>Item 2</bkkr-label></bkkr-item>
+            <bkkr-item button><bkkr-label>Item 3</bkkr-label></bkkr-item>
+          </bkkr-list>
+        </bkkr-content>
+      `;
+    }
+  }
+
+  customElements.define('profile-page', ProfilePage);
+
+  class ListPage extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      let items = '';
+      for (var i = 0; i < 30; i++) {
+        items += '<bkkr-item><bkkr-label>Item ' + i + '</bkkr-label></bkkr-item>';
+      }
+
+      this.innerHTML = `
+        <bkkr-content>
+          <bkkr-list>
+            <bkkr-list-header><bkkr-label>Bkkr</bkkr-label></bkkr-list-header>
+            ` + items + `
+          </bkkr-list>
+        </bkkr-content>
+      `;
+    }
+  }
+
+  customElements.define('list-page', ListPage);
+</script>
+  </bkkr-root>
+
+  
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
+
+
+</body>
+
+</html>

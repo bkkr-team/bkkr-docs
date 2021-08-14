@@ -1,681 +1,681 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/accordion/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/accordion/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/accordion/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/accordion/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/alert/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/alert/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/alert/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/alert/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/backdrop/readme/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/backdrop/readme/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/badge/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/badge/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/badge/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/badge/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumbs/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumbs/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumbs/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumbs/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/button/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/button/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/button/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/button/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/card/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/card/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/card/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/card/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/checkbox/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/checkbox/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/checkbox/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/checkbox/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/container/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/container/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/container/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/container/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/content/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/content/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/content/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/content/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/datetime/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/datetime/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/datetime/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/datetime/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/drawer/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/drawer/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/drawer/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/drawer/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/fab/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/fab/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/fab/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/fab/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/footer/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/footer/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/footer/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/footer/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/grid/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/grid/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/grid/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/grid/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/header/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/header/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/header/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/header/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/icon/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/icon/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/icon/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/icon/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/img/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/img/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/img/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/img/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/input/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/input/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/input/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/input/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/item/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/item/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/item/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/item/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/label/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/label/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/label/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/label/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/list-header/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/list-header/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/list-header/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/list-header/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/list/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/list/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/list/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/list/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/loading/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/loading/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/loading/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/loading/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/menu/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/menu/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/menu/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/menu/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/modal/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/modal/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/modal/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/modal/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/navs/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/navs/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/note/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/note/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/popover/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/popover/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/popover/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/popover/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/progress-bar/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/progress-bar/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/progress-bar/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/progress-bar/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio-group/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/radio-group/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio-group/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/radio-group/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/radio/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/radio/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/range/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/range/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/range/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/range/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/reorder-group/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/reorder-group/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/reorder-group/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/reorder-group/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/reorder/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/reorder/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/reorder/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/reorder/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route-redirect/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/route-redirect/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/route/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/router/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/row/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/row/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/row/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/row/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/searchbar/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/searchbar/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/searchbar/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/searchbar/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/segment/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/segment/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/segment/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/segment/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/select/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/select/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/shape/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/shape/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/shape/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/shape/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/skeleton/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/skeleton/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/skeleton/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/skeleton/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/slides/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/slides/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/slides/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/slides/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/spinner/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/spinner/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/spinner/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/spinner/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/split-pane/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/split-pane/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/split-pane/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/split-pane/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/tabs/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/tabs/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/tabs/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/tabs/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/textarea/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/textarea/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/textarea/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/textarea/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/thumbnail/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/thumbnail/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toast/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toast/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toast/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toast/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toggle/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toggle/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toggle/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toggle/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toolbar/usage/angular/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toolbar/usage/angular/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toolbar/usage/javascript/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toolbar/usage/javascript/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/accordion/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/accordion/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/accordion/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/accordion/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/accordion-group/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/accordion-group/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/alert/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/alert/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/alert/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/alert/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/badge/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/badge/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/badge/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/badge/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/icon/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/icon/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/4.2/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v4/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumb/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumb/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumbs/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumbs/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/breadcrumbs/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumbs/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/4.2/getting-started/build-tools/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v4/getting-started/build-tools/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/button/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/button/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/button/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/button/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/card/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/card/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/card/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/card/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/card-content/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/card-content/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/card-header/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/card-header/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/checkbox/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/checkbox/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/checkbox/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/checkbox/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/col/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/col/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/container/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/container/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/container/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/container/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/content/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/content/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/content/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/content/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/datetime/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/datetime/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/datetime/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/datetime/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/datetime-popover/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/datetime-popover/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/drawer/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/drawer/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/drawer/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/drawer/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/4.2/examples/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v4/examples/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/fab/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/fab/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/fab/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/fab/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/fab-button/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/fab-button/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/footer/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/footer/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/footer/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/footer/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/grid/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/grid/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/grid/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/grid/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/header/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/header/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/header/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/header/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/icon/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/icon/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/img/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/img/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/img/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/img/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/input/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/input/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/input/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/input/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/item/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/item/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/item/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/item/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/label/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/label/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/label/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/label/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/list/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/list/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/list/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/list/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/list-header/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/list-header/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/loading/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/loading/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/loading/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/loading/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/menu/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/menu/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/menu/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/menu/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/menu-toggle/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/menu-toggle/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/modal/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/modal/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/modal/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/modal/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/nav/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/nav/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/navs/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/navs/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/navs/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/note/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/note/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/note/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/paginator/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/popover/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/popover/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/popover/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/popover/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/progress-bar/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/progress-bar/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/progress-bar/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/progress-bar/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/radio/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/radio/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/radio-group/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/radio-group/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/range/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/range/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/range/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/range/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/reorder/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/reorder/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/reorder/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/reorder/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/reorder-group/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/reorder-group/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/root/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/root/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/route/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/route-redirect/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/route-redirect/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/router/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-link/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/router-link/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/router-outlet/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/router-outlet/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/row/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/row/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/row/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/row/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/searchbar/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/searchbar/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/searchbar/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/searchbar/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/segment/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/segment/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/segment/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/segment/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/segment-button/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/segment-button/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/select/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/select/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select-option/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/select-option/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/select-option/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/select-option/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/shape/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/shape/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/shape/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/shape/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/skeleton/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/skeleton/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/skeleton/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/skeleton/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/slide/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/slide/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/slides/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/slides/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/slides/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/slides/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/spinner/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/spinner/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/spinner/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/spinner/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/split-pane/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/split-pane/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/split-pane/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/split-pane/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/tab/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/tab/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/tabs/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/tabs/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/tabs/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/tabs/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/textarea/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/textarea/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/textarea/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/textarea/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/thumbnail/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/thumbnail/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toast/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toast/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toast/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toast/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toggle/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toggle/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toggle/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toggle/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toolbar/example/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toolbar/example/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/toolbar/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/toolbar/</loc>
   </url>
   <url>
-    <loc>https://bkkr-team.github.io/bkkr-docs/5.0/components/</loc>
+    <loc>https://bkkr-team.github.io/bkkr-docs/v5/components/</loc>
   </url>
 </urlset>

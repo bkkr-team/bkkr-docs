@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.">
+<meta name="author" content="Imre Bekker">
+<meta name="generator" content="Hugo 0.87.0">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.0">
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en" />
+<meta property="og:site_name" content="BKKR Documentation" />
+<meta property="og:title" content="thumbnail" />
+<meta property="og:description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript." />
+<meta property="og:image" content="https://bkkr-team.github.io/bkkr-docs/media/v5/bkkr-preview.png" />
+<meta property="og:image:alt" content="BKKR preview image" />
+<meta property="og:url" content="https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/" />
+
+<meta name="theme-color" content="#3880ff"/>
+<meta name="color-scheme" content="dark light">
+
+<title>
+  
+    thumbnail
+  
+</title>
+
+
+
+<link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/">
+  
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+
+
+
+
+
+
+
+
+<link href="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="https://bkkr-team.github.io/bkkr-docs/v5/assets/css/docs.css">
+</head>
+
+<body>
+  <bkkr-root class="docs-root">
+    <bkkr-header class="docs-header">
+  <bkkr-toolbar>
+    <nav class="d-flex align-items-center">
+      <bkkr-menu-toggle slot="start" class="d-lg-none">
+        <bkkr-button fill="clear">
+          <bkkr-icon name="bars" slot="icon-only"></bkkr-icon>
+        </bkkr-button>
+      </bkkr-menu-toggle>
+
+      <a class="docs-logo mr-4" href="https://bkkr-team.github.io/bkkr-docs/v5/">
+        <span class="brand">BKKR</span>
+        <span class="docs">Docs</span>
+      </a>
+
+      <ul class="navs d-none d-lg-flex">
+        <li>
+          <a class="nav text-small" href="https://bkkr-team.github.io/bkkr-docs/v5/">Guide</a>
+        </li>
+        <li>
+          <a class="nav text-small" href="https://bkkr-team.github.io/bkkr-docs/v5/components">Components</a>
+        </li>
+      </ul>
+    </nav>
+    <div slot="end">
+      <bkkr-button fill="clear" target="_blank" href="https://github.com/bkkr-team/bkkr-framework">
+        <bkkr-icon slot="icon-only" type="brands" name="github"></bkkr-icon>
+      </bkkr-button>
+    </div>
+  </bkkr-toolbar>
+</bkkr-header>
+
+    <bkkr-split-pane class="docs-content" content-id="main-content">
+      
+      <bkkr-menu content-id="main-content">
+  <nav class="docs-menu" aria-label="Docs navigation"><div class="docs-menu-nav">
+      <ul class="list-unstyled mb-0 py-3"><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Accordion
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/accordion/" class="align-items-center " >accordion</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/accordion-group/" class="align-items-center " >accordion-group</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Alert
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/alert/" class="align-items-center " >alert</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Badge
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/badge/" class="align-items-center " >badge</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Breadcrumbs
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumbs/" class="align-items-center " >breadcrumbs</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/breadcrumb/" class="align-items-center " >breadcrumb</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Buttons
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/button/" class="align-items-center " >button</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Card
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/card/" class="align-items-center " >card</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/card-header/" class="align-items-center " >card-header</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/card-content/" class="align-items-center " >card-content</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Content
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/root/" class="align-items-center " >root</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/content/" class="align-items-center " >content</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/container/" class="align-items-center " >container</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Datetime
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/datetime/" class="align-items-center " >datetime</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Drawer
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/drawer/" class="align-items-center " >drawer</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Floating Action Button
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/fab/" class="align-items-center " >fab</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/fab-button/" class="align-items-center " >fab-button</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Flexgrid
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/row/" class="align-items-center " >row</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/col/" class="align-items-center " >col</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Grid
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/grid/" class="align-items-center " >grid</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Inputs
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/checkbox/" class="align-items-center " >checkbox</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/input/" class="align-items-center " >input</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/radio/" class="align-items-center " >radio</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/radio-group/" class="align-items-center " >radio-group</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/range/" class="align-items-center " >range</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/select/" class="align-items-center " >select</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/textarea/" class="align-items-center " >textarea</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/toggle/" class="align-items-center " >toggle</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Item
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/item/" class="align-items-center " >item</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/label/" class="align-items-center " >label</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/note/" class="align-items-center " >note</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            List
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/list/" class="align-items-center " >list</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/list-header/" class="align-items-center " >list-header</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Media
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/icon/" class="align-items-center " >icon</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/img/" class="align-items-center " >img</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/shape/" class="align-items-center " >shape</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/" class="align-items-center  active" 
+                aria-current="page" >thumbnail</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Modal
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/modal/" class="align-items-center " >modal</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Menu
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/menu/" class="align-items-center " >menu</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/menu-toggle/" class="align-items-center " >menu-toggle</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/split-pane/" class="align-items-center " >split-pane</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Navigation
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/navs/" class="align-items-center " >navs</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/nav/" class="align-items-center " >nav</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Pagination
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/paginator/" class="align-items-center " >paginator</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Popover
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/popover/" class="align-items-center " >popover</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Progress indicators
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/loading/" class="align-items-center " >loading</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/progress-bar/" class="align-items-center " >progress-bar</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/skeleton/" class="align-items-center " >skeleton</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/spinner/" class="align-items-center " >spinner</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Reorder
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/reorder/" class="align-items-center " >reorder</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/reorder-group/" class="align-items-center " >reorder-group</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Routing
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/route/" class="align-items-center " >route</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router/" class="align-items-center " >router</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router-link/" class="align-items-center " >router-link</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router-outlet/" class="align-items-center " >router-outlet</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/router-redirect/" class="align-items-center " >router-redirect</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Search
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/searchbar/" class="align-items-center " >searchbar</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Segments
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/segment/" class="align-items-center " >segment</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/segment-button/" class="align-items-center " >segment-button</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Slides
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/slides/" class="align-items-center " >slides</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/slide/" class="align-items-center " >slide</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Tabs
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/tabs/" class="align-items-center " >tabs</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/tab/" class="align-items-center " >tab</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Toast
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/toast/" class="align-items-center " >toast</a></li>
+          </ul>
+        </li><li class="pb-3">
+          <h6 class="docs-menu-nav-title d-flex align-items-center">
+            Toolbar
+          </h6>
+          <ul class="list-unstyled font-weight-normal pb-1 small">
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/toolbar/" class="align-items-center " >toolbar</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/header/" class="align-items-center " >header</a></li>
+            <li><a href="https://bkkr-team.github.io/bkkr-docs/v5/components/footer/" class="align-items-center " >footer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</bkkr-menu>
+      
+
+      <main id="main-content" class="bkkr-page" role="main">
+
+        <bkkr-content>
+          <div class="docs-page">
+            <article>
+              <div class="docs-intro">
+                <h1 class="docs-title text-truncate" id="content">thumbnail</h1>
+                <p class="docs-lead lead"></p>
+              </div>
+
+              <div>
+                
+                <div class="docs-toc">
+                  <strong class="docs-toc-title d-block">Contents</strong>
+                  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#angular--javascript">Angular / javascript</a></li>
+      </ul>
+    </li>
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#css-custom-properties">CSS Custom Properties</a></li>
+  </ul>
+</nav>
+                </div>
+                
+              </div>
+
+              <div class="docs-content">
+                <!-- Auto Generated Below -->
+<h2 id="usage">Usage</h2>
+<h3 id="angular--javascript">Angular / javascript</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">bkkr-thumbnail</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">bkkr-img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://randomuser.me/api/portraits/women/59.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;user&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bkkr-img</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">bkkr-thumbnail</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disabled</code></td>
+<td><code>disabled</code></td>
+<td>If <code>true</code>, the user cannot interact with the thumbnail.</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="css-custom-properties">CSS Custom Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--border-color</code></td>
+<td>Border color</td>
+</tr>
+<tr>
+<td><code>--border-radius</code></td>
+<td>Background of the badge</td>
+</tr>
+<tr>
+<td><code>--border-style</code></td>
+<td>Border style</td>
+</tr>
+<tr>
+<td><code>--border-width</code></td>
+<td>Border width</td>
+</tr>
+<tr>
+<td><code>--box-shadow</code></td>
+<td>Shadow</td>
+</tr>
+<tr>
+<td><code>--padding-bottom</code></td>
+<td>Bottom padding of the badge</td>
+</tr>
+<tr>
+<td><code>--padding-end</code></td>
+<td>Right padding if direction is left-to-right, and left padding if direction is right-to-left of the badge</td>
+</tr>
+<tr>
+<td><code>--padding-start</code></td>
+<td>Left padding if direction is left-to-right, and right padding if direction is right-to-left of the badge</td>
+</tr>
+<tr>
+<td><code>--padding-top</code></td>
+<td>Top padding of the badge</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+              </div>
+            </article>
+
+            
+            <div class="docs-demo">
+              <div class="docs-demo-inner">
+                <div class="docs-device">
+                  <div class="docs-device-inner">
+                    <iframe src="https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/example"></iframe>
+                  </div>
+                </div>
+                <p class="docs-fullscreen my-3 text-center">
+                  <a href="https://bkkr-team.github.io/bkkr-docs/v5/components/thumbnail/example" target="_blank">
+                    <bkkr-icon name="expand" class="mr-2"></bkkr-icon>
+                    <span>View in fullscreen</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </bkkr-content>
+      </main>
+    </bkkr-split-pane>
+
+    
+  </bkkr-root>
+
+  
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
+
+
+</body>
+
+</html>

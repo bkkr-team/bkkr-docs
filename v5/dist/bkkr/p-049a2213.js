@@ -1,0 +1,1 @@
+class t{constructor(){this.m=new Map}reset(t){this.m=new Map(Object.entries(t))}get(t,e){const s=this.m.get(t);return void 0!==s?s:e}getBoolean(t,e=!1){const s=this.m.get(t);return void 0===s?e:"string"==typeof s?"true"===s:!!s}getNumber(t,e){const s=parseFloat(this.m.get(t));return isNaN(s)?void 0!==e?e:NaN:s}set(t,e){this.m.set(t,e)}}const e=new t;export{e as c}

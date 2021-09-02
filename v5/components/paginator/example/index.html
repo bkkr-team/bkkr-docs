@@ -62,13 +62,7 @@
     
 <div class="bkkr-page">
     <bkkr-content>
-        <bkkr-container class="mb-3">
-            <bkkr-button onClick="togglePaginator()" expand="block">
-                Toggle Infinite Scroll
-            </bkkr-button>
-        </bkkr-container>
-
-        <bkkr-paginator threshold="100px" infinite="true" id="paginator" items="110" length="10" page="7">
+        <bkkr-paginator threshold="100px" toolbar="true" id="paginator" items="80" length="10" page="1">
             <bkkr-list id="list">
             </bkkr-list>
         </bkkr-paginator>
@@ -87,7 +81,6 @@
       console.log('Loading data...');
       await wait(500);
       paginator.complete();
-      appendItems();
 
       console.log('Done');
     });

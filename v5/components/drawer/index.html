@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.">
 <meta name="author" content="Imre Bekker">
-<meta name="generator" content="Hugo 0.87.0">
+<meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -526,6 +526,13 @@
 <td><code>true</code></td>
 </tr>
 <tr>
+<td><code>htmlAttributes</code></td>
+<td>&ndash;</td>
+<td>Additional attributes to pass to the drawer.</td>
+<td><code>DrawerAttributes</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
 <td><code>isOpen</code></td>
 <td><code>is-open</code></td>
 <td>If <code>true</code>, the drawer will open. If <code>false</code>, the drawer will close. Use this if you need finer grained control over presentation, otherwise just use the drawerController or the <code>trigger</code> property. Note: <code>isOpen</code> will not automatically be set back to <code>false</code> when the drawer dismisses. You will need to do that in your code.</td>
@@ -745,7 +752,7 @@
 <li><a href="../icon">bkkr-icon</a></li>
 </ul>
 <h3 id="graph">Graph</h3>
-<pre><code class="language-mermaid" data-lang="mermaid">graph TD;
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD;
   bkkr-drawer --&gt; bkkr-backdrop
   bkkr-drawer --&gt; bkkr-icon
   style bkkr-drawer fill:#f9f,stroke:#333,stroke-width:4px
@@ -779,8 +786,7 @@
     
   </bkkr-root>
 
-  
-<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/js/bkkr.js"></script> */}}
 
 
 

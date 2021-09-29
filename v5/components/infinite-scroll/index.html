@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -459,7 +459,7 @@
 <td><code>buttonText</code></td>
 <td><code>button-text</code></td>
 <td>Text to display on &lsquo;Show more&rsquo; button. <code>buttonText</code> can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example <code>&lt;Bkkr&gt;</code> would become <code>&amp;lt;Bkkr&amp;gt;</code></td>
-<td><code>SafeString | string</code></td>
+<td><code>SafeString | string | undefined</code></td>
 <td><code>'Show more'</code></td>
 </tr>
 <tr>
@@ -481,20 +481,20 @@
 <td><code>items</code></td>
 <td>Number of items.</td>
 <td><code>number</code></td>
-<td><code>undefined</code></td>
+<td><code>0</code></td>
 </tr>
 <tr>
 <td><code>length</code></td>
 <td><code>length</code></td>
 <td>Length of the page.</td>
 <td><code>number</code></td>
-<td><code>undefined</code></td>
+<td><code>0</code></td>
 </tr>
 <tr>
 <td><code>loadingText</code></td>
 <td><code>loading-text</code></td>
 <td>Optional text to display while loading. <code>loadingText</code> can accept either plaintext or HTML as a string. To display characters normally reserved for HTML, they must be escaped. For example <code>&lt;Bkkr&gt;</code> would become <code>&amp;lt;Bkkr&amp;gt;</code></td>
-<td><code>SafeString | string</code></td>
+<td><code>SafeString | string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -515,7 +515,7 @@
 <td><code>spinner</code></td>
 <td><code>spinner</code></td>
 <td>An animated SVG spinner that shows while loading.</td>
-<td><code>&quot;circles&quot; | &quot;circular&quot; | &quot;crescent&quot; | &quot;dots&quot; | &quot;lines&quot; | &quot;lines-sharp&quot; | &quot;lines-sharp-small&quot; | &quot;lines-small&quot;</code></td>
+<td><code>&quot;circles&quot; | &quot;circular&quot; | &quot;crescent&quot; | &quot;dots&quot; | &quot;lines&quot; | &quot;lines-sharp&quot; | &quot;lines-sharp-small&quot; | &quot;lines-small&quot; | null | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -604,7 +604,10 @@ to <code>enabled</code>.</p>
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

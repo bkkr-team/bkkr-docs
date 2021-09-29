@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -371,7 +371,7 @@
     <li><a href="#events">Events</a></li>
     <li><a href="#methods">Methods</a>
       <ul>
-        <li><a href="#dismissdata-any-role-string--promiseboolean"><code>dismiss(data?: any, role?: string) =&gt; Promise&lt;boolean&gt;</code></a>
+        <li><a href="#dismissdata-any-role-string--undefined--promiseboolean"><code>dismiss(data?: any, role?: string | undefined) =&gt; Promise&lt;boolean&gt;</code></a>
           <ul>
             <li><a href="#returns">Returns</a></li>
           </ul>
@@ -465,21 +465,21 @@
 <td><code>buttons</code></td>
 <td>&ndash;</td>
 <td>An array of buttons for the toast.</td>
-<td><code>(string | ToastButton)[]</code></td>
+<td><code>(string | ToastButton)[] | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>color</code></td>
 <td><code>color</code></td>
 <td>The color to use from your application&rsquo;s color palette. Default options are: <code>&quot;primary&quot;</code>, <code>&quot;secondary&quot;</code>, <code>&quot;tertiary&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;warning&quot;</code>, <code>&quot;danger&quot;</code>, <code>&quot;light&quot;</code>, <code>&quot;medium&quot;</code>, and <code>&quot;dark&quot;</code>. For more information on colors, see <a href="https://bkkr-team.github.io/bkkr-docs/docs/theming/basics">theming</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>cssClass</code></td>
 <td><code>css-class</code></td>
 <td>Additional classes to apply for custom CSS. If multiple classes are provided they should be separated by spaces.</td>
-<td><code>string | string[]</code></td>
+<td><code>string | string[] | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -493,21 +493,21 @@
 <td><code>enterAnimation</code></td>
 <td>&ndash;</td>
 <td>Animation to use when the toast is presented.</td>
-<td><code>(baseEl: any, opts?: any) =&gt; Animation</code></td>
+<td><code>((baseEl: any, opts?: any) =&gt; Animation) | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>header</code></td>
 <td><code>header</code></td>
 <td>Header to be shown in the toast.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>htmlAttributes</code></td>
 <td>&ndash;</td>
 <td>Additional attributes to pass to the toast.</td>
-<td><code>ToastAttributes</code></td>
+<td><code>ToastAttributes | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -521,14 +521,14 @@
 <td><code>leaveAnimation</code></td>
 <td>&ndash;</td>
 <td>Animation to use when the toast is dismissed.</td>
-<td><code>(baseEl: any, opts?: any) =&gt; Animation</code></td>
+<td><code>((baseEl: any, opts?: any) =&gt; Animation) | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>message</code></td>
 <td><code>message</code></td>
 <td>Message to be shown in the toast.</td>
-<td><code>SafeString | string</code></td>
+<td><code>SafeString | string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -580,7 +580,7 @@
 </tbody>
 </table>
 <h2 id="methods">Methods</h2>
-<h3 id="dismissdata-any-role-string--promiseboolean"><code>dismiss(data?: any, role?: string) =&gt; Promise&lt;boolean&gt;</code></h3>
+<h3 id="dismissdata-any-role-string--undefined--promiseboolean"><code>dismiss(data?: any, role?: string | undefined) =&gt; Promise&lt;boolean&gt;</code></h3>
 <p>Dismiss the toast overlay after it has been presented.</p>
 <h4 id="returns">Returns</h4>
 <p>Type: <code>Promise&lt;boolean&gt;</code></p>
@@ -741,7 +741,10 @@
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

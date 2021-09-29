@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -400,14 +400,14 @@
 <td><code>beforeEnter</code></td>
 <td>&ndash;</td>
 <td>A navigation hook that is fired when the route tries to enter. Returning <code>true</code> allows the navigation to proceed, while returning <code>false</code> causes it to be cancelled. Returning a <code>NavigationHookOptions</code> object causes the router to redirect to the path specified.</td>
-<td><code>() =&gt; NavigationHookResult | Promise&lt;NavigationHookResult&gt;</code></td>
+<td><code>(() =&gt; NavigationHookResult | Promise&lt;NavigationHookResult&gt;) | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>beforeLeave</code></td>
 <td>&ndash;</td>
 <td>A navigation hook that is fired when the route tries to leave. Returning <code>true</code> allows the navigation to proceed, while returning <code>false</code> causes it to be cancelled. Returning a <code>NavigationHookOptions</code> object causes the router to redirect to the path specified.</td>
-<td><code>() =&gt; NavigationHookResult | Promise&lt;NavigationHookResult&gt;</code></td>
+<td><code>(() =&gt; NavigationHookResult | Promise&lt;NavigationHookResult&gt;) | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -421,7 +421,7 @@
 <td><code>componentProps</code></td>
 <td>&ndash;</td>
 <td>A key value <code>{ 'red': true, 'blue': 'white'}</code> containing props that should be passed to the defined component when rendered.</td>
-<td><code>{ [key: string]: any; }</code></td>
+<td><code>undefined | { [key: string]: any; }</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -464,7 +464,10 @@
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -370,7 +370,7 @@
     <li><a href="#events">Events</a></li>
     <li><a href="#methods">Methods</a>
       <ul>
-        <li><a href="#openevent-uievent--promiseany"><code>open(event?: UIEvent) =&gt; Promise&lt;any&gt;</code></a>
+        <li><a href="#openevent-uievent--undefined--promiseany"><code>open(event?: UIEvent | undefined) =&gt; Promise&lt;any&gt;</code></a>
           <ul>
             <li><a href="#returns">Returns</a></li>
           </ul>
@@ -425,7 +425,7 @@
 <td><code>compareWith</code></td>
 <td><code>compare-with</code></td>
 <td>A property name or function used to compare object values</td>
-<td><code>((currentValue: any, compareValue: any) =&gt; boolean) | string</code></td>
+<td><code>((currentValue: any, compareValue: any) =&gt; boolean) | null | string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -481,7 +481,7 @@
 <td><code>placeholder</code></td>
 <td><code>placeholder</code></td>
 <td>The text to display when the select is empty.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -495,7 +495,7 @@
 <td><code>selectedText</code></td>
 <td><code>selected-text</code></td>
 <td>The text to display instead of the selected option&rsquo;s value.</td>
-<td><code>string</code></td>
+<td><code>null | string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -557,7 +557,7 @@
 </tbody>
 </table>
 <h2 id="methods">Methods</h2>
-<h3 id="openevent-uievent--promiseany"><code>open(event?: UIEvent) =&gt; Promise&lt;any&gt;</code></h3>
+<h3 id="openevent-uievent--undefined--promiseany"><code>open(event?: UIEvent | undefined) =&gt; Promise&lt;any&gt;</code></h3>
 <p>Open the select overlay. The overlay is either an alert, action sheet, or popover,
 depending on the <code>interface</code> property on the <code>bkkr-select</code>.</p>
 <h4 id="returns">Returns</h4>
@@ -659,7 +659,10 @@ depending on the <code>interface</code> property on the <code>bkkr-select</code>
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

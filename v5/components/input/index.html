@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -451,7 +451,7 @@
 <td><code>accept</code></td>
 <td><code>accept</code></td>
 <td>If the value of the type attribute is <code>&quot;file&quot;</code>, then this attribute will indicate the types of files that the server accepts, otherwise it will be ignored. The value must be a comma-separated list of unique content type specifiers.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -493,14 +493,14 @@
 <td><code>clearOnEdit</code></td>
 <td><code>clear-on-edit</code></td>
 <td>If <code>true</code>, the value will be cleared after focus upon edit. Defaults to <code>true</code> when <code>type</code> is <code>&quot;password&quot;</code>, <code>false</code> for all other types.</td>
-<td><code>boolean</code></td>
+<td><code>boolean | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>color</code></td>
 <td><code>color</code></td>
 <td>The color to use from your application&rsquo;s color palette. Default options are: <code>&quot;primary&quot;</code>, <code>&quot;secondary&quot;</code>, <code>&quot;tertiary&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;warning&quot;</code>, <code>&quot;danger&quot;</code>, <code>&quot;light&quot;</code>, <code>&quot;medium&quot;</code>, and <code>&quot;dark&quot;</code>. For more information on colors, see <a href="https://bkkr-team.github.io/bkkr-docs/docs/theming/basics">theming</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -521,49 +521,49 @@
 <td><code>enterkeyhint</code></td>
 <td><code>enterkeyhint</code></td>
 <td>A hint to the browser for which enter key to display. Possible values: <code>&quot;enter&quot;</code>, <code>&quot;done&quot;</code>, <code>&quot;go&quot;</code>, <code>&quot;next&quot;</code>, <code>&quot;previous&quot;</code>, <code>&quot;search&quot;</code>, and <code>&quot;send&quot;</code>.</td>
-<td><code>&quot;done&quot; | &quot;enter&quot; | &quot;go&quot; | &quot;next&quot; | &quot;previous&quot; | &quot;search&quot; | &quot;send&quot;</code></td>
+<td><code>&quot;done&quot; | &quot;enter&quot; | &quot;go&quot; | &quot;next&quot; | &quot;previous&quot; | &quot;search&quot; | &quot;send&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>inputmode</code></td>
 <td><code>inputmode</code></td>
 <td>A hint to the browser for which keyboard to display. Possible values: <code>&quot;none&quot;</code>, <code>&quot;text&quot;</code>, <code>&quot;tel&quot;</code>, <code>&quot;url&quot;</code>, <code>&quot;email&quot;</code>, <code>&quot;numeric&quot;</code>, <code>&quot;decimal&quot;</code>, and <code>&quot;search&quot;</code>.</td>
-<td><code>&quot;decimal&quot; | &quot;email&quot; | &quot;none&quot; | &quot;numeric&quot; | &quot;search&quot; | &quot;tel&quot; | &quot;text&quot; | &quot;url&quot;</code></td>
+<td><code>&quot;decimal&quot; | &quot;email&quot; | &quot;none&quot; | &quot;numeric&quot; | &quot;search&quot; | &quot;tel&quot; | &quot;text&quot; | &quot;url&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>max</code></td>
 <td><code>max</code></td>
 <td>The maximum value, which must not be less than its minimum (min attribute) value.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>maxlength</code></td>
 <td><code>maxlength</code></td>
 <td>If the value of the type attribute is <code>text</code>, <code>email</code>, <code>search</code>, <code>password</code>, <code>tel</code>, or <code>url</code>, this attribute specifies the maximum number of characters that the user can enter.</td>
-<td><code>number</code></td>
+<td><code>number | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>min</code></td>
 <td><code>min</code></td>
 <td>The minimum value, which must not be greater than its maximum (max attribute) value.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>minlength</code></td>
 <td><code>minlength</code></td>
 <td>If the value of the type attribute is <code>text</code>, <code>email</code>, <code>search</code>, <code>password</code>, <code>tel</code>, or <code>url</code>, this attribute specifies the minimum number of characters that the user can enter.</td>
-<td><code>number</code></td>
+<td><code>number | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>multiple</code></td>
 <td><code>multiple</code></td>
 <td>If <code>true</code>, the user can enter more than one value. This attribute applies when the type attribute is set to <code>&quot;email&quot;</code> or <code>&quot;file&quot;</code>, otherwise it is ignored.</td>
-<td><code>boolean</code></td>
+<td><code>boolean | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -577,14 +577,14 @@
 <td><code>pattern</code></td>
 <td><code>pattern</code></td>
 <td>A regular expression that the value is checked against. The pattern must match the entire value, not just some subset. Use the title attribute to describe the pattern to help the user. This attribute applies when the value of the type attribute is <code>&quot;text&quot;</code>, <code>&quot;search&quot;</code>, <code>&quot;tel&quot;</code>, <code>&quot;url&quot;</code>, <code>&quot;email&quot;</code>, <code>&quot;date&quot;</code>, or <code>&quot;password&quot;</code>, otherwise it is ignored. When the type attribute is <code>&quot;date&quot;</code>, <code>pattern</code> will only be used in browsers that do not support the <code>&quot;date&quot;</code> input type natively. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date</a> for more information.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>placeholder</code></td>
 <td><code>placeholder</code></td>
 <td>Instructional text that shows before the input has a value.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -605,7 +605,7 @@
 <td><code>size</code></td>
 <td><code>size</code></td>
 <td>The initial size of the control. This value is in pixels unless the value of the type attribute is <code>&quot;text&quot;</code> or <code>&quot;password&quot;</code>, in which case it is an integer number of characters. This attribute applies only when the <code>type</code> attribute is set to <code>&quot;text&quot;</code>, <code>&quot;search&quot;</code>, <code>&quot;tel&quot;</code>, <code>&quot;url&quot;</code>, <code>&quot;email&quot;</code>, or <code>&quot;password&quot;</code>, otherwise it is ignored.</td>
-<td><code>number</code></td>
+<td><code>number | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -619,7 +619,7 @@
 <td><code>step</code></td>
 <td><code>step</code></td>
 <td>Works with the min and max attributes to limit the increments at which a value can be set. Possible values are: <code>&quot;any&quot;</code> or a positive floating point number.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -633,7 +633,7 @@
 <td><code>value</code></td>
 <td><code>value</code></td>
 <td>The value of the input.</td>
-<td><code>number | string</code></td>
+<td><code>null | number | string | undefined</code></td>
 <td><code>''</code></td>
 </tr>
 </tbody>
@@ -774,7 +774,10 @@
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

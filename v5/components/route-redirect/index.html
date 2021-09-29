@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -407,7 +407,7 @@
 <td><code>to</code> <em>(required)</em></td>
 <td><code>to</code></td>
 <td>A redirect route, redirects &ldquo;from&rdquo; a URL &ldquo;to&rdquo; another URL. This property is that &ldquo;to&rdquo; URL. When the defined <code>bkkr-route-redirect</code> rule matches, the router will redirect to the path specified in this property.  The value of this property is always an absolute path inside the scope of routes defined in <code>bkkr-router</code> it can&rsquo;t be used with another router or to perform a redirection to a different domain.  Note that this is a virtual redirect, it will not cause a real browser refresh, again, it&rsquo;s a redirect inside the context of bkkr-router.  When this property is not specified or his value is <code>undefined</code> the whole redirect route is noop, even if the &ldquo;from&rdquo; value matches.</td>
-<td><code>string</code></td>
+<td><code>null | string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 </tbody>
@@ -443,7 +443,10 @@
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

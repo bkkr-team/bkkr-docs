@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -422,21 +422,21 @@ Get vector icons and social logos on your website with Font Awesome, the web&rsq
 <td><code>ariaHidden</code></td>
 <td><code>aria-hidden</code></td>
 <td>Set the icon to hidden, respectively <code>true</code>, to remove it from the accessibility tree.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>ariaLabel</code></td>
 <td><code>aria-label</code></td>
 <td>Specifies the label to use for accessibility. Defaults to the icon name.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>color</code></td>
 <td><code>color</code></td>
 <td>The color to use for the background of the item.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -457,7 +457,7 @@ Get vector icons and social logos on your website with Font Awesome, the web&rsq
 <td><code>name</code></td>
 <td><code>name</code></td>
 <td>The name of icons. See all icons on <a href="https://fontawesome.com/">Fontawesome</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -471,14 +471,14 @@ Get vector icons and social logos on your website with Font Awesome, the web&rsq
 <td><code>size</code></td>
 <td><code>size</code></td>
 <td>The icon size.</td>
-<td><code>&quot;default&quot; | &quot;large&quot; | &quot;small&quot;</code></td>
+<td><code>&quot;default&quot; | &quot;large&quot; | &quot;small&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>src</code></td>
 <td><code>src</code></td>
 <td>Specifies the exact <code>src</code> of an SVG file to use.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -551,7 +551,10 @@ Get vector icons and social logos on your website with Font Awesome, the web&rsq
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

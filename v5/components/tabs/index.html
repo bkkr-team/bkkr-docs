@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -502,11 +502,11 @@
 <h3 id="getselected--promisestring--undefined"><code>getSelected() =&gt; Promise&lt;string | undefined&gt;</code></h3>
 <p>Get the currently selected tab.</p>
 <h4 id="returns">Returns</h4>
-<p>Type: <code>Promise&lt;string&gt;</code></p>
+<p>Type: <code>Promise&lt;string | undefined&gt;</code></p>
 <h3 id="gettabtab-string--htmlbkkrtabelement--promisehtmlbkkrtabelement--undefined"><code>getTab(tab: string | HTMLBkkrTabElement) =&gt; Promise&lt;HTMLBkkrTabElement | undefined&gt;</code></h3>
 <p>Get a specific tab by the value of its <code>tab</code> property or an element reference.</p>
 <h4 id="returns-1">Returns</h4>
-<p>Type: <code>Promise&lt;HTMLBkkrTabElement&gt;</code></p>
+<p>Type: <code>Promise&lt;HTMLBkkrTabElement | undefined&gt;</code></p>
 <h3 id="selecttab-string--htmlbkkrtabelement--promiseboolean"><code>select(tab: string | HTMLBkkrTabElement) =&gt; Promise&lt;boolean&gt;</code></h3>
 <p>Select a tab by the value of its <code>tab</code> property or an element reference.</p>
 <h4 id="returns-2">Returns</h4>
@@ -541,7 +541,10 @@
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -443,7 +443,7 @@
 <td><code>color</code></td>
 <td><code>color</code></td>
 <td>The color to use from your application&rsquo;s color palette. Default options are: <code>&quot;primary&quot;</code>, <code>&quot;secondary&quot;</code>, <code>&quot;tertiary&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;warning&quot;</code>, <code>&quot;danger&quot;</code>, <code>&quot;light&quot;</code>, <code>&quot;medium&quot;</code>, and <code>&quot;dark&quot;</code>. For more information on colors, see <a href="https://bkkr-team.github.io/bkkr-docs/docs/theming/basics">theming</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -457,35 +457,35 @@
 <td><code>download</code></td>
 <td><code>download</code></td>
 <td>This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>expand</code></td>
 <td><code>expand</code></td>
 <td>Set to <code>&quot;block&quot;</code> for a full-width button or to <code>&quot;full&quot;</code> for a full-width button without left and right borders.</td>
-<td><code>&quot;block&quot;</code></td>
+<td><code>&quot;block&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>fill</code></td>
 <td><code>fill</code></td>
 <td>Set to <code>&quot;clear&quot;</code> for a transparent button, to <code>&quot;outline&quot;</code> for a transparent button with a border, or to <code>&quot;solid&quot;</code>. The default style is <code>&quot;solid&quot;</code> except inside of a toolbar, where the default is <code>&quot;clear&quot;</code>.</td>
-<td><code>&quot;clear&quot; | &quot;default&quot; | &quot;outline&quot; | &quot;solid&quot;</code></td>
+<td><code>&quot;clear&quot; | &quot;default&quot; | &quot;outline&quot; | &quot;solid&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>href</code></td>
 <td><code>href</code></td>
 <td>Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>rel</code></td>
 <td><code>rel</code></td>
 <td>Specifies the relationship of the target object to the link object. The value is a space-separated list of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">link types</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -499,21 +499,21 @@
 <td><code>shape</code></td>
 <td><code>shape</code></td>
 <td>The button shape.</td>
-<td><code>&quot;round&quot;</code></td>
+<td><code>&quot;round&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>size</code></td>
 <td><code>size</code></td>
 <td>The button size.</td>
-<td><code>&quot;default&quot; | &quot;large&quot; | &quot;small&quot;</code></td>
+<td><code>&quot;default&quot; | &quot;large&quot; | &quot;small&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>target</code></td>
 <td><code>target</code></td>
 <td>Specifies where to display the linked URL. Only applies when an <code>href</code> is provided. Special keywords: <code>&quot;_blank&quot;</code>, <code>&quot;_self&quot;</code>, <code>&quot;_parent&quot;</code>, <code>&quot;_top&quot;</code>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -741,7 +741,10 @@
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

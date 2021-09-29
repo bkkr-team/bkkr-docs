@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -375,7 +375,7 @@
             <li><a href="#returns">Returns</a></li>
           </ul>
         </li>
-        <li><a href="#openevent-uievent--promiseany"><code>open(event?: UIEvent) =&gt; Promise&lt;any&gt;</code></a>
+        <li><a href="#openevent-uievent--undefined--promiseany"><code>open(event?: UIEvent | undefined) =&gt; Promise&lt;any&gt;</code></a>
           <ul>
             <li><a href="#returns-1">Returns</a></li>
           </ul>
@@ -435,21 +435,21 @@
 <td><code>color</code></td>
 <td><code>color</code></td>
 <td>The color to use from your application&rsquo;s color palette. Default options are: <code>&quot;primary&quot;</code>, <code>&quot;secondary&quot;</code>, <code>&quot;tertiary&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;warning&quot;</code>, <code>&quot;danger&quot;</code>, <code>&quot;light&quot;</code>, <code>&quot;medium&quot;</code>, and <code>&quot;dark&quot;</code>. For more information on colors, see <a href="https://bkkr-team.github.io/bkkr-docs/docs/theming/basics">theming</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>dayNames</code></td>
 <td><code>day-names</code></td>
 <td>Full day of the week names. This can be used to provide locale names for each day in the week. Defaults to English.</td>
-<td><code>string | string[]</code></td>
+<td><code>string | string[] | undefined</code></td>
 <td><code>DAY_NAMES</code></td>
 </tr>
 <tr>
 <td><code>dayShortNames</code></td>
 <td><code>day-short-names</code></td>
 <td>Short abbreviated day of the week names. This can be used to provide locale names for each day in the week. Defaults to English. Defaults to: <code>['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']</code></td>
-<td><code>string | string[]</code></td>
+<td><code>string | string[] | undefined</code></td>
 <td><code>DAY_SHORT_NAMES</code></td>
 </tr>
 <tr>
@@ -463,21 +463,21 @@
 <td><code>displayFormat</code></td>
 <td><code>display-format</code></td>
 <td>The display format of the date and time as text that shows within the item. When the <code>pickerFormat</code> input is not used, then the <code>displayFormat</code> is used for both display the formatted text, and determining the datetime picker&rsquo;s columns. See the <code>pickerFormat</code> input description for more info. Defaults to <code>DD.MM.YYYY</code>.</td>
-<td><code>string | string[]</code></td>
+<td><code>string | string[] | undefined</code></td>
 <td><code>DEFAULT_DATE_FORMAT</code></td>
 </tr>
 <tr>
 <td><code>enterkeyhint</code></td>
 <td><code>enterkeyhint</code></td>
 <td>A hint to the browser for which enter key to display. Possible values: <code>&quot;enter&quot;</code>, <code>&quot;done&quot;</code>, <code>&quot;go&quot;</code>, <code>&quot;next&quot;</code>, <code>&quot;previous&quot;</code>, <code>&quot;search&quot;</code>, and <code>&quot;send&quot;</code>.</td>
-<td><code>&quot;done&quot; | &quot;enter&quot; | &quot;go&quot; | &quot;next&quot; | &quot;previous&quot; | &quot;search&quot; | &quot;send&quot;</code></td>
+<td><code>&quot;done&quot; | &quot;enter&quot; | &quot;go&quot; | &quot;next&quot; | &quot;previous&quot; | &quot;search&quot; | &quot;send&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>inputmode</code></td>
 <td><code>inputmode</code></td>
 <td>A hint to the browser for which keyboard to display. Possible values: <code>&quot;none&quot;</code>, <code>&quot;text&quot;</code>, <code>&quot;tel&quot;</code>, <code>&quot;url&quot;</code>, <code>&quot;email&quot;</code>, <code>&quot;numeric&quot;</code>, <code>&quot;decimal&quot;</code>, and <code>&quot;search&quot;</code>.</td>
-<td><code>&quot;decimal&quot; | &quot;email&quot; | &quot;none&quot; | &quot;numeric&quot; | &quot;search&quot; | &quot;tel&quot; | &quot;text&quot; | &quot;url&quot;</code></td>
+<td><code>&quot;decimal&quot; | &quot;email&quot; | &quot;none&quot; | &quot;numeric&quot; | &quot;search&quot; | &quot;tel&quot; | &quot;text&quot; | &quot;url&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -491,28 +491,28 @@
 <td><code>max</code></td>
 <td><code>max</code></td>
 <td>The maximum datetime allowed. Value must be a date string following the <a href="https://www.w3.org/TR/NOTE-datetime">ISO 8601 datetime format standard</a>, <code>1996-12-19</code>. The format does not have to be specific to an exact datetime. For example, the maximum could just be the year, such as <code>1994</code>. Defaults to the end of this year.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>min</code></td>
 <td><code>min</code></td>
 <td>The minimum datetime allowed. Value must be a date string following the <a href="https://www.w3.org/TR/NOTE-datetime">ISO 8601 datetime format standard</a>, such as <code>1996-12-19</code>. The format does not have to be specific to an exact datetime. For example, the minimum could just be the year, such as <code>1994</code>. Defaults to the beginning of the year, 100 years ago from today.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>monthNames</code></td>
 <td><code>month-names</code></td>
 <td>Full names for each month name. This can be used to provide locale month names. Defaults to English.</td>
-<td><code>string | string[]</code></td>
+<td><code>string | string[] | undefined</code></td>
 <td><code>MONTH_SHORT_NAMES</code></td>
 </tr>
 <tr>
 <td><code>monthShortNames</code></td>
 <td><code>month-short-names</code></td>
 <td>Short abbreviated names for each month name. This can be used to provide locale month names. Defaults to English.</td>
-<td><code>string | string[]</code></td>
+<td><code>string | string[] | undefined</code></td>
 <td><code>MONTH_SHORT_NAMES</code></td>
 </tr>
 <tr>
@@ -533,7 +533,7 @@
 <td><code>placeholder</code></td>
 <td><code>placeholder</code></td>
 <td>Instructional text that shows before the datetime has a value.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -554,7 +554,7 @@
 <td><code>value</code></td>
 <td><code>value</code></td>
 <td>The value of the datetime as a valid ISO 8601 datetime string.</td>
-<td><code>string</code></td>
+<td><code>null | string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 </tbody>
@@ -606,7 +606,7 @@
 <p>Returns the native <code>&lt;datetime&gt;</code> element used under the hood.</p>
 <h4 id="returns">Returns</h4>
 <p>Type: <code>Promise&lt;HTMLInputElement&gt;</code></p>
-<h3 id="openevent-uievent--promiseany"><code>open(event?: UIEvent) =&gt; Promise&lt;any&gt;</code></h3>
+<h3 id="openevent-uievent--undefined--promiseany"><code>open(event?: UIEvent | undefined) =&gt; Promise&lt;any&gt;</code></h3>
 <p>Open the select overlay. The overlay is either an alert, action sheet, or popover,
 depending on the <code>interface</code> property on the <code>bkkr-select</code>.</p>
 <h4 id="returns-1">Returns</h4>
@@ -710,7 +710,10 @@ depending on the <code>interface</code> property on the <code>bkkr-select</code>
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

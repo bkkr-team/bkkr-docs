@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -371,7 +371,7 @@
     <li><a href="#events">Events</a></li>
     <li><a href="#methods">Methods</a>
       <ul>
-        <li><a href="#dismissdata-any-role-string-dismissparentpopover-boolean--promiseboolean"><code>dismiss(data?: any, role?: string, dismissParentPopover?: boolean) =&gt; Promise&lt;boolean&gt;</code></a>
+        <li><a href="#dismissdata-any-role-string--undefined-dismissparentpopover-boolean--promiseboolean"><code>dismiss(data?: any, role?: string | undefined, dismissParentPopover?: boolean) =&gt; Promise&lt;boolean&gt;</code></a>
           <ul>
             <li><a href="#returns">Returns</a></li>
           </ul>
@@ -386,7 +386,7 @@
             <li><a href="#returns-2">Returns</a></li>
           </ul>
         </li>
-        <li><a href="#presentevent-mouseevent--touchevent--pointerevent--promisevoid"><code>present(event?: MouseEvent | TouchEvent | PointerEvent) =&gt; Promise&lt;void&gt;</code></a>
+        <li><a href="#presentevent-mouseevent--touchevent--pointerevent--undefined--promisevoid"><code>present(event?: MouseEvent | TouchEvent | PointerEvent | undefined) =&gt; Promise&lt;void&gt;</code></a>
           <ul>
             <li><a href="#returns-3">Returns</a></li>
           </ul>
@@ -509,14 +509,14 @@
 <td><code>component</code></td>
 <td><code>component</code></td>
 <td>The component to display inside of the popover. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just slot your component inside of <code>bkkr-popover</code>.</td>
-<td><code>Function | HTMLElement | string</code></td>
+<td><code>Function | HTMLElement | null | string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>componentProps</code></td>
 <td>&ndash;</td>
 <td>The data to pass to the popover component. You only need to use this if you are not using a JavaScript framework. Otherwise, you can just set the props directly on your component.</td>
-<td><code>{ [key: string]: any; }</code></td>
+<td><code>undefined | { [key: string]: any; }</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -530,7 +530,7 @@
 <td><code>enterAnimation</code></td>
 <td>&ndash;</td>
 <td>Animation to use when the popover is presented.</td>
-<td><code>(baseEl: any, opts?: any) =&gt; Animation</code></td>
+<td><code>((baseEl: any, opts?: any) =&gt; Animation) | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -544,7 +544,7 @@
 <td><code>htmlAttributes</code></td>
 <td>&ndash;</td>
 <td>Additional attributes to pass to the popover.</td>
-<td><code>PopoverAttributes</code></td>
+<td><code>PopoverAttributes | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -565,7 +565,7 @@
 <td><code>leaveAnimation</code></td>
 <td>&ndash;</td>
 <td>Animation to use when the popover is dismissed.</td>
-<td><code>(baseEl: any, opts?: any) =&gt; Animation</code></td>
+<td><code>((baseEl: any, opts?: any) =&gt; Animation) | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -600,7 +600,7 @@
 <td><code>trigger</code></td>
 <td><code>trigger</code></td>
 <td>An ID corresponding to the trigger element that causes the popover to open. Use the <code>trigger-action</code> property to customize the interaction that results in the popover opening.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -665,7 +665,7 @@
 </tbody>
 </table>
 <h2 id="methods">Methods</h2>
-<h3 id="dismissdata-any-role-string-dismissparentpopover-boolean--promiseboolean"><code>dismiss(data?: any, role?: string, dismissParentPopover?: boolean) =&gt; Promise&lt;boolean&gt;</code></h3>
+<h3 id="dismissdata-any-role-string--undefined-dismissparentpopover-boolean--promiseboolean"><code>dismiss(data?: any, role?: string | undefined, dismissParentPopover?: boolean) =&gt; Promise&lt;boolean&gt;</code></h3>
 <p>Dismiss the popover overlay after it has been presented.</p>
 <h4 id="returns">Returns</h4>
 <p>Type: <code>Promise&lt;boolean&gt;</code></p>
@@ -677,7 +677,7 @@
 <p>Returns a promise that resolves when the popover will dismiss.</p>
 <h4 id="returns-2">Returns</h4>
 <p>Type: <code>Promise&lt;OverlayEventDetail&lt;T&gt;&gt;</code></p>
-<h3 id="presentevent-mouseevent--touchevent--pointerevent--promisevoid"><code>present(event?: MouseEvent | TouchEvent | PointerEvent) =&gt; Promise&lt;void&gt;</code></h3>
+<h3 id="presentevent-mouseevent--touchevent--pointerevent--undefined--promisevoid"><code>present(event?: MouseEvent | TouchEvent | PointerEvent | undefined) =&gt; Promise&lt;void&gt;</code></h3>
 <p>Present the popover overlay after it has been created.
 Developers can pass a mouse, touch, or pointer event
 to position the popover relative to where that event
@@ -812,7 +812,10 @@ was dispatched.</p>
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

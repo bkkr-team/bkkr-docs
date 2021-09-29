@@ -10,7 +10,7 @@
 <meta name="generator" content="Hugo 0.88.1">
 
 <meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="5.0">
+<meta name="docsearch:version" content="5.1">
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en" />
@@ -435,14 +435,14 @@
 <td><code>color</code></td>
 <td><code>color</code></td>
 <td>The color to use from your application&rsquo;s color palette. Default options are: <code>&quot;primary&quot;</code>, <code>&quot;secondary&quot;</code>, <code>&quot;tertiary&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;warning&quot;</code>, <code>&quot;danger&quot;</code>, <code>&quot;light&quot;</code>, <code>&quot;medium&quot;</code>, and <code>&quot;dark&quot;</code>. For more information on colors, see <a href="https://bkkr-team.github.io/bkkr-docs/docs/theming/basics">theming</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>detail</code></td>
 <td><code>detail</code></td>
 <td>If <code>true</code>, a detail arrow will appear on the item. Defaults to <code>false</code> unless the <code>mode</code> is <code>ios</code> and an <code>href</code> or <code>button</code> property is present.</td>
-<td><code>boolean</code></td>
+<td><code>boolean | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -463,28 +463,28 @@
 <td><code>download</code></td>
 <td><code>download</code></td>
 <td>This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>href</code></td>
 <td><code>href</code></td>
 <td>Contains a URL or a URL fragment that the hyperlink points to. If this property is set, an anchor tag will be rendered.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>lines</code></td>
 <td><code>lines</code></td>
 <td>How the bottom border should be displayed on the item.</td>
-<td><code>&quot;full&quot; | &quot;inset&quot; | &quot;none&quot;</code></td>
+<td><code>&quot;full&quot; | &quot;inset&quot; | &quot;none&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>rel</code></td>
 <td><code>rel</code></td>
 <td>Specifies the relationship of the target object to the link object. The value is a space-separated list of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">link types</a>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -498,7 +498,7 @@
 <td><code>target</code></td>
 <td><code>target</code></td>
 <td>Specifies where to display the linked URL. Only applies when an <code>href</code> is provided. Special keywords: <code>&quot;_blank&quot;</code>, <code>&quot;_self&quot;</code>, <code>&quot;_parent&quot;</code>, <code>&quot;_top&quot;</code>.</td>
-<td><code>string</code></td>
+<td><code>string | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -742,7 +742,10 @@
     
   </bkkr-root>
 
-  <script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+  
+
+<script src="https://bkkr-team.github.io/bkkr-docs/v5/dist/bkkr/bkkr.js"></script>
+
 
 
 

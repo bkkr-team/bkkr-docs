@@ -439,6 +439,13 @@
 <td><code>undefined</code></td>
 </tr>
 <tr>
+<td><code>counter</code></td>
+<td><code>counter</code></td>
+<td>If <code>true</code>, a character counter will display the ratio of characters used and the total character limit. Only applies when the <code>maxlength</code> property is set on the inner <code>bkkr-input</code> or <code>bkkr-textarea</code>.</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
 <td><code>detail</code></td>
 <td><code>detail</code></td>
 <td>If <code>true</code>, a detail arrow will appear on the item. Defaults to <code>false</code> unless the <code>mode</code> is <code>ios</code> and an <code>href</code> or <code>button</code> property is present.</td>
@@ -464,6 +471,13 @@
 <td><code>download</code></td>
 <td>This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want).</td>
 <td><code>string | undefined</code></td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><code>fill</code></td>
+<td><code>fill</code></td>
+<td>The fill for the item. If <code>'solid'</code> the item will have a background. If <code>'outline'</code> the item will be transparent with a border.</td>
+<td><code>&quot;outline&quot; | &quot;solid&quot; | undefined</code></td>
 <td><code>undefined</code></td>
 </tr>
 <tr>
@@ -493,6 +507,13 @@
 <td>When using a router, it specifies the transition direction when navigating to another page using <code>href</code>.</td>
 <td><code>&quot;back&quot; | &quot;forward&quot; | &quot;root&quot;</code></td>
 <td><code>'forward'</code></td>
+</tr>
+<tr>
+<td><code>shape</code></td>
+<td><code>shape</code></td>
+<td>The shape of the item. If &ldquo;round&rdquo; it will have increased border radius.</td>
+<td><code>&quot;round&quot; | undefined</code></td>
+<td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>target</code></td>
@@ -642,10 +663,6 @@
 <td>The color of the highlight on the item when invalid</td>
 </tr>
 <tr>
-<td><code>--highlight-color-valid</code></td>
-<td>The color of the highlight on the item when valid</td>
-</tr>
-<tr>
 <td><code>--highlight-height</code></td>
 <td>The height of the highlight on the item</td>
 </tr>
@@ -707,10 +724,12 @@
 <h3 id="depends-on">Depends on</h3>
 <ul>
 <li><a href="../icon">bkkr-icon</a></li>
+<li><a href="../note">bkkr-note</a></li>
 </ul>
 <h3 id="graph">Graph</h3>
 <pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD;
   bkkr-item --&gt; bkkr-icon
+  bkkr-item --&gt; bkkr-note
   style bkkr-item fill:#f9f,stroke:#333,stroke-width:4px
 </code></pre><hr>
 

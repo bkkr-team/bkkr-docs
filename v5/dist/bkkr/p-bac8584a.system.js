@@ -1,0 +1,4 @@
+/*!
+ * (C) BKKR Framework https://bkkr-team.github.io/bkkr-docs/ - MIT License
+ */
+System.register(["./p-739d5869.system.js","./p-41d12dc7.system.js","./p-b938bf14.system.js"],(function(e){"use strict";var s,i,t,n,f,r;return{setters:[function(e){s=e.s},function(e){i=e.s},function(e){t=e.c;n=e.a;f=e.b;r=e.s}],execute:function(){var a=e("i",(function(e){if(e===void 0){e={}}if(typeof window==="undefined"){return}var a=window;var c=a.Bkkr=a.Bkkr||{};var o={};if(e._ael){o.ael=e._ael}if(e._rel){o.rel=e._rel}if(e._ce){o.ce=e._ce}s(o);var g=Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({},t(a)),{persistConfig:false}),c.config),n(a)),e);f.reset(g);if(f.getBoolean("persistConfig")){r(a,g)}i(a);c.config=f;if(f.getBoolean("_testing")){f.set("animated",false)}}))}}}));

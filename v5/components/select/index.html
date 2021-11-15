@@ -382,6 +382,7 @@
     <li><a href="#dependencies">Dependencies</a>
       <ul>
         <li><a href="#used-by">Used by</a></li>
+        <li><a href="#depends-on">Depends on</a></li>
         <li><a href="#graph">Graph</a></li>
       </ul>
     </li>
@@ -625,8 +626,14 @@ depending on the <code>interface</code> property on the <code>bkkr-select</code>
 <ul>
 <li><a href="../paginator">bkkr-paginator</a></li>
 </ul>
+<h3 id="depends-on">Depends on</h3>
+<ul>
+<li>bkkr-select-choices</li>
+</ul>
 <h3 id="graph">Graph</h3>
 <pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD;
+  bkkr-select --&gt; bkkr-select-choices
+  bkkr-select-choices --&gt; bkkr-icon
   bkkr-paginator --&gt; bkkr-select
   style bkkr-select fill:#f9f,stroke:#333,stroke-width:4px
 </code></pre><hr>

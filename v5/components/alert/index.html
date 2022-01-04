@@ -568,23 +568,43 @@
 </thead>
 <tbody>
 <tr>
-<td><code>alertDidDismiss</code></td>
+<td><code>bkkrAlertDidDismiss</code></td>
 <td>Emitted after the alert has dismissed.</td>
 <td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
 </tr>
 <tr>
-<td><code>alertDidPresent</code></td>
+<td><code>bkkrAlertDidPresent</code></td>
 <td>Emitted after the alert has presented.</td>
 <td><code>CustomEvent&lt;void&gt;</code></td>
 </tr>
 <tr>
-<td><code>alertWillDismiss</code></td>
+<td><code>bkkrAlertWillDismiss</code></td>
 <td>Emitted before the alert has dismissed.</td>
 <td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
 </tr>
 <tr>
-<td><code>alertWillPresent</code></td>
+<td><code>bkkrAlertWillPresent</code></td>
 <td>Emitted before the alert has presented.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+<tr>
+<td><code>didDismiss</code></td>
+<td>Emitted after the alert has dismissed. Shorthand for bkkrAlertDidDismiss.</td>
+<td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
+</tr>
+<tr>
+<td><code>didPresent</code></td>
+<td>Emitted after the alert has presented. Shorthand for bkkrAlertWillDismiss.</td>
+<td><code>CustomEvent&lt;void&gt;</code></td>
+</tr>
+<tr>
+<td><code>willDismiss</code></td>
+<td>Emitted before the alert has dismissed. Shorthand for bkkrAlertWillDismiss.</td>
+<td><code>CustomEvent&lt;OverlayEventDetail&lt;any&gt;&gt;</code></td>
+</tr>
+<tr>
+<td><code>willPresent</code></td>
+<td>Emitted before the alert has presented. Shorthand for bkkrAlertWillPresent.</td>
 <td><code>CustomEvent&lt;void&gt;</code></td>
 </tr>
 </tbody>

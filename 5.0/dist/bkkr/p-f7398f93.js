@@ -1,1 +1,0 @@
-const i={xs:"(min-width: 0px)",sm:"(min-width: 576px)",md:"(min-width: 768px)",lg:"(min-width: 992px)",xl:"(min-width: 1200px)",xll:"(min-width: 1400px)"},d=d=>void 0===d||""===d||!!window.matchMedia&&window.matchMedia(i[d]).matches;export{d as m}

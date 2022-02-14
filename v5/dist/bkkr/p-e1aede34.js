@@ -1,4 +1,0 @@
-/*!
- * (C) BKKR Framework https://bkkr-team.github.io/bkkr-docs/ - MIT License
- */
-import{s}from"./p-fef964f0.js";import{s as t}from"./p-5ab02a77.js";import{c as e,a as o,b as i,s as a}from"./p-e7c3cb65.js";const n=(n={})=>{if("undefined"==typeof window)return;const c=window,f=c.Bkkr=c.Bkkr||{},r={};n._ael&&(r.ael=n._ael),n._rel&&(r.rel=n._rel),n._ce&&(r.ce=n._ce),s(r);const p=Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({},e(c)),{persistConfig:!1}),f.config),o(c)),n);i.reset(p),i.getBoolean("persistConfig")&&a(c,p),t(c),f.config=i,i.getBoolean("_testing")&&i.set("animated",!1)};export{n as i}

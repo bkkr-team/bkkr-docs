@@ -1,4 +1,0 @@
-/*!
- * (C) BKKR Framework https://bkkr-team.github.io/bkkr-docs/ - MIT License
- */
-System.register(["./p-bd1be62f.system.js"],(function(e){"use strict";var t,r;return{setters:[function(e){t=e.r;r=e.c}],execute:function(){var n=e("bkkr_route_redirect",function(){function e(e){t(this,e);this.bkkrRouteRedirectChanged=r(this,"bkkrRouteRedirectChanged",7)}e.prototype.propDidChange=function(){this.bkkrRouteRedirectChanged.emit()};e.prototype.connectedCallback=function(){this.bkkrRouteRedirectChanged.emit()};Object.defineProperty(e,"watchers",{get:function(){return{from:["propDidChange"],to:["propDidChange"]}},enumerable:false,configurable:true});return e}())}}}));

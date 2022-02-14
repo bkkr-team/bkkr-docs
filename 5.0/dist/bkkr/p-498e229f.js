@@ -1,1 +1,0 @@
-const a=async n=>{const r=n;if(r){if(null!=r.componentOnReady&&null!=await r.componentOnReady())return;await Promise.all(Array.from(r.children).map(a))}};export{a as d}

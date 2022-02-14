@@ -1,1 +1,0 @@
-import{r as t,h as s,g as r,H as e}from"./p-1bbdd538.js";const o=class{constructor(s){t(this,s),this.inputId="bkkr-select-opt-"+i++,this.disabled=!1}render(){return s(e,{role:"option",id:this.inputId})}get el(){return r(this)}};let i=0;o.style=":host{display:none}";export{o as bkkr_select_option}

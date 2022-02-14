@@ -1,1 +1,0 @@
-System.register(["./p-92f7c087.system.js"],(function(t){"use strict";var e,n,r;return{setters:[function(t){e=t.r;n=t.h;r=t.H}],execute:function(){var i=".datepicker,:host{display:inline-block}";var s=t("bkkr_datepicker",function(){function t(t){e(this,t)}t.prototype.render=function(){return n(r,null,n("slot",null))};return t}());s.style=i}}}));

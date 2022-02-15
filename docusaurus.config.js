@@ -10,7 +10,8 @@ const BASE_URL = '/docs';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'BKKR Documentation',
-  tagline: 'A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.',
+  tagline:
+    'A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript.',
   url: 'https://bkkr-team.github.io/',
   baseUrl: `${BASE_URL}/`,
   onBrokenLinks: 'warn',
@@ -22,7 +23,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
     localeConfigs: {
-      en: { label: 'English' }
+      en: { label: 'English' },
     },
   },
   presets: [
@@ -31,9 +32,23 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: ({ versionDocsDirPath, docPath }) => {
+            let match = docPath.match(/api\/(.*)\.md/);
+            if (match != null) {
+              return `https://github.com/bkkr-team/bkkr-framework/edit/main/core/src/components/${match[1]}/readme.md`;
+            }
+            return `https://github.com/bkkr-team/bkkr-docs/edit/main/${versionDocsDirPath}/${docPath}`;
+          },
+          exclude: ['README.md'],
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'v6',
+              banner: 'none',
+            },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -42,7 +57,10 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./node_modules/modern-normalize/modern-normalize.css'),
+            require.resolve('./src/styles/custom.scss'),
+          ],
         },
       }),
     ],
@@ -61,14 +79,23 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            label: 'Guide',
+            docId: 'guide',
             position: 'left',
-            label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'doc',
+            label: 'Components',
+            docId: 'components',
+            position: 'left',
+          },
           {
             href: 'https://github.com/bkkr-team/bkkr-framework',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'search',
             position: 'right',
           },
         ],
@@ -122,47 +149,28 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'S9UPRK0052',
+        apiKey: 'deac83026d9661f1eb9c6a4484ce1caf',
+        indexName: 'bkkrframework',
+        contextualSearch: true,
+      },
     },
 
-    /* TODO: Later */
-    /* plugins: [
-      'docusaurus-plugin-sass',
-      [
-        'docusaurus-plugin-module-alias',
-        {
-          alias: {
-            react: path.resolve(__dirname, './node_modules/react'),
-            'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-            '@components': path.resolve(__dirname, './src/components'),
-          },
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      'docusaurus-plugin-module-alias',
+      {
+        alias: {
+          'styled-components': path.resolve(__dirname, './node_modules/styled-components'),
+          react: path.resolve(__dirname, './node_modules/react'),
+          'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+          '@components': path.resolve(__dirname, './src/components'),
         },
-      ],
-      [
-        '@docusaurus/plugin-content-docs',
-        {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: ({ versionDocsDirPath, docPath }) => {
-            let match = docPath.match(/api\/(.*)\.md/);
-            if (match != null) {
-              return `https://github.com/bkkr-team/bkkr-framework/edit/main/core/src/components/${match[1]}/readme.md`;
-            }
-            return `https://github.com/bkkr-team/bkkr-docs/edit/main/${versionDocsDirPath}/${docPath}`;
-          },
-          exclude: ['README.md'],
-          lastVersion: 'current',
-          versions: {
-            current: {
-              label: 'v6',
-              banner: 'none',
-            },
-          },
-        },
-      ],
-      '@docusaurus/plugin-content-pages',
-      '@docusaurus/plugin-debug',
-      '@docusaurus/plugin-sitemap',
-    ] */
+      },
+    ],
+  ]
 };
 
 module.exports = config;

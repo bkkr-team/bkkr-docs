@@ -114,7 +114,7 @@ DOMTokenList
 
   var resourcesUrl = scriptElm ? scriptElm.getAttribute('data-resources-url') || scriptElm.src : '';
   var start = function() {
-    var url = new URL('./p-2a6e85e8.system.js', new URL(resourcesUrl, window.location.origin));
+    var url = new URL('./p-05a55d5e.system.js', new URL(resourcesUrl, window.location.origin));
     System.import(url.href);
   };
 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Reorder-group - Basic</title>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link href="../../../../../dist/bkkr/bkkr.css" rel="stylesheet">
+    <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
+    <script src="../../../../../scripts/testing/scripts.js"></script>
+    <script type="module" src="../../../../../dist/bkkr/bkkr.esm.js"></script>
+    <script>
+      class PageOne extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = `
+            <bkkr-header>
+              <bkkr-toolbar>
+                <bkkr-title>Page One</bkkr-title>
+              </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content class="bkkr-padding">
+              <h1>Page One</h1>
+              <bkkr-button href="#/two/segment">Go to Page Two</bkkr-button>
+            </bkkr-content>
+          `;
+        }
+      }
+      class PageTwo extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = `
+            <bkkr-header>
+              <bkkr-toolbar>
+                <bkkr-title>Page Two</bkkr-title>
+              </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content class="bkkr-padding">
+              <h1>Page Two</h1>
+              <div>
+                <bkkr-button href="#/page-3">Go to Page Three</bkkr-button>
+              </div>
+            </bkkr-content>
+          `;
+        }
+      }
+      class PageThree extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = `
+            <bkkr-header>
+              <bkkr-toolbar>
+                <bkkr-title>Page Three</bkkr-title>
+              </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content class="bkkr-padding">
+              <h1>Page Three</h1>
+            </bkkr-content>
+          `;
+        }
+      }
+      class PageFour extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = `
+            <bkkr-header>
+              <bkkr-toolbar>
+                <bkkr-title>Page Four</bkkr-title>
+              </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content class="bkkr-padding">
+              <h1>text = ${this.text}</h1>
+            </bkkr-content>
+          `;
+        }
+      }    
+      customElements.define('page-one', PageOne);
+      customElements.define('page-two', PageTwo);
+      customElements.define('page-three', PageThree);
+      customElements.define('page-four', PageFour);
+    </script>
+  </head>
+  <body>
+    <bkkr-root>
+      <bkkr-router>
+        <bkkr-route url="/" component="page-one"> </bkkr-route>
+        <bkkr-route url="/two/:param" component="page-two"> </bkkr-route>
+        <bkkr-route url="/page-3" component="page-three"> </bkkr-route>
+        <bkkr-route url="/page-4.1/:text" component="page-four"> </bkkr-route>
+        <bkkr-route url="/page-4.2/:text" component="page-four"> </bkkr-route>
+      </bkkr-router>
+  
+      <bkkr-split-pane content-id="main">
+        <bkkr-menu content-id="main">
+          <bkkr-header>
+            <bkkr-toolbar>
+              <bkkr-title>Menu</bkkr-title>
+            </bkkr-toolbar>
+          </bkkr-header>
+          <bkkr-content>
+            <bkkr-item href="#/">
+              <bkkr-label>Page 1</bkkr-label>
+            </bkkr-item>
+            <bkkr-item href="#/two/segment">
+              <bkkr-label>Page 2</bkkr-label>
+            </bkkr-item>
+            <bkkr-item href="#/page-3">
+              <bkkr-label>Page 3</bkkr-label>
+            </bkkr-item>
+            <bkkr-item href="#/page-4.1/foo">
+              <bkkr-label>Page 4 (foo)</bkkr-label>
+            </bkkr-item>
+            <bkkr-item href="#/page-4.2/bar">
+              <bkkr-label>Page 4 (bar)</bkkr-label>
+            </bkkr-item>                    
+          </bkkr-content>
+        </bkkr-menu>
+        <bkkr-router-outlet id="main"></bkkr-router-outlet>
+      </bkkr-split-pane>
+    </bkkr-root>
+
+    <script>
+      document.querySelector('ion-route[component=page-three]').componentProps = {param: "route"};
+    </script>
+  </body>
+</html>

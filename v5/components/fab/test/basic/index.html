@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fab - Basic</title>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link href="../../../../../dist/bkkr/bkkr.css" rel="stylesheet">
+    <link href="../../../../../scripts/testing/styles.css" rel="stylesheet">
+    <script src="../../../../../scripts/testing/scripts.js"></script>
+    <script type="module" src="../../../../../dist/bkkr/bkkr.esm.js"></script>
+  </head>
+  <body>
+    <bkkr-root>
+      <bkkr-header>
+        <bkkr-toolbar>
+          <bkkr-title>Fab - Basic</bkkr-title>
+        </bkkr-toolbar>
+      </bkkr-header>
+      <bkkr-content fullscreen="true">
+        <div class="grid bkkr-padding">
+          <div class="grid-item">
+            <h2>Inset, Color</h2>
+            <bkkr-fab-group expand="inset">
+              <bkkr-fab value="attractions">
+                <bkkr-item color="primary" slot="header" button detail="false">
+                  <bkkr-icon slot="start" ios="film-outline" md="film"></bkkr-icon>
+                  <bkkr-label> Attractions</bkkr-label>
+                </bkkr-item>
+                <bkkr-list lines="none" slot="content">
+                  <bkkr-item>
+                    <bkkr-label>Movie Theaters</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>Amusement Parks</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>Mini Golf</bkkr-label>
+                  </bkkr-item>
+                </bkkr-list>
+              </bkkr-fab>
+              <bkkr-fab value="dining">
+                <bkkr-item color="warning" slot="header" button detail="false">
+                  <bkkr-icon slot="start" name="pizza"></bkkr-icon>
+                  <bkkr-label>Dining</bkkr-label>
+                </bkkr-item>
+                <bkkr-list lines="none" slot="content">
+                  <bkkr-item>
+                    <bkkr-label>Breakfast & Brunch</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>New American</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>Sushi Bars</bkkr-label>
+                  </bkkr-item>
+                </bkkr-list>
+              </bkkr-fab>
+              <bkkr-fab value="games">
+                <bkkr-item color="danger" slot="header" button detail="false">
+                  <bkkr-icon slot="start" ios="game-controller-outline" md="game-controller"></bkkr-icon>
+                  <bkkr-label>Games</bkkr-label>
+                </bkkr-item>
+
+                <bkkr-list lines="none" slot="content">
+                  <bkkr-item>
+                    <bkkr-label>Xbox</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>Playstation</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>Switch</bkkr-label>
+                  </bkkr-item>
+                </bkkr-list>
+              </bkkr-fab>
+              <bkkr-fab value="exercise">
+                <bkkr-item color="success" slot="header" button detail="false">
+                  <bkkr-icon slot="start" ios="bicycle-outline" md="bicycle"></bkkr-icon>
+                  <bkkr-label>Exercise</bkkr-label>
+                </bkkr-item>
+
+                <bkkr-list lines="none" slot="content">
+                  <bkkr-item>
+                    <bkkr-label>Jog</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>Swim</bkkr-label>
+                  </bkkr-item>
+                  <bkkr-item>
+                    <bkkr-label>Nap</bkkr-label>
+                  </bkkr-item>
+                </bkkr-list>
+              </bkkr-fab>
+            </bkkr-fab-group>
+          </div>
+
+        </div>
+      </bkkr-content>
+    </bkkr-root>
+  </body>
+</html>

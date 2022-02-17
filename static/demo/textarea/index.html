@@ -1,0 +1,34 @@
+---
+layout: "v5/examples"
+title: "textarea"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-list class="mb-5">
+            <bkkr-list-header>
+                Profile infos
+            </bkkr-list-header>
+
+            <bkkr-item>
+                <bkkr-label position="floating">About us</bkkr-label>
+                <bkkr-textarea placeholder="Tell something about yourself..." maxlength="125"></bkkr-textarea>
+                <bkkr-note slot="helper">Not required.</bkkr-note>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>Signature</bkkr-label>
+                <bkkr-textarea disabled value="Sent from my phone">
+                </bkkr-textarea>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>Notes</bkkr-label>
+                <bkkr-textarea rows="6" cols="20" clear-on-edit placeholder="Enter any notes here..."></bkkr-textarea>
+            </bkkr-item>
+        </bkkr-list>
+    </bkkr-content>
+</div>

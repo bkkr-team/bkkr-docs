@@ -1,0 +1,55 @@
+---
+layout: "v5/examples"
+title: "drawer"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+  <bkkr-content>
+    <bkkr-container>
+      <bkkr-button class="mb-2" onclick="openDrawer()">
+        Launch drawer
+      </bkkr-button>
+
+      <bkkr-button onclick="openAutoDrawer()">
+        Lauch drawer with timer
+      </bkkr-button>
+
+      <bkkr-drawer>
+        <bkkr-header>
+          <bkkr-toolbar class="px-3">
+            <h2 class="text-bold my-2">
+              Drawer
+            </h2>
+          </bkkr-toolbar>
+        </bkkr-header>
+        <bkkr-content>
+          <bkkr-container>
+            This is my inline drawer content!
+          </bkkr-container>
+        </bkkr-content>
+      </bkkr-drawer>
+    </bkkr-container>
+  </bkkr-content>
+</div>
+
+<script>
+  const drawer = document.querySelector('bkkr-drawer');
+  drawer.presentingElement = document.querySelector('.bkkr-page');
+
+  const openDrawer = () => {
+    drawer.isOpen = true;
+    drawer.duration = 0
+  }
+
+  const openAutoDrawer = () => {
+    drawer.isOpen = true;
+    drawer.duration = 3000
+  }
+
+  drawer.addEventListener('didDismiss', () => {
+    drawer.isOpen = false;
+  });
+</script>

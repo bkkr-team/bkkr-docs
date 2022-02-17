@@ -1,0 +1,44 @@
+---
+layout: "v5/examples"
+title: "breadcrumb"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+  <bkkr-content>
+    <bkkr-container>
+      <bkkr-breadcrumbs max-items="4" items-before-collapse="0" items-after-collapse="2">
+        <bkkr-breadcrumb href="#">
+          Home
+        </bkkr-breadcrumb>
+        <bkkr-breadcrumb href="#electronics">
+          Electronics
+        </bkkr-breadcrumb>
+        <bkkr-breadcrumb href="#photography">
+          Photography
+        </bkkr-breadcrumb>
+        <bkkr-breadcrumb href="#cameras">
+          Cameras
+        </bkkr-breadcrumb>
+        <bkkr-breadcrumb href="#film">
+          Film
+        </bkkr-breadcrumb>
+        <bkkr-breadcrumb>
+          35 mm
+        </bkkr-breadcrumb>
+      </bkkr-breadcrumbs>
+    </bkkr-container>
+  </bkkr-content>
+</div>
+
+<script>
+const breadcrumbs = document.querySelector('bkkr-breadcrumbs');
+
+breadcrumbs.addEventListener('bkkrCollapsedClick', () => expandBreadcrumbs());
+
+function expandBreadcrumbs() {
+  breadcrumbs.maxItems = undefined;
+}
+</script>

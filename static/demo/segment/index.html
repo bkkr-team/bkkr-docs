@@ -1,0 +1,47 @@
+---
+layout: "v5/examples"
+title: "segment"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-header>
+        <bkkr-toolbar>
+            <bkkr-segment value="all">
+                <bkkr-segment-button value="all">
+                    <bkkr-label>All</bkkr-label>
+                </bkkr-segment-button>
+                <bkkr-segment-button value="friends">
+                    <bkkr-label>Friends</bkkr-label>
+                </bkkr-segment-button>
+                <bkkr-segment-button value="enemies">
+                    <bkkr-label>Enemies</bkkr-label>
+                </bkkr-segment-button>
+            </bkkr-segment>
+        </bkkr-toolbar>
+    </bkkr-header>
+    <bkkr-content>
+        <bkkr-segment value="all">
+            <bkkr-segment-button value="all">
+                <bkkr-label>All</bkkr-label>
+            </bkkr-segment-button>
+            <bkkr-segment-button value="friends">
+                <bkkr-label>Friends</bkkr-label>
+            </bkkr-segment-button>
+            <bkkr-segment-button value="enemies">
+                <bkkr-label>Enemies</bkkr-label>
+            </bkkr-segment-button>
+        </bkkr-segment>
+    </bkkr-content>
+</div>
+
+<script>
+    const segments = document.querySelectorAll('bkkr-segment');
+    for (let i = 0; i < segments.length; i++) {
+        segments[i].addEventListener('bkkrChange', (ev) => {
+            console.log('Segment changed', ev);
+        });
+    }
+</script>

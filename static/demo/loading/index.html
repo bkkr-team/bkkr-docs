@@ -1,0 +1,44 @@
+---
+layout: "v5/examples"
+title: "loading"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+  <bkkr-header>
+    <bkkr-toolbar>
+      <bkkr-button slot="start">
+        <bkkr-icon slot="start" name="arrow-left" class="mr-2"></bkkr-icon>
+        Back
+      </bkkr-button>
+    </bkkr-toolbar>
+  </bkkr-header>
+  <bkkr-content id="content">
+  </bkkr-content>
+  <bkkr-footer>
+    <bkkr-toolbar>
+      <bkkr-button slot="start" onclick="presentLoading()">
+        Show loading
+      </bkkr-button>
+      <bkkr-button slot="end" onclick="dismissLoading()">
+        Hide loading
+      </bkkr-button>
+    </bkkr-toolbar>
+  </bkkr-footer>
+</div>
+
+<script>
+  const loading = document.createElement('bkkr-loading');
+
+  async function presentLoading() {
+    loading.setAttribute("slot", "fixed");
+    document.getElementById('content').appendChild(loading);
+    return loading.present();
+  }
+
+  async function dismissLoading() {
+    return loading.dismiss();
+  }
+</script>

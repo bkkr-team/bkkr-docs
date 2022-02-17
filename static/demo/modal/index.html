@@ -1,0 +1,45 @@
+---
+layout: "v5/examples"
+title: "modal"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+  <bkkr-content>
+      <bkkr-container>
+          <bkkr-button onclick="openModal(event)">
+              Launch modal
+          </bkkr-button>
+
+          <bkkr-modal>
+            <bkkr-header>
+              <bkkr-toolbar class="px-3">
+                <h2 class="text-bold mb-2">
+                  Modal
+                </h2>
+              </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content>
+              <bkkr-container>
+                This is my inline modal content!
+              </bkkr-container>
+            </bkkr-content>
+          </bkkr-modal>
+      </bkkr-container>
+  </bkkr-content>
+</div>
+
+<script>
+  const modal = document.querySelector('bkkr-modal');
+  modal.presentingElement = document.querySelector('.bkkr-page');
+
+  const openModal = () => {
+    modal.isOpen = true;
+  }
+
+  modal.addEventListener('didDismiss', () => {
+    modal.isOpen = false;
+  });
+</script>

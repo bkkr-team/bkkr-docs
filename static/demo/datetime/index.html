@@ -1,0 +1,52 @@
+---
+layout: "v5/examples"
+title: "datetime"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-list class="mb-5">
+            <bkkr-item>
+                <bkkr-input placeholder="Title"></bkkr-input>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-input placeholder="Location"></bkkr-input>
+            </bkkr-item>
+        </bkkr-list>
+        <bkkr-list>
+            <bkkr-item>
+                <bkkr-label>Start Date</bkkr-label>
+                <bkkr-datetime value="1990-02-19T00:00Z" min="1990-02-10T00:00Z" placeholder="Select Date"></bkkr-datetime>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-label>Start Time</bkkr-label>
+                <bkkr-datetime id="timefield" min="1990-02-10" value="1990-02-19T07:43Z" picker="false">
+                </bkkr-datetime>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-label>Ends</bkkr-label>
+                <bkkr-datetime value="2021-03-06" min="2021-03-03T00:00Z" max="2021-03-10T00:00Z" placeholder="Select Date"></bkkr-datetime>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-label>Empty</bkkr-label>
+                <bkkr-datetime placeholder="Select Date"></bkkr-datetime>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-label>Repeat</bkkr-label>
+                <bkkr-datetime placeholder="Never" disabled></bkkr-datetime>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-label>Travel Time</bkkr-label>
+                <bkkr-datetime placeholder="None" disabled></bkkr-datetime>
+            </bkkr-item>
+        </bkkr-list>
+    </bkkr-content>
+</div>
+
+<script>
+    var el = document.getElementById('timefield');
+    el.displayFormat = ['h:mm A', 'HH:mm'];
+</script>

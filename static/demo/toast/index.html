@@ -1,0 +1,28 @@
+---
+layout: "v5/examples"
+title: "toast"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+	<bkkr-content>
+		<bkkr-container>
+			<bkkr-button onclick="presentToast()">
+        Show toast message
+      </bkkr-button>
+		</bkkr-container>
+	</bkkr-content>
+</div>
+
+<script>
+async function presentToast() {
+  const toast = document.createElement('bkkr-toast');
+  toast.header = 'Your settings have been saved.';
+  toast.duration = 4000;
+
+  document.body.appendChild(toast);
+  return toast.present();
+}
+</script>

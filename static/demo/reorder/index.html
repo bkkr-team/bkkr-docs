@@ -1,0 +1,88 @@
+---
+layout: "v5/examples"
+title: "reorder"
+descriptbkkr: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-header>
+        <bkkr-toolbar>
+            <bkkr-button id="edit" slot="end" onclick="toggleEdit()">Edit</bkkr-button>
+            <bkkr-button id="done" slot="end" hidden onclick="toggleEdit()">Done</bkkr-button>
+
+        </bkkr-toolbar>
+    </bkkr-header>
+    <bkkr-content>
+        <bkkr-list>
+            <bkkr-reorder-group id="reorder">
+                <bkkr-list-header>
+                    Reorder item
+                </bkkr-list-header>
+                <bkkr-reorder>
+                    <bkkr-item>
+                        <bkkr-label>
+                            Item 1
+                        </bkkr-label>
+                    </bkkr-item>
+                </bkkr-reorder>
+                <bkkr-reorder>
+                    <bkkr-item>
+                        <bkkr-label>
+                            Item 2
+                        </bkkr-label>
+                    </bkkr-item>
+                </bkkr-reorder>
+                <bkkr-reorder>
+                    <bkkr-item>
+                        <bkkr-label>
+                            Item 3
+                        </bkkr-label>
+                    </bkkr-item>
+                </bkkr-reorder>
+
+                <bkkr-list-header class="mt-3">
+                    Reorder icon
+                </bkkr-list-header>
+                <bkkr-item>
+                    <bkkr-reorder slot="start"></bkkr-reorder>
+                    <bkkr-label>
+                        Item 4
+                    </bkkr-label>
+                </bkkr-item>
+                <bkkr-item>
+                    <bkkr-reorder slot="start"></bkkr-reorder>
+                    <bkkr-label>
+                        Item 5
+                    </bkkr-label>
+                </bkkr-item>
+                <bkkr-item>
+                    <bkkr-reorder slot="start"></bkkr-reorder>
+                    <bkkr-label>
+                        Item 6
+                    </bkkr-label>
+                </bkkr-item>
+            </bkkr-reorder-group>
+        </bkkr-list>
+    </bkkr-content>
+</div>
+
+<script>
+    function toggleEdit() {
+        const editBtn = document.getElementById('edit');
+        const doneBtn = document.getElementById('done');
+
+        const reorderGroup = document.getElementById('reorder');
+        reorderGroup.disabled = !reorderGroup.disabled;
+
+        editBtn.hidden = !reorderGroup.disabled;
+        doneBtn.hidden = reorderGroup.disabled;
+
+        reorderGroup.addEventListener('bkkrItemReorder', ({ detail }) => {
+            console.log('Dragged from index', detail.from, 'to', detail.to);
+
+            detail.complete();
+        });
+    }
+</script>

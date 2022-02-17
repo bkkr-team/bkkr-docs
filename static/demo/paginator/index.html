@@ -1,0 +1,52 @@
+---
+layout: "v5/examples"
+title: "paginator"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-paginator threshold="100px" toolbar="true" id="paginator" items="80" length="30" page="1">
+            <bkkr-list id="list">
+            </bkkr-list>
+        </bkkr-paginator>
+    </bkkr-content>
+</div>
+
+<script>
+    const list = document.getElementById('list');
+    const paginator = document.getElementById('paginator');
+
+    function togglePaginator() {
+      paginator.disabled = !paginator.disabled;
+    }
+
+    paginator.addEventListener('bkkrPaginator', async function () {
+      console.log('Loading data...');
+      await wait(500);
+      paginator.complete();
+
+      console.log('Done');
+    });
+
+    function appendItems() {
+      for (var i = 0; i < 30; i++) {
+        const el = document.createElement('bkkr-item');
+        el.textContent = `${1 + i}`;
+        list.appendChild(el);
+      }
+    }
+
+    function wait(time) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve();
+        }, time);
+      });
+    }
+
+    appendItems();
+
+  </script>

@@ -1,0 +1,49 @@
+---
+layout: "v5/examples"
+title: "input"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-list class="mb-5">
+            <bkkr-list-header>
+                Account details
+            </bkkr-list-header>
+
+            <bkkr-item>
+                <bkkr-label>Firstname</bkkr-label>
+                <bkkr-input required></bkkr-input>
+            </bkkr-item>
+    
+            <bkkr-item>
+                <bkkr-label position="fixed">Lastname</bkkr-label>
+                <bkkr-input required></bkkr-input>
+            </bkkr-item>
+    
+            <bkkr-item>
+                <bkkr-label position="stacked">Address</bkkr-label>
+                <bkkr-input placeholder="ZIP City, Street"></bkkr-input>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label position="floating">Address 2</bkkr-label>
+                <bkkr-input placeholder="ZIP City, Street" clear-input></bkkr-input>
+                <bkkr-note slot="helper" class="text-muted">Not required</bkkr-note>
+            </bkkr-item>
+        </bkkr-list>
+
+        <bkkr-list>
+            <bkkr-item>
+                <bkkr-label position="fixed">Email</bkkr-label>
+                <bkkr-input value="test@elek.com" disabled></bkkr-input>
+            </bkkr-item>
+            <bkkr-item>
+                <bkkr-label position="fixed">Password</bkkr-label>
+                <bkkr-input value="123456789" type="password" clear-input></bkkr-input>
+            </bkkr-item>
+        </bkkr-list>
+    </bkkr-content>
+</div>

@@ -34,6 +34,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsible: false,
           editUrl: ({ versionDocsDirPath, docPath }) => {
             let match = docPath.match(/api\/(.*)\.md/);
             if (match != null) {
@@ -53,8 +54,7 @@ const config = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: [
@@ -73,8 +73,10 @@ const config = {
         hideOnScroll: true,
         title: 'BKKR',
         logo: {
-          alt: 'BKKR',
+          alt: 'BKKR logo',
           src: 'img/logo.svg',
+          href: '/',
+          target: '_self',
         },
         items: [
           {
@@ -99,51 +101,6 @@ const config = {
             position: 'right',
           },
         ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} BKKR Team. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -170,7 +127,7 @@ const config = {
         },
       },
     ],
-  ]
+  ],
 };
 
 module.exports = config;

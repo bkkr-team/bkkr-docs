@@ -40,7 +40,7 @@ function writePage(page) {
 function renderFrontmatter({ tag }) {
   const frontmatter = {
     title: tag,
-    hide_table_of_contents: true,
+    // hide_table_of_contents: true,
   };
 
   const demoPath = `api/${tag.replace("bkkr-", "")}/index.html`;

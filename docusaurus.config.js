@@ -38,9 +38,9 @@ const config = {
           editUrl: ({ versionDocsDirPath, docPath }) => {
             let match = docPath.match(/api\/(.*)\.md/);
             if (match != null) {
-              return `https://github.com/bkkr-team/bkkr-framework/edit/main/core/src/components/${match[1]}/readme.md`;
+              return `https://github.com/bkkr-team/bkkr-framework/edit/mmaster/core/src/components/${match[1]}/readme.md`;
             }
-            return `https://github.com/bkkr-team/bkkr-docs/edit/main/${versionDocsDirPath}/${docPath}`;
+            return `https://github.com/bkkr-team/bkkr-docs/edit/master/${versionDocsDirPath}/${docPath}`;
           },
           exclude: ['README.md'],
           lastVersion: 'current',
@@ -50,11 +50,6 @@ const config = {
               banner: 'none',
             },
           },
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: [
@@ -80,9 +75,8 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
             label: 'Guide',
-            docId: 'guide',
+            href: '/',
             position: 'left',
           },
           {

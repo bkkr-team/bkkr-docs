@@ -1,16 +1,15 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const utils = require('./utils');
 
-const DEMOS_PATH = path.resolve('static/demos');
+const DEMOS_PATH = path.resolve('static/demo');
 let COMPONENT_LINK_REGEXP;
 
 (async function () {
   const response = await fetch('https://unpkg.com/@bkkr/docs@5.7.14-dev/core.json');
   const { components } = await response.json();
 
-  const names = components.map((component) => component.tag.replace("bkkr-", ""));
+  const names = components.map((component) => component.tag.replace('bkkr-', ''));
   // matches all relative markdown links to a component, e.g. (../button)
   COMPONENT_LINK_REGEXP = new RegExp(`\\(../(${names.join('|')})/?(#[^)]+)?\\)`, 'g');
 
@@ -33,7 +32,7 @@ function writePage(page) {
   // fix relative links, e.g. (../button) -> (button.md)
   data = data.replace(COMPONENT_LINK_REGEXP, '($1.md$2)');
 
-  const path = `docs/components/${page.tag.replace("bkkr-", "")}.md`;
+  const path = `docs/components/${page.tag.replace('bkkr-', '')}.md`;
   fs.writeFileSync(path, data);
 }
 
@@ -43,10 +42,10 @@ function renderFrontmatter({ tag }) {
     // hide_table_of_contents: true,
   };
 
-  const demoPath = `api/${tag.replace("bkkr-", "")}/index.html`;
+  const demoPath = `${tag.replace('bkkr-', '')}/index.html`;
   if (fs.existsSync(path.join(DEMOS_PATH, demoPath))) {
-    frontmatter.demoUrl = `/docs/demos/${demoPath}`;
-    frontmatter.demoSourceUrl = `https://github.com/bkkr-team/bkkr-docs/tree/main/static/demos/${demoPath}`;
+    frontmatter.demoUrl = `/docs/demo/${demoPath}`;
+    frontmatter.demoSourceUrl = `https://github.com/bkkr-team/bkkr-docs/tree/master/static/demo/${demoPath}`;
   }
 
   return `---
@@ -56,6 +55,7 @@ ${Object.entries(frontmatter)
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import DocUsage from '@components/DocUsage';
 `;
 }
 
@@ -76,6 +76,22 @@ ${addAdmonitions(rest)}
 }
 
 function renderUsage({ usage }) {
+  const keys = Object.keys(usage);
+
+  if (keys.length === 0) {
+    return '';
+  }
+
+  return `
+## Usage
+
+<DocUsage>
+  ${renderUsageContent(usage)}
+</DocUsage>
+`;
+}
+
+function renderUsageContent(usage) {
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -88,13 +104,14 @@ function renderUsage({ usage }) {
 
   if (keys.length === 1) {
     return `
-## Usage
+
+
 ${usage[keys[0]]}
+
 `;
   }
 
   return `
-## Usage
 <Tabs groupId="framework" defaultValue="${keys[0]}" values={[${keys
     .map((key) => `{ value: '${key}', label: '${capitalizeFirstLetter(key)}' }`)
     .join(', ')}]}>
@@ -120,6 +137,7 @@ function renderProperties({ props: properties }) {
 
   // NOTE: replaces | with U+FF5C since MDX renders \| in tables incorrectly
   return `
+  
 ## Properties
 ${properties
   .map(

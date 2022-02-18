@@ -9,10 +9,10 @@
     --ifm-color-primary-lightest: #5ee5c5;
     --ifm-code-font-size: 95%;
     --ifm-color-black: #393d42;
-  }
-  
-  /* For readability concerns, you should choose a lighter palette in dark mode. */
-  html[data-theme='dark'] {
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+html[data-theme="dark"] {
     --ifm-color-primary: #23d5ab;
     --ifm-color-primary-dark: #20c09a;
     --ifm-color-primary-darker: #1eb591;
@@ -20,77 +20,87 @@
     --ifm-color-primary-light: #33deb5;
     --ifm-color-primary-lighter: #3edfb9;
     --ifm-color-primary-lightest: #5ee5c5;
-  }
-  
-  :root {
+}
+
+:root {
     --docsearch-logo-color: var(--ifm-color-primary);
-  
-    --ifm-font-family-base: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+    --ifm-font-family-base: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+        sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
     --ifm-heading-font-weight: 900;
 
     --ifm-h2-font-size: 1.825rem;
-  }
-  
-  
-  html {
+}
+
+html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-smoothing: antialiased;
-  
+
     scroll-padding-top: calc(var(--ifm-navbar-height) + 16px);
-  }
-  
-  *,
-  *::before,
-  *::after {
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
-  
+
     &:hover {
-      text-decoration: none;
+        text-decoration: none;
     }
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
-  }
-  
-  .theme-doc-version-banner {
+}
+
+p {
+    line-height: 1.7;
+}
+
+.theme-doc-version-badge {
     display: none;
-  }
-  
-  .theme-doc-version-badge {
-    display: none;
-  }
-  
-  figure {
+}
+
+figure {
     margin: 0;
-  }
-  
-  figure > * {
+}
+
+figure > * {
     display: block;
     margin: 0 auto;
-  }
-  
-  figure.device {
+}
+
+figure.device {
     max-width: 400px;
     margin: 0 auto;
-  }
-  
-  figcaption {
+}
+
+figcaption {
     text-align: center;
-  }
-  
-  img {
+}
+
+img {
     display: block;
     max-width: 100%;
-  }
-  
-  iframe {
+}
+
+iframe {
     background-color: rgba(0, 0, 0, 0.02);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-  }
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.pagination-nav__link {
+    border: 0;
+}

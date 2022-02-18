@@ -18,6 +18,8 @@ custom_edit_url: null
   <link rel="alternate" href="https://bkkr-team.github.io/bkkr-docs/" hreflang="x-default" />
   <link rel="alternate" href="https://bkkr-team.github.io/bkkr-docs/" hreflang="en" />
   <meta property="og:url" content="https://bkkr-team.github.io/bkkr-docs/" />
+  <meta property="og:image" content="/docs/img/bkkr-preview.png" />
+<meta property="og:image:alt" content="BKKR preview image" />
 </head>
 
 <header>

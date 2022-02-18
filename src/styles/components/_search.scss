@@ -1,3 +1,9 @@
-DocSearch-Form {
-    border-radius: 0.8rem;
+@media (min-width: 997px) {
+    .DocSearch {
+        min-width: 300px;
+    }
+}
+
+.DocSearch-Form {
+    border-radius: var(--docsearch-searchbox-height) !important;
 }

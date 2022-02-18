@@ -46,7 +46,7 @@ const config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'v6',
+              label: 'v5',
               banner: 'none',
             },
           },
@@ -86,13 +86,18 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/bkkr-team/bkkr-framework',
-            label: 'GitHub',
+            type: 'docsVersionDropdown',
             position: 'right',
           },
           {
             type: 'search',
             position: 'right',
+          },
+          {
+            href: 'https://github.com/bkkr-team/bkkr-framework',
+            label: 'GitHub',
+            target: '_blank',
+            position: 'right'
           },
         ],
       },

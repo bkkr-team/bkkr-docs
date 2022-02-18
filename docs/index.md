@@ -14,19 +14,25 @@ custom_edit_url: null
     name="description"
     content="A UI toolkit for building performant, high-quality mobile and desktop apps using web technologies - HTML, CSS, and JavaScript."
   />
-  <link rel="canonical" href="https://ionicframework.com/docs" />
-  <link rel="alternate" href="https://ionicframework.com/docs" hreflang="x-default" />
-  <link rel="alternate" href="https://ionicframework.com/docs" hreflang="en" />
-  <meta property="og:url" content="https://ionicframework.com/docs" />
+  <link rel="canonical" href="https://bkkr-team.github.io/bkkr-docs/" />
+  <link rel="alternate" href="https://bkkr-team.github.io/bkkr-docs/" hreflang="x-default" />
+  <link rel="alternate" href="https://bkkr-team.github.io/bkkr-docs/" hreflang="en" />
+  <meta property="og:url" content="https://bkkr-team.github.io/bkkr-docs/" />
 </head>
 
 <header>
-  <div className="container">
+  <div className="landing-hero">
     <h1 className="landing-title">Design. Create. Build.</h1>
     <div className="landing-title-black">
-      <svg viewBox="0 0 62 18">
-        <text x="0" y="15">
-          FASTER
+      <svg viewBox="0 0 67 14">
+        <defs>
+          <linearGradient id="gradient" x1="0" x2="100%" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#23c7b8" offset="0%" />
+            <stop stop-color="#23a6d5" offset="100%" />
+          </linearGradient>
+        </defs>
+        <text x="-2" y="14" fill="url(#gradient)">
+          BKKR
         </text>
       </svg>
     </div>
@@ -34,12 +40,15 @@ custom_edit_url: null
 </header>
 
 <div>
-<div size="12" size-lg="5" class="mb-3">
-    <h2 class="text-bolder">Getting started</h2>
+    <img src="/docs/img/code-solid.svg" alt="code" class="landing-icon" />
 </div>
-<div>
+<div class="landing-section row">
+<div  class="col col-5 mb-3">
+    <h2 class="landing-title">Getting started</h2>
+</div>
+<div class="col">
   <div className="mb-5">
-    <h2 className="text-bold">CDN</h2>
+    <h2 className="text-bolder">CDN</h2>
     <p>
       It's recommended to use jsdelivr to access the Framework from a CDN. To get the latest version, add the following
       inside the head element in an HTML file, or where external assets are included in the online code editor:
@@ -53,7 +62,7 @@ custom_edit_url: null
 
   </div>
   <div className="mb-5">
-    <h2 className="text-bold">BKKR + Angular</h2>
+    <h2 className="text-bolder">BKKR + Angular</h2>
     <p>
       When using BKKR Framework in an Angular project, install the latest @bkkr/angular package from npm. This comes
       with all of the BKKR Framework components and Angular specific services and features.
@@ -64,8 +73,8 @@ npm install @bkkr/angular@latest --save
 ```
 
   </div>
-  <div className="disabled">
-    <h2 className="text-bold">BKKR + React</h2>
+  <div className="landing-disabled">
+    <h2 className="text-bolder">BKKR + React</h2>
     <p>
       To add BKKR Framework to an already existing React project, install the @bkkr/react and @bkkr/react-router
       package.
@@ -79,31 +88,36 @@ npm install @bkkr/react@latest @bkkr/react-router@latest --save
 </div>
 </div>
 
-
 <div>
-    <div class="mb-3">
-        <h2 class="text-bolder">Usage</h2>
+    <img src="/docs/img/pen-solid.svg" alt="code" class="landing-icon" />
+</div>
+<div class="landing-section row">
+    <div class="col col-5 mb-3">
+        <h2 class="landing-title">Usage</h2>
     </div>
+    <div class="col">
     <div class="mb-5">
-    <h2 class="text-bold">UI Components</h2>
+    <h2 class="text-bolder">UI Components</h2>
     <p>Use just like the HTML tags. You can choose from 50+ components which making it easy to build modern, high quality UIs that perform great everywhere.</p>
 
 ```html
 <bkkr-card>
-    <bkkr-img src="/assets/myImg.png" alt="myImg"></bkkr-img>
-    <bkkr-card-header>
-        <p class="text-small text-uppercase">Card Subtitle</p>
-        <h2 class="text-bold">Card Title</h2>
-    </bkkr-card-header>
-    <bkkr-card-content>
-        <p>
-            Here’s a small text description for the card component. 
-            Nothing more, nothing less.
-        </p>
-        <bkkr-button size="block" color="primary">Learn more</bkkr-button>
-    </bkkr-card-content>
+  <bkkr-img src="/assets/myImg.png" alt="myImg"></bkkr-img>
+  <bkkr-card-header>
+    <p class="text-small text-uppercase">Card Subtitle</p>
+    <h2 class="text-bold">Card Title</h2>
+  </bkkr-card-header>
+  <bkkr-card-content>
+    <p>Here’s a small text description for the card component. Nothing more, nothing less.</p>
+    <bkkr-button size="block" color="primary">Learn more</bkkr-button>
+  </bkkr-card-content>
 </bkkr-card>
 ```
 
 </div>
 </div>
+</div>
+
+<p class="text-end text-small mb-0">
+    Code licensed MIT, docs CC BY 3.0.
+</p>

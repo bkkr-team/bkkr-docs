@@ -1,25 +1,25 @@
 /* You can override the default Infima variables here. */
 :root {
-    --ifm-color-primary: #fa5454;
-    --ifm-color-primary-dark: #d43d3d;
-    --ifm-color-primary-darker: #ad3a3a;
-    --ifm-color-primary-darkest: #6e2525;
-    --ifm-color-primary-light: #f76767;
-    --ifm-color-primary-lighter: #f88888;
-    --ifm-color-primary-lightest: #ff9090;
+    --ifm-color-primary: #23d5ab;
+    --ifm-color-primary-dark: #20c09a;
+    --ifm-color-primary-darker: #1eb591;
+    --ifm-color-primary-darkest: #189578;
+    --ifm-color-primary-light: #33deb5;
+    --ifm-color-primary-lighter: #3edfb9;
+    --ifm-color-primary-lightest: #5ee5c5;
     --ifm-code-font-size: 95%;
     --ifm-color-black: #393d42;
   }
   
   /* For readability concerns, you should choose a lighter palette in dark mode. */
   html[data-theme='dark'] {
-    --ifm-color-primary: #fa5454;
-    --ifm-color-primary-dark: #d43d3d;
-    --ifm-color-primary-darker: #ad3a3a;
-    --ifm-color-primary-darkest: #6e2525;
-    --ifm-color-primary-light: #f76767;
-    --ifm-color-primary-lighter: #f88888;
-    --ifm-color-primary-lightest: #ff9090;
+    --ifm-color-primary: #23d5ab;
+    --ifm-color-primary-dark: #20c09a;
+    --ifm-color-primary-darker: #1eb591;
+    --ifm-color-primary-darkest: #189578;
+    --ifm-color-primary-light: #33deb5;
+    --ifm-color-primary-lighter: #3edfb9;
+    --ifm-color-primary-lightest: #5ee5c5;
   }
   
   :root {
@@ -27,6 +27,8 @@
   
     --ifm-font-family-base: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --ifm-heading-font-weight: 900;
+
+    --ifm-h2-font-size: 1.825rem;
   }
   
   

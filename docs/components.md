@@ -1,7 +1,7 @@
 ---
 title: UI Components
 hide_table_of_contents: true
-sidebar_position: 1
+custom_edit_url: null
 ---
 
 <div class="mb-5">

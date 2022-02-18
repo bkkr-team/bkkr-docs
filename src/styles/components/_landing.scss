@@ -1,0 +1,35 @@
+// Landing
+.landing-hero {
+    height: 65vh;
+    min-height: 300px;
+  }
+  
+  .landing-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--ifm-color-primary);
+  }
+  
+  .landing-title-black {
+    font-weight: 900;
+  
+    svg {
+      fill: var(--ifm-font-color-base);
+      width: 100%;
+    }
+  }
+  
+  .landing-icon {
+    font-size: 5rem;
+  }
+  
+  .landing-example-card {
+    max-width: 300px;
+  }
+  
+  // Utilities
+  .disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  

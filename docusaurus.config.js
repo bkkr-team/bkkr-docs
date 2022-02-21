@@ -5,7 +5,7 @@ const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const BASE_URL = '/docs';
+const BASE_URL = '/bkkr-docs';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -38,7 +38,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsible: false,
           editUrl: ({ versionDocsDirPath, docPath }) => {
-            let match = docPath.match(/api\/(.*)\.md/);
+            let match = docPath.match(/components\/(.*)\.md/);
             if (match != null) {
               return `https://github.com/bkkr-team/bkkr-framework/edit/mmaster/core/src/components/${match[1]}/readme.md`;
             }

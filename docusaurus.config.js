@@ -64,12 +64,23 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
+      respectPrefersColorScheme: false,
+      switchConfig: {
+        darkIcon: '\u{1F319}',
+        darkIconStyle: {
+          marginLeft: '2px',
+        },
+        lightIcon: '\u{1F602}',
+        lightIconStyle: {
+          marginLeft: '1px',
+        },
+      },
       navbar: {
         hideOnScroll: true,
-        title: 'BKKR',
         logo: {
           alt: 'BKKR logo',
-          src: 'img/logo.svg',
+          src: 'logo/bkkr.svg',
+          srcDark: 'logo/bkkr-light.svg',
           href: '/',
           target: '_self',
         },

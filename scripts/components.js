@@ -6,7 +6,7 @@ const DEMOS_PATH = path.resolve('static/demo');
 let COMPONENT_LINK_REGEXP;
 
 (async function () {
-  const response = await fetch('https://unpkg.com/@bkkr/docs@5.7.14-dev/core.json');
+  const response = await fetch('https://unpkg.com/@bkkr/core@5.7.15/dist/docs.json');
   const { components } = await response.json();
 
   const names = components.map((component) => component.tag.replace('bkkr-', ''));

@@ -78,7 +78,6 @@ const config = {
         },
       },
       navbar: {
-        hideOnScroll: true,
         logo: {
           alt: 'BKKR logo',
           src: 'logo/bkkr.svg',

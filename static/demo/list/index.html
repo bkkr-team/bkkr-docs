@@ -1,23 +1,38 @@
----
-layout: "v5/examples"
-title: "list"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-  <bkkr-content>
-    <bkkr-list>
-      <bkkr-list-header>
-        List header
-      </bkkr-list-header>
-      <bkkr-item>
-        Item 1
-      </bkkr-item>
-      <bkkr-item>Item 2</bkkr-item>
-      <bkkr-item>Item 3</bkkr-item>
-      <bkkr-item>Item 4</bkkr-item>
-    </bkkr-list>
-  </bkkr-content>
-</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>List</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+  <style>
+    :root {
+      --safe-area-top: 20px;
+      --safe-area-bottom: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <bkkr-root>
+    <bkkr-content>
+      <bkkr-list>
+        <bkkr-list-header>
+          List header
+        </bkkr-list-header>
+        <bkkr-item>
+          Item 1
+        </bkkr-item>
+        <bkkr-item>Item 2</bkkr-item>
+        <bkkr-item>Item 3</bkkr-item>
+        <bkkr-item>Item 4</bkkr-item>
+      </bkkr-list>
+    </bkkr-content>
+  </bkkr-root>
+</body>
+
+</html>

@@ -27,9 +27,22 @@
 
   figure {
     position: relative;
-    background: var(--bkkr-background-color);
+    background: var(--ifm-background-color);
     width: 100%;
     overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      height: 4px;
+      width: 32%;
+      background-color: var(--ifm-color-content);
+      transform: translateX(-50%);
+      border-radius: 4px;
+      z-index: 10;
+    }
 
     iframe {
       position: absolute;
@@ -37,10 +50,8 @@
       top: 0;
       left: 0;
 
-      margin: var(--device-frame-width);
-
-      width: calc(100% - var(--device-frame-width) * 2);
-      height: calc(100% - var(--device-frame-width) * 2);
+      width: 100%;
+      height: 100%;
       border-radius: calc(var(--device-frame-radius) - var(--device-frame-width));
 
       border: none;
@@ -60,7 +71,7 @@
   fill: var(--ifm-color-content);
   left: 50%;
   position: absolute;
-  top: 12px;
+  top: 0;
   transform: translateX(-50%);
   width: 165px;
   z-index: 2;

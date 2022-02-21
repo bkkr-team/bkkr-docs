@@ -1,72 +1,85 @@
----
-layout: "v5/examples"
-title: "reorder"
-descriptbkkr: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-header>
-        <bkkr-toolbar>
-            <bkkr-button id="edit" slot="end" onclick="toggleEdit()">Edit</bkkr-button>
-            <bkkr-button id="done" slot="end" hidden onclick="toggleEdit()">Done</bkkr-button>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Reorder</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
 
-        </bkkr-toolbar>
-    </bkkr-header>
-    <bkkr-content>
-        <bkkr-list>
-            <bkkr-reorder-group id="reorder">
-                <bkkr-list-header>
-                    Reorder item
-                </bkkr-list-header>
-                <bkkr-reorder>
+<body>
+    <bkkr-root>
+        <bkkr-header>
+            <bkkr-toolbar>
+                <bkkr-button id="edit" slot="end" onclick="toggleEdit()">Edit</bkkr-button>
+                <bkkr-button id="done" slot="end" hidden onclick="toggleEdit()">Done</bkkr-button>
+
+            </bkkr-toolbar>
+        </bkkr-header>
+        <bkkr-content>
+            <bkkr-list>
+                <bkkr-reorder-group id="reorder">
+                    <bkkr-list-header>
+                        Reorder item
+                    </bkkr-list-header>
+                    <bkkr-reorder>
+                        <bkkr-item>
+                            <bkkr-label>
+                                Item 1
+                            </bkkr-label>
+                        </bkkr-item>
+                    </bkkr-reorder>
+                    <bkkr-reorder>
+                        <bkkr-item>
+                            <bkkr-label>
+                                Item 2
+                            </bkkr-label>
+                        </bkkr-item>
+                    </bkkr-reorder>
+                    <bkkr-reorder>
+                        <bkkr-item>
+                            <bkkr-label>
+                                Item 3
+                            </bkkr-label>
+                        </bkkr-item>
+                    </bkkr-reorder>
+
+                    <bkkr-list-header class="mt-3">
+                        Reorder icon
+                    </bkkr-list-header>
                     <bkkr-item>
+                        <bkkr-reorder slot="start"></bkkr-reorder>
                         <bkkr-label>
-                            Item 1
+                            Item 4
                         </bkkr-label>
                     </bkkr-item>
-                </bkkr-reorder>
-                <bkkr-reorder>
                     <bkkr-item>
+                        <bkkr-reorder slot="start"></bkkr-reorder>
                         <bkkr-label>
-                            Item 2
+                            Item 5
                         </bkkr-label>
                     </bkkr-item>
-                </bkkr-reorder>
-                <bkkr-reorder>
                     <bkkr-item>
+                        <bkkr-reorder slot="start"></bkkr-reorder>
                         <bkkr-label>
-                            Item 3
+                            Item 6
                         </bkkr-label>
                     </bkkr-item>
-                </bkkr-reorder>
-
-                <bkkr-list-header class="mt-3">
-                    Reorder icon
-                </bkkr-list-header>
-                <bkkr-item>
-                    <bkkr-reorder slot="start"></bkkr-reorder>
-                    <bkkr-label>
-                        Item 4
-                    </bkkr-label>
-                </bkkr-item>
-                <bkkr-item>
-                    <bkkr-reorder slot="start"></bkkr-reorder>
-                    <bkkr-label>
-                        Item 5
-                    </bkkr-label>
-                </bkkr-item>
-                <bkkr-item>
-                    <bkkr-reorder slot="start"></bkkr-reorder>
-                    <bkkr-label>
-                        Item 6
-                    </bkkr-label>
-                </bkkr-item>
-            </bkkr-reorder-group>
-        </bkkr-list>
-    </bkkr-content>
-</div>
+                </bkkr-reorder-group>
+            </bkkr-list>
+        </bkkr-content>
+    </bkkr-root>
+</body>
 
 <script>
     function toggleEdit() {
@@ -86,3 +99,5 @@ version: "v5"
         });
     }
 </script>
+
+</html>

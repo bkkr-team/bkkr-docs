@@ -1,32 +1,48 @@
----
-layout: "v5/examples"
-title: "grid"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-grid size="2">
-            <bkkr-card class="m-2">
-                <bkkr-img src="https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg"
-                    alt="cat"></bkkr-img>
-                <bkkr-card-header>
-                    <p class="text-small text-uppercase mb-0">Explore</p>
-                    <h3 class="mb-0 text-bold">Cat behaviour</h3>
-                </bkkr-card-header>
-            </bkkr-card>
-            <bkkr-card class="m-2">
-                <bkkr-card>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Grid</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <bkkr-root>
+        <bkkr-content>
+            <bkkr-grid size="2">
+                <bkkr-card class="m-2">
                     <bkkr-img src="https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg"
                         alt="cat"></bkkr-img>
                     <bkkr-card-header>
                         <p class="text-small text-uppercase mb-0">Explore</p>
-                        <h3 class="mb-0 text-bold">Cat behaviour</h2>
+                        <h3 class="mb-0 text-bold">Cat behaviour</h3>
                     </bkkr-card-header>
                 </bkkr-card>
-            </bkkr-card>
-        </bkkr-grid>
-    </bkkr-content>
-</div>
+                <bkkr-card class="m-2">
+                    <bkkr-card>
+                        <bkkr-img
+                            src="https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg"
+                            alt="cat"></bkkr-img>
+                        <bkkr-card-header>
+                            <p class="text-small text-uppercase mb-0">Explore</p>
+                            <h3 class="mb-0 text-bold">Cat behaviour</h2>
+                        </bkkr-card-header>
+                    </bkkr-card>
+                </bkkr-card>
+            </bkkr-grid>
+        </bkkr-content>
+    </bkkr-root>
+</body>
+
+</html>

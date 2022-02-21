@@ -1,61 +1,76 @@
----
-layout: "v5/examples"
-title: "tabs"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-tabs>
-        <bkkr-tab tab="tab-schedule">
-            <bkkr-content>
-                <p>tab-schedule</p>
-            </bkkr-content>
-        </bkkr-tab>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Tab</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
 
-        <bkkr-tab tab="tab-speaker">
-            <bkkr-content>
-                <p>tab-speaker</p>
-            </bkkr-content>
-        </bkkr-tab>
+<body>
+    <bkkr-root>
+        <bkkr-tabs>
+            <bkkr-tab tab="tab-schedule">
+                <bkkr-content>
+                    <p>tab-schedule</p>
+                </bkkr-content>
+            </bkkr-tab>
 
-        <bkkr-tab tab="tab-map">
-            <bkkr-content>
-                <p>tab-map</p>
-            </bkkr-content>
-        </bkkr-tab>
+            <bkkr-tab tab="tab-speaker">
+                <bkkr-content>
+                    <p>tab-speaker</p>
+                </bkkr-content>
+            </bkkr-tab>
 
-        <bkkr-tab tab="tab-about">
-            <bkkr-content>
-                <p>tab-about</p>
-            </bkkr-content>
-        </bkkr-tab>
+            <bkkr-tab tab="tab-map">
+                <bkkr-content>
+                    <p>tab-map</p>
+                </bkkr-content>
+            </bkkr-tab>
 
-        <bkkr-footer position="floating" slot="bottom">
-            <bkkr-toolbar>
-                <bkkr-navs>
-                    <bkkr-nav nav="tab-schedule">
-                        <bkkr-icon name="calendar"></bkkr-icon>
-                        <bkkr-label>Schedule</bkkr-label>
-                    </bkkr-nav>
+            <bkkr-tab tab="tab-about">
+                <bkkr-content>
+                    <p>tab-about</p>
+                </bkkr-content>
+            </bkkr-tab>
 
-                    <bkkr-nav nav="tab-speaker">
-                        <bkkr-icon name="user"></bkkr-icon>
-                        <bkkr-label>Speakers</bkkr-label>
-                    </bkkr-nav>
+            <bkkr-footer position="floating" slot="bottom">
+                <bkkr-toolbar>
+                    <bkkr-navs>
+                        <bkkr-nav nav="tab-schedule">
+                            <bkkr-icon name="calendar"></bkkr-icon>
+                            <bkkr-label>Schedule</bkkr-label>
+                        </bkkr-nav>
 
-                    <bkkr-nav nav="tab-map">
-                        <bkkr-icon name="map"></bkkr-icon>
-                        <bkkr-label>Map</bkkr-label>
-                    </bkkr-nav>
+                        <bkkr-nav nav="tab-speaker">
+                            <bkkr-icon name="user"></bkkr-icon>
+                            <bkkr-label>Speakers</bkkr-label>
+                        </bkkr-nav>
 
-                    <bkkr-nav nav="tab-about">
-                        <bkkr-icon name="info"></bkkr-icon>
-                        <bkkr-label>About</bkkr-label>
-                    </bkkr-nav>
-                </bkkr-navs>
-            </bkkr-toolbar>
-        </bkkr-footer>
-    </bkkr-tabs>
-</div>
+                        <bkkr-nav nav="tab-map">
+                            <bkkr-icon name="map"></bkkr-icon>
+                            <bkkr-label>Map</bkkr-label>
+                        </bkkr-nav>
+
+                        <bkkr-nav nav="tab-about">
+                            <bkkr-icon name="info"></bkkr-icon>
+                            <bkkr-label>About</bkkr-label>
+                        </bkkr-nav>
+                    </bkkr-navs>
+                </bkkr-toolbar>
+            </bkkr-footer>
+        </bkkr-tabs>
+    </bkkr-root>
+</body>
+
+</html>

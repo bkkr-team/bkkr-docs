@@ -1,50 +1,65 @@
----
-layout: "v5/examples"
-title: "range"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-list>
-            <bkkr-list-header>
-                Adjust Display
-            </bkkr-list-header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Range</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
 
-            <bkkr-item>
-                <bkkr-range value="20">
-                    <bkkr-icon slot="start" size="small" name="sun"></bkkr-icon>
-                    <bkkr-icon slot="end" name="sun"></bkkr-icon>
-                </bkkr-range>
-            </bkkr-item>
+<body>
+    <bkkr-root>
+        <bkkr-content>
+            <bkkr-list>
+                <bkkr-list-header>
+                    Adjust Display
+                </bkkr-list-header>
 
-            <bkkr-item>
-                <bkkr-range min="-200" max="200" pin color="secondary">
-                    <bkkr-icon slot="start" size="small" name="adjust"></bkkr-icon>
-                    <bkkr-icon slot="end" name="adjust"></bkkr-icon>
-                </bkkr-range>
-            </bkkr-item>
+                <bkkr-item>
+                    <bkkr-range value="20">
+                        <bkkr-icon slot="start" size="small" name="sun"></bkkr-icon>
+                        <bkkr-icon slot="end" name="sun"></bkkr-icon>
+                    </bkkr-range>
+                </bkkr-item>
 
-            <bkkr-item>
-                <bkkr-range id="dual-range" dual-knobs pin color="dark">
-                    <bkkr-icon slot="start" size="small" name="brush"></bkkr-icon>
-                    <bkkr-icon slot="end" name="brush"></bkkr-icon>
-                </bkkr-range>
-            </bkkr-item>
+                <bkkr-item>
+                    <bkkr-range min="-200" max="200" pin color="secondary">
+                        <bkkr-icon slot="start" size="small" name="adjust"></bkkr-icon>
+                        <bkkr-icon slot="end" name="adjust"></bkkr-icon>
+                    </bkkr-range>
+                </bkkr-item>
 
-            <bkkr-item>
-                <bkkr-range min="1000" max="2000" step="100" value="1400" snaps color="danger">
-                    <bkkr-icon slot="start" size="small" color="danger" name="thermometer"></bkkr-icon>
-                    <bkkr-icon slot="end" color="danger" name="thermometer"></bkkr-icon>
-                </bkkr-range>
-            </bkkr-item>
-        </bkkr-list>
-    </bkkr-content>
-</div>
+                <bkkr-item>
+                    <bkkr-range id="dual-range" dual-knobs pin color="dark">
+                        <bkkr-icon slot="start" size="small" name="brush"></bkkr-icon>
+                        <bkkr-icon slot="end" name="brush"></bkkr-icon>
+                    </bkkr-range>
+                </bkkr-item>
+
+                <bkkr-item>
+                    <bkkr-range min="1000" max="2000" step="100" value="1400" snaps color="danger">
+                        <bkkr-icon slot="start" size="small" color="danger" name="thermometer"></bkkr-icon>
+                        <bkkr-icon slot="end" color="danger" name="thermometer"></bkkr-icon>
+                    </bkkr-range>
+                </bkkr-item>
+            </bkkr-list>
+        </bkkr-content>
+    </bkkr-root>
+</body>
 
 <script>
     const dualRange = document.querySelector('#dual-range');
     dualRange.value = { lower: 33, upper: 60 };
 </script>
+
+</html>

@@ -1,39 +1,54 @@
----
-layout: "v5/examples"
-title: "alert"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-	<bkkr-content>
-		<bkkr-container>
-			<bkkr-button onclick="presentAlert()">
-              Show alert dialog
-          	</bkkr-button>
-		</bkkr-container>
-	</bkkr-content>
-</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>Alert</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+  <style>
+    :root {
+      --safe-area-top: 20px;
+      --safe-area-bottom: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <bkkr-root>
+    <bkkr-content>
+      <bkkr-container>
+        <bkkr-button onclick="presentAlert()">
+          Show alert dialog
+        </bkkr-button>
+      </bkkr-container>
+    </bkkr-content>
+  </bkkr-root>
+</body>
 
 <script>
-function presentAlert() {
-  const alert = document.createElement('bkkr-alert');
-  alert.cssClass = 'my-custom-class';
-  alert.header = 'Alert';
-  alert.subHeader = 'Subtitle';
-  alert.message = 'This is an alert message.';
-  alert.buttons = ['Cancel', 'OK'];
-  alert.inputs = [{
-    name: 'confirm',
-    type: 'text',
-    placeholder: 'Type something here...',
-    attributes: {
-      autofocus: true
-    }
-  }];
+  function presentAlert() {
+    const alert = document.createElement('bkkr-alert');
+    alert.cssClass = 'my-custom-class';
+    alert.header = 'Alert';
+    alert.subHeader = 'Subtitle';
+    alert.message = 'This is an alert message.';
+    alert.buttons = ['Cancel', 'OK'];
+    alert.inputs = [{
+      name: 'confirm',
+      type: 'text',
+      placeholder: 'Type something here...',
+      attributes: {
+        autofocus: true
+      }
+    }];
 
-  document.body.appendChild(alert);
-  return alert.present();
-}
+    document.body.appendChild(alert);
+    return alert.present();
+  }
 </script>
+
+</html>

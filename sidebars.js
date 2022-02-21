@@ -40,7 +40,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Breadcrumb',
-      items: ['components/breadcrumb', 'components/breadcrumbs'],
+      items: ['components/breadcrumbs', 'components/breadcrumb'],
     },
     {
       type: 'category',

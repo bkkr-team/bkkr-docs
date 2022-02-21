@@ -1,41 +1,56 @@
----
-layout: "v5/examples"
-title: "spinner"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-list>
-            <bkkr-list-header>
-                Spinners
-            </bkkr-list-header>
-            <bkkr-item>
-                <p class="font-bold mb-0">Crescent</p>
-                <bkkr-spinner slot="end" type="crescent"></bkkr-spinner>
-            </bkkr-item>
-            <bkkr-item>
-                <p class="font-bold mb-0">Lines</p>
-                <bkkr-spinner slot="end" type="lines"></bkkr-spinner>
-            </bkkr-item>
-            <bkkr-item>
-                <p class="font-bold mb-0">Sharp lines</p>
-                <bkkr-spinner slot="end" type="lines-sharp"></bkkr-spinner>
-            </bkkr-item>
-            <bkkr-item>
-                <p class="font-bold mb-0">Dots</p>
-                <bkkr-spinner slot="end" type="dots"></bkkr-spinner>
-            </bkkr-item>
-            <bkkr-item>
-                <p class="font-bold mb-0">Circular</p>
-                <bkkr-spinner slot="end" type="circular"></bkkr-spinner>
-            </bkkr-item>
-            <bkkr-item>
-                <p class="font-bold mb-0">Circles</p>
-                <bkkr-spinner slot="end" type="circles"></bkkr-spinner>
-            </bkkr-item>
-        </bkkr-list>
-    </bkkr-content>
-</div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Spinner</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <bkkr-root>
+        <bkkr-content>
+            <bkkr-list>
+                <bkkr-list-header>
+                    Spinners
+                </bkkr-list-header>
+                <bkkr-item>
+                    <p class="font-bold mb-0">Crescent</p>
+                    <bkkr-spinner slot="end" type="crescent"></bkkr-spinner>
+                </bkkr-item>
+                <bkkr-item>
+                    <p class="font-bold mb-0">Lines</p>
+                    <bkkr-spinner slot="end" type="lines"></bkkr-spinner>
+                </bkkr-item>
+                <bkkr-item>
+                    <p class="font-bold mb-0">Sharp lines</p>
+                    <bkkr-spinner slot="end" type="lines-sharp"></bkkr-spinner>
+                </bkkr-item>
+                <bkkr-item>
+                    <p class="font-bold mb-0">Dots</p>
+                    <bkkr-spinner slot="end" type="dots"></bkkr-spinner>
+                </bkkr-item>
+                <bkkr-item>
+                    <p class="font-bold mb-0">Circular</p>
+                    <bkkr-spinner slot="end" type="circular"></bkkr-spinner>
+                </bkkr-item>
+                <bkkr-item>
+                    <p class="font-bold mb-0">Circles</p>
+                    <bkkr-spinner slot="end" type="circles"></bkkr-spinner>
+                </bkkr-item>
+            </bkkr-list>
+        </bkkr-content>
+    </bkkr-root>
+</body>
+
+</html>

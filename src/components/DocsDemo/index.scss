@@ -1,0 +1,67 @@
+.docs-demo {
+  --ifm-color-content: #1c1e21;
+  --device-width: 344px;
+  --device-height: 704px;
+
+  display: none;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1234px) {
+  .docs-demo {
+    display: inline-block;
+  }
+}
+
+.docs-demo-device {
+  --device-frame-radius: 50px;
+  --device-frame-width: 12px;
+
+  display: flex;
+  height: var(--device-height);
+  width: var(--device-width);
+  background: var(--ifm-color-content);
+  border: var(--device-frame-width) solid var(--ifm-color-content);
+  border-radius: var(--device-frame-radius);
+  margin-bottom: 12px;
+
+  figure {
+    position: relative;
+    background: var(--bkkr-background-color);
+    width: 100%;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      margin: var(--device-frame-width);
+
+      width: calc(100% - var(--device-frame-width) * 2);
+      height: calc(100% - var(--device-frame-width) * 2);
+      border-radius: calc(var(--device-frame-radius) - var(--device-frame-width));
+
+      border: none;
+
+      overflow: hidden;
+
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+      z-index: 1;
+    }
+  }
+}
+
+
+.docs-demo-device__ios-notch {
+  display: block;
+  fill: var(--ifm-color-content);
+  left: 50%;
+  position: absolute;
+  top: 12px;
+  transform: translateX(-50%);
+  width: 165px;
+  z-index: 2;
+}

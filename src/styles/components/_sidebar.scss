@@ -1,9 +1,9 @@
 html[data-theme="light"] {
-    --sidebar-category-c: var(--ifm-color-gray-1000);
+    --sidebar-category-c: var(--ifm-color-content);
     --sidebar-border-c: var(--ifm-color-gray-0);
 
     --ifm-menu-color-background-active: var(--ifm-color-gray-100);
-    --ifm-menu-color: var(--ifm-color-gray-1000);
+    --ifm-menu-color: var(--ifm-color-content);
 }
 
 html[data-theme="dark"] {

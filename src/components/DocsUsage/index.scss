@@ -1,0 +1,15 @@
+.row {
+    .col {
+        --grow: 1;
+        --basis: 0%;
+        flex: var(--grow) 0 var(--basis);
+        width: var(--basis, auto);
+        min-width: 0px;
+        max-width: 100%;
+    }
+
+    .col-auto {
+        --grow: 0;
+        --basis: auto;
+    }
+}

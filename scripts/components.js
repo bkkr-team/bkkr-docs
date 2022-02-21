@@ -42,12 +42,6 @@ function renderFrontmatter({ tag }) {
     // hide_table_of_contents: true,
   };
 
-  const demoPath = `${tag.replace('bkkr-', '')}/index.html`;
-  if (fs.existsSync(path.join(DEMOS_PATH, demoPath))) {
-    frontmatter.demoUrl = `/docs/demo/${demoPath}`;
-    frontmatter.demoSourceUrl = `https://github.com/bkkr-team/bkkr-docs/tree/master/static/demo/${demoPath}`;
-  }
-
   return `---
 ${Object.entries(frontmatter)
   .map(([key, value]) => `${key}: ${typeof value === 'string' ? `"${value.replace('"', '\\"')}"` : value}`)
@@ -55,11 +49,9 @@ ${Object.entries(frontmatter)
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import DocUsage from '@components/DocUsage';
+import DocsUsage from '@components/DocsUsage';
 `;
 }
-
-// ${utils.getHeadTag(apiOverrides[tag])}
 
 function renderReadme({ readme }) {
   const endIndex = readme.indexOf('\n');
@@ -75,19 +67,26 @@ ${addAdmonitions(rest)}
   `;
 }
 
-function renderUsage({ usage }) {
+function renderUsage({ tag, usage }) {
   const keys = Object.keys(usage);
+  const demo = {};
 
   if (keys.length === 0) {
     return '';
   }
 
+  const demoPath = `${tag.replace('bkkr-', '')}/index.html`;
+  if (fs.existsSync(path.join(DEMOS_PATH, demoPath))) {
+    demo.demoUrl = `/bkkr-docs/demo/${demoPath}`;
+    demo.demoSourceUrl = `https://github.com/bkkr-team/bkkr-docs/tree/master/static/demo/${demoPath}`;
+  }
+
   return `
 ## Usage
 
-<DocUsage>
+<DocsUsage demoUrl="${demo.demoUrl}" demoSourceUrl="${demo.demoSourceUrl}">
   ${renderUsageContent(usage)}
-</DocUsage>
+</DocsUsage>
 `;
 }
 

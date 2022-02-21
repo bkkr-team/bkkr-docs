@@ -1,0 +1,61 @@
+---
+layout: "v5/examples"
+title: "tabs"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-tabs>
+        <bkkr-tab tab="tab-schedule">
+            <bkkr-content>
+                <p>tab-schedule</p>
+            </bkkr-content>
+        </bkkr-tab>
+
+        <bkkr-tab tab="tab-speaker">
+            <bkkr-content>
+                <p>tab-speaker</p>
+            </bkkr-content>
+        </bkkr-tab>
+
+        <bkkr-tab tab="tab-map">
+            <bkkr-content>
+                <p>tab-map</p>
+            </bkkr-content>
+        </bkkr-tab>
+
+        <bkkr-tab tab="tab-about">
+            <bkkr-content>
+                <p>tab-about</p>
+            </bkkr-content>
+        </bkkr-tab>
+
+        <bkkr-footer position="floating" slot="bottom">
+            <bkkr-toolbar>
+                <bkkr-navs>
+                    <bkkr-nav nav="tab-schedule">
+                        <bkkr-icon name="calendar"></bkkr-icon>
+                        <bkkr-label>Schedule</bkkr-label>
+                    </bkkr-nav>
+
+                    <bkkr-nav nav="tab-speaker">
+                        <bkkr-icon name="user"></bkkr-icon>
+                        <bkkr-label>Speakers</bkkr-label>
+                    </bkkr-nav>
+
+                    <bkkr-nav nav="tab-map">
+                        <bkkr-icon name="map"></bkkr-icon>
+                        <bkkr-label>Map</bkkr-label>
+                    </bkkr-nav>
+
+                    <bkkr-nav nav="tab-about">
+                        <bkkr-icon name="info"></bkkr-icon>
+                        <bkkr-label>About</bkkr-label>
+                    </bkkr-nav>
+                </bkkr-navs>
+            </bkkr-toolbar>
+        </bkkr-footer>
+    </bkkr-tabs>
+</div>

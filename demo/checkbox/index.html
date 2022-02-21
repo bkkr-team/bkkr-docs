@@ -1,0 +1,42 @@
+---
+layout: "v5/examples"
+title: "checkbox"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-list>
+            <bkkr-list-header>
+                Select ingredients
+            </bkkr-list-header>
+
+            <bkkr-item>
+                <bkkr-label>Ham</bkkr-label>
+                <bkkr-checkbox slot="end" value="ham" checked></bkkr-checkbox>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>Cucumber</bkkr-label>
+                <bkkr-checkbox slot="end" value="cucumber" disabled></bkkr-checkbox>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>Pepperoni</bkkr-label>
+                <bkkr-checkbox slot="end" value="pepperoni" color="danger" checked></bkkr-checkbox>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>Corn</bkkr-label>
+                <bkkr-checkbox slot="end" value="Corn" color="success"></bkkr-checkbox>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>Mushroom</bkkr-label>
+                <bkkr-checkbox slot="end" value="mushroom" color="warning" checked indeterminate></bkkr-checkbox>
+            </bkkr-item>
+        </bkkr-list>
+    </bkkr-content>
+</div>

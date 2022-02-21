@@ -1,0 +1,41 @@
+---
+layout: "v5/examples"
+title: "slides"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-slides slot="fixed" style="height: 100%;
+
+background: black" id="slides">
+            <bkkr-slide style="background: rgb(0, 200, 0); color: white;">
+                <h1>Slide 1</h1>
+            </bkkr-slide>
+            <bkkr-slide style="background: white; color: blue;">
+                <h1>Slide 2</h1>
+            </bkkr-slide>
+            <bkkr-slide style="background: blue; color: white;">
+                <h1>Slide 3</h1>
+            </bkkr-slide>
+        </bkkr-slides>
+    </bkkr-content>
+</div>
+
+<script>
+    var slideCount = 4;
+    var slides = document.getElementById('slides')
+    slides.options = {
+      keyboard: {
+        enabled: true
+      }
+    }
+    slides.addEventListener('bkkrSlidesDidLoad', () => {
+        console.log("Slide have inited.");
+    });
+    slides.addEventListener('bkkrSlideDidChange', () => {
+        console.log("Slide have changed.");
+    });
+</script>

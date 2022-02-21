@@ -1,0 +1,39 @@
+---
+layout: "v5/examples"
+title: "alert"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+	<bkkr-content>
+		<bkkr-container>
+			<bkkr-button onclick="presentAlert()">
+              Show alert dialog
+          	</bkkr-button>
+		</bkkr-container>
+	</bkkr-content>
+</div>
+
+<script>
+function presentAlert() {
+  const alert = document.createElement('bkkr-alert');
+  alert.cssClass = 'my-custom-class';
+  alert.header = 'Alert';
+  alert.subHeader = 'Subtitle';
+  alert.message = 'This is an alert message.';
+  alert.buttons = ['Cancel', 'OK'];
+  alert.inputs = [{
+    name: 'confirm',
+    type: 'text',
+    placeholder: 'Type something here...',
+    attributes: {
+      autofocus: true
+    }
+  }];
+
+  document.body.appendChild(alert);
+  return alert.present();
+}
+</script>

@@ -1,0 +1,72 @@
+---
+layout: "v5/examples"
+title: "item"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+  <bkkr-content>
+    <bkkr-list class="mb-4">
+      <bkkr-item>
+        Item 1
+      </bkkr-item>
+      <bkkr-item>
+        <bkkr-icon name="flask" class="mr-3" slot="start"></bkkr-icon>
+        Item 2
+      </bkkr-item>
+      <bkkr-item>
+        Item 3
+        <bkkr-icon name="flask" slot="end"></bkkr-icon>
+      </bkkr-item>
+      <bkkr-item href="#">
+        <bkkr-icon name="flask" class="mr-3" slot="start"></bkkr-icon>
+        Item 4
+        <bkkr-icon name="flask" slot="end"></bkkr-icon>
+      </bkkr-item>
+    </bkkr-list>
+
+    <bkkr-container class="mb-4">
+      <bkkr-item fill="solid" detail href="#" class="mb-3">
+        <bkkr-label>
+          Solid Item with Detail Arrow
+        </bkkr-label>
+      </bkkr-item>
+
+      <bkkr-item fill="solid" shape="round" detail href="#">
+        <bkkr-label>
+          Solid Round Item with Detail Arrow
+        </bkkr-label>
+      </bkkr-item>
+    </bkkr-container>
+
+    <bkkr-container>
+      <bkkr-item fill="solid" class="mb-4">
+        <bkkr-label position="floating">Input (Fill: Solid)</bkkr-label>
+        <bkkr-input></bkkr-input>
+      </bkkr-item>
+  
+      <bkkr-item fill="outline" class="mb-4">
+        <bkkr-label position="floating">Input (Fill: Outline)</bkkr-label>
+        <bkkr-input></bkkr-input>
+      </bkkr-item>
+  
+      <bkkr-item class="mb-4 state-invalid state-touched">
+        <bkkr-label position="floating">Helper and Error Text</bkkr-label>
+        <bkkr-input type="email"></bkkr-input>
+        <bkkr-note slot="helper">Helper Text</bkkr-note>
+        <bkkr-note slot="error">Error Text</bkkr-note>
+      </bkkr-item>
+  
+      <bkkr-item button onclick="testClick()" class="mb-4">
+        <bkkr-shape shape="circle" size="52" slot="start">
+          <bkkr-img src="https://randomuser.me/api/portraits/women/59.jpg" alt="cat"></bkkr-img>
+        </bkkr-shape>
+        <bkkr-label>
+          Avatar Start, Button Item
+        </bkkr-label>
+      </bkkr-item>
+    </bkkr-container>
+  </bkkr-content>
+</div>

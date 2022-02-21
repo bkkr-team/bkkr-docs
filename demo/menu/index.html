@@ -1,0 +1,43 @@
+---
+layout: "v5/examples"
+title: "menu"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<bkkr-menu content-id="main-content">
+    <bkkr-header>
+        <bkkr-toolbar>
+            <p class="mb-0">header</p>
+        </bkkr-toolbar>
+    </bkkr-header>
+    <bkkr-content>
+        <bkkr-list>
+            <bkkr-item href="#">
+                Item 1
+            </bkkr-item>
+            <bkkr-item href="#">
+                Item 2
+            </bkkr-item>
+            <bkkr-item href="#">
+                Item 3
+            </bkkr-item>
+        </bkkr-list>
+    </bkkr-content>
+</bkkr-menu>
+
+<div class="bkkr-page" id="main-content">
+    <bkkr-header>
+        <bkkr-toolbar>
+            <bkkr-menu-toggle slot="start">
+                <bkkr-button fill="clear">
+                    <bkkr-icon name="bars" slot="icon-only"> </bkkr-icon>
+                </bkkr-button>
+            </bkkr-menu-toggle>
+            <p class="text-center mb-0 font-bold">Menu</p>
+        </bkkr-toolbar>
+    </bkkr-header>
+    <bkkr-content>
+    </bkkr-content>
+</div>

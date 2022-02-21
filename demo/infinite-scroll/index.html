@@ -1,0 +1,58 @@
+---
+layout: "v5/examples"
+title: "infinite-scroll"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-container class="mb-3">
+            <bkkr-button onClick="toggleInfinite()" expand="block">
+                Toggle Infinite Scroll
+            </bkkr-button>
+        </bkkr-container>
+
+        <bkkr-infinite-scroll threshold="100px" infinite="true" items="110" length="10" page="7" id="infinite-scroll">
+            <bkkr-list id="list">
+            </bkkr-list>
+        </bkkr-infinite-scroll>
+    </bkkr-content>
+</div>
+
+<script>
+    const list = document.getElementById('list');
+    const infinite = document.getElementById('infinite-scroll');
+
+    function toggleInfinite() {
+      infinite.infinite = !infinite.infinite;
+    }
+
+    infinite.addEventListener('bkkrInfinite', async function () {
+      console.log('Loading data...');
+      await wait(700);
+      infinite.complete();
+      appendItems();
+
+      console.log('Done');
+    });
+
+    function appendItems() {
+      for (var i = 0; i < 30; i++) {
+        const el = document.createElement('bkkr-item');
+        el.textContent = `${1 + i}`;
+        list.appendChild(el);
+      }
+    }
+
+    function wait(time) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve();
+        }, time);
+      });
+    }
+
+    appendItems();
+  </script>

@@ -1,0 +1,32 @@
+---
+layout: "v5/examples"
+title: "toggle"
+description: ""
+group: "components"
+version: "v5"
+---
+
+<div class="bkkr-page">
+    <bkkr-content>
+        <bkkr-list>
+            <bkkr-list-header>
+                Notification types
+            </bkkr-list-header>
+
+            <bkkr-item>
+                <bkkr-label>Push-notifications</bkkr-label>
+                <bkkr-toggle slot="end" value="push" checked></bkkr-toggle>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>In-app notifications</bkkr-label>
+                <bkkr-toggle slot="end" value="inapp" color="danger" checked></bkkr-toggle>
+            </bkkr-item>
+
+            <bkkr-item>
+                <bkkr-label>E-mail</bkkr-label>
+                <bkkr-toggle slot="end" value="email" checked disabled></bkkr-toggle>
+            </bkkr-item>
+        </bkkr-list>
+    </bkkr-content>
+</div>

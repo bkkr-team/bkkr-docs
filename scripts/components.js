@@ -84,7 +84,7 @@ function renderUsage({ tag, usage }) {
   return `
 ## Usage
 
-<DocsUsage demoUrl="${demo.demoUrl}" demoSourceUrl="${demo.demoSourceUrl}">
+<DocsUsage demoUrl="${demo.demoUrl??''}" demoSourceUrl="${demo.demoSourceUrl??''}">
   ${renderUsageContent(usage)}
 </DocsUsage>
 `;

@@ -11,18 +11,19 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const DocsUsage = (props: Props) => {
-  const section = (
-    <div className="row">
-      {props.demoUrl && (
-        <div className="col col-auto">
-          <DocsDemo url={props.demoUrl} source={props.demoSourceUrl} />
-        </div>
-      )}
-      <div className="col">{props.children}</div>
+  const isDemo = props.demoUrl.length > 0;
+  return (
+    <div className="docs-usage">
+      <div className="row">
+        {isDemo && (
+          <div className="col col-auto">
+            <DocsDemo url={props.demoUrl} source={props.demoSourceUrl} />
+          </div>
+        )}
+        <div className="col">{props.children}</div>
+      </div>
     </div>
   );
-
-  return <div className="docs-usage">{section}</div>;
 };
 
 export default DocsUsage;

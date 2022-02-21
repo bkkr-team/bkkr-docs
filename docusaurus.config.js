@@ -40,7 +40,7 @@ const config = {
           editUrl: ({ versionDocsDirPath, docPath }) => {
             let match = docPath.match(/components\/(.*)\.md/);
             if (match != null) {
-              return `https://github.com/bkkr-team/bkkr-framework/edit/mmaster/core/src/components/${match[1]}/readme.md`;
+              return `https://github.com/bkkr-team/bkkr-framework/edit/master/core/src/components/${match[1]}/readme.md`;
             }
             return `https://github.com/bkkr-team/bkkr-docs/edit/master/${versionDocsDirPath}/${docPath}`;
           },

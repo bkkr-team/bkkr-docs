@@ -1,42 +1,57 @@
----
-layout: "v5/examples"
-title: "checkbox"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-list>
-            <bkkr-list-header>
-                Select ingredients
-            </bkkr-list-header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Checkbox</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
 
-            <bkkr-item>
-                <bkkr-label>Ham</bkkr-label>
-                <bkkr-checkbox slot="end" value="ham" checked></bkkr-checkbox>
-            </bkkr-item>
+<body>
+    <bkkr-root>
+        <bkkr-content>
+            <bkkr-list>
+                <bkkr-list-header>
+                    Select ingredients
+                </bkkr-list-header>
 
-            <bkkr-item>
-                <bkkr-label>Cucumber</bkkr-label>
-                <bkkr-checkbox slot="end" value="cucumber" disabled></bkkr-checkbox>
-            </bkkr-item>
+                <bkkr-item>
+                    <bkkr-label>Ham</bkkr-label>
+                    <bkkr-checkbox slot="end" value="ham" checked></bkkr-checkbox>
+                </bkkr-item>
 
-            <bkkr-item>
-                <bkkr-label>Pepperoni</bkkr-label>
-                <bkkr-checkbox slot="end" value="pepperoni" color="danger" checked></bkkr-checkbox>
-            </bkkr-item>
+                <bkkr-item>
+                    <bkkr-label>Cucumber</bkkr-label>
+                    <bkkr-checkbox slot="end" value="cucumber" disabled></bkkr-checkbox>
+                </bkkr-item>
 
-            <bkkr-item>
-                <bkkr-label>Corn</bkkr-label>
-                <bkkr-checkbox slot="end" value="Corn" color="success"></bkkr-checkbox>
-            </bkkr-item>
+                <bkkr-item>
+                    <bkkr-label>Pepperoni</bkkr-label>
+                    <bkkr-checkbox slot="end" value="pepperoni" color="danger" checked></bkkr-checkbox>
+                </bkkr-item>
 
-            <bkkr-item>
-                <bkkr-label>Mushroom</bkkr-label>
-                <bkkr-checkbox slot="end" value="mushroom" color="warning" checked indeterminate></bkkr-checkbox>
-            </bkkr-item>
-        </bkkr-list>
-    </bkkr-content>
-</div>
+                <bkkr-item>
+                    <bkkr-label>Corn</bkkr-label>
+                    <bkkr-checkbox slot="end" value="Corn" color="success"></bkkr-checkbox>
+                </bkkr-item>
+
+                <bkkr-item>
+                    <bkkr-label>Mushroom</bkkr-label>
+                    <bkkr-checkbox slot="end" value="mushroom" color="warning" checked indeterminate></bkkr-checkbox>
+                </bkkr-item>
+            </bkkr-list>
+        </bkkr-content>
+    </bkkr-root>
+</body>
+
+</html>

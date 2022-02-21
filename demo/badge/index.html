@@ -1,18 +1,37 @@
----
-layout: "v5/examples"
-title: "badge"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-container>
-            <h2>Badge <bkkr-badge color="primary">New</bkkr-badge> </h2>
-            <h3>Contacts <bkkr-badge color="secondary">1</bkkr-badge> </h3>
-            <h4>News <bkkr-badge color="warning">15</bkkr-badge></h4>
-            <p>Notifications <bkkr-badge color="danger">99+</bkkr-badge></p>
-        </bkkr-container>
-    </bkkr-content>
-</div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Badge</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <bkkr-root>
+        <bkkr-content>
+            <bkkr-container>
+                <h2>Badge <bkkr-badge color="primary">New</bkkr-badge>
+                </h2>
+                <h3>Contacts <bkkr-badge color="secondary">1</bkkr-badge>
+                </h3>
+                <h4>News <bkkr-badge color="warning">15</bkkr-badge>
+                </h4>
+                <p>Notifications <bkkr-badge color="danger">99+</bkkr-badge>
+                </p>
+            </bkkr-container>
+        </bkkr-content>
+    </bkkr-root>
+</body>
+
+</html>

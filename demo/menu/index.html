@@ -1,43 +1,60 @@
----
-layout: "v5/examples"
-title: "menu"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<bkkr-menu content-id="main-content">
-    <bkkr-header>
-        <bkkr-toolbar>
-            <p class="mb-0">header</p>
-        </bkkr-toolbar>
-    </bkkr-header>
-    <bkkr-content>
-        <bkkr-list>
-            <bkkr-item href="#">
-                Item 1
-            </bkkr-item>
-            <bkkr-item href="#">
-                Item 2
-            </bkkr-item>
-            <bkkr-item href="#">
-                Item 3
-            </bkkr-item>
-        </bkkr-list>
-    </bkkr-content>
-</bkkr-menu>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Menu</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
 
-<div class="bkkr-page" id="main-content">
-    <bkkr-header>
-        <bkkr-toolbar>
-            <bkkr-menu-toggle slot="start">
-                <bkkr-button fill="clear">
-                    <bkkr-icon name="bars" slot="icon-only"> </bkkr-icon>
-                </bkkr-button>
-            </bkkr-menu-toggle>
-            <p class="text-center mb-0 font-bold">Menu</p>
-        </bkkr-toolbar>
-    </bkkr-header>
-    <bkkr-content>
-    </bkkr-content>
-</div>
+<body>
+    <bkkr-root>
+        <bkkr-menu content-id="main-content">
+            <bkkr-header>
+                <bkkr-toolbar>
+                    <p class="mb-0">header</p>
+                </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content>
+                <bkkr-list>
+                    <bkkr-item href="#">
+                        Item 1
+                    </bkkr-item>
+                    <bkkr-item href="#">
+                        Item 2
+                    </bkkr-item>
+                    <bkkr-item href="#">
+                        Item 3
+                    </bkkr-item>
+                </bkkr-list>
+            </bkkr-content>
+        </bkkr-menu>
+
+        <div class="bkkr-page" id="main-content">
+            <bkkr-header>
+                <bkkr-toolbar>
+                    <bkkr-menu-toggle slot="start">
+                        <bkkr-button fill="clear">
+                            <bkkr-icon name="bars" slot="icon-only"> </bkkr-icon>
+                        </bkkr-button>
+                    </bkkr-menu-toggle>
+                    <p class="text-center mb-0 font-bold">Menu</p>
+                </bkkr-toolbar>
+            </bkkr-header>
+            <bkkr-content>
+            </bkkr-content>
+        </div>
+    </bkkr-root>
+</body>
+
+</html>

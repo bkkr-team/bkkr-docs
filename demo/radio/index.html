@@ -1,34 +1,49 @@
----
-layout: "v5/examples"
-title: "radio"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-list>
-            <bkkr-radio-group value="woman">
-                <bkkr-list-header>
-                    Select gender
-                </bkkr-list-header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Radio</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
 
-                <bkkr-item>
-                    <bkkr-label>Woman</bkkr-label>
-                    <bkkr-radio slot="start" value="woman"></bkkr-radio>
-                </bkkr-item>
+<body>
+    <bkkr-root>
+        <bkkr-content>
+            <bkkr-list>
+                <bkkr-radio-group value="woman">
+                    <bkkr-list-header>
+                        Select gender
+                    </bkkr-list-header>
 
-                <bkkr-item>
-                    <bkkr-label>Man</bkkr-label>
-                    <bkkr-radio slot="start" value="man"></bkkr-radio>
-                </bkkr-item>
-
-                <bkkr-item>
-                    <bkkr-label>Non-binary</bkkr-label>
-                    <bkkr-radio slot="start" value="nonbinary"></bkkr-radio>
+                    <bkkr-item>
+                        <bkkr-label>Woman</bkkr-label>
+                        <bkkr-radio slot="start" value="woman"></bkkr-radio>
                     </bkkr-item>
-            </bkkr-radio-group>
-        </bkkr-list>
-    </bkkr-content>
-</div>
+
+                    <bkkr-item>
+                        <bkkr-label>Man</bkkr-label>
+                        <bkkr-radio slot="start" value="man"></bkkr-radio>
+                    </bkkr-item>
+
+                    <bkkr-item>
+                        <bkkr-label>Non-binary</bkkr-label>
+                        <bkkr-radio slot="start" value="nonbinary"></bkkr-radio>
+                    </bkkr-item>
+                </bkkr-radio-group>
+            </bkkr-list>
+        </bkkr-content>
+    </bkkr-root>
+</body>
+
+</html>

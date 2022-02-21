@@ -1,24 +1,39 @@
----
-layout: "v5/examples"
-title: "progress-bar"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-  <bkkr-content>
-    <bkkr-container>
-      <h4>Default</h4>
-    </bkkr-container>
-    <bkkr-progress-bar color="primary" value="0.5" class="my-2"></bkkr-progress-bar>
-    <bkkr-progress-bar color="secondary" value="0.5" class="my-2"></bkkr-progress-bar> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>Progress bar</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+  <style>
+    :root {
+      --safe-area-top: 20px;
+      --safe-area-bottom: 22px;
+    }
+  </style>
+</head>
 
-    <bkkr-container class="mt-4">
-      <h4>Indeterminate</h4>
-    </bkkr-container>
-    <bkkr-progress-bar value="0.25" buffer="0.75" class="my-2"></bkkr-progress-bar>
-    <bkkr-progress-bar type="indeterminate" class="my-2"></bkkr-progress-bar>
-    <bkkr-progress-bar type="indeterminate" reversed="true" class="my-2"></bkkr-progress-bar>
-  <bkkr-container>
-</div>
+<body>
+  <bkkr-root>
+    <bkkr-content>
+      <bkkr-container>
+        <h4>Default</h4>
+      </bkkr-container>
+      <bkkr-progress-bar color="primary" value="0.5" class="my-2"></bkkr-progress-bar>
+      <bkkr-progress-bar color="secondary" value="0.5" class="my-2"></bkkr-progress-bar>
+
+      <bkkr-container class="mt-4">
+        <h4>Indeterminate</h4>
+      </bkkr-container>
+      <bkkr-progress-bar value="0.25" buffer="0.75" class="my-2"></bkkr-progress-bar>
+      <bkkr-progress-bar type="indeterminate" class="my-2"></bkkr-progress-bar>
+      <bkkr-progress-bar type="indeterminate" reversed="true" class="my-2"></bkkr-progress-bar>
+      <bkkr-container>
+  </bkkr-root>
+</body>
+
+</html>

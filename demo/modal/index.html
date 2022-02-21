@@ -1,36 +1,48 @@
----
-layout: "v5/examples"
-title: "modal"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-  <bkkr-content>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>Modal</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+  <style>
+    :root {
+      --safe-area-top: 20px;
+      --safe-area-bottom: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <bkkr-root>
+    <bkkr-content>
       <bkkr-container>
-          <bkkr-button onclick="openModal(event)">
-              Launch modal
-          </bkkr-button>
+        <bkkr-button onclick="openModal(event)">
+          Launch modal
+        </bkkr-button>
 
-          <bkkr-modal>
-            <bkkr-header>
-              <bkkr-toolbar class="px-3">
-                <h2 class="text-bold mb-2">
-                  Modal
-                </h2>
-              </bkkr-toolbar>
-            </bkkr-header>
-            <bkkr-content>
-              <bkkr-container>
-                This is my inline modal content!
-              </bkkr-container>
-            </bkkr-content>
-          </bkkr-modal>
+        <bkkr-modal>
+          <bkkr-header>
+            <bkkr-toolbar class="px-3">
+              <h2 class="text-bold mb-2">
+                Modal
+              </h2>
+            </bkkr-toolbar>
+          </bkkr-header>
+          <bkkr-content>
+            <bkkr-container>
+              This is my inline modal content!
+            </bkkr-container>
+          </bkkr-content>
+        </bkkr-modal>
       </bkkr-container>
-  </bkkr-content>
-</div>
-
+    </bkkr-content>
+  </bkkr-root>
+</body>
 <script>
   const modal = document.querySelector('bkkr-modal');
   modal.presentingElement = document.querySelector('.bkkr-page');
@@ -43,3 +55,5 @@ version: "v5"
     modal.isOpen = false;
   });
 </script>
+
+</html>

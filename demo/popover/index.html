@@ -1,58 +1,71 @@
----
-layout: "v5/examples"
-title: "popover"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-  <bkkr-content>
-    <bkkr-container>
-      <bkkr-button id="basic-popover" expand="block" class="mb-3"
-        onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
-      <bkkr-button id="long-list-popover" expand="block" class="mb-3" color="secondary"
-        onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
-      <bkkr-button id="no-event-popover" expand="block" class="mb-3" color="danger"
-        onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
-    </bkkr-container>
-  </bkkr-content>
-  <bkkr-footer color="primary">
-    <bkkr-toolbar color="primary">
-      <bkkr-button slot="start" id="trigger-context">
-        <bkkr-icon slot="start" name="mouse" class="mr-2"></bkkr-icon>
-        Context menu
-      </bkkr-button>
-      <bkkr-button slot="end" id="trigger-hover">
-        <bkkr-icon slot="start" name="mouse-pointer" class="mr-2"></bkkr-icon>
-        Hover
-      </bkkr-button>
-    </bkkr-toolbar>
-  </bkkr-footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>Popover</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+  <style>
+    :root {
+      --safe-area-top: 20px;
+      --safe-area-bottom: 22px;
+    }
+  </style>
+</head>
 
-  <bkkr-popover trigger="trigger-context" trigger-action="context-menu">
-    <bkkr-content>
-      <bkkr-list>
-        <bkkr-item lines="full">
-          Copy
-        </bkkr-item>
-        <bkkr-item lines="full">
-          Paste
-        </bkkr-item>
-        </bkkr-container>
-    </bkkr-content>
-  </bkkr-popover>
-
-  <bkkr-popover trigger="trigger-hover" trigger-action="hover">
+<body>
+  <bkkr-root>
     <bkkr-content>
       <bkkr-container>
-        <div class="text-center">
-          Hello!
-        </div>
+        <bkkr-button id="basic-popover" expand="block" class="mb-3"
+          onclick="presentPopover({ component: 'profile-page', event: event })">Show Popover</bkkr-button>
+        <bkkr-button id="long-list-popover" expand="block" class="mb-3" color="secondary"
+          onclick="presentPopover({ component: 'list-page', event: event })">Show Long List Popover</bkkr-button>
+        <bkkr-button id="no-event-popover" expand="block" class="mb-3" color="danger"
+          onclick="presentPopover({ component: 'profile-page' })">No Event Popover</bkkr-button>
       </bkkr-container>
     </bkkr-content>
-  </bkkr-popover>
-</div>
+    <bkkr-footer color="primary">
+      <bkkr-toolbar color="primary">
+        <bkkr-button slot="start" id="trigger-context">
+          <bkkr-icon slot="start" name="mouse" class="mr-2"></bkkr-icon>
+          Context menu
+        </bkkr-button>
+        <bkkr-button slot="end" id="trigger-hover">
+          <bkkr-icon slot="start" name="mouse-pointer" class="mr-2"></bkkr-icon>
+          Hover
+        </bkkr-button>
+      </bkkr-toolbar>
+    </bkkr-footer>
+
+    <bkkr-popover trigger="trigger-context" trigger-action="context-menu">
+      <bkkr-content>
+        <bkkr-list>
+          <bkkr-item lines="full">
+            Copy
+          </bkkr-item>
+          <bkkr-item lines="full">
+            Paste
+          </bkkr-item>
+          </bkkr-container>
+      </bkkr-content>
+    </bkkr-popover>
+
+    <bkkr-popover trigger="trigger-hover" trigger-action="hover">
+      <bkkr-content>
+        <bkkr-container>
+          <div class="text-center">
+            Hello!
+          </div>
+        </bkkr-container>
+      </bkkr-content>
+    </bkkr-popover>
+  </bkkr-root>
+</body>
 
 <script type="module">
   import { popoverController } from '../../../dist/bkkr/index.esm.js';
@@ -111,3 +124,5 @@ version: "v5"
 
   customElements.define('list-page', ListPage);
 </script>
+
+</html>

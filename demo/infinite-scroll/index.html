@@ -1,58 +1,73 @@
----
-layout: "v5/examples"
-title: "infinite-scroll"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <title>Infinite scroll</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+  <style>
+    :root {
+      --safe-area-top: 20px;
+      --safe-area-bottom: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <bkkr-root>
     <bkkr-content>
-        <bkkr-container class="mb-3">
-            <bkkr-button onClick="toggleInfinite()" expand="block">
-                Toggle Infinite Scroll
-            </bkkr-button>
-        </bkkr-container>
+      <bkkr-container class="mb-3">
+        <bkkr-button onClick="toggleInfinite()" expand="block">
+          Toggle Infinite Scroll
+        </bkkr-button>
+      </bkkr-container>
 
-        <bkkr-infinite-scroll threshold="100px" infinite="true" items="110" length="10" page="7" id="infinite-scroll">
-            <bkkr-list id="list">
-            </bkkr-list>
-        </bkkr-infinite-scroll>
+      <bkkr-infinite-scroll threshold="100px" infinite="true" items="110" length="10" page="7" id="infinite-scroll">
+        <bkkr-list id="list">
+        </bkkr-list>
+      </bkkr-infinite-scroll>
     </bkkr-content>
-</div>
+  </bkkr-root>
+</body>
 
 <script>
-    const list = document.getElementById('list');
-    const infinite = document.getElementById('infinite-scroll');
+  const list = document.getElementById('list');
+  const infinite = document.getElementById('infinite-scroll');
 
-    function toggleInfinite() {
-      infinite.infinite = !infinite.infinite;
-    }
+  function toggleInfinite() {
+    infinite.infinite = !infinite.infinite;
+  }
 
-    infinite.addEventListener('bkkrInfinite', async function () {
-      console.log('Loading data...');
-      await wait(700);
-      infinite.complete();
-      appendItems();
-
-      console.log('Done');
-    });
-
-    function appendItems() {
-      for (var i = 0; i < 30; i++) {
-        const el = document.createElement('bkkr-item');
-        el.textContent = `${1 + i}`;
-        list.appendChild(el);
-      }
-    }
-
-    function wait(time) {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          resolve();
-        }, time);
-      });
-    }
-
+  infinite.addEventListener('bkkrInfinite', async function () {
+    console.log('Loading data...');
+    await wait(700);
+    infinite.complete();
     appendItems();
-  </script>
+
+    console.log('Done');
+  });
+
+  function appendItems() {
+    for (var i = 0; i < 30; i++) {
+      const el = document.createElement('bkkr-item');
+      el.textContent = `${1 + i}`;
+      list.appendChild(el);
+    }
+  }
+
+  function wait(time) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, time);
+    });
+  }
+
+  appendItems();
+</script>
+
+</html>

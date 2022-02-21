@@ -1,34 +1,50 @@
----
-layout: "v5/examples"
-title: "textarea"
-description: ""
-group: "components"
-version: "v5"
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="bkkr-page">
-    <bkkr-content>
-        <bkkr-list class="mb-5">
-            <bkkr-list-header>
-                Profile infos
-            </bkkr-list-header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Textarea</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/core@5/dist/bkkr/bkkr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bkkr/utilities@1/dist/bkkr.utilities.min.css" />
+    <style>
+        :root {
+            --safe-area-top: 20px;
+            --safe-area-bottom: 22px;
+        }
+    </style>
+</head>
 
-            <bkkr-item>
-                <bkkr-label position="floating">About us</bkkr-label>
-                <bkkr-textarea placeholder="Tell something about yourself..." maxlength="125"></bkkr-textarea>
-                <bkkr-note slot="helper">Not required.</bkkr-note>
-            </bkkr-item>
+<body>
+    <bkkr-root>
+        <bkkr-content>
+            <bkkr-list class="mb-5">
+                <bkkr-list-header>
+                    Profile infos
+                </bkkr-list-header>
 
-            <bkkr-item>
-                <bkkr-label>Signature</bkkr-label>
-                <bkkr-textarea disabled value="Sent from my phone">
-                </bkkr-textarea>
-            </bkkr-item>
+                <bkkr-item>
+                    <bkkr-label position="floating">About us</bkkr-label>
+                    <bkkr-textarea placeholder="Tell something about yourself..." maxlength="125"></bkkr-textarea>
+                    <bkkr-note slot="helper">Not required.</bkkr-note>
+                </bkkr-item>
 
-            <bkkr-item>
-                <bkkr-label>Notes</bkkr-label>
-                <bkkr-textarea rows="6" cols="20" clear-on-edit placeholder="Enter any notes here..."></bkkr-textarea>
-            </bkkr-item>
-        </bkkr-list>
-    </bkkr-content>
-</div>
+                <bkkr-item>
+                    <bkkr-label>Signature</bkkr-label>
+                    <bkkr-textarea disabled value="Sent from my phone">
+                    </bkkr-textarea>
+                </bkkr-item>
+
+                <bkkr-item>
+                    <bkkr-label>Notes</bkkr-label>
+                    <bkkr-textarea rows="6" cols="20" clear-on-edit placeholder="Enter any notes here...">
+                    </bkkr-textarea>
+                </bkkr-item>
+            </bkkr-list>
+        </bkkr-content>
+    </bkkr-root>
+</body>
+
+</html>

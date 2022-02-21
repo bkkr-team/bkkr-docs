@@ -19,6 +19,8 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'bkkr-team',
   projectName: 'bkkr-docs',
+  trailingSlash: false,
+  deploymentBranch: 'gh-pages',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],

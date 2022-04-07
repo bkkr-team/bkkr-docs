@@ -7,8 +7,8 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-    --ifm-tabs-bg-c: var(--ifm-color-content);
-    --ifm-tabs-bg-c-active: var(--ifm-color-content);
+    --ifm-tabs-bg-c: var(--ifm-color-gray-900);
+    --ifm-tabs-bg-c-active: var(--ifm-color-gray-800);
     --ifm-tabs-color: #fff;
     --ifm-tabs-color-active: #fff;
     --tabs-border-c: #fff;

@@ -25,7 +25,7 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --code-block-bg-c: var(--ifm-color-content);
+  --code-block-bg-c: var(--ifm-color-gray-900);
 }
 
 :not(pre) > code {
@@ -82,13 +82,13 @@ pre[class*='language-'] {
   padding: 1em;
   margin: 0 0;
   overflow: auto;
-  border-radius: 0.8rem;
+  border-radius: var(--ifm-global-radius);
 }
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
   padding: 0.15em 0.2em 0.05em;
-  border-radius: 0.8rem;
+  border-radius: var(--ifm-global-radius);
   border: 0.13em solid hsl(30, 20%, 40%);
   box-shadow: 1px 1px 0.3em -0.1em black inset;
   white-space: normal;

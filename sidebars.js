@@ -69,6 +69,11 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Drawer',
+      items: ['components/drawer'],
+    },
+    {
+      type: 'category',
       label: 'Floating Action Button',
       items: ['components/fab', 'components/fab-button'],
     },

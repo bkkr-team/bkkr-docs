@@ -24,13 +24,12 @@ custom_edit_url: null
 
 <header>
   <div className="landing-hero">
-    <h1 className="landing-title">Design. Create. Build.</h1>
     <div className="landing-title-black">
       <svg viewBox="0 0 67 14">
         <defs>
           <linearGradient id="gradient" x1="0" x2="100%" y1="0" y2="0" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#23c7b8" offset="0%" />
-            <stop stopColor="#23a6d5" offset="100%" />
+            <stop stopColor="#ffe993" offset="0%" />
+            <stop stopColor="#eb831c" offset="100%" />
           </linearGradient>
         </defs>
         <text x="-2" y="14" fill="url(#gradient)">
